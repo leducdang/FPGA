@@ -1,0 +1,35 @@
+module i2cControllerRTC(
+					clock,
+					sda,
+					scl,
+					led7seg,
+					led7seg2
+
+);
+
+input	 clock;
+inout i2c_sda;
+output i2c_scl;
+output [0:6] led7seg;
+output [0:6] led7seg2;
+reg 	[7:0] data;
+
+parametter [7:0] addr_read_data = 8'b0000_0001;
+
+i2cReadRTC seconds(
+		.clk_50mhz(clock),
+		.i2c_scl(scl),
+		.i2c_sda(sda),
+		.data_out(data),
+		.addr_read(addr_read_data)
+	
+	);
+
+led7seg ledseconds(
+		.clk(clock), 
+		.data_in(data),
+		.led1(led7seg), 
+		.led2(led7seg2)
+);
+
+endmodule

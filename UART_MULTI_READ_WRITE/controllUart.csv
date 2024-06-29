@@ -1,0 +1,54 @@
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# File: D:\2024\FPGA\codeFPGAL_LIB\UART_MULTI_READ_WRITE\controllUart.csv
+# Generated on: Sat Jun 29 09:29:14 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clock,Input,PIN_Y2,2,B2_N0,PIN_Y2,2.5 V,,,,,
+led7seg[0],Output,PIN_G18,7,B7_N2,PIN_G18,2.5 V,,,,,
+led7seg[1],Output,PIN_F22,7,B7_N0,PIN_F22,2.5 V,,,,,
+led7seg[2],Output,PIN_E17,7,B7_N2,PIN_E17,2.5 V,,,,,
+led7seg[3],Output,PIN_L26,6,B6_N1,PIN_L26,2.5 V,,,,,
+led7seg[4],Output,PIN_L25,6,B6_N1,PIN_L25,2.5 V,,,,,
+led7seg[5],Output,PIN_J22,6,B6_N0,PIN_J22,2.5 V,,,,,
+led7seg[6],Output,PIN_H22,6,B6_N0,PIN_H22,2.5 V,,,,,
+led7seg1[0],Output,PIN_M24,6,B6_N2,PIN_C15,,,,,,
+led7seg1[1],Output,PIN_Y22,5,B5_N0,PIN_E15,,,,,,
+led7seg1[2],Output,PIN_W21,5,B5_N1,PIN_D15,,,,,,
+led7seg1[3],Output,PIN_W22,5,B5_N0,PIN_A12,,,,,,
+led7seg1[4],Output,PIN_W25,5,B5_N1,PIN_D13,,,,,,
+led7seg1[5],Output,PIN_U23,5,B5_N1,PIN_F15,,,,,,
+led7seg1[6],Output,PIN_U24,5,B5_N0,PIN_C13,,,,,,
+led7seg2[0],Output,PIN_AA25,5,B5_N1,PIN_C12,,,,,,
+led7seg2[1],Output,PIN_AA26,5,B5_N1,PIN_G14,,,,,,
+led7seg2[2],Output,PIN_Y25,5,B5_N1,PIN_J14,,,,,,
+led7seg2[3],Output,PIN_W26,5,B5_N1,PIN_D12,,,,,,
+led7seg2[4],Output,PIN_Y26,5,B5_N1,PIN_H14,,,,,,
+led7seg2[5],Output,PIN_W27,5,B5_N1,PIN_D14,,,,,,
+led7seg2[6],Output,PIN_W28,5,B5_N1,PIN_C14,,,,,,
+led7seg3[0],Output,PIN_V21,5,B5_N1,PIN_A17,,,,,,
+led7seg3[1],Output,PIN_U21,5,B5_N0,PIN_C16,,,,,,
+led7seg3[2],Output,PIN_AB20,4,B4_N0,PIN_J16,,,,,,
+led7seg3[3],Output,PIN_AA21,4,B4_N0,PIN_H15,,,,,,
+led7seg3[4],Output,PIN_AD24,4,B4_N0,PIN_D16,,,,,,
+led7seg3[5],Output,PIN_AF23,4,B4_N0,PIN_J15,,,,,,
+led7seg3[6],Output,PIN_Y19,4,B4_N0,PIN_B17,,,,,,
+reset,Input,PIN_M23,6,B6_N2,PIN_M23,2.5 V,,,,,
+rx,Input,PIN_G12,8,B8_N1,PIN_G12,2.5 V,,,,,
+tx,Output,PIN_G9,8,B8_N2,PIN_G9,2.5 V,,,,,

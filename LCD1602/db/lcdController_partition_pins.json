@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rs_pin",
+					"strict" : false
+				},
+				{
+					"name" : "en_pin",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLCD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

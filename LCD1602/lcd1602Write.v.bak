@@ -1,0 +1,100 @@
+module lcd1602Write(clock_50mhz, rs_pin, rw_pin, en_pin, slect, data, pos_x, pos_y, pinLCD);
+
+//lcd1602Write
+// khai báo in out cho thu vien lcd
+input clock_50mhz;
+output rs_pin;
+output rw_pin;
+output en_pin;
+input		[1:0]	slect; 		// chọn chế độ 0- khởi tạo, 1-ghi lệnh, 2-ghi data.
+input 	[7:0] data;
+input 	[3:0]	pos_x;      //cột
+input 	[1:0]	pos_y;		// hàng
+output 	[7:0]	pinLCD;
+
+//khai báo biến phụ
+reg 		[15:0]	counter_1ms;		// bien dem tạo xung clock 1ms
+reg		[7:0]		counter_lcd;				// bien dem chuyen trang thai lcd 1ms
+reg	rs;
+reg	rw;
+reg	en;
+reg	[7:0]	data_input;
+
+
+
+always@(posedge clock_50mhz)
+	begin
+		if(counter_1ms == 16'd49999)
+			begin 
+				counter_1ms <= 16'd0;
+				counter_lcd <= counter_lcd + 1;
+			end
+		else
+			counter_1ms <= counter_1ms + 1;
+	end
+
+
+always@(posedge clock_50mhz)
+	begin
+		if(slect == 2'd0)  			// khoi tao lcd
+			begin
+				case(counter_lcd)
+					8'd0:	begin
+								rw	<=	0;
+								rs	<= 0;
+							end
+					8'd1:		data_input <= 8'h30;
+					8'd2:		en	<= 1;
+					8'd3:		en	<= 0;
+					//delay 5ms
+					8'd8:		rs	<= 0;
+					8'd9:		data_input <= 8'h30;
+					8'd10:	en	<= 1;	
+					8'd11:	en	<= 0;
+					//delay 1ms
+					8'd13:	rs	<= 0;
+					8'd14:	data_input <= 8'h30;
+					8'd15:	en	<= 1;
+					8'd16:	en	<= 0;
+					
+					8'd17:	data_input <= 8'h01;
+					8'd18:	en	<= 1;
+					8'd19:	en	<= 0;
+					8'd20:	data_input <= 8'h01;
+					8'd21:	en	<= 1;
+					8'd22:	en	<= 0;		
+				endcase
+			end
+		// ghi lênh
+		if(slect == 2'd1)
+			begin
+				case(counter_lcd)
+					8'd0:	rs	<= 0;
+					8'd1:	data_input	<=	data;
+					8'd2:	en <= 1;
+					8'd3:	en <= 0;
+				endcase
+			end
+			
+		// ghi data
+		if(slect == 2'd2)
+			begin
+				case(counter_lcd)
+					8'd1: rs <= 1;
+					8'd2:	data_input	<= data;
+					8'd3:	en <= 1;
+					8'd4:	en <= 0;
+				endcase
+			end
+		
+	end
+
+
+
+assign rs_pin = rs;
+assign rw_pin = rw;
+assign en_pin = en;
+assign data_pin = data_input;
+
+
+endmodule

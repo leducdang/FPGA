@@ -1,0 +1,42 @@
+
+State Machine - |controllUart|stt_rx
+Name stt_rx.00000 stt_rx.00010 stt_rx.00001 
+stt_rx.00000 0 0 0 
+stt_rx.00001 1 0 1 
+stt_rx.00010 1 1 0 
+
+State Machine - |controllUart|stt_tx
+Name stt_tx.00011 stt_tx.00010 stt_tx.00001 stt_tx.00000 stt_tx.00100 
+stt_tx.00000 0 0 0 0 0 
+stt_tx.00001 0 0 1 1 0 
+stt_tx.00010 0 1 0 1 0 
+stt_tx.00011 1 0 0 1 0 
+stt_tx.00100 0 0 0 1 1 
+
+State Machine - |controllUart|uartRead:read1|stt_rx
+Name stt_rx.00001001 stt_rx.00001000 stt_rx.00000111 stt_rx.00000110 stt_rx.00000101 stt_rx.00000100 stt_rx.00000011 stt_rx.00000010 stt_rx.00000001 stt_rx.00000000 
+stt_rx.00000000 0 0 0 0 0 0 0 0 0 0 
+stt_rx.00000001 0 0 0 0 0 0 0 0 1 1 
+stt_rx.00000010 0 0 0 0 0 0 0 1 0 1 
+stt_rx.00000011 0 0 0 0 0 0 1 0 0 1 
+stt_rx.00000100 0 0 0 0 0 1 0 0 0 1 
+stt_rx.00000101 0 0 0 0 1 0 0 0 0 1 
+stt_rx.00000110 0 0 0 1 0 0 0 0 0 1 
+stt_rx.00000111 0 0 1 0 0 0 0 0 0 1 
+stt_rx.00001000 0 1 0 0 0 0 0 0 0 1 
+stt_rx.00001001 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |controllUart|uartWrite:write1|stt_tx
+Name stt_tx.00001011 stt_tx.00001010 stt_tx.00001001 stt_tx.00001000 stt_tx.00000111 stt_tx.00000110 stt_tx.00000101 stt_tx.00000100 stt_tx.00000011 stt_tx.00000010 stt_tx.00000001 stt_tx.00000000 
+stt_tx.00000000 0 0 0 0 0 0 0 0 0 0 0 0 
+stt_tx.00000001 0 0 0 0 0 0 0 0 0 0 1 1 
+stt_tx.00000010 0 0 0 0 0 0 0 0 0 1 0 1 
+stt_tx.00000011 0 0 0 0 0 0 0 0 1 0 0 1 
+stt_tx.00000100 0 0 0 0 0 0 0 1 0 0 0 1 
+stt_tx.00000101 0 0 0 0 0 0 1 0 0 0 0 1 
+stt_tx.00000110 0 0 0 0 0 1 0 0 0 0 0 1 
+stt_tx.00000111 0 0 0 0 1 0 0 0 0 0 0 1 
+stt_tx.00001000 0 0 0 1 0 0 0 0 0 0 0 1 
+stt_tx.00001001 0 0 1 0 0 0 0 0 0 0 0 1 
+stt_tx.00001010 0 1 0 0 0 0 0 0 0 0 0 1 
+stt_tx.00001011 1 0 0 0 0 0 0 0 0 0 0 1 

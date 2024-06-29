@@ -1,0 +1,69 @@
+module lcd1602Write(clock_50mhz, rs, rw, en, slect, data, pos_x, pos_y, pinLCD);
+
+
+// khai báo in out cho thu vien lcd
+input clock_50mhz;
+input rs;
+input rw;
+input en;
+input		[1:0]	slect; 		// chọn chế độ 0- khởi tạo, 1-ghi lệnh, 2-ghi data.
+input 	[7:0] data;
+input 	[3:0]	pos_x;      //cột
+input 	[1:0]	pos_y;		// hàng
+output 	[7:0]	pinLCD;
+
+//khai báo biến phụ
+reg 		[15:0]	counter_1ms;		// bien dem tạo xung clock 1ms
+reg		[7:0]		counter_lcd				// bien dem chuyen trang thai lcd 1ms
+
+
+
+always@(posedge clock_50mhz)
+	begin
+		if(counter_1ms == 16'd49999)
+			begin 
+				counter_1ms <= 16'd0;
+				counter_lcd <= counter_lcd + 1;
+			end
+		else
+			counter_1ms <= counter_1ms + 1;
+	end
+
+
+always@(posedge clock_50mhz)
+	begin
+		case(counter_lcd)
+			8'd1:
+			8'd2:
+			8'd3:
+			8'd4:
+			8'd5:
+			8'd6:
+			8'd7:
+			8'd8:
+			8'd9:
+			8'd10:
+			8'd11:
+			8'd12:
+			8'd13:
+			8'd14:
+			8'd15:
+			8'd16:
+			8'd17:
+			8'd18:
+			8'd19:
+			8'd20:
+			8'd21:
+			8'd22:
+			8'd23:
+			
+		endcase
+	end
+
+
+
+
+
+
+
+endmodule

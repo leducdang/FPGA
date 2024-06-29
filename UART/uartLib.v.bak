@@ -1,0 +1,57 @@
+module uartLib(clock_50mhz, tx_pin, rx_pin, reset_pin);
+
+input 	clock_50mhz;
+input 	rx_pin;
+input		reset_pin;
+output	tx_pin;
+
+reg rx;
+reg tx;
+
+
+reg 		[7:0] 	data_tx = 0x41;
+reg		[7:0]		data_rx;
+reg		[17:0]	counter; // 50000000:217 = 230414.
+reg					clock, // lAY Xung cạnh len duoc tan so 115200/s
+reg		[7:0]		stt;		//trang thai khung truyen uart
+
+
+always@(posedge clock_50mhz)
+	begin
+		if(counter == 18'd230413)
+			begin
+				counter<=0;
+				clock= ~clock; 
+			end
+		else
+			counter <= counter + 1;
+	end
+
+
+
+// chuong trinh uart gui du lieu	
+always@(posedge clock or negedge reset_pin)
+		if(!reset_pin)
+			begin
+				stt <= 0;
+				tx <= 1;
+			end
+		else 
+			case(stt)
+				8'd0: begin tx<=1; 				stt<=1; end
+				8'd1:	begin tx <= data_tx[0]; stt<=2; end
+				8'd2:	begin tx <= data_tx[1]; stt<=3; end
+				8'd3:	begin tx <= data_tx[2]; stt<=4; end
+				8'd4:	begin tx <= data_tx[3]; stt<=5; end
+				8'd5:	begin tx <= data_tx[4]; stt<=6; end
+				8'd6:	begin tx <= data_tx[5]; stt<=7; end
+				8'd7:	begin tx <= data_tx[6]; stt<=8; end
+				8'd8:	begin tx <= data_tx[7]; stt<=9; end
+				8'd9:	begin tx <= 1; stt<=10; end
+				8'd10:	begin tx <= 1; stt<=11; end
+				
+			endcase
+assign tx_pin = tx;
+assign rx_pin = rx;
+
+endmodule

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jun 27 15:30:25 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : lcdController
+Top-level Entity Name : lcdController
+Family : Cyclone IV E
+Total logic elements : 158
+    Total combinational functions : 158
+    Dedicated logic registers : 59
+Total registers : 59
+Total pins : 20
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

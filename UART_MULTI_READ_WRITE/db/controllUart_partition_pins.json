@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led7seg3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

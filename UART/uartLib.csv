@@ -1,0 +1,35 @@
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# File: D:\2024\FPGA\codeFPGAL_LIB\UART\uartLib.csv
+# Generated on: Fri Jun 28 10:53:33 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clock_50mhz,Input,PIN_Y2,2,B2_N0,PIN_Y2,2.5 V,,,,,
+clock_out,Output,PIN_AH22,4,B4_N1,PIN_AH22,2.5 V,,,,,
+led7seg[0],Output,PIN_G18,7,B7_N2,PIN_M25,,,,,,
+led7seg[1],Output,PIN_F22,7,B7_N0,PIN_M27,,,,,,
+led7seg[2],Output,PIN_E17,7,B7_N2,PIN_M26,,,,,,
+led7seg[3],Output,PIN_L26,6,B6_N1,PIN_N25,,,,,,
+led7seg[4],Output,PIN_L25,6,B6_N1,PIN_M28,,,,,,
+led7seg[5],Output,PIN_J22,6,B6_N0,PIN_L28,,,,,,
+led7seg[6],Output,PIN_H22,6,B6_N0,PIN_L23,,,,,,
+reset_pin,Input,PIN_M23,6,B6_N2,PIN_M23,2.5 V,,,,,
+rx_pin,Input,PIN_G12,8,B8_N1,PIN_G12,2.5 V,,,,,
+tx_pin,Output,PIN_G9,8,B8_N2,PIN_G9,2.5 V,,,,,
+tx_test,Output,PIN_AG22,4,B4_N1,PIN_AG22,2.5 V,,,,,

@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock_50mhz'
+Slack : -2.980
+TNS   : -13.455
+
+Type  : Slow 1200mV 85C Model Setup 'data_rx[1]'
+Slack : -2.918
+TNS   : -17.237
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -2.616
+TNS   : -29.683
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_50mhz'
+Slack : 0.641
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'data_rx[1]'
+Slack : 0.965
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_50mhz'
+Slack : -3.000
+TNS   : -14.565
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -1.285
+TNS   : -39.835
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'data_rx[1]'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'data_rx[1]'
+Slack : -2.704
+TNS   : -15.941
+
+Type  : Slow 1200mV 0C Model Setup 'clock_50mhz'
+Slack : -2.677
+TNS   : -11.393
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -2.348
+TNS   : -24.674
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_50mhz'
+Slack : 0.586
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'data_rx[1]'
+Slack : 1.016
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_50mhz'
+Slack : -3.000
+TNS   : -14.565
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -1.285
+TNS   : -39.835
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'data_rx[1]'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'data_rx[1]'
+Slack : -1.227
+TNS   : -6.333
+
+Type  : Fast 1200mV 0C Model Setup 'clock_50mhz'
+Slack : -1.008
+TNS   : -2.052
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -0.813
+TNS   : -6.095
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'data_rx[1]'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_50mhz'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_50mhz'
+Slack : -3.000
+TNS   : -12.559
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -1.000
+TNS   : -31.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'data_rx[1]'
+Slack : 0.375
+TNS   : 0.000
+
+------------------------------------------------------------
