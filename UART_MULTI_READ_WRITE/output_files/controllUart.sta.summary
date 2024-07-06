@@ -3,32 +3,32 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -3.137
-TNS   : -228.526
+Slack : -3.599
+TNS   : -288.422
 
 Type  : Slow 1200mV 85C Model Setup 'uartWrite:write1|clock'
-Slack : -1.064
-TNS   : -7.276
+Slack : -1.122
+TNS   : -7.526
 
 Type  : Slow 1200mV 85C Model Setup 'uartRead:read1|clock'
-Slack : -0.814
-TNS   : -12.933
+Slack : -0.974
+TNS   : -14.053
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.403
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'uartRead:read1|clock'
-Slack : 0.404
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'uartWrite:write1|clock'
-Slack : 0.404
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -145.635
+TNS   : -154.630
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uartRead:read1|clock'
 Slack : -1.285
@@ -39,23 +39,23 @@ Slack : -1.285
 TNS   : -17.990
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -2.798
-TNS   : -198.238
+Slack : -3.190
+TNS   : -254.314
 
 Type  : Slow 1200mV 0C Model Setup 'uartWrite:write1|clock'
-Slack : -0.877
-TNS   : -5.646
+Slack : -0.947
+TNS   : -5.805
 
 Type  : Slow 1200mV 0C Model Setup 'uartRead:read1|clock'
-Slack : -0.657
-TNS   : -10.126
-
-Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.355
-TNS   : 0.000
+Slack : -0.836
+TNS   : -11.222
 
 Type  : Slow 1200mV 0C Model Hold 'uartRead:read1|clock'
-Slack : 0.355
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'uartWrite:write1|clock'
@@ -64,7 +64,7 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -145.635
+TNS   : -154.630
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uartRead:read1|clock'
 Slack : -1.285
@@ -75,32 +75,32 @@ Slack : -1.285
 TNS   : -17.990
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -0.950
-TNS   : -52.985
+Slack : -1.238
+TNS   : -81.353
 
 Type  : Fast 1200mV 0C Model Setup 'uartWrite:write1|clock'
-Slack : -0.048
-TNS   : -0.048
+Slack : -0.088
+TNS   : -0.088
 
 Type  : Fast 1200mV 0C Model Setup 'uartRead:read1|clock'
-Slack : 0.118
+Slack : 0.015
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.174
+Slack : 0.136
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'uartRead:read1|clock'
-Slack : 0.182
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'uartWrite:write1|clock'
-Slack : 0.183
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -120.828
+TNS   : -128.288
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uartRead:read1|clock'
 Slack : -1.000

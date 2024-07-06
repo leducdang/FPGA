@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jul  5 08:20:30 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : topSRAM
+Top-level Entity Name : topSRAM
+Family : Cyclone IV E
+Total logic elements : 68
+    Total combinational functions : 27
+    Dedicated logic registers : 65
+Total registers : 65
+Total pins : 79
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

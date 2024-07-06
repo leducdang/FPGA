@@ -1,5 +1,5 @@
 Analysis & Synthesis report for controllUart
-Sat Jun 29 10:48:44 2024
+Sat Jun 29 16:39:29 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -51,15 +51,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 29 10:48:44 2024          ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 29 16:39:29 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; controllUart                                   ;
 ; Top-level Entity Name              ; controllUart                                   ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 181                                            ;
-;     Total combinational functions  ; 148                                            ;
-;     Dedicated logic registers      ; 143                                            ;
-; Total registers                    ; 143                                            ;
+; Total logic elements               ; 191                                            ;
+;     Total combinational functions  ; 158                                            ;
+;     Dedicated logic registers      ; 150                                            ;
+; Total registers                    ; 150                                            ;
 ; Total pins                         ; 32                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -187,20 +187,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 181         ;
+; Estimated Total logic elements              ; 191         ;
 ;                                             ;             ;
-; Total combinational functions               ; 148         ;
+; Total combinational functions               ; 158         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 73          ;
-;     -- 3 input functions                    ; 12          ;
-;     -- <=2 input functions                  ; 63          ;
+;     -- 4 input functions                    ; 81          ;
+;     -- 3 input functions                    ; 8           ;
+;     -- <=2 input functions                  ; 69          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 119         ;
-;     -- arithmetic mode                      ; 29          ;
+;     -- normal mode                          ; 122         ;
+;     -- arithmetic mode                      ; 36          ;
 ;                                             ;             ;
-; Total registers                             ; 143         ;
-;     -- Dedicated logic registers            ; 143         ;
+; Total registers                             ; 150         ;
+;     -- Dedicated logic registers            ; 150         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 32          ;
@@ -208,9 +208,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 111         ;
-; Total fan-out                               ; 916         ;
-; Average fan-out                             ; 2.58        ;
+; Maximum fan-out                             ; 118         ;
+; Total fan-out                               ; 965         ;
+; Average fan-out                             ; 2.59        ;
 +---------------------------------------------+-------------+
 
 
@@ -219,8 +219,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+--------------+
-; |controllUart              ; 148 (93)            ; 143 (101)                 ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |controllUart                  ; controllUart ; work         ;
-;    |uartRead:read1|        ; 36 (36)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controllUart|uartRead:read1   ; uartRead     ; work         ;
+; |controllUart              ; 158 (98)            ; 150 (104)                 ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |controllUart                  ; controllUart ; work         ;
+;    |uartRead:read1|        ; 41 (41)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controllUart|uartRead:read1   ; uartRead     ; work         ;
 ;    |uartWrite:write1|      ; 19 (19)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controllUart|uartWrite:write1 ; uartWrite    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -299,14 +299,18 @@ Encoding Type:  One-Hot
 +----------------------------------------+----------------------------------------+
 ; data_tx[7]                             ; Stuck at GND due to stuck port data_in ;
 ; uartRead:read1|rx_ready                ; Merged with uartRead:read1|fb          ;
+; uartWrite:write1|counter[11]           ; Merged with uartRead:read1|counter[11] ;
+; uartWrite:write1|counter[9]            ; Merged with uartRead:read1|counter[9]  ;
+; uartWrite:write1|counter[5]            ; Merged with uartRead:read1|counter[5]  ;
+; uartWrite:write1|counter[3]            ; Merged with uartRead:read1|counter[3]  ;
+; uartWrite:write1|counter[1]            ; Merged with uartRead:read1|counter[1]  ;
+; uartWrite:write1|counter[0]            ; Merged with uartRead:read1|counter[0]  ;
+; uartWrite:write1|counter[10]           ; Merged with uartRead:read1|counter[10] ;
+; uartWrite:write1|counter[8]            ; Merged with uartRead:read1|counter[8]  ;
 ; uartWrite:write1|counter[7]            ; Merged with uartRead:read1|counter[7]  ;
 ; uartWrite:write1|counter[6]            ; Merged with uartRead:read1|counter[6]  ;
 ; uartWrite:write1|counter[4]            ; Merged with uartRead:read1|counter[4]  ;
-; uartWrite:write1|counter[3]            ; Merged with uartRead:read1|counter[3]  ;
-; uartWrite:write1|counter[5]            ; Merged with uartRead:read1|counter[5]  ;
 ; uartWrite:write1|counter[2]            ; Merged with uartRead:read1|counter[2]  ;
-; uartWrite:write1|counter[1]            ; Merged with uartRead:read1|counter[1]  ;
-; uartWrite:write1|counter[0]            ; Merged with uartRead:read1|counter[0]  ;
 ; stt_rx~7                               ; Lost fanout                            ;
 ; stt_rx~8                               ; Lost fanout                            ;
 ; stt_rx~9                               ; Lost fanout                            ;
@@ -332,7 +336,7 @@ Encoding Type:  One-Hot
 ; uartWrite:write1|stt_tx~9              ; Lost fanout                            ;
 ; uartRead:read1|stt_rx.00001001         ; Lost fanout                            ;
 ; stt_tx.00100                           ; Lost fanout                            ;
-; Total Number of Removed Registers = 35 ;                                        ;
+; Total Number of Removed Registers = 39 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -350,8 +354,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 143   ;
-; Number of registers using Synchronous Clear  ; 23    ;
+; Total registers                              ; 150   ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 9     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -366,11 +370,11 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |controllUart|cnt_rx[2]             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |controllUart|counter[14]           ;
-; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX1[3]               ;
-; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX2[3]               ;
-; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX3[2]               ;
-; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX4[1]               ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |controllUart|counter[2]            ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX1[0]               ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX2[6]               ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX3[3]               ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 42 LEs               ; 1148 LEs               ; Yes        ; |controllUart|HEX4[3]               ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |controllUart|uartRead:read1|stt_rx ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |controllUart|Selector5             ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |controllUart|Selector4             ;
@@ -383,25 +387,25 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 32                          ;
-; cycloneiii_ff         ; 143                         ;
+; cycloneiii_ff         ; 150                         ;
 ;     CLR               ; 5                           ;
 ;     ENA               ; 82                          ;
 ;     ENA CLR           ; 4                           ;
 ;     ENA SCLR          ; 5                           ;
-;     SCLR              ; 18                          ;
-;     plain             ; 29                          ;
-; cycloneiii_lcell_comb ; 148                         ;
-;     arith             ; 29                          ;
-;         2 data inputs ; 28                          ;
+;     SCLR              ; 21                          ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 158                         ;
+;     arith             ; 36                          ;
+;         2 data inputs ; 35                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 119                         ;
+;     normal            ; 122                         ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 27                          ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 73                          ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 81                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.60                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -420,7 +424,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sat Jun 29 10:48:36 2024
+    Info: Processing started: Sat Jun 29 16:39:21 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off controllUart -c controllUart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -430,34 +434,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file uartrea
     Info (12023): Found entity 1: uartRead File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controlluart.v
     Info (12023): Found entity 1: controllUart File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at uartRead.v(60): created implicit net for "input_rx" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at uartRead.v(69): created implicit net for "input_rx" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 69
 Info (12127): Elaborating entity "controllUart" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at controllUart.v(54): truncated value with size 32 to match size of target (5) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 54
 Info (10264): Verilog HDL Case Statement information at controllUart.v(48): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 48
-Warning (10230): Verilog HDL assignment warning at controllUart.v(83): truncated value with size 32 to match size of target (16) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 83
-Warning (10230): Verilog HDL assignment warning at controllUart.v(86): truncated value with size 32 to match size of target (5) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 86
-Warning (10230): Verilog HDL assignment warning at controllUart.v(168): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 168
+Warning (10230): Verilog HDL assignment warning at controllUart.v(84): truncated value with size 32 to match size of target (19) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 84
+Warning (10230): Verilog HDL assignment warning at controllUart.v(87): truncated value with size 32 to match size of target (5) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 87
 Warning (10230): Verilog HDL assignment warning at controllUart.v(169): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 169
 Warning (10230): Verilog HDL assignment warning at controllUart.v(170): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 170
 Warning (10230): Verilog HDL assignment warning at controllUart.v(171): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 171
-Info (12128): Elaborating entity "uartWrite" for hierarchy "uartWrite:write1" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 157
-Warning (10230): Verilog HDL assignment warning at uartWrite.v(37): truncated value with size 32 to match size of target (8) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 37
-Info (10264): Verilog HDL Case Statement information at uartWrite.v(45): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 45
-Info (12128): Elaborating entity "uartRead" for hierarchy "uartRead:read1" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 164
-Warning (10230): Verilog HDL assignment warning at uartRead.v(32): truncated value with size 32 to match size of target (8) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 32
-Info (10264): Verilog HDL Case Statement information at uartRead.v(46): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 46
+Warning (10230): Verilog HDL assignment warning at controllUart.v(172): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 172
+Info (12128): Elaborating entity "uartWrite" for hierarchy "uartWrite:write1" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 158
+Warning (10230): Verilog HDL assignment warning at uartWrite.v(39): truncated value with size 32 to match size of target (12) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 39
+Info (10264): Verilog HDL Case Statement information at uartWrite.v(47): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 47
+Info (12128): Elaborating entity "uartRead" for hierarchy "uartRead:read1" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 165
+Warning (10230): Verilog HDL assignment warning at uartRead.v(37): truncated value with size 32 to match size of target (12) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 37
+Info (10264): Verilog HDL Case Statement information at uartRead.v(52): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 52
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 25 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 214 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 224 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 182 logic cells
+    Info (21061): Implemented 192 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Sat Jun 29 10:48:44 2024
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Sat Jun 29 16:39:29 2024
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 

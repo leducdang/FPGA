@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jul  5 10:53:17 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : sdram_controller
+Top-level Entity Name : sdram_controller
+Family : Cyclone IV E
+Total logic elements : 245
+    Total combinational functions : 118
+    Dedicated logic registers : 212
+Total registers : 212
+Total pins : 152
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

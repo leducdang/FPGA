@@ -1,0 +1,161 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_vga_clock",
+					"strict" : false
+				},
+				{
+					"name" : "pin_bank",
+					"strict" : false
+				},
+				{
+					"name" : "pin_hs",
+					"strict" : false
+				},
+				{
+					"name" : "pin_vs",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

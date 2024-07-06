@@ -1,0 +1,257 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pinAddr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinCE",
+					"strict" : false
+				},
+				{
+					"name" : "pinOE",
+					"strict" : false
+				},
+				{
+					"name" : "pinWE",
+					"strict" : false
+				},
+				{
+					"name" : "pinUB",
+					"strict" : false
+				},
+				{
+					"name" : "pinLB",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pinLED[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData[15]",
+					"strict" : false
+				},
+				{
+					"name" : "input_sw_Addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
+					"strict" : false
+				},
+				{
+					"name" : "pinReset",
+					"strict" : false
+				},
+				{
+					"name" : "input_sw_Addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinRead",
+					"strict" : false
+				},
+				{
+					"name" : "pinWrite",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pinSW[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

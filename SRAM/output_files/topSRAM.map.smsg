@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at SRAM_CONTROLLER.v(49): extended using "x" or "z" File: D:/2024/FPGA/codeFPGAL_LIB/SRAM/SRAM_CONTROLLER.v Line: 49
+Warning (10273): Verilog HDL warning at SRAM_CONTROLLER.v(50): extended using "x" or "z" File: D:/2024/FPGA/codeFPGAL_LIB/SRAM/SRAM_CONTROLLER.v Line: 50

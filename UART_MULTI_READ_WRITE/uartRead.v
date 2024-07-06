@@ -14,22 +14,28 @@ output wire		feedback;			// khai báo tin hieu feedback dau ra
 
 reg	clock;							// xung clock voi baurade 115200/s
 reg	fb;
-reg	[7:0]		counter;				// 50000000:115200:2 = 217. tính so xung cho 1 nua chu ky baurate 115200/s
+//reg	[7:0]		counter;				// 50000000:115200:2 = 217. tính so xung cho 1 nua chu ky baurate 115200/s
+reg	[11:0]	counter  ;				// 50000000:9600:2 = 2604. tính so xung cho 1 nua chu ky baurate 9600 bit/s												
 reg	[7:0]		stt_rx;				//	trang thai khung nhan uart
 reg	rx_ready;
 reg	[7:0]		data_reciver;
+reg	delay;
+reg 	run;
 
 // hàm tao xung clock baurade 115200/s
 
 always@(posedge clock_50mhz)
 	begin
-		if(counter == 8'd216)
-			begin
-				counter<=0;
-				clock= ~clock; 		// tao xung clock có tan so 115200 bit/s
-			end
-		else
-			counter <= counter + 1;
+		begin
+//			if(counter == 8'd216)			//115200 bit/s
+			if(counter == 12'd2603)			//9600 bit/s
+				begin
+					counter <= 0;
+					clock	<= ~clock; 		// tao xung clock có tan so 115200 bit/s
+				end
+			else
+				counter <= counter + 1;
+		end
 	end
 	
 // chuong trinh nhan data
@@ -56,6 +62,9 @@ always@(posedge clock)
 				//8'd9:	
 			endcase
 		end
+		
+
+
 
 assign input_rx = rx_pin;				// doc trang thai chan rx
 assign data = data_reciver;			// gan du lieu cho ouput data voi du lieu nhan duoc, gui ve cho module top_level

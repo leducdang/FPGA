@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uartLib
-Fri Jun 28 13:15:57 2024
+Wed Jul  3 13:24:13 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 28 13:15:57 2024          ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul  3 13:24:13 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; uartLib                                        ;
 ; Top-level Entity Name              ; uartLib                                        ;
@@ -375,7 +375,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri Jun 28 13:15:50 2024
+    Info: Processing started: Wed Jul  3 13:24:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uartLib -c uartLib
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -426,10 +426,10 @@ Info (21057): Implemented 85 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 74 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Fri Jun 28 13:15:57 2024
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Wed Jul  3 13:24:13 2024
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +------------------------------------------+

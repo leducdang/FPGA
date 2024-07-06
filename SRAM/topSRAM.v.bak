@@ -1,0 +1,89 @@
+module topSRAM(clock_50mhz, 
+					pinAddr,
+					pinData,
+					pinCE,
+					pinOE,
+					pinWE,
+					pinUB,
+					pinLB,
+					pinSW,
+					pinLED,
+					pinRead,
+					pinWrite,
+					pinReset
+					);
+
+input				clock_50mhz;
+input	[19:0]	pinAddr;
+inout	[15:0]	pinData;
+output 			pinCE;
+output			pinOE;
+output			pinWE;
+output			pinUB;
+output			pinLB;
+input	[15:0]	pinSW;
+output[15:0]	pinLED;
+input				pinRead;
+input				pinWrite;
+input 			pinReset;
+
+reg	[19:0]	addr;
+reg 	[15:0]	dataWrite;
+reg	[15:0]	dataRead;
+reg	[3:0]		sttWrite;
+reg	[3:0]		sttRead
+reg				OE;
+reg				CE;
+reg				WE;
+reg				UB;
+reg				LB;
+
+always@(posedge clock_50mhz or negedge pinReset)
+begin
+	if(!pinReset) begin sttWrite <= 0;	CE <= 1; OE <= 1; WE <= 1; end 
+	else
+		begin
+			if(sttWrite == 4 && pinWrite == 0) sttWrite <= 0;
+			case(sttWrite)
+			4'd0:	begin dataWrite <= inputdata; addr <= 1; sttWrite <= 1; end
+			4'd1:	begin CE<=0; WE <= 0; sttWrite <= 2; end
+			4'd2:	sttWrite <= 3;
+			4'd3: begin sttWrite <= 4; CE<= 1; WE <= 1; end
+			
+		end
+	
+end
+
+
+
+always@(posedge clock_50mhz or negedge pinReset)
+begin
+	if(!pinReset) begin sttRead <= 0;	CE <= 1; OE <= 1; WE <= 1; end 
+	else
+		begin
+			if(sttRead == 5 && pinWrite == 0) sttRead <= 0;
+			case(sttRead)
+			4'd0:	begin dataRead <= inputdata; addr <= 1; sttRead <= 1; end
+			4'd1:	begin CE<=0; OE <= 0; sttRead <= 2; end
+			4'd2:	begin dataRead = 	data;		sttRead <= 3;
+			4'd3:	sttRead <= 4;
+			4'd4: begin sttRead <= 5; CE<= 1; OE <= 1;  end
+			
+		end
+	
+end
+
+
+
+assign data = pinData;
+assign inputdata = pinSW;
+assign pinData = dataWrite;
+assign pinAddr = addr;		
+assign pinCE = CE;
+assign pinOE = OE;
+assign pinWE = WE;
+assign pinUB = UB;
+assign pinLB = LB;
+assign pinLED = dataRead;	
+					
+endmodule

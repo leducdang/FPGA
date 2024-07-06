@@ -28,8 +28,8 @@ wire 	[127:0] chuoikitu = "** Thanh Hung **";			// khai bao chuoi du lieu can gu
 
 reg	[4:0] 	cnt_tx;											// khai bao bien thu tu du lieu được gửi đi
 reg	[4:0] 	cnt_rx;											// khai báo biến thứ tự dữ liệu nhận được
-reg	[15:0]	counter;     //50_000 = 1ms				// tạo 1 biến đếm để tạo tín hiệu ngắt 1ms, kiểm tra dũ liệu còn tiếp tục được gửi ko.
-
+//reg	[15:0]	counter;     //50_000 = 1ms; baudrate 115200	 // tạo 1 biến đếm để tạo tín hiệu ngắt 1ms, kiểm tra dũ liệu còn tiếp tục được gửi ko.
+reg	[18:0]	counter;     //50_000 = 10ms; baudrate 9600
 generate																						// khởi tao chuc năng vòng lặp
 	genvar i;
 		for( i = 1; i < 17; i = i+1)													// chuyển đổi dữ liệu cần gửi sang mảng dữ liệu 
@@ -73,8 +73,9 @@ always@(posedge clock or negedge reset)
 	
 always@(posedge clock)
 	begin
-		if(counter == 16'd49999)					// nêu sau 1ms không có dữ liệu nhận được thì reset biến nhân data đầu tiên về 0 và reset counter
-			begin
+//		if(counter == 16'd49999)	// baudrate 115200 bit/s				// nêu sau 1ms không có dữ liệu nhận được thì reset biến nhân data đầu tiên về 0 và reset counter
+		if(counter == 19'd499999)	// baudrate 9600 bit/s
+		begin
 				counter 	<= 0;
 				cnt_rx	<= 0;
 			end

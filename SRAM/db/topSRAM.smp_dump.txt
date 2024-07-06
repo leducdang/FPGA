@@ -1,0 +1,17 @@
+
+State Machine - |topSRAM|sttRead
+Name sttRead.0000 sttRead.0100 sttRead.0011 sttRead.0010 sttRead.0001 sttRead.0101 
+sttRead.0101 0 0 0 0 0 0 
+sttRead.0001 0 0 0 0 1 1 
+sttRead.0010 0 0 0 1 0 1 
+sttRead.0011 0 0 1 0 0 1 
+sttRead.0100 0 1 0 0 0 1 
+sttRead.0000 1 0 0 0 0 1 
+
+State Machine - |topSRAM|sttWrite
+Name sttWrite.0000 sttWrite.0011 sttWrite.0010 sttWrite.0001 sttWrite.0100 
+sttWrite.0100 0 0 0 0 0 
+sttWrite.0001 0 0 0 1 1 
+sttWrite.0010 0 0 1 0 1 
+sttWrite.0011 0 1 0 0 1 
+sttWrite.0000 1 0 0 0 1 

@@ -1,0 +1,228 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# Date created = 08:58:26  July 04, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		topSRAM_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY topSRAM
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:58:26  JULY 04, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCS64
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_Y2 -to clock_50mhz
+set_location_assignment PIN_AB7 -to pinAddr[0]
+set_location_assignment PIN_AD7 -to pinAddr[1]
+set_location_assignment PIN_AE7 -to pinAddr[2]
+set_location_assignment PIN_AC7 -to pinAddr[3]
+set_location_assignment PIN_AB6 -to pinAddr[4]
+set_location_assignment PIN_AE6 -to pinAddr[5]
+set_location_assignment PIN_AB5 -to pinAddr[6]
+set_location_assignment PIN_AC5 -to pinAddr[7]
+set_location_assignment PIN_AF5 -to pinAddr[8]
+set_location_assignment PIN_T7 -to pinAddr[9]
+set_location_assignment PIN_AF2 -to pinAddr[10]
+set_location_assignment PIN_AD3 -to pinAddr[11]
+set_location_assignment PIN_AB4 -to pinAddr[12]
+set_location_assignment PIN_AC3 -to pinAddr[13]
+set_location_assignment PIN_AA4 -to pinAddr[14]
+set_location_assignment PIN_AB11 -to pinAddr[15]
+set_location_assignment PIN_AC11 -to pinAddr[16]
+set_location_assignment PIN_AB9 -to pinAddr[17]
+set_location_assignment PIN_AB8 -to pinAddr[18]
+set_location_assignment PIN_T8 -to pinAddr[19]
+set_location_assignment PIN_AG3 -to pinData[15]
+set_location_assignment PIN_AH3 -to pinData[0]
+set_location_assignment PIN_AF4 -to pinData[1]
+set_location_assignment PIN_AG4 -to pinData[2]
+set_location_assignment PIN_AH4 -to pinData[3]
+set_location_assignment PIN_AF6 -to pinData[4]
+set_location_assignment PIN_AG6 -to pinData[5]
+set_location_assignment PIN_AH6 -to pinData[6]
+set_location_assignment PIN_AF7 -to pinData[7]
+set_location_assignment PIN_AD1 -to pinData[8]
+set_location_assignment PIN_AD2 -to pinData[9]
+set_location_assignment PIN_AE2 -to pinData[10]
+set_location_assignment PIN_AE1 -to pinData[11]
+set_location_assignment PIN_AE3 -to pinData[12]
+set_location_assignment PIN_AE4 -to pinData[13]
+set_location_assignment PIN_AF3 -to pinData[14]
+set_location_assignment PIN_AF8 -to pinCE
+set_location_assignment PIN_AD4 -to pinLB
+set_location_assignment PIN_AD5 -to pinOE
+set_location_assignment PIN_AC4 -to pinUB
+set_location_assignment PIN_AE8 -to pinWE
+set_location_assignment PIN_AB28 -to pinSW[0]
+set_location_assignment PIN_AC28 -to pinSW[1]
+set_location_assignment PIN_AC27 -to pinSW[2]
+set_location_assignment PIN_AD27 -to pinSW[3]
+set_location_assignment PIN_AB27 -to pinSW[4]
+set_location_assignment PIN_AC26 -to pinSW[5]
+set_location_assignment PIN_AD26 -to pinSW[6]
+set_location_assignment PIN_AB26 -to pinSW[7]
+set_location_assignment PIN_AC25 -to pinSW[8]
+set_location_assignment PIN_AB25 -to pinSW[9]
+set_location_assignment PIN_AC24 -to pinSW[10]
+set_location_assignment PIN_AB24 -to pinSW[11]
+set_location_assignment PIN_AB23 -to pinSW[12]
+set_location_assignment PIN_AA24 -to pinSW[13]
+set_location_assignment PIN_AA23 -to pinSW[14]
+set_location_assignment PIN_AA22 -to pinSW[15]
+set_location_assignment PIN_M23 -to pinReset
+set_location_assignment PIN_R24 -to pinWrite
+set_location_assignment PIN_N21 -to pinRead
+set_location_assignment PIN_G19 -to pinLED[0]
+set_location_assignment PIN_F19 -to pinLED[1]
+set_location_assignment PIN_E19 -to pinLED[2]
+set_location_assignment PIN_F21 -to pinLED[3]
+set_location_assignment PIN_F18 -to pinLED[4]
+set_location_assignment PIN_E18 -to pinLED[5]
+set_location_assignment PIN_J19 -to pinLED[6]
+set_location_assignment PIN_H19 -to pinLED[7]
+set_location_assignment PIN_J17 -to pinLED[8]
+set_location_assignment PIN_G17 -to pinLED[9]
+set_location_assignment PIN_J15 -to pinLED[10]
+set_location_assignment PIN_H16 -to pinLED[11]
+set_location_assignment PIN_J16 -to pinLED[12]
+set_location_assignment PIN_H17 -to pinLED[13]
+set_location_assignment PIN_F15 -to pinLED[14]
+set_location_assignment PIN_G15 -to pinLED[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clock_50mhz
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[19]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[18]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[17]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[16]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinCE
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLB
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLED[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinOE
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinRead
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinReset
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinSW[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinUB
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinWE
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinWrite
+set_global_assignment -name VERILOG_FILE topSRAM.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_Y24 -to input_sw_Addr[0]
+set_location_assignment PIN_Y23 -to input_sw_Addr[1]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -18,7 +18,8 @@ output wire		feedback;			// tra ve ket qua = 1 khi da gui xong data
 reg	clock;							// xung clock voi baurade 115200/s
 reg	fb;								// bien phan hoi ket qua
 reg 	tx;								// bien gan gia tri cho chan tx
-reg	[7:0]		counter;				// 50000000:115200:2 = 217. tính so xung cho 1 nua chu ky baurate 115200/s
+//reg	[7:0]		counter;				// 50000000:115200:2 = 217. tính so xung cho 1 nua chu ky baurate 115200/s
+reg	[11:0]	counter;				// 50000000:9600:2 = 2604. tính so xung cho 1 nua chu ky baurate 9600 bit/s
 reg	[7:0]		stt_tx;				//	trang thai khung truyen uart
 
 
@@ -28,7 +29,8 @@ reg	[7:0]		stt_tx;				//	trang thai khung truyen uart
 
 always@(posedge clock_50mhz)
 	begin
-		if(counter == 8'd216)
+//		if(counter == 8'd216)		// baurade 115200 bit/s
+		if(counter == 12'd2603)		// baurade	9600  bit/s
 			begin
 				counter<=0;
 				clock= ~clock; 												// đầu ra xung clock có tần số 115200/s
