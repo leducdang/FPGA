@@ -1,0 +1,253 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# Date created = 16:19:14  July 31, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		top_i2c_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY top_i2c
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:19:14  JULY 31, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VERILOG_FILE top_i2c.v
+set_global_assignment -name VERILOG_FILE i2c_de2.v
+set_global_assignment -name QIP_FILE PLL_I2C.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONEIII_CONFIGURATION_DEVICE EPCS64
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_Y2 -to clock_50mhz
+set_location_assignment PIN_M23 -to pin_RESET
+set_location_assignment PIN_AG22 -to pin_scl
+set_location_assignment PIN_AH22 -to pin_sda
+set_location_assignment PIN_R24 -to pin_write
+set_location_assignment PIN_AE20 -to pin_xclk_camera
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clock_50mhz
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_RESET
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_scl
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_sda
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_write
+set_global_assignment -name VERILOG_FILE output_files/camera_read_data.v
+set_global_assignment -name VERILOG_FILE sram.v
+set_global_assignment -name VERILOG_FILE vga.v
+set_location_assignment PIN_D12 -to pin_oVGA_B[7]
+set_location_assignment PIN_D11 -to pin_oVGA_B[6]
+set_location_assignment PIN_C12 -to pin_oVGA_B[5]
+set_location_assignment PIN_A11 -to pin_oVGA_B[4]
+set_location_assignment PIN_B11 -to pin_oVGA_B[3]
+set_location_assignment PIN_C11 -to pin_oVGA_B[2]
+set_location_assignment PIN_A10 -to pin_oVGA_B[1]
+set_location_assignment PIN_B10 -to pin_oVGA_B[0]
+set_location_assignment PIN_F11 -to pin_oVGA_BLANK
+set_location_assignment PIN_C9 -to pin_oVGA_G[7]
+set_location_assignment PIN_F10 -to pin_oVGA_G[6]
+set_location_assignment PIN_B8 -to pin_oVGA_G[5]
+set_location_assignment PIN_C8 -to pin_oVGA_G[4]
+set_location_assignment PIN_H12 -to pin_oVGA_G[3]
+set_location_assignment PIN_F8 -to pin_oVGA_G[2]
+set_location_assignment PIN_G11 -to pin_oVGA_G[1]
+set_location_assignment PIN_G8 -to pin_oVGA_G[0]
+set_location_assignment PIN_G13 -to pin_oVGA_HS
+set_location_assignment PIN_H10 -to pin_oVGA_R[7]
+set_location_assignment PIN_H8 -to pin_oVGA_R[6]
+set_location_assignment PIN_J12 -to pin_oVGA_R[5]
+set_location_assignment PIN_G10 -to pin_oVGA_R[4]
+set_location_assignment PIN_F12 -to pin_oVGA_R[3]
+set_location_assignment PIN_D10 -to pin_oVGA_R[2]
+set_location_assignment PIN_E11 -to pin_oVGA_R[1]
+set_location_assignment PIN_E12 -to pin_oVGA_R[0]
+set_location_assignment PIN_C10 -to pin_oVGA_SYNC
+set_location_assignment PIN_C13 -to pin_oVGA_VS
+set_location_assignment PIN_A12 -to pin_oVGA_CLOCK
+set_location_assignment PIN_AB28 -to pin_pickup
+set_location_assignment PIN_AC27 -to pin_show_image
+set_location_assignment PIN_AD5 -to pinOE_sram
+set_location_assignment PIN_AC4 -to pinUB_sram
+set_location_assignment PIN_AE8 -to pinWE_sram
+set_location_assignment PIN_AD4 -to pinLB_sram
+set_location_assignment PIN_AG3 -to pinData_sram[15]
+set_location_assignment PIN_AF3 -to pinData_sram[14]
+set_location_assignment PIN_AE4 -to pinData_sram[13]
+set_location_assignment PIN_AE3 -to pinData_sram[12]
+set_location_assignment PIN_AE1 -to pinData_sram[11]
+set_location_assignment PIN_AE2 -to pinData_sram[10]
+set_location_assignment PIN_AD2 -to pinData_sram[9]
+set_location_assignment PIN_AD1 -to pinData_sram[8]
+set_location_assignment PIN_AF7 -to pinData_sram[7]
+set_location_assignment PIN_AH6 -to pinData_sram[6]
+set_location_assignment PIN_AG6 -to pinData_sram[5]
+set_location_assignment PIN_AF6 -to pinData_sram[4]
+set_location_assignment PIN_AH4 -to pinData_sram[3]
+set_location_assignment PIN_AG4 -to pinData_sram[2]
+set_location_assignment PIN_AF4 -to pinData_sram[1]
+set_location_assignment PIN_AH3 -to pinData_sram[0]
+set_location_assignment PIN_AF8 -to pinCE_sram
+set_location_assignment PIN_T8 -to pinAddr_sram[19]
+set_location_assignment PIN_AB8 -to pinAddr_sram[18]
+set_location_assignment PIN_AB9 -to pinAddr_sram[17]
+set_location_assignment PIN_AC11 -to pinAddr_sram[16]
+set_location_assignment PIN_AB11 -to pinAddr_sram[15]
+set_location_assignment PIN_AA4 -to pinAddr_sram[14]
+set_location_assignment PIN_AC3 -to pinAddr_sram[13]
+set_location_assignment PIN_AB4 -to pinAddr_sram[12]
+set_location_assignment PIN_AD3 -to pinAddr_sram[11]
+set_location_assignment PIN_AF2 -to pinAddr_sram[10]
+set_location_assignment PIN_T7 -to pinAddr_sram[9]
+set_location_assignment PIN_AF5 -to pinAddr_sram[8]
+set_location_assignment PIN_AC5 -to pinAddr_sram[7]
+set_location_assignment PIN_AB5 -to pinAddr_sram[6]
+set_location_assignment PIN_AE6 -to pinAddr_sram[5]
+set_location_assignment PIN_AB6 -to pinAddr_sram[4]
+set_location_assignment PIN_AC7 -to pinAddr_sram[3]
+set_location_assignment PIN_AE7 -to pinAddr_sram[2]
+set_location_assignment PIN_AD7 -to pinAddr_sram[1]
+set_location_assignment PIN_AB7 -to pinAddr_sram[0]
+set_location_assignment PIN_AB22 -to pin_data[0]
+set_location_assignment PIN_AC15 -to pin_data[1]
+set_location_assignment PIN_AB21 -to pin_data[2]
+set_location_assignment PIN_Y17 -to pin_data[3]
+set_location_assignment PIN_AC21 -to pin_data[4]
+set_location_assignment PIN_Y16 -to pin_data[5]
+set_location_assignment PIN_AD21 -to pin_data[6]
+set_location_assignment PIN_AE16 -to pin_data[7]
+set_location_assignment PIN_AE15 -to pin_clock_pclk
+set_location_assignment PIN_AF16 -to pin_vs
+set_location_assignment PIN_AC19 -to pin_href
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[19]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[18]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[17]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[16]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinAddr_sram[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinCE_sram
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinData_sram[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinLB_sram
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinOE_sram
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinUB_sram
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pinWE_sram
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_clock_pclk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_data[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_B[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_BLANK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_CLOCK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_G[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_HS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_R[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_SYNC
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_oVGA_VS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_pickup
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_show_image
+set_location_assignment PIN_G19 -to pin_led
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_href
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pin_vs
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

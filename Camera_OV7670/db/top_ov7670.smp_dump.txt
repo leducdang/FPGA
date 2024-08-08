@@ -1,0 +1,31 @@
+
+State Machine - |top_ov7670|fsmCamera
+Name fsmCamera.0011 fsmCamera.0010 fsmCamera.0001 fsmCamera.0000 fsmCamera.0100 
+fsmCamera.0000 0 0 0 0 0 
+fsmCamera.0001 0 0 1 1 0 
+fsmCamera.0010 0 1 0 1 0 
+fsmCamera.0011 1 0 0 1 0 
+fsmCamera.0100 0 0 0 1 1 
+
+State Machine - |top_ov7670|fsmVGA
+Name fsmVGA.0011 fsmVGA.0010 fsmVGA.0001 fsmVGA.0000 
+fsmVGA.0000 0 0 0 0 
+fsmVGA.0001 0 0 1 1 
+fsmVGA.0010 0 1 0 1 
+fsmVGA.0011 1 0 0 1 
+
+State Machine - |top_ov7670|camera_read:u4|FSM_state
+Name FSM_state.ROW_CAPTURE 
+FSM_state.00 0 
+FSM_state.ROW_CAPTURE 1 
+
+State Machine - |top_ov7670|config_camera:u2|stt
+Name stt.00000 stt.00110 stt.00101 stt.00100 stt.00011 stt.00010 stt.00001 stt.11111 
+stt.11111 0 0 0 0 0 0 0 0 
+stt.00001 0 0 0 0 0 0 1 1 
+stt.00010 0 0 0 0 0 1 0 1 
+stt.00011 0 0 0 0 1 0 0 1 
+stt.00100 0 0 0 1 0 0 0 1 
+stt.00101 0 0 1 0 0 0 0 1 
+stt.00110 0 1 0 0 0 0 0 1 
+stt.00000 1 0 0 0 0 0 0 1 

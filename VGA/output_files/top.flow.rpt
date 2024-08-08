@@ -1,5 +1,5 @@
 Flow report for top
-Wed Jul  3 15:28:27 2024
+Tue Jul 16 09:55:44 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jul  3 15:28:27 2024          ;
+; Flow Status                        ; Successful - Tue Jul 16 09:55:44 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; top                                            ;
 ; Top-level Entity Name              ; top                                            ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/03/2024 15:28:01 ;
+; Start date & time ; 07/16/2024 09:55:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 2545931656683.171999528102832          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 2545931656683.172109851305416          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -105,12 +105,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4782 MB             ; 00:00:07                           ;
-; Fitter               ; 00:00:11     ; 1.0                     ; 5713 MB             ; 00:00:08                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4718 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4859 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4782 MB             ; 00:00:07                           ;
+; Fitter               ; 00:00:13     ; 1.0                     ; 5708 MB             ; 00:00:09                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4715 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4859 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4652 MB             ; 00:00:00                           ;
-; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:19                           ;
+; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

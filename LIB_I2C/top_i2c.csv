@@ -1,0 +1,112 @@
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# File: D:\2024\FPGA\codeFPGAL_LIB\LIB_I2C\top_i2c.csv
+# Generated on: Sat Aug  3 16:36:40 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clock_50mhz,Input,PIN_Y2,2,B2_N0,PIN_Y2,2.5 V,,,,,
+pinAddr_sram[19],Output,PIN_T8,2,B2_N1,PIN_T8,2.5 V,,,,,
+pinAddr_sram[18],Output,PIN_AB8,3,B3_N2,PIN_AB8,2.5 V,,,,,
+pinAddr_sram[17],Output,PIN_AB9,3,B3_N2,PIN_AB9,2.5 V,,,,,
+pinAddr_sram[16],Output,PIN_AC11,3,B3_N0,PIN_AC11,2.5 V,,,,,
+pinAddr_sram[15],Output,PIN_AB11,3,B3_N1,PIN_AB11,2.5 V,,,,,
+pinAddr_sram[14],Output,PIN_AA4,2,B2_N1,PIN_AA4,2.5 V,,,,,
+pinAddr_sram[13],Output,PIN_AC3,2,B2_N1,PIN_AC3,2.5 V,,,,,
+pinAddr_sram[12],Output,PIN_AB4,2,B2_N2,PIN_AB4,2.5 V,,,,,
+pinAddr_sram[11],Output,PIN_AD3,2,B2_N1,PIN_AD3,2.5 V,,,,,
+pinAddr_sram[10],Output,PIN_AF2,2,B2_N2,PIN_AF2,2.5 V,,,,,
+pinAddr_sram[9],Output,PIN_T7,2,B2_N0,PIN_T7,2.5 V,,,,,
+pinAddr_sram[8],Output,PIN_AF5,3,B3_N2,PIN_AF5,2.5 V,,,,,
+pinAddr_sram[7],Output,PIN_AC5,2,B2_N2,PIN_AC5,2.5 V,,,,,
+pinAddr_sram[6],Output,PIN_AB5,2,B2_N2,PIN_AB5,2.5 V,,,,,
+pinAddr_sram[5],Output,PIN_AE6,3,B3_N2,PIN_AE6,2.5 V,,,,,
+pinAddr_sram[4],Output,PIN_AB6,2,B2_N2,PIN_AB6,2.5 V,,,,,
+pinAddr_sram[3],Output,PIN_AC7,3,B3_N2,PIN_AC7,2.5 V,,,,,
+pinAddr_sram[2],Output,PIN_AE7,3,B3_N1,PIN_AE7,2.5 V,,,,,
+pinAddr_sram[1],Output,PIN_AD7,3,B3_N2,PIN_AD7,2.5 V,,,,,
+pinAddr_sram[0],Output,PIN_AB7,3,B3_N1,PIN_AB7,2.5 V,,,,,
+pinCE_sram,Output,PIN_AF8,3,B3_N1,PIN_AF8,2.5 V,,,,,
+pinData_sram[15],Bidir,PIN_AG3,3,B3_N2,PIN_AG3,2.5 V,,,,,
+pinData_sram[14],Bidir,PIN_AF3,3,B3_N2,PIN_AF3,2.5 V,,,,,
+pinData_sram[13],Bidir,PIN_AE4,3,B3_N2,PIN_AE4,2.5 V,,,,,
+pinData_sram[12],Bidir,PIN_AE3,2,B2_N2,PIN_AE3,2.5 V,,,,,
+pinData_sram[11],Bidir,PIN_AE1,2,B2_N1,PIN_AE1,2.5 V,,,,,
+pinData_sram[10],Bidir,PIN_AE2,2,B2_N1,PIN_AE2,2.5 V,,,,,
+pinData_sram[9],Bidir,PIN_AD2,2,B2_N1,PIN_AD2,2.5 V,,,,,
+pinData_sram[8],Bidir,PIN_AD1,2,B2_N1,PIN_AD1,2.5 V,,,,,
+pinData_sram[7],Bidir,PIN_AF7,3,B3_N1,PIN_AF7,2.5 V,,,,,
+pinData_sram[6],Bidir,PIN_AH6,3,B3_N2,PIN_AH6,2.5 V,,,,,
+pinData_sram[5],Bidir,PIN_AG6,3,B3_N2,PIN_AG6,2.5 V,,,,,
+pinData_sram[4],Bidir,PIN_AF6,3,B3_N2,PIN_AF6,2.5 V,,,,,
+pinData_sram[3],Bidir,PIN_AH4,3,B3_N2,PIN_AH4,2.5 V,,,,,
+pinData_sram[2],Bidir,PIN_AG4,3,B3_N2,PIN_AG4,2.5 V,,,,,
+pinData_sram[1],Bidir,PIN_AF4,3,B3_N2,PIN_AF4,2.5 V,,,,,
+pinData_sram[0],Bidir,PIN_AH3,3,B3_N2,PIN_AH3,2.5 V,,,,,
+pinLB_sram,Output,PIN_AD4,3,B3_N2,PIN_AD4,2.5 V,,,,,
+pinOE_sram,Output,PIN_AD5,3,B3_N2,PIN_AD5,2.5 V,,,,,
+pinUB_sram,Output,PIN_AC4,2,B2_N2,PIN_AC4,2.5 V,,,,,
+pinWE_sram,Output,PIN_AE8,3,B3_N1,PIN_AE8,2.5 V,,,,,
+pin_RESET,Input,PIN_M23,6,B6_N2,PIN_M23,2.5 V,,,,,
+pin_clock_pclk,Input,PIN_AE15,4,B4_N2,PIN_AE15,2.5 V,,,,,
+pin_data[7],Input,PIN_AE16,4,B4_N2,PIN_AE16,2.5 V,,,,,
+pin_data[6],Input,PIN_AD21,4,B4_N0,PIN_AD21,2.5 V,,,,,
+pin_data[5],Input,PIN_Y16,4,B4_N0,PIN_Y16,2.5 V,,,,,
+pin_data[4],Input,PIN_AC21,4,B4_N0,PIN_AC21,2.5 V,,,,,
+pin_data[3],Input,PIN_Y17,4,B4_N0,PIN_Y17,2.5 V,,,,,
+pin_data[2],Input,PIN_AB21,4,B4_N0,PIN_AB21,2.5 V,,,,,
+pin_data[1],Input,PIN_AC15,4,B4_N2,PIN_AC15,2.5 V,,,,,
+pin_data[0],Input,PIN_AB22,4,B4_N0,PIN_AB22,2.5 V,,,,,
+pin_href,Input,PIN_AC19,4,B4_N0,PIN_AC19,2.5 V,,,,,
+pin_led,Output,PIN_G19,7,B7_N2,PIN_G19,2.5 V,,,,,
+pin_oVGA_B[7],Output,PIN_D12,8,B8_N0,PIN_D12,2.5 V,,,,,
+pin_oVGA_B[6],Output,PIN_D11,8,B8_N1,PIN_D11,2.5 V,,,,,
+pin_oVGA_B[5],Output,PIN_C12,8,B8_N0,PIN_C12,2.5 V,,,,,
+pin_oVGA_B[4],Output,PIN_A11,8,B8_N0,PIN_A11,2.5 V,,,,,
+pin_oVGA_B[3],Output,PIN_B11,8,B8_N0,PIN_B11,2.5 V,,,,,
+pin_oVGA_B[2],Output,PIN_C11,8,B8_N1,PIN_C11,2.5 V,,,,,
+pin_oVGA_B[1],Output,PIN_A10,8,B8_N0,PIN_A10,2.5 V,,,,,
+pin_oVGA_B[0],Output,PIN_B10,8,B8_N0,PIN_B10,2.5 V,,,,,
+pin_oVGA_BLANK,Output,PIN_F11,8,B8_N1,PIN_F11,2.5 V,,,,,
+pin_oVGA_CLOCK,Output,PIN_A12,8,B8_N0,PIN_A12,2.5 V,,,,,
+pin_oVGA_G[7],Output,PIN_C9,8,B8_N1,PIN_C9,2.5 V,,,,,
+pin_oVGA_G[6],Output,PIN_F10,8,B8_N1,PIN_F10,2.5 V,,,,,
+pin_oVGA_G[5],Output,PIN_B8,8,B8_N1,PIN_B8,2.5 V,,,,,
+pin_oVGA_G[4],Output,PIN_C8,8,B8_N1,PIN_C8,2.5 V,,,,,
+pin_oVGA_G[3],Output,PIN_H12,8,B8_N1,PIN_H12,2.5 V,,,,,
+pin_oVGA_G[2],Output,PIN_F8,8,B8_N2,PIN_F8,2.5 V,,,,,
+pin_oVGA_G[1],Output,PIN_G11,8,B8_N1,PIN_G11,2.5 V,,,,,
+pin_oVGA_G[0],Output,PIN_G8,8,B8_N2,PIN_G8,2.5 V,,,,,
+pin_oVGA_HS,Output,PIN_G13,8,B8_N0,PIN_G13,2.5 V,,,,,
+pin_oVGA_R[7],Output,PIN_H10,8,B8_N1,PIN_H10,2.5 V,,,,,
+pin_oVGA_R[6],Output,PIN_H8,8,B8_N2,PIN_H8,2.5 V,,,,,
+pin_oVGA_R[5],Output,PIN_J12,8,B8_N0,PIN_J12,2.5 V,,,,,
+pin_oVGA_R[4],Output,PIN_G10,8,B8_N1,PIN_G10,2.5 V,,,,,
+pin_oVGA_R[3],Output,PIN_F12,8,B8_N1,PIN_F12,2.5 V,,,,,
+pin_oVGA_R[2],Output,PIN_D10,8,B8_N1,PIN_D10,2.5 V,,,,,
+pin_oVGA_R[1],Output,PIN_E11,8,B8_N1,PIN_E11,2.5 V,,,,,
+pin_oVGA_R[0],Output,PIN_E12,8,B8_N1,PIN_E12,2.5 V,,,,,
+pin_oVGA_SYNC,Output,PIN_C10,8,B8_N0,PIN_C10,2.5 V,,,,,
+pin_oVGA_VS,Output,PIN_C13,8,B8_N0,PIN_C13,2.5 V,,,,,
+pin_pickup,Input,PIN_AB28,5,B5_N1,PIN_AB28,2.5 V,,,,,
+pin_scl,Output,PIN_AG22,4,B4_N1,PIN_AG22,2.5 V,,,,,
+pin_sda,Bidir,PIN_AH22,4,B4_N1,PIN_AH22,2.5 V,,,,,
+pin_show_image,Input,PIN_AC27,5,B5_N2,PIN_AC27,2.5 V,,,,,
+pin_vs,Input,PIN_AF16,4,B4_N2,PIN_AF16,2.5 V,,,,,
+pin_write,Input,PIN_R24,5,B5_N0,PIN_R24,2.5 V,,,,,
+pin_xclk_camera,Output,PIN_AE20,4,B4_N1,PIN_AE5,,,,,,

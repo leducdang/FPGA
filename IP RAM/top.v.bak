@@ -1,0 +1,52 @@
+module top(clock_50mhz,
+				pin_addr,
+				pin_dataOut,
+				pin_write,
+				pin_dataIn,
+				);
+
+				
+input clock_50mhz;
+input	[7:0]	pin_addr;
+input	pin_write;
+input [7:0]	pin_dataIn;
+output	[7:0]	pin_dataOut;
+
+reg	rw_en;			
+				
+				
+wire [7:0]	data_out;	
+
+
+
+always@(posedge clock_50mhz)
+begin
+	if(pin_write) rw_en	<=	1;
+	else	rw_en <=	0;
+	
+end
+
+			
+
+ram1	u1(
+			.address(pin_addr),
+			.clock(clock_50mhz),
+			.data(pin_dataIn),
+			.wren(rw_en;),
+			.q(data_out)
+			);			
+				
+				
+assign pin_dataOut = data_out;							
+
+					
+endmodule			
+				
+/*				
+module ram1 (
+	address,
+	clock,
+	data,
+	wren,
+	q);
+*/

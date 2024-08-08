@@ -1,0 +1,22 @@
+module top( clock_50,
+				pin_reset,
+				pin_start,
+				pin_setup,
+				pin_led_ready,
+				audio_i2c_clock,
+				audio_i2c_data,
+				pin_AUD_XCK,
+				pin_AUD_BCLK,
+				pin_AUD_DACDAT,
+				pin_AUD_DACLRCK,
+				pin_AUD_ADCDAT,
+				pin_AUD_ADCLRCK
+				);
+				
+				
+				
+				
+
+				
+				
+endmodule

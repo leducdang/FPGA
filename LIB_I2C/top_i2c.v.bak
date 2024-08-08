@@ -1,0 +1,18 @@
+module top_i2c(
+					clock_50mhz,
+					pin_sda,
+					pin_scl
+					);
+					
+					
+					
+					
+					
+input 	clock_50mhz;
+output 	pin_scl;
+inout 	pin_sda;
+					
+					
+					
+					
+endmodule

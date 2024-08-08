@@ -1,0 +1,30 @@
+	component ed_synth is
+		port (
+			emif_status_local_cal_fail    : out   std_logic;                                        -- local_cal_fail
+			emif_status_local_cal_success : out   std_logic;                                        -- local_cal_success
+			emif_status_local_init_done   : out   std_logic;                                        -- local_init_done
+			global_reset_reset_n          : in    std_logic                     := 'X';             -- reset_n
+			mem_mem_a                     : out   std_logic_vector(12 downto 0);                    -- mem_a
+			mem_mem_ba                    : out   std_logic_vector(1 downto 0);                     -- mem_ba
+			mem_mem_cas_n                 : out   std_logic;                                        -- mem_cas_n
+			mem_mem_cke                   : out   std_logic;                                        -- mem_cke
+			mem_mem_ck                    : inout std_logic                     := 'X';             -- mem_ck
+			mem_mem_ck_n                  : inout std_logic                     := 'X';             -- mem_ck_n
+			mem_mem_cs_n                  : out   std_logic;                                        -- mem_cs_n
+			mem_mem_dm                    : out   std_logic;                                        -- mem_dm
+			mem_mem_dq                    : inout std_logic_vector(7 downto 0)  := (others => 'X'); -- mem_dq
+			mem_mem_dqs                   : inout std_logic                     := 'X';             -- mem_dqs
+			mem_mem_dqs_n                 : inout std_logic                     := 'X';             -- mem_dqs_n
+			mem_mem_odt                   : out   std_logic;                                        -- mem_odt
+			mem_mem_ras_n                 : out   std_logic;                                        -- mem_ras_n
+			mem_mem_we_n                  : out   std_logic;                                        -- mem_we_n
+			phy_clk_clk                   : out   std_logic;                                        -- clk
+			pll_ref_clk_clk               : in    std_logic                     := 'X';             -- clk
+			tg_pnf_pnf_per_bit            : out   std_logic_vector(15 downto 0);                    -- pnf_per_bit
+			tg_pnf_pnf_per_bit_persist    : out   std_logic_vector(15 downto 0);                    -- pnf_per_bit_persist
+			tg_status_pass                : out   std_logic;                                        -- pass
+			tg_status_fail                : out   std_logic;                                        -- fail
+			tg_status_test_complete       : out   std_logic                                         -- test_complete
+		);
+	end component ed_synth;
+

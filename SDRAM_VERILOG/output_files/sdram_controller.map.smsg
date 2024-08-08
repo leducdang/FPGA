@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at sdram_controller.v(64): always construct contains both blocking and non-blocking assignments File: D:/2024/FPGA/codeFPGAL_LIB/SDRAM_VERILOG/sdram_controller.v Line: 64

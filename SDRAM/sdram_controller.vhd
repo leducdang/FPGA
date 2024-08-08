@@ -79,7 +79,7 @@ begin
 		elsif (stb_i='1' and cyc_i='1') then 
 		  addr_r <= addr_i;
 		  dat_i_r <= dat_i;
-		  we_i_r <= we_i;
+		  we_i_r <= we_i;   				--1 la ghi 0 la doc
 		  stb_i_r <= stb_i;
 		end if;
     end if;

@@ -72,10 +72,10 @@ begin
 			endcase
 			
 			case(input_sw_Addr)				// kiem tra cac dau vao chan dia chi
-				2'b00: addr <= 20'd10;		// gan dia chi neu 2 chan == 00
-				2'b01: addr <= 20'd11;		// gan dia chi neu 2 chan == 01
-				2'b10: addr <= 20'd12;		// gan dia chi neu 2 chan == 10
-				2'b11: addr <= 20'd13;		// gan dia chi neu 2 chan == 11
+				2'b00: addr <= 20'd0;		// gan dia chi neu 2 chan == 00
+				2'b01: addr <= 20'd1;		// gan dia chi neu 2 chan == 01
+				2'b10: addr <= 20'd2;		// gan dia chi neu 2 chan == 10
+				2'b11: addr <= 20'd3;		// gan dia chi neu 2 chan == 11
 			endcase
 				
 		end

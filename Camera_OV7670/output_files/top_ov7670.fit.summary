@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Aug  8 15:33:16 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : top_ov7670
+Top-level Entity Name : top_ov7670
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 400 / 114,480 ( < 1 % )
+    Total combinational functions : 320 / 114,480 ( < 1 % )
+    Dedicated logic registers : 236 / 114,480 ( < 1 % )
+Total registers : 236
+Total pins : 113 / 529 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 1,616 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

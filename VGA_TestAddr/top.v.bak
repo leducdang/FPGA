@@ -1,0 +1,20 @@
+module top(	input clock_50mhz,
+				output	clock_25mhz,
+				input reset
+				);
+			
+reg clock;	
+	
+
+always@(posedge clock_50mhz or negedge reset)
+begin 
+	if(!reset) clock <= 0;
+	else
+		clock <= ~clock;
+		
+end
+
+
+assign clock_25mhz = clock;
+
+endmodule

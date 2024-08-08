@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Aug  8 15:33:04 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : top_ov7670
+Top-level Entity Name : top_ov7670
+Family : Cyclone IV E
+Total logic elements : 419
+    Total combinational functions : 320
+    Dedicated logic registers : 252
+Total registers : 252
+Total pins : 113
+Total virtual pins : 0
+Total memory bits : 1,616
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

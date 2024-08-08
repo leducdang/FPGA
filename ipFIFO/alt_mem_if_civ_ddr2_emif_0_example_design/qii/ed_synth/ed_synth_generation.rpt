@@ -1,0 +1,22 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\DELL\AppData\Local\Temp\alt9919_2309074667928930051.dir\0002_alt_mem_if_civ_ddr2_emif_0_gen\qii\ed_synth.qsys --synthesis=VERILOG --output-directory=C:\Users\DELL\AppData\Local\Temp\alt9919_2309074667928930051.dir\0002_alt_mem_if_civ_ddr2_emif_0_gen\qii\ed_synth\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading qii/ed_synth.qsys
+Progress: Reading input file
+Progress: Adding ed_synth [alt_mem_if_civ_ddr2_tg_ed 1.0.0]
+Progress: Parameterizing module ed_synth
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: ed_synth.ed_synth.emif.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: ed_synth: Generating ed_synth "ed_synth" for QUARTUS_SYNTH
+Info: ed_synth: "ed_synth" instantiated alt_mem_if_civ_ddr2_tg_ed "ed_synth"
+Info: emif: "ed_synth" instantiated alt_mem_if_civ_ddr2_emif "emif"
+Info: tg: "ed_synth" instantiated altera_avalon_mm_traffic_generator "tg"
+Info: phy: "emif" instantiated alt_mem_if_civ_ddr2_phy "phy"
+Info: ctl: "emif" instantiated alt_mem_if_civ_ddr2_controller "ctl"
+Info: status_bridge: "emif" instantiated alt_mem_if_civ_ddr2_status_bridge "status_bridge"
+Info: traffic_generator_0: "tg" instantiated altera_avalon_mm_traffic_generator_core "traffic_generator_0"
+Info: ed_synth: Done "ed_synth" with 8 modules, 101 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

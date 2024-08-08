@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_dataOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_write",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_dataIn[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

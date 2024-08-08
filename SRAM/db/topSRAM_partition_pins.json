@@ -12,10 +12,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "pinAddr[2]",
-					"strict" : false
-				},
-				{
 					"name" : "pinCE",
 					"strict" : false
 				},

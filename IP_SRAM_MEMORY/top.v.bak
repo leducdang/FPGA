@@ -1,0 +1,15 @@
+module top(
+				clock_50mhz,
+				pin_reset,
+				pin_sw_addr,
+				pin_sw_data,
+				pin_led_odata,
+				
+				
+				
+				);
+				
+
+				
+				
+endmodule

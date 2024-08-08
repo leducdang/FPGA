@@ -1,0 +1,7 @@
+	component ed_sim is
+		port (
+			tg_pnf_pnf_per_bit         : out std_logic_vector(15 downto 0);  -- pnf_per_bit
+			tg_pnf_pnf_per_bit_persist : out std_logic_vector(15 downto 0)   -- pnf_per_bit_persist
+		);
+	end component ed_sim;
+

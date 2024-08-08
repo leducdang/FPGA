@@ -1,0 +1,19 @@
+module top(
+				clock_50mhz,
+				data_in,
+				data_out,
+				wr_en,
+				rd_en
+				);
+				
+input 			clock_50mhz;
+input [7:0]		data_in;
+output	[7:0]	data_out;
+input 			wr_en;
+input 			rd_en;
+
+
+
+
+	
+endmodule

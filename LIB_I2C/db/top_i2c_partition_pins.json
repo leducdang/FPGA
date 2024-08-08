@@ -1,0 +1,353 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_scl",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[16]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[17]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[18]",
+					"strict" : false
+				},
+				{
+					"name" : "pinAddr_sram[19]",
+					"strict" : false
+				},
+				{
+					"name" : "pinCE_sram",
+					"strict" : false
+				},
+				{
+					"name" : "pinOE_sram",
+					"strict" : false
+				},
+				{
+					"name" : "pinWE_sram",
+					"strict" : false
+				},
+				{
+					"name" : "pinUB_sram",
+					"strict" : false
+				},
+				{
+					"name" : "pinLB_sram",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_R[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "pin_oVGA_BLANK",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sda",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pinData_sram[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_RESET",
+					"strict" : false
+				},
+				{
+					"name" : "pin_show_image",
+					"strict" : false
+				},
+				{
+					"name" : "pin_pickup",
+					"strict" : false
+				},
+				{
+					"name" : "pin_clock_pclk",
+					"strict" : false
+				},
+				{
+					"name" : "pin_href",
+					"strict" : false
+				},
+				{
+					"name" : "pin_vs",
+					"strict" : false
+				},
+				{
+					"name" : "pin_write",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

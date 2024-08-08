@@ -1,5 +1,5 @@
 Timing Analyzer report for topSRAM
-Fri Jul  5 08:20:52 2024
+Fri Aug  2 11:27:35 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -117,13 +117,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                        ;
-+-----------+-----------------+-------------+---------------------------------------------------------------+
-; Fmax      ; Restricted Fmax ; Clock Name  ; Note                                                          ;
-+-----------+-----------------+-------------+---------------------------------------------------------------+
-; 427.9 MHz ; 250.0 MHz       ; clock_50mhz ; limit due to minimum period restriction (max I/O toggle rate) ;
-+-----------+-----------------+-------------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                         ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note                                                          ;
++------------+-----------------+-------------+---------------------------------------------------------------+
+; 427.35 MHz ; 250.0 MHz       ; clock_50mhz ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+-------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -138,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; clock_50mhz ; -1.337 ; -44.060       ;
+; clock_50mhz ; -1.340 ; -43.411       ;
 +-------------+--------+---------------+
 
 
@@ -168,7 +168,7 @@ No paths to report.
 +-------------+--------+----------------------------+
 ; Clock       ; Slack  ; End Point TNS              ;
 +-------------+--------+----------------------------+
-; clock_50mhz ; -3.000 ; -86.525                    ;
+; clock_50mhz ; -3.000 ; -85.240                    ;
 +-------------+--------+----------------------------+
 
 
@@ -177,106 +177,106 @@ No paths to report.
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
-; -1.337 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 2.255      ;
-; -1.337 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 2.255      ;
-; -1.337 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 2.255      ;
-; -1.337 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 2.255      ;
-; -1.337 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 2.255      ;
-; -1.337 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 2.255      ;
-; -1.129 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.129 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.046      ;
-; -1.113 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.446      ;
-; -1.113 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.446      ;
-; -1.113 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.446      ;
-; -1.113 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.446      ;
-; -0.973 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.891      ;
-; -0.973 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.891      ;
-; -0.973 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.891      ;
-; -0.973 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.891      ;
-; -0.973 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.891      ;
-; -0.973 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.891      ;
-; -0.881 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.881 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.881 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.881 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.881 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.881 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.881 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.881 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.215      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.765 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.682      ;
-; -0.763 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.096      ;
-; -0.763 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.096      ;
-; -0.763 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.096      ;
-; -0.763 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.335      ; 2.096      ;
-; -0.718 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.635      ;
-; -0.700 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.617      ;
-; -0.543 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.460      ;
-; -0.519 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.304      ; 1.821      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.517 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.851      ;
-; -0.425 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.074     ; 1.349      ;
-; -0.394 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.088     ; 1.304      ;
+; -1.340 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.257      ;
+; -1.340 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.257      ;
+; -1.340 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.257      ;
+; -1.340 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.257      ;
+; -1.340 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 2.257      ;
+; -1.141 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.141 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 2.057      ;
+; -1.096 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.428      ;
+; -1.096 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.428      ;
+; -1.096 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.428      ;
+; -1.096 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.428      ;
+; -1.096 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.428      ;
+; -1.096 ; sttRead.0000  ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.428      ;
+; -0.976 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.893      ;
+; -0.976 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.893      ;
+; -0.976 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.893      ;
+; -0.976 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.893      ;
+; -0.976 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.893      ;
+; -0.883 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.217      ;
+; -0.883 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.217      ;
+; -0.883 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.217      ;
+; -0.883 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.217      ;
+; -0.883 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.217      ;
+; -0.883 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.217      ;
+; -0.883 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 2.217      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.777 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.693      ;
+; -0.739 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.071      ;
+; -0.739 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.071      ;
+; -0.739 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.071      ;
+; -0.739 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.071      ;
+; -0.739 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.071      ;
+; -0.739 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 2.071      ;
+; -0.725 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.642      ;
+; -0.689 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.606      ;
+; -0.572 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.306      ; 1.876      ;
+; -0.543 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.096     ; 1.445      ;
+; -0.542 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.459      ;
+; -0.519 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.853      ;
+; -0.519 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.853      ;
+; -0.519 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.853      ;
+; -0.519 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.853      ;
+; -0.519 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.853      ;
+; -0.519 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.853      ;
+; -0.519 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.336      ; 1.853      ;
 ; -0.394 ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.311      ;
-; -0.388 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.304      ;
-; -0.372 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.074     ; 1.296      ;
-; -0.335 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.088     ; 1.245      ;
-; -0.315 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.315 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.334      ; 1.647      ;
-; -0.239 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.156      ;
-; -0.219 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.136      ;
-; -0.207 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.082     ; 1.123      ;
-; -0.090 ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.008      ;
-; -0.090 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 1.008      ;
-; -0.070 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 0.988      ;
-; -0.049 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.966      ;
-; -0.031 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.948      ;
-; 0.079  ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.838      ;
-; 0.126  ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.791      ;
-; 0.129  ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.788      ;
+; -0.390 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.096     ; 1.292      ;
+; -0.385 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.067     ; 1.316      ;
+; -0.334 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.067     ; 1.265      ;
+; -0.273 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.273 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.364      ; 1.635      ;
+; -0.237 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.154      ;
+; -0.225 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.142      ;
+; -0.223 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.140      ;
+; -0.221 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.138      ;
+; -0.195 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 1.112      ;
+; -0.072 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.080     ; 0.990      ;
+; 0.076  ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.841      ;
+; 0.092  ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.825      ;
+; 0.104  ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.813      ;
+; 0.105  ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.812      ;
+; 0.128  ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.789      ;
+; 0.128  ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.081     ; 0.789      ;
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -289,102 +289,102 @@ No paths to report.
 ; 0.402 ; OE            ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.669      ;
 ; 0.402 ; sttRead.0101  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.669      ;
 ; 0.402 ; sttWrite.0100 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.669      ;
+; 0.429 ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.696      ;
 ; 0.429 ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.696      ;
-; 0.430 ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.697      ;
-; 0.465 ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.732      ;
-; 0.604 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.871      ;
-; 0.608 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.874      ;
-; 0.641 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 0.909      ;
-; 0.641 ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 0.909      ;
-; 0.642 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.909      ;
-; 0.672 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.939      ;
-; 0.675 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.942      ;
-; 0.677 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.944      ;
-; 0.705 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.972      ;
-; 0.706 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.973      ;
-; 0.706 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.973      ;
-; 0.708 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.975      ;
-; 0.709 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.976      ;
-; 0.712 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.979      ;
-; 0.712 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.979      ;
-; 0.713 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.980      ;
-; 0.714 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.981      ;
-; 0.714 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.981      ;
-; 0.745 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.011      ;
-; 0.824 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.092      ;
-; 0.824 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.092      ;
-; 0.827 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.095      ;
-; 0.827 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.095      ;
-; 0.828 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.096      ;
-; 0.828 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.096      ;
-; 0.891 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.157      ;
-; 0.909 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.074      ; 1.169      ;
+; 0.437 ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.704      ;
+; 0.443 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.710      ;
+; 0.445 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.712      ;
+; 0.467 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.734      ;
+; 0.468 ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.735      ;
+; 0.643 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.910      ;
+; 0.681 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.948      ;
+; 0.681 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.948      ;
+; 0.683 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 0.950      ;
+; 0.739 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.005      ;
+; 0.747 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.014      ;
+; 0.791 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.059      ;
+; 0.791 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.059      ;
+; 0.792 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.060      ;
+; 0.792 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.060      ;
+; 0.793 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.061      ;
+; 0.841 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.109      ;
+; 0.841 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.109      ;
+; 0.842 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.110      ;
+; 0.842 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.110      ;
+; 0.845 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.113      ;
+; 0.846 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.114      ;
+; 0.846 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.114      ;
+; 0.846 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.114      ;
+; 0.847 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.115      ;
+; 0.847 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.115      ;
+; 0.848 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.116      ;
+; 0.874 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.096      ; 1.156      ;
 ; 0.910 ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.177      ;
-; 0.917 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.088      ; 1.191      ;
-; 0.978 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.074      ; 1.238      ;
-; 0.985 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.088      ; 1.259      ;
-; 0.988 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
-; 0.988 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.512      ; 1.686      ;
+; 0.925 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.096      ; 1.207      ;
+; 0.953 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.953 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.543      ; 1.682      ;
+; 0.955 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.067      ; 1.208      ;
 ; 1.028 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.295      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.190 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 1.892      ;
-; 1.201 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.481      ; 1.868      ;
-; 1.220 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.487      ;
-; 1.433 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.514      ; 2.133      ;
-; 1.433 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.514      ; 2.133      ;
-; 1.433 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.514      ; 2.133      ;
-; 1.433 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.514      ; 2.133      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.447 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.714      ;
-; 1.466 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.466 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.466 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.466 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.466 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.466 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.466 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.466 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.516      ; 2.168      ;
-; 1.657 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.925      ;
-; 1.657 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.925      ;
-; 1.657 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.925      ;
-; 1.657 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.925      ;
-; 1.657 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.925      ;
-; 1.657 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.925      ;
-; 1.723 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.990      ;
-; 1.723 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.990      ;
-; 1.723 ; sttRead.0000  ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.990      ;
-; 1.723 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.990      ;
+; 1.080 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.067      ; 1.333      ;
+; 1.190 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 1.893      ;
+; 1.190 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 1.893      ;
+; 1.190 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 1.893      ;
+; 1.190 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 1.893      ;
+; 1.190 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 1.893      ;
+; 1.190 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 1.893      ;
+; 1.190 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 1.893      ;
+; 1.214 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.081      ; 1.481      ;
+; 1.246 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.482      ; 1.914      ;
+; 1.415 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.116      ;
+; 1.415 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.116      ;
+; 1.415 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.116      ;
+; 1.415 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.116      ;
+; 1.415 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.116      ;
+; 1.415 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.116      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.448 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.716      ;
+; 1.467 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 2.170      ;
+; 1.467 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 2.170      ;
+; 1.467 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 2.170      ;
+; 1.467 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 2.170      ;
+; 1.467 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 2.170      ;
+; 1.467 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 2.170      ;
+; 1.467 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.517      ; 2.170      ;
+; 1.658 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.926      ;
+; 1.658 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.926      ;
+; 1.658 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.926      ;
+; 1.658 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.926      ;
+; 1.658 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.082      ; 1.926      ;
+; 1.701 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.402      ;
+; 1.701 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.402      ;
+; 1.701 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.402      ;
+; 1.701 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.402      ;
+; 1.701 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.515      ; 2.402      ;
 +-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -399,7 +399,7 @@ No synchronizer chains to report.
 +------------+-----------------+-------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name  ; Note                                                          ;
 +------------+-----------------+-------------+---------------------------------------------------------------+
-; 473.04 MHz ; 250.0 MHz       ; clock_50mhz ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 472.81 MHz ; 250.0 MHz       ; clock_50mhz ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+-------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -409,7 +409,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; clock_50mhz ; -1.114 ; -34.436       ;
+; clock_50mhz ; -1.115 ; -33.812       ;
 +-------------+--------+---------------+
 
 
@@ -439,7 +439,7 @@ No paths to report.
 +-------------+--------+---------------------------+
 ; Clock       ; Slack  ; End Point TNS             ;
 +-------------+--------+---------------------------+
-; clock_50mhz ; -3.000 ; -86.525                   ;
+; clock_50mhz ; -3.000 ; -85.240                   ;
 +-------------+--------+---------------------------+
 
 
@@ -448,105 +448,105 @@ No paths to report.
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
-; -1.114 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.042      ;
-; -1.114 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.042      ;
-; -1.114 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.042      ;
-; -1.114 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.042      ;
-; -1.114 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.042      ;
-; -1.114 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.042      ;
-; -0.934 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.934 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.861      ;
-; -0.905 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 2.215      ;
-; -0.905 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 2.215      ;
-; -0.905 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 2.215      ;
-; -0.905 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 2.215      ;
-; -0.799 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.727      ;
-; -0.799 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.727      ;
-; -0.799 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.727      ;
-; -0.799 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.727      ;
-; -0.799 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.727      ;
-; -0.799 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.727      ;
-; -0.695 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.695 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.695 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.695 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.695 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.695 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.695 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.695 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.007      ;
-; -0.629 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 1.939      ;
-; -0.629 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 1.939      ;
-; -0.629 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 1.939      ;
-; -0.629 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.311      ; 1.939      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.609 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.536      ;
-; -0.547 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.474      ;
-; -0.529 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.456      ;
-; -0.402 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.329      ;
-; -0.393 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.279      ; 1.671      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.380 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.692      ;
-; -0.298 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.065     ; 1.232      ;
-; -0.282 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.079     ; 1.202      ;
+; -1.115 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.043      ;
+; -1.115 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.043      ;
+; -1.115 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.043      ;
+; -1.115 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.043      ;
+; -1.115 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 2.043      ;
+; -0.943 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.943 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.870      ;
+; -0.886 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 2.197      ;
+; -0.886 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 2.197      ;
+; -0.886 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 2.197      ;
+; -0.886 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 2.197      ;
+; -0.886 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 2.197      ;
+; -0.886 ; sttRead.0000  ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 2.197      ;
+; -0.800 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.728      ;
+; -0.800 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.728      ;
+; -0.800 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.728      ;
+; -0.800 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.728      ;
+; -0.800 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 1.728      ;
+; -0.697 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.009      ;
+; -0.697 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.009      ;
+; -0.697 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.009      ;
+; -0.697 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.009      ;
+; -0.697 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.009      ;
+; -0.697 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.009      ;
+; -0.697 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 2.009      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.618 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.545      ;
+; -0.610 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 1.921      ;
+; -0.610 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 1.921      ;
+; -0.610 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 1.921      ;
+; -0.610 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 1.921      ;
+; -0.610 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 1.921      ;
+; -0.610 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.312      ; 1.921      ;
+; -0.551 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.478      ;
+; -0.521 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.448      ;
+; -0.438 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.281      ; 1.718      ;
+; -0.398 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.325      ;
+; -0.388 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.085     ; 1.302      ;
+; -0.381 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.693      ;
+; -0.381 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.693      ;
+; -0.381 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.693      ;
+; -0.381 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.693      ;
+; -0.381 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.693      ;
+; -0.381 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.693      ;
+; -0.381 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.313      ; 1.693      ;
+; -0.260 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.085     ; 1.174      ;
 ; -0.260 ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.187      ;
-; -0.241 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.073     ; 1.167      ;
-; -0.233 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.065     ; 1.167      ;
-; -0.219 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.079     ; 1.139      ;
-; -0.199 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.199 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.308      ; 1.506      ;
-; -0.116 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.043      ;
-; -0.099 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.026      ;
-; -0.083 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.073     ; 1.009      ;
-; 0.021  ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 0.907      ;
-; 0.022  ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 0.906      ;
-; 0.041  ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.071     ; 0.887      ;
-; 0.054  ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.873      ;
-; 0.074  ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.073     ; 0.852      ;
-; 0.174  ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.753      ;
-; 0.215  ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.712      ;
+; -0.242 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.059     ; 1.182      ;
+; -0.199 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.059     ; 1.139      ;
+; -0.159 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.159 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.337      ; 1.495      ;
+; -0.112 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.039      ;
+; -0.103 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.030      ;
+; -0.101 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.028      ;
+; -0.100 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.027      ;
+; -0.073 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 1.000      ;
+; 0.039  ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.888      ;
+; 0.170  ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.757      ;
+; 0.179  ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.748      ;
+; 0.196  ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.731      ;
+; 0.197  ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.730      ;
+; 0.217  ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.710      ;
 ; 0.217  ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.072     ; 0.710      ;
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 
@@ -560,102 +560,102 @@ No paths to report.
 ; 0.354 ; OE            ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.597      ;
 ; 0.354 ; sttRead.0101  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.597      ;
 ; 0.354 ; sttWrite.0100 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.597      ;
-; 0.396 ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.639      ;
-; 0.398 ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.641      ;
-; 0.429 ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.672      ;
-; 0.560 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.071      ; 0.802      ;
-; 0.561 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.804      ;
-; 0.589 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.833      ;
-; 0.594 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.838      ;
-; 0.594 ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.838      ;
-; 0.616 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.859      ;
-; 0.619 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.862      ;
-; 0.619 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.862      ;
-; 0.648 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.891      ;
-; 0.648 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.891      ;
-; 0.649 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.892      ;
-; 0.651 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.894      ;
-; 0.651 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.894      ;
-; 0.654 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.897      ;
-; 0.655 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.898      ;
-; 0.656 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.899      ;
-; 0.656 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.899      ;
-; 0.657 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.900      ;
-; 0.695 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.071      ; 0.937      ;
-; 0.757 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.001      ;
-; 0.758 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.002      ;
-; 0.760 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.004      ;
-; 0.760 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.004      ;
-; 0.761 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.005      ;
-; 0.761 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.005      ;
-; 0.826 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.065      ; 1.062      ;
-; 0.826 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.071      ; 1.068      ;
+; 0.395 ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.638      ;
+; 0.396 ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.639      ;
+; 0.397 ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.640      ;
+; 0.409 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.652      ;
+; 0.410 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.653      ;
+; 0.432 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.675      ;
+; 0.433 ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.676      ;
+; 0.592 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.835      ;
+; 0.622 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.865      ;
+; 0.623 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.866      ;
+; 0.624 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.867      ;
+; 0.682 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.925      ;
+; 0.688 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 0.931      ;
+; 0.729 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.973      ;
+; 0.729 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.973      ;
+; 0.729 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.973      ;
+; 0.730 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.974      ;
+; 0.731 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 0.975      ;
+; 0.771 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.014      ;
+; 0.772 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.015      ;
+; 0.772 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.015      ;
+; 0.773 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.016      ;
+; 0.775 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.018      ;
+; 0.776 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.019      ;
+; 0.777 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.020      ;
+; 0.777 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.020      ;
+; 0.777 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.020      ;
+; 0.778 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.021      ;
+; 0.778 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.021      ;
+; 0.816 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.085      ; 1.072      ;
 ; 0.832 ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.075      ;
-; 0.857 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.079      ; 1.107      ;
-; 0.876 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.065      ; 1.112      ;
-; 0.909 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.909 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.469      ; 1.549      ;
-; 0.915 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.079      ; 1.165      ;
-; 0.941 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.184      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.093 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.737      ;
-; 1.102 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.438      ; 1.711      ;
-; 1.119 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.362      ;
-; 1.293 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.936      ;
-; 1.293 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.936      ;
-; 1.293 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.936      ;
-; 1.293 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.936      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.334 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.577      ;
-; 1.350 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.350 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.350 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.350 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.350 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.350 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.350 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.350 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.994      ;
-; 1.526 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.770      ;
-; 1.526 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.770      ;
-; 1.526 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.770      ;
-; 1.526 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.770      ;
-; 1.526 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.770      ;
-; 1.526 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.770      ;
-; 1.579 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.222      ;
-; 1.579 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.222      ;
-; 1.579 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.222      ;
-; 1.579 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.222      ;
+; 0.860 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.085      ; 1.116      ;
+; 0.870 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.059      ; 1.100      ;
+; 0.874 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.874 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.498      ; 1.543      ;
+; 0.938 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.181      ;
+; 1.005 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.059      ; 1.235      ;
+; 1.094 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.738      ;
+; 1.094 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.738      ;
+; 1.094 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.738      ;
+; 1.094 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.738      ;
+; 1.094 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.738      ;
+; 1.094 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.738      ;
+; 1.094 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.738      ;
+; 1.112 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.355      ;
+; 1.149 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.439      ; 1.759      ;
+; 1.276 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.919      ;
+; 1.276 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.919      ;
+; 1.276 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.919      ;
+; 1.276 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.919      ;
+; 1.276 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.919      ;
+; 1.276 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 1.919      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.337 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.072      ; 1.580      ;
+; 1.351 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.995      ;
+; 1.351 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.995      ;
+; 1.351 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.995      ;
+; 1.351 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.995      ;
+; 1.351 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.995      ;
+; 1.351 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.995      ;
+; 1.351 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.473      ; 1.995      ;
+; 1.527 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.771      ;
+; 1.527 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.771      ;
+; 1.527 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.771      ;
+; 1.527 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.771      ;
+; 1.527 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.073      ; 1.771      ;
+; 1.562 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.205      ;
+; 1.562 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.205      ;
+; 1.562 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.205      ;
+; 1.562 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.205      ;
+; 1.562 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.472      ; 2.205      ;
 +-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -670,7 +670,7 @@ No synchronizer chains to report.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; clock_50mhz ; -0.148 ; -1.600        ;
+; clock_50mhz ; -0.149 ; -1.599        ;
 +-------------+--------+---------------+
 
 
@@ -700,7 +700,7 @@ No paths to report.
 +-------------+--------+---------------------------+
 ; Clock       ; Slack  ; End Point TNS             ;
 +-------------+--------+---------------------------+
-; clock_50mhz ; -3.000 ; -72.684                   ;
+; clock_50mhz ; -3.000 ; -71.737                   ;
 +-------------+--------+---------------------------+
 
 
@@ -709,106 +709,106 @@ No paths to report.
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
-; -0.148 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.094      ;
-; -0.148 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.094      ;
-; -0.148 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.094      ;
-; -0.148 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.094      ;
-; -0.148 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.094      ;
-; -0.148 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.094      ;
-; -0.052 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.193      ;
-; -0.052 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.193      ;
-; -0.052 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.193      ;
-; -0.052 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.193      ;
-; -0.036 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; -0.036 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.982      ;
-; 0.032  ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.914      ;
-; 0.032  ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.914      ;
-; 0.032  ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.914      ;
-; 0.032  ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.914      ;
-; 0.032  ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.914      ;
-; 0.032  ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.914      ;
-; 0.070  ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.070  ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.070  ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.070  ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.070  ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.070  ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.070  ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.070  ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.072      ;
-; 0.128  ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.013      ;
-; 0.128  ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.013      ;
-; 0.128  ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.013      ;
-; 0.128  ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.013      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.144  ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.802      ;
-; 0.173  ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.773      ;
-; 0.184  ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.762      ;
-; 0.249  ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.140      ; 0.878      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.250  ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.892      ;
-; 0.263  ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.683      ;
-; 0.275  ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.051     ; 0.661      ;
-; 0.290  ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.031     ; 0.666      ;
-; 0.306  ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.051     ; 0.630      ;
-; 0.307  ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.031     ; 0.649      ;
-; 0.310  ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.043     ; 0.634      ;
-; 0.338  ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.608      ;
-; 0.358  ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.358  ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 0.783      ;
-; 0.389  ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.557      ;
-; 0.401  ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.545      ;
-; 0.407  ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.043     ; 0.537      ;
-; 0.466  ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.040     ; 0.481      ;
-; 0.467  ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.040     ; 0.480      ;
-; 0.470  ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.040     ; 0.477      ;
-; 0.486  ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.459      ;
-; 0.487  ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.458      ;
-; 0.548  ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.398      ;
-; 0.572  ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.374      ;
-; 0.573  ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.372      ;
+; -0.149 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.095      ;
+; -0.149 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.095      ;
+; -0.149 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.095      ;
+; -0.149 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.095      ;
+; -0.149 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 1.095      ;
+; -0.043 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.043 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.988      ;
+; -0.042 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.183      ;
+; -0.042 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.183      ;
+; -0.042 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.183      ;
+; -0.042 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.183      ;
+; -0.042 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.183      ;
+; -0.042 ; sttRead.0000  ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.183      ;
+; 0.031  ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.915      ;
+; 0.031  ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.915      ;
+; 0.031  ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.915      ;
+; 0.031  ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.915      ;
+; 0.031  ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.915      ;
+; 0.069  ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.073      ;
+; 0.069  ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.073      ;
+; 0.069  ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.073      ;
+; 0.069  ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.073      ;
+; 0.069  ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.073      ;
+; 0.069  ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.073      ;
+; 0.069  ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 1.073      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.137  ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.808      ;
+; 0.138  ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.003      ;
+; 0.138  ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.003      ;
+; 0.138  ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.003      ;
+; 0.138  ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.003      ;
+; 0.138  ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.003      ;
+; 0.138  ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.154      ; 1.003      ;
+; 0.168  ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.777      ;
+; 0.188  ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.757      ;
+; 0.207  ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.054     ; 0.726      ;
+; 0.225  ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.142      ; 0.904      ;
+; 0.249  ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.893      ;
+; 0.249  ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.893      ;
+; 0.249  ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.893      ;
+; 0.249  ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.893      ;
+; 0.249  ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.893      ;
+; 0.249  ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.893      ;
+; 0.249  ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.155      ; 0.893      ;
+; 0.265  ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.680      ;
+; 0.276  ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.054     ; 0.657      ;
+; 0.298  ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.030     ; 0.659      ;
+; 0.322  ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.030     ; 0.635      ;
+; 0.337  ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.608      ;
+; 0.375  ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.375  ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 1.000        ; 0.164      ; 0.776      ;
+; 0.393  ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.552      ;
+; 0.396  ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.549      ;
+; 0.397  ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.548      ;
+; 0.398  ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.547      ;
+; 0.413  ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.532      ;
+; 0.468  ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.041     ; 0.478      ;
+; 0.543  ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.402      ;
+; 0.557  ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.388      ;
+; 0.558  ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.387      ;
+; 0.560  ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.385      ;
+; 0.572  ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.373      ;
+; 0.573  ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 1.000        ; -0.042     ; 0.372      ;
 +--------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -818,105 +818,105 @@ No paths to report.
 ; Slack ; From Node     ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 ; 0.181 ; WE            ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.307      ;
-; 0.182 ; OE            ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; sttRead.0101  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.307      ;
-; 0.182 ; sttWrite.0100 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.307      ;
+; 0.181 ; OE            ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; sttRead.0101  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; sttWrite.0100 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.307      ;
+; 0.188 ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.314      ;
 ; 0.188 ; sttWrite.0010 ; sttWrite.0011    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.314      ;
-; 0.190 ; sttRead.0011  ; sttRead.0100     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.315      ;
-; 0.209 ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.334      ;
-; 0.266 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.390      ;
-; 0.270 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.396      ;
-; 0.277 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.403      ;
-; 0.285 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.412      ;
-; 0.285 ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.412      ;
-; 0.309 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.434      ;
-; 0.312 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.437      ;
-; 0.312 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.437      ;
-; 0.321 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.446      ;
-; 0.321 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.446      ;
-; 0.322 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.447      ;
-; 0.323 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.448      ;
-; 0.324 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.449      ;
-; 0.326 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.451      ;
-; 0.327 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.452      ;
-; 0.328 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.453      ;
-; 0.328 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.453      ;
-; 0.329 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.454      ;
-; 0.331 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.455      ;
-; 0.376 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.502      ;
-; 0.376 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.502      ;
-; 0.379 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.505      ;
-; 0.379 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.505      ;
-; 0.380 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.506      ;
-; 0.381 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.507      ;
-; 0.404 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.528      ;
-; 0.415 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.051      ; 0.550      ;
-; 0.420 ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.545      ;
-; 0.426 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.031      ; 0.541      ;
-; 0.451 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.779      ;
-; 0.451 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.051      ; 0.586      ;
-; 0.456 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.031      ; 0.571      ;
-; 0.471 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.596      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.536 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.866      ;
-; 0.543 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.230      ; 0.857      ;
-; 0.558 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.683      ;
-; 0.653 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 0.982      ;
-; 0.653 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 0.982      ;
-; 0.653 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 0.982      ;
-; 0.653 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 0.982      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.664 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.789      ;
-; 0.671 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.671 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.671 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.671 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.671 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.671 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.671 ; sttRead.0000  ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.671 ; sttRead.0000  ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.001      ;
-; 0.755 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.881      ;
-; 0.755 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.881      ;
-; 0.755 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.881      ;
-; 0.755 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.881      ;
-; 0.755 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.881      ;
-; 0.755 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.881      ;
-; 0.788 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 1.117      ;
-; 0.788 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 1.117      ;
-; 0.788 ; sttRead.0000  ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 1.117      ;
-; 0.788 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.245      ; 1.117      ;
+; 0.197 ; sttWrite.0001 ; sttWrite.0010    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.323      ;
+; 0.198 ; sttWrite.0001 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.324      ;
+; 0.203 ; sttWrite.0011 ; sttWrite.0100    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.329      ;
+; 0.210 ; sttRead.0001  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.336      ;
+; 0.211 ; sttRead.0001  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.337      ;
+; 0.278 ; sttRead.0010  ; sttRead.0011     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.404      ;
+; 0.312 ; sttWrite.0011 ; WE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.438      ;
+; 0.312 ; sttRead.0100  ; sttRead.0101     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.438      ;
+; 0.314 ; sttRead.0100  ; OE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.440      ;
+; 0.326 ; sttRead.0001  ; sttRead.0010     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.451      ;
+; 0.339 ; sttWrite.0011 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.465      ;
+; 0.359 ; sttRead.0000  ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.486      ;
+; 0.359 ; sttRead.0000  ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.486      ;
+; 0.360 ; sttRead.0000  ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.487      ;
+; 0.360 ; sttRead.0000  ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.487      ;
+; 0.361 ; sttRead.0000  ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.488      ;
+; 0.385 ; sttRead.0000  ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.511      ;
+; 0.385 ; sttRead.0000  ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.511      ;
+; 0.386 ; sttRead.0000  ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.512      ;
+; 0.387 ; sttRead.0000  ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.513      ;
+; 0.389 ; sttRead.0000  ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.515      ;
+; 0.390 ; sttRead.0000  ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.516      ;
+; 0.390 ; sttRead.0000  ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.516      ;
+; 0.391 ; sttRead.0000  ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.517      ;
+; 0.391 ; sttRead.0000  ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.517      ;
+; 0.392 ; sttRead.0000  ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.518      ;
+; 0.392 ; sttRead.0000  ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.518      ;
+; 0.404 ; sttWrite.0100 ; sttWrite.0000    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.054      ; 0.542      ;
+; 0.418 ; CE            ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.544      ;
+; 0.420 ; sttRead.0101  ; sttRead.0000     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.054      ; 0.558      ;
+; 0.436 ; sttRead.0010  ; dataRead[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[5]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[7]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[8]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[9]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[10]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[11]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[12]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[13]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[14]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.436 ; sttRead.0010  ; dataRead[15]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.255      ; 0.775      ;
+; 0.440 ; sttWrite.0000 ; sttWrite.0001    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.030      ; 0.554      ;
+; 0.469 ; sttRead.0100  ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.595      ;
+; 0.505 ; sttRead.0000  ; sttRead.0001     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.030      ; 0.619      ;
+; 0.536 ; sttWrite.0000 ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 0.867      ;
+; 0.536 ; sttWrite.0000 ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 0.867      ;
+; 0.536 ; sttWrite.0000 ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 0.867      ;
+; 0.536 ; sttWrite.0000 ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 0.867      ;
+; 0.536 ; sttWrite.0000 ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 0.867      ;
+; 0.536 ; sttWrite.0000 ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 0.867      ;
+; 0.536 ; sttWrite.0000 ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 0.867      ;
+; 0.553 ; sttWrite.0001 ; CE               ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.679      ;
+; 0.558 ; sttRead.0010  ; dataRead[6]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.232      ; 0.874      ;
+; 0.637 ; sttWrite.0000 ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.967      ;
+; 0.637 ; sttWrite.0000 ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.967      ;
+; 0.637 ; sttWrite.0000 ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.967      ;
+; 0.637 ; sttWrite.0000 ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.967      ;
+; 0.637 ; sttWrite.0000 ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.967      ;
+; 0.637 ; sttWrite.0000 ; dataWrite[11]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 0.967      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[15]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[14]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[13]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[12]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[11]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[10]~en ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[9]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[8]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[7]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[6]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[5]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[7]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[12]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.665 ; sttWrite.0000 ; dataWrite[15]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.042      ; 0.791      ;
+; 0.671 ; sttRead.0000  ; dataWrite[0]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 1.002      ;
+; 0.671 ; sttRead.0000  ; dataWrite[1]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 1.002      ;
+; 0.671 ; sttRead.0000  ; dataWrite[2]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 1.002      ;
+; 0.671 ; sttRead.0000  ; dataWrite[3]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 1.002      ;
+; 0.671 ; sttRead.0000  ; dataWrite[4]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 1.002      ;
+; 0.671 ; sttRead.0000  ; dataWrite[13]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 1.002      ;
+; 0.671 ; sttRead.0000  ; dataWrite[14]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.247      ; 1.002      ;
+; 0.755 ; sttWrite.0000 ; dataWrite[4]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.882      ;
+; 0.755 ; sttWrite.0000 ; dataWrite[3]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.882      ;
+; 0.755 ; sttWrite.0000 ; dataWrite[2]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.882      ;
+; 0.755 ; sttWrite.0000 ; dataWrite[1]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.882      ;
+; 0.755 ; sttWrite.0000 ; dataWrite[0]~en  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.043      ; 0.882      ;
+; 0.772 ; sttRead.0000  ; dataWrite[5]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.102      ;
+; 0.772 ; sttRead.0000  ; dataWrite[6]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.102      ;
+; 0.772 ; sttRead.0000  ; dataWrite[8]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.102      ;
+; 0.772 ; sttRead.0000  ; dataWrite[9]     ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.102      ;
+; 0.772 ; sttRead.0000  ; dataWrite[10]    ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.246      ; 1.102      ;
 +-------+---------------+------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -931,10 +931,10 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -1.337  ; 0.181 ; N/A      ; N/A     ; -3.000              ;
-;  clock_50mhz     ; -1.337  ; 0.181 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -44.06  ; 0.0   ; 0.0      ; 0.0     ; -86.525             ;
-;  clock_50mhz     ; -44.060 ; 0.000 ; N/A      ; N/A     ; -86.525             ;
+; Worst-case Slack ; -1.340  ; 0.181 ; N/A      ; N/A     ; -3.000              ;
+;  clock_50mhz     ; -1.340  ; 0.181 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -43.411 ; 0.0   ; 0.0      ; 0.0     ; -85.24              ;
+;  clock_50mhz     ; -43.411 ; 0.000 ; N/A      ; N/A     ; -85.240             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -1295,9 +1295,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 37    ; 37   ;
-; Unconstrained Input Port Paths  ; 104   ; 104  ;
-; Unconstrained Output Ports      ; 40    ; 40   ;
-; Unconstrained Output Port Paths ; 56    ; 56   ;
+; Unconstrained Input Port Paths  ; 102   ; 102  ;
+; Unconstrained Output Ports      ; 39    ; 39   ;
+; Unconstrained Output Port Paths ; 55    ; 55   ;
 +---------------------------------+-------+------+
 
 
@@ -1362,7 +1362,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; pinAddr[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinAddr[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; pinAddr[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinCE       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinData[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinData[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1455,7 +1454,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; pinAddr[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinAddr[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; pinAddr[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinCE       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinData[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; pinData[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1502,10 +1500,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri Jul  5 08:20:50 2024
+    Info: Processing started: Fri Aug  2 11:27:33 2024
 Info: Command: quartus_sta topSRAM -c topSRAM
 Info: qsta_default_script.tcl version: #1
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1519,10 +1516,10 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.337
+Info (332146): Worst-case setup slack is -1.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.337             -44.060 clock_50mhz 
+    Info (332119):    -1.340             -43.411 clock_50mhz 
 Info (332146): Worst-case hold slack is 0.402
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1532,17 +1529,17 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -86.525 clock_50mhz 
+    Info (332119):    -3.000             -85.240 clock_50mhz 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.114
+Info (332146): Worst-case setup slack is -1.115
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.114             -34.436 clock_50mhz 
+    Info (332119):    -1.115             -33.812 clock_50mhz 
 Info (332146): Worst-case hold slack is 0.354
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1552,15 +1549,15 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -86.525 clock_50mhz 
+    Info (332119):    -3.000             -85.240 clock_50mhz 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.148
+Info (332146): Worst-case setup slack is -0.149
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.148              -1.600 clock_50mhz 
+    Info (332119):    -0.149              -1.599 clock_50mhz 
 Info (332146): Worst-case hold slack is 0.181
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1570,12 +1567,12 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -72.684 clock_50mhz 
+    Info (332119):    -3.000             -71.737 clock_50mhz 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Fri Jul  5 08:20:52 2024
+    Info: Processing ended: Fri Aug  2 11:27:35 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at audio_gen.v(22): always construct contains both blocking and non-blocking assignments File: D:/2024/FPGA/codeFPGAL_LIB/AUDIO/audio_gen.v Line: 22

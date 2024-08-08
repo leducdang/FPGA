@@ -1,0 +1,69 @@
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# File: D:\2024\FPGA\codeFPGAL_LIB\VGA\output_files\top.csv
+# Generated on: Tue Jul  2 14:52:47 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clock_50mhz,Input,PIN_Y2,2,B2_N0,PIN_Y2,2.5 V,,,,,
+pin_b[7],Input,PIN_D12,8,B8_N0,PIN_AA26,2.5 V,,,,,
+pin_b[6],Input,PIN_D11,8,B8_N1,PIN_AE14,2.5 V,,,,,
+pin_b[5],Input,PIN_C12,8,B8_N0,PIN_E15,2.5 V,,,,,
+pin_b[4],Input,PIN_A11,8,B8_N0,PIN_AB15,2.5 V,,,,,
+pin_b[3],Input,PIN_B11,8,B8_N0,PIN_D24,2.5 V,,,,,
+pin_b[2],Input,PIN_C11,8,B8_N1,PIN_J13,2.5 V,,,,,
+pin_b[1],Input,PIN_A10,8,B8_N0,PIN_G17,2.5 V,,,,,
+pin_b[0],Input,PIN_B10,8,B8_N0,PIN_AD3,2.5 V,,,,,
+pin_bank,Output,PIN_F11,8,B8_N1,PIN_R3,2.5 V,,,,,
+pin_g[7],Input,PIN_C9,8,B8_N1,PIN_F10,2.5 V,,,,,
+pin_g[6],Input,PIN_F10,8,B8_N1,PIN_H24,2.5 V,,,,,
+pin_g[5],Input,PIN_B8,8,B8_N1,PIN_AF23,2.5 V,,,,,
+pin_g[4],Input,PIN_C8,8,B8_N1,PIN_AF18,2.5 V,,,,,
+pin_g[3],Input,PIN_H12,8,B8_N1,PIN_AD11,2.5 V,,,,,
+pin_g[2],Input,PIN_F8,8,B8_N2,PIN_W21,2.5 V,,,,,
+pin_g[1],Input,PIN_G11,8,B8_N1,PIN_E25,2.5 V,,,,,
+pin_g[0],Input,PIN_G8,8,B8_N2,PIN_AF4,2.5 V,,,,,
+pin_hs,Output,PIN_G13,8,B8_N0,PIN_R6,2.5 V,,,,,
+pin_r[7],Input,PIN_H10,8,B8_N1,PIN_AG26,2.5 V,,,,,
+pin_r[6],Input,PIN_H8,8,B8_N2,PIN_G28,2.5 V,,,,,
+pin_r[5],Input,PIN_J12,8,B8_N0,PIN_AE21,2.5 V,,,,,
+pin_r[4],Input,PIN_G10,8,B8_N1,PIN_V21,2.5 V,,,,,
+pin_r[3],Input,PIN_F12,8,B8_N1,PIN_AA21,2.5 V,,,,,
+pin_r[2],Input,PIN_D10,8,B8_N1,PIN_W1,2.5 V,,,,,
+pin_r[1],Input,PIN_E11,8,B8_N1,PIN_AE16,2.5 V,,,,,
+pin_r[0],Input,PIN_E12,8,B8_N1,PIN_AH18,2.5 V,,,,,
+pin_sync,Output,PIN_C10,8,B8_N0,PIN_U4,2.5 V,,,,,
+pin_vga_clock,Output,PIN_A12,8,B8_N0,PIN_R2,2.5 V,,,,,
+pin_vs,Output,PIN_C13,8,B8_N0,PIN_U3,2.5 V,,,,,
+reset,Input,PIN_M23,6,B6_N2,PIN_Y1,2.5 V,,,,,
+sw_g[7],Input,PIN_Y23,5,B5_N2,PIN_Y10,2.5 V,,,,,
+sw_g[6],Input,PIN_Y24,5,B5_N2,PIN_B17,2.5 V,,,,,
+sw_g[5],Input,PIN_AA22,5,B5_N2,PIN_Y3,2.5 V,,,,,
+sw_g[4],Input,PIN_AA23,5,B5_N2,PIN_Y13,2.5 V,,,,,
+sw_g[3],Input,PIN_AA24,5,B5_N2,PIN_AC1,2.5 V,,,,,
+sw_g[2],Input,PIN_AB23,5,B5_N2,PIN_AE25,2.5 V,,,,,
+sw_g[1],Input,PIN_AB24,5,B5_N2,PIN_J25,2.5 V,,,,,
+sw_g[0],Input,PIN_AC24,5,B5_N2,PIN_AH10,2.5 V,,,,,
+sw_r[7],Input,PIN_AB26,5,B5_N1,PIN_AF13,2.5 V,,,,,
+sw_r[6],Input,PIN_AD26,5,B5_N2,PIN_E5,2.5 V,,,,,
+sw_r[5],Input,PIN_AC26,5,B5_N2,PIN_AC8,2.5 V,,,,,
+sw_r[4],Input,PIN_AB27,5,B5_N1,PIN_AG25,2.5 V,,,,,
+sw_r[3],Input,PIN_AD27,5,B5_N2,PIN_G11,2.5 V,,,,,
+sw_r[2],Input,PIN_AC27,5,B5_N2,PIN_AG22,2.5 V,,,,,
+sw_r[1],Input,PIN_AC28,5,B5_N2,PIN_AF21,2.5 V,,,,,
+sw_r[0],Input,PIN_AB28,5,B5_N1,PIN_E18,2.5 V,,,,,

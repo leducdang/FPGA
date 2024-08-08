@@ -1,0 +1,253 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_led_odata[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led_odata[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_LB_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_UB_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_CE_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_OE_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
+					"strict" : false
+				},
+				{
+					"name" : "pin_write",
+					"strict" : false
+				},
+				{
+					"name" : "pin_read",
+					"strict" : false
+				},
+				{
+					"name" : "pin_reset",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw_data[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

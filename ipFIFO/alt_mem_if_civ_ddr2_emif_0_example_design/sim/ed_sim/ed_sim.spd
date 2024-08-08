@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/verbosity_pkg.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_common_sv_packages"
+   systemVerilogPackageName="avalon_vip_verbosity_pkg" />
+ <file
+   path="simulation/submodules/driver_definitions.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/burst_boundary_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/lfsr.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/lfsr_wrapper.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/rand_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/rand_burstcount_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/rand_num_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/rand_seq_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/reset_sync.v"
+   type="VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/scfifo_wrapper.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/seq_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/template_addr_gen.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/template_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/driver_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/avalon_traffic_gen_avl_use_be_avl_use_burstbegin.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/block_rw_stage_avl_use_be_avl_use_burstbegin.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/driver_avl_use_be_avl_use_burstbegin.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/driver_fsm_avl_use_be_avl_use_burstbegin.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/read_compare_avl_use_be_avl_use_burstbegin.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/single_rw_stage_avl_use_be_avl_use_burstbegin.sv"
+   type="SYSTEM_VERILOG"
+   library="traffic_generator_0" />
+ <file
+   path="simulation/submodules/ed_sim_ed_sim_emif_ed_emif_status_bridge.v"
+   type="VERILOG"
+   library="status_bridge" />
+ <file
+   path="simulation/submodules/ed_sim_ed_sim_emif_ed_emif_ctl.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_addr_cmd.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_addr_cmd_wrap.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_arbiter.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_buffer.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_buffer_manager.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_burst_gen.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_burst_tracking.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_cmd_gen.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_controller.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_controller_st_top.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_csr.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_dataid_manager.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ddr2_odt_gen.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ddr3_odt_gen.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ecc_decoder.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ecc_encoder.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ecc_encoder_32_syn.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ecc_encoder_64_syn.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_fifo.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_input_if.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_list.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_lpddr2_addr_cmd.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_mm_st_converter.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_odt_gen.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_rank_timer.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_rdata_path.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_rdwr_data_tmg.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_sideband.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_tbp.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_timing_param.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_ddrx_wdata_path.v"
+   type="VERILOG"
+   library="ctl">
+  <include path="simulation/submodules/alt_mem_ddrx_define.iv" />
+ </file>
+ <file
+   path="simulation/submodules/sdc_params.tcl"
+   type="OTHER"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/ed_sim_ed_sim_emif_ed_emif_phy.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_ac.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_addr_cmd.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_clk_reset.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_delay.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_dp_io.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_dqs_offset.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_mimic.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_mimic_debug.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_mux.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_pll.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_postamble.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_rdata_valid.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_read_dp.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_read_dp_group.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_reset_pipe.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_seq_wrapper.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_write_dp.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_write_dp_fr.v"
+   type="VERILOG"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_constants_pkg.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_record_pkg.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_regs_pkg.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_addr_cmd_pkg.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_iram_addr_pkg.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_admin.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_ctrl.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_dgrb.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_dgwb.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_iram_ram.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_iram.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_mmi.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/alt_mem_phy_seq.vhd"
+   type="VHDL"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/memphy_pins.tcl"
+   type="OTHER"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/memphy_report_timing.tcl"
+   type="OTHER"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/memphy_report_timing_core.tcl"
+   type="OTHER"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/memphy_timing.sdc"
+   type="SDC"
+   library="phy">
+  <include path="simulation/submodules/alt_mem_phy_defines.iv" />
+ </file>
+ <file
+   path="simulation/submodules/ed_sim_ed_sim_emif_ed_tg.v"
+   type="VERILOG"
+   library="tg" />
+ <file
+   path="simulation/submodules/ed_sim_ed_sim_emif_ed_emif.v"
+   type="VERILOG"
+   library="emif" />
+ <file
+   path="simulation/submodules/altera_avalon_reset_source.sv"
+   type="SYSTEM_VERILOG"
+   library="global_reset" />
+ <file
+   path="simulation/submodules/altera_avalon_clock_source.sv"
+   type="SYSTEM_VERILOG"
+   library="ref_clk" />
+ <file
+   path="simulation/submodules/alt_mem_if_ddr2_mem_model_top_mem_if_dm_pins_en.sv"
+   type="SYSTEM_VERILOG"
+   library="mem_model" />
+ <file
+   path="simulation/submodules/alt_mem_if_common_ddr_mem_model_mem_if_dm_pins_en.sv"
+   type="SYSTEM_VERILOG"
+   library="mem_model" />
+ <file
+   path="simulation/submodules/altera_mem_if_checker_no_ifdef_params.sv"
+   type="SYSTEM_VERILOG"
+   library="sim_checker" />
+ <file
+   path="simulation/submodules/ed_sim_ed_sim_emif_ed.v"
+   type="VERILOG"
+   library="emif_ed" />
+ <file
+   path="simulation/submodules/ed_sim_ed_sim.v"
+   type="VERILOG"
+   library="ed_sim" />
+ <file path="simulation/ed_sim.v" type="VERILOG" />
+ <topLevel name="ed_sim" />
+ <deviceFamily name="cycloneive" />
+</simPackage>

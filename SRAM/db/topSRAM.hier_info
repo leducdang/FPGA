@@ -194,7 +194,6 @@ pinReset => addr[3].ENA
 pinReset => addr[2].ENA
 pinReset => addr[1].ENA
 input_sw_Addr[0] => addr[0].DATAIN
-input_sw_Addr[1] => addr[2].DATAIN
 input_sw_Addr[1] => addr[1].DATAIN
 
 

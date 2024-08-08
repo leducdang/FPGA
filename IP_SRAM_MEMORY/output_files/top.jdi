@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="7e786f22c45c69db302a"/>
+  </project>
+  <file_info>
+    <file device="EP4CE115F29C7" path="top.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="IP_SRAM:u1" name="u1">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME IP_SRAM HAS_SOPCINFO 1 GENERATION_ID 1722583070"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

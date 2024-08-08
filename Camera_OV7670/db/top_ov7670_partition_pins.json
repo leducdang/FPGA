@@ -1,0 +1,385 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_scl",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_LB_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_UB_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_bank",
+					"strict" : false
+				},
+				{
+					"name" : "pin_hs",
+					"strict" : false
+				},
+				{
+					"name" : "pin_vs",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[7]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[8]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[9]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[10]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[11]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[12]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[13]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[14]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[15]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[16]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[17]",
+					"strict" : false
+				},
+				{
+					"name" : "led_test[18]",
+					"strict" : false
+				},
+				{
+					"name" : "led_g0",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sda",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_reset",
+					"strict" : false
+				},
+				{
+					"name" : "bt_config",
+					"strict" : false
+				},
+				{
+					"name" : "PCLK_CAMERA",
+					"strict" : false
+				},
+				{
+					"name" : "HREF_CAMERA",
+					"strict" : false
+				},
+				{
+					"name" : "pin_read_sram",
+					"strict" : false
+				},
+				{
+					"name" : "pin_write_sram",
+					"strict" : false
+				},
+				{
+					"name" : "VSYNC_CAMERA",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_CAMERA[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

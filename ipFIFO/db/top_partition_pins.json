@@ -1,0 +1,125 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_data_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_data_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_empty",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_full",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_out_usedw[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "wr_en",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
+					"strict" : false
+				},
+				{
+					"name" : "rd_en",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

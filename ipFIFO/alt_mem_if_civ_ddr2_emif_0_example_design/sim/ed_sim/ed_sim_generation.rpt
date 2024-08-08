@@ -1,0 +1,48 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\Users\DELL\AppData\Local\Temp\alt9919_2309074667928930051.dir\0002_alt_mem_if_civ_ddr2_emif_0_gen\sim\ed_sim.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\DELL\AppData\Local\Temp\alt9919_2309074667928930051.dir\0002_alt_mem_if_civ_ddr2_emif_0_gen\sim\ed_sim\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading sim/ed_sim.qsys
+Progress: Reading input file
+Progress: Adding ed_sim [alt_mem_if_civ_ddr2_tg_eds 1.0.0]
+Progress: Parameterizing module ed_sim
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: ed_sim.ed_sim.emif_ed.emif.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: ed_sim.ed_sim.ref_clk: Elaborate: altera_clock_source
+Info: ed_sim.ed_sim.ref_clk:            $Revision: #1 $
+Info: ed_sim.ed_sim.ref_clk:            $Date: 2021/10/27 $
+Info: ed_sim.ed_sim.global_reset: Elaborate: altera_reset_source
+Info: ed_sim.ed_sim.global_reset:            $Revision: #1 $
+Info: ed_sim.ed_sim.global_reset:            $Date: 2021/10/27 $
+Info: ed_sim.ed_sim.global_reset: Reset is negatively asserted.
+Warning: ed_sim.ed_sim.emif_ed.mem/mem_model.memory: mem has a mem_dqs_n signal, but memory does not.
+Info: ed_sim: Generating ed_sim "ed_sim" for SIM_VERILOG
+Warning: ed_sim: "No matching role found for emif_ed:mem:mem_dqs_n (mem_dqs_n)"
+Info: ed_sim: "ed_sim" instantiated alt_mem_if_civ_ddr2_tg_eds "ed_sim"
+Info: emif_ed: "ed_sim" instantiated alt_mem_if_civ_ddr2_tg_ed "emif_ed"
+Info: sim_checker: "ed_sim" instantiated altera_mem_if_checker "sim_checker"
+Info: mem_model: Preparing to generate verilog simulation fileset for alt_mem_if_ddr2_mem_model_top_mem_if_dm_pins_en
+Info: mem_model: "ed_sim" instantiated altera_mem_if_civ_ddr2_mem_model "mem_model"
+Info: ref_clk: "ed_sim" instantiated altera_avalon_clock_source "ref_clk"
+Info: global_reset: "ed_sim" instantiated altera_avalon_reset_source "global_reset"
+Info: Reusing file C:/Users/DELL/AppData/Local/Temp/alt9919_2309074667928930051.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/sim/ed_sim/simulation/submodules/verbosity_pkg.sv
+Info: emif: "emif_ed" instantiated alt_mem_if_civ_ddr2_emif "emif"
+Info: tg: "emif_ed" instantiated altera_avalon_mm_traffic_generator "tg"
+Info: phy: "emif" instantiated alt_mem_if_civ_ddr2_phy "phy"
+Info: ctl: "emif" instantiated alt_mem_if_civ_ddr2_controller "ctl"
+Info: status_bridge: "emif" instantiated alt_mem_if_civ_ddr2_status_bridge "status_bridge"
+Info: traffic_generator_0: "tg" instantiated altera_avalon_mm_traffic_generator_core "traffic_generator_0"
+Info: ed_sim: Done "ed_sim" with 13 modules, 107 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\Users\DELL\AppData\Local\Temp\alt9919_2309074667928930051.dir\0002_alt_mem_if_civ_ddr2_emif_0_gen\sim\ed_sim\ed_sim.spd --output-directory=C:/Users/DELL/AppData/Local/Temp/alt9919_2309074667928930051.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/sim/ed_sim/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\DELL\AppData\Local\Temp\alt9919_2309074667928930051.dir\0002_alt_mem_if_civ_ddr2_emif_0_gen\sim\ed_sim\ed_sim.spd --output-directory=C:/Users/DELL/AppData/Local/Temp/alt9919_2309074667928930051.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/sim/ed_sim/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/DELL/AppData/Local/Temp/alt9919_2309074667928930051.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/sim/ed_sim/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/DELL/AppData/Local/Temp/alt9919_2309074667928930051.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/sim/ed_sim/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/DELL/AppData/Local/Temp/alt9919_2309074667928930051.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/sim/ed_sim/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.

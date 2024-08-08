@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "audio_i2c_clock",
+					"strict" : false
+				},
+				{
+					"name" : "pin_AUD_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "pin_AUD_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "audio_i2c_data",
+					"strict" : false
+				},
+				{
+					"name" : "pin_reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50Mhz",
+					"strict" : false
+				},
+				{
+					"name" : "pin_start",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

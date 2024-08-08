@@ -1,0 +1,333 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_DQM0",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQM1",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQM2",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQM3",
+					"strict" : false
+				},
+				{
+					"name" : "pin_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "pin_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "pin_CAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "pin_RAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "pin_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[16]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[17]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[18]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[19]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[20]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[21]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[22]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[23]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[24]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[25]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[26]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[27]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[28]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[29]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[30]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_led[31]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[16]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[17]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[18]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[19]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[20]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[21]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[22]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[23]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[24]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[25]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[26]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[27]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[28]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[29]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[30]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_DQ[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
+					"strict" : false
+				},
+				{
+					"name" : "pin_reset",
+					"strict" : false
+				},
+				{
+					"name" : "pin_read",
+					"strict" : false
+				},
+				{
+					"name" : "pin_write",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_sw[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

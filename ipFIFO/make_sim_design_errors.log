@@ -1,0 +1,53 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Copyright (C) 2022  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Mon Jul  8 10:54:49 2024
+Info: Command: quartus_sh -t C:/Users/DELL/AppData/Local/Temp/alt9912_1939392256599971565.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/make_sim_design.tcl
+Info:  
+Info: *************************************************************************
+Info: Altera External Memory Interface IP Example Design Builder
+Info:  
+Info: Type    : Simulation Design
+Info: Family  : Cyclone IV E
+Info: Language: VERILOG
+Info:  
+Info: This script takes ~1 minute to execute...
+Info: *************************************************************************
+Info:  
+Info: Generating example design files...
+Info: Finalizing...
+Error (23031): Evaluation of Tcl script C:/Users/DELL/AppData/Local/Temp/alt9912_1939392256599971565.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/make_sim_design.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 1 error, 0 warnings
+    Error: Peak virtual memory: 4634 megabytes
+    Error: Processing ended: Mon Jul  8 10:57:39 2024
+    Error: Elapsed time: 00:02:50
+    Error: Total CPU time (on all processors): 00:00:24
+------------------------------------------------
+couldn't open "C:/Users/DELL/AppData/Local/Temp/alt9912_1939392256599971565.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/sim/ed_sim/synopsys/vcsmx/vcsmx_setup.sh": no such file or directory
+    while executing
+"open $sim_script r"
+    ("foreach" body line 2)
+    invoked from within
+"foreach sim_script $sim_scripts {
+   set fh [open $sim_script r]
+   set file_data [read $fh]
+   close $fh
+
+   set fh [open $sim_script w]
+   foreach l..."
+    (file "C:/Users/DELL/AppData/Local/Temp/alt9912_1939392256599971565.dir/0002_alt_mem_if_civ_ddr2_emif_0_gen/make_sim_design.tcl" line 129)
+------------------------------------------------

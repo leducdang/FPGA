@@ -1,0 +1,20 @@
+module camera_read_data(clock_pclk,
+								vs,
+								href,
+								i_data_1byte,
+								o_data_2_byte,
+								flag_o_data
+								);
+
+input clock_pclk;
+input vs;
+input href;
+input [7:0] i_data_1byte;
+output [15:0] o_data_2_byte;
+output	flag_o_data;
+
+always@()
+								
+
+								
+endmodule
