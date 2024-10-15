@@ -1,0 +1,33 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading SDRAM/sdram.qsys
+Progress: Reading input file
+Progress: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
+Progress: Parameterizing module alt_mem_if_civ_ddr2_emif_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading SDRAM/sdram.qsys
+Progress: Reading input file
+Progress: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
+Progress: Parameterizing module alt_mem_if_civ_ddr2_emif_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: sdram: Generating sdram "sdram" for QUARTUS_SYNTH
+Info: alt_mem_if_civ_ddr2_emif_0: "sdram" instantiated alt_mem_if_civ_ddr2_emif "alt_mem_if_civ_ddr2_emif_0"
+Info: phy: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_phy "phy"
+Info: ctl: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_controller "ctl"
+Info: status_bridge: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_status_bridge "status_bridge"
+Info: sdram: Done "sdram" with 5 modules, 78 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

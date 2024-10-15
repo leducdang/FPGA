@@ -1,0 +1,90 @@
+module data_camera(
+				clock_50mhz,
+				clock_24mhz,
+				XCLK,
+				PCLK,
+				VSYNC,
+				HREF,
+				DATA,
+				DATA_OUT,
+				reset,
+				addr,
+				enable				// = 1 cấp xung XCLK cho phép camera hoạt động
+				);
+				
+//************* PORT CAMERA *****************//
+				
+input 		clock_50mhz;
+input			clock_24mhz;
+output 		XCLK;
+input 		PCLK;
+input 		VSYNC;
+input			HREF;
+input  [7:0] DATA;
+output [15:0] DATA_OUT;
+input			reset;
+output		addr;
+input			enable;
+
+//************* VAR CAMERA *****************//
+
+reg	[5:0] stt;
+reg	[18:0] counter_pixel;
+reg	[9:0]	counter_col;
+reg	[9:0]	counter_row;
+reg			stt_href;
+reg	[15:0] data_read;
+reg			stt_byte;
+reg			done_read_pixel;			// báo hiệu đọc xong 1 pixel
+
+
+always@(negedge PCLK or  negedge reset)
+begin
+	if(!reset) 
+		begin
+			stt <= 0;
+			counter_pixel <= 0;
+			counter_col <= 0;
+			counter_row <= 0;
+		end
+	else
+		if(enable)
+			begin
+				if(VSYNC) counter_pixel <= 0;
+				else
+					begin
+						if(HREF && stt_href == 0)
+							begin
+								counter_row <= counter_row + 1;
+								stt_href <= 1;
+							end
+						else if(!HREF && stt_href == 1) stt_href <= 0;
+					end
+			end
+	
+end
+
+always@(negedge PCLK)
+begin
+	if(!VSYNC && HREF && counter_row < 481 && enable)
+	begin
+		if(!stt_byte)
+			begin
+				data_read[15:8] <= DATA;
+				done_read_pixel <= 0;
+				stt_byte <= 1;
+			end
+		else
+			begin
+				data_read[7:0] <= DATA;
+				done_read_pixel <= 1;
+				stt_byte <= 0;
+			end
+	end
+end
+
+
+assign XCLK = (enable)?clock_24mhz:0;
+
+
+endmodule

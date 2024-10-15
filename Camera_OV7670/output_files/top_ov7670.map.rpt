@@ -1,6 +1,6 @@
 Analysis & Synthesis report for top_ov7670
-Thu Aug  8 15:33:04 2024
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Sat Aug 10 14:46:39 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -45,9 +45,9 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -57,115 +57,114 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Aug  8 15:33:04 2024          ;
-; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                      ; top_ov7670                                     ;
-; Top-level Entity Name              ; top_ov7670                                     ;
-; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 419                                            ;
-;     Total combinational functions  ; 320                                            ;
-;     Dedicated logic registers      ; 252                                            ;
-; Total registers                    ; 252                                            ;
-; Total pins                         ; 113                                            ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 1,616                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 1                                              ;
-+------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Aug 10 14:46:39 2024       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; top_ov7670                                  ;
+; Top-level Entity Name              ; top_ov7670                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 419                                         ;
+;     Total combinational functions  ; 320                                         ;
+;     Dedicated logic registers      ; 252                                         ;
+; Total registers                    ; 252                                         ;
+; Total pins                         ; 113                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,616                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; top_ov7670         ; top_ov7670         ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; top_ov7670         ; top_ov7670         ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -191,16 +190,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                  ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                               ; Library ;
 +---------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; read_camera.v                                     ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/read_camera.v                                     ;         ;
 ; sram/synthesis/sram.v                             ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/sram/synthesis/sram.v                             ; sram    ;
 ; sram/synthesis/submodules/sram_sram_0.v           ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/sram/synthesis/submodules/sram_sram_0.v           ; sram    ;
 ; top_ov7670.v                                      ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/top_ov7670.v                                      ;         ;
 ; i2c.v                                             ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/i2c.v                                             ;         ;
 ; config_camera.v                                   ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/config_camera.v                                   ;         ;
-; output_files/read_camera.v                        ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/output_files/read_camera.v                        ;         ;
 ; PLL.v                                             ; yes             ; User Wizard-Generated File                            ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/PLL.v                                             ;         ;
 ; VGA_control.v                                     ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/VGA_control.v                                     ;         ;
 ; altpll.tdf                                        ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/altpll.tdf                                         ;         ;
-; aglobal221.inc                                    ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/aglobal221.inc                                     ;         ;
+; aglobal171.inc                                    ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/aglobal171.inc                                     ;         ;
 ; stratix_pll.inc                                   ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/stratix_pll.inc                                    ;         ;
 ; stratixii_pll.inc                                 ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/stratixii_pll.inc                                  ;         ;
 ; cycloneii_pll.inc                                 ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/cycloneii_pll.inc                                  ;         ;
@@ -395,6 +394,8 @@ Encoding Type:  One-Hot
 ; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                                     ;
 +---------------------------------+---------------------------+----------------------------------------------------------------------------+
 ; read_sram                       ; Stuck at VCC              ; sram:u3|sram_sram_0:sram_0|SRAM_OE_N, sram:u3|sram_sram_0:sram_0|SRAM_CE_N ;
+;                                 ; due to stuck port data_in ;                                                                            ;
+; stt_vga[2]                      ; Stuck at GND              ; sram:u3|sram_sram_0:sram_0|SRAM_ADDR[19]                                   ;
 ;                                 ; due to stuck port data_in ;                                                                            ;
 ; config_camera:u2|i_i2c_data[23] ; Stuck at GND              ; config_camera:u2|i2c:config_camera|SD[23]                                  ;
 ;                                 ; due to stuck port data_in ;                                                                            ;
@@ -978,24 +979,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "VGA_Ctrl:u5"                                                                                                                                            ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                                                                                         ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; iRed         ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "iRed[9..8]" will be connected to GND.   ;
-; iRed[2..0]   ; Input  ; Info     ; Stuck at GND                                                                                                                                    ;
-; iGreen       ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "iGreen[9..8]" will be connected to GND. ;
-; iGreen[1..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                    ;
-; iBlue        ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "iBlue[9..8]" will be connected to GND.  ;
-; iBlue[2..0]  ; Input  ; Info     ; Stuck at GND                                                                                                                                    ;
-; oCurrent_X   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; oCurrent_Y   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; oRequest     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; oVGA_R       ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "oVGA_R[9..8]" have no fanouts                      ;
-; oVGA_G       ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "oVGA_G[9..8]" have no fanouts                      ;
-; oVGA_B       ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "oVGA_B[9..8]" have no fanouts                      ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA_Ctrl:u5"                                                                                ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; iRed[2..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; iGreen[1..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; iBlue[2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; oCurrent_X   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; oCurrent_Y   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; oRequest     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -1083,7 +1078,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1092,11 +1087,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Aug  8 15:32:56 2024
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Aug 10 14:46:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_ov7670 -c top_ov7670
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file read_camera.v
+    Info (12023): Found entity 1: camera_read File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/read_camera.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file sram/synthesis/sram.v
     Info (12023): Found entity 1: sram File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/sram/synthesis/sram.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file sram/synthesis/submodules/sram_sram_0.v
@@ -1108,8 +1105,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file i2c.v
 Warning (10229): Verilog HDL Expression warning at config_camera.v(144): truncated literal to match 5 bits File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/config_camera.v Line: 144
 Info (12021): Found 1 design units, including 1 entities, in source file config_camera.v
     Info (12023): Found entity 1: config_camera File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/config_camera.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file output_files/read_camera.v
-    Info (12023): Found entity 1: camera_read File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/output_files/read_camera.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
     Info (12023): Found entity 1: PLL File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/PLL.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file vga_control.v
@@ -1200,12 +1195,12 @@ Info (12133): Instantiated megafunction "PLL:u1|altpll:altpll_component" with th
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: PLL_altpll File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/pll_altpll.v Line: 30
-Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated" File: d:/fpga/quartus/libraries/megafunctions/altpll.tdf Line: 898
+    Info (12023): Found entity 1: PLL_altpll File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/pll_altpll.v Line: 29
+Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated" File: d:/fpga/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "sram" for hierarchy "sram:u3" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/top_ov7670.v Line: 295
 Info (12128): Elaborating entity "sram_sram_0" for hierarchy "sram:u3|sram_sram_0:sram_0" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/sram/synthesis/sram.v Line: 42
 Info (12128): Elaborating entity "camera_read" for hierarchy "camera_read:u4" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/top_ov7670.v Line: 307
-Warning (10230): Verilog HDL assignment warning at read_camera.v(55): truncated value with size 32 to match size of target (1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/output_files/read_camera.v Line: 55
+Warning (10230): Verilog HDL assignment warning at read_camera.v(55): truncated value with size 32 to match size of target (1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/read_camera.v Line: 55
 Info (12128): Elaborating entity "VGA_Ctrl" for hierarchy "VGA_Ctrl:u5" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/top_ov7670.v Line: 333
 Warning (10230): Verilog HDL assignment warning at VGA_control.v(67): truncated value with size 32 to match size of target (19) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/VGA_control.v Line: 67
 Warning (10230): Verilog HDL assignment warning at VGA_control.v(70): truncated value with size 32 to match size of target (11) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/VGA_control.v Line: 70
@@ -1235,10 +1230,10 @@ Info (12133): Instantiated megafunction "config_camera:u2|altsyncram:message_rtl
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_si81.tdf
-    Info (12023): Found entity 1: altsyncram_si81 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/altsyncram_si81.tdf Line: 28
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif" contains "don't care" values -- overwriting them with 0s File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif" contains "don't care" values -- overwriting them with 0s File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: altsyncram_si81 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/altsyncram_si81.tdf Line: 27
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif" contains "don't care" values -- overwriting them with 0s File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif" contains "don't care" values -- overwriting them with 0s File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/i2c.v Line: 79
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -1271,9 +1266,9 @@ Info (21057): Implemented 550 device resources after synthesis - the final resou
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Thu Aug  8 15:33:04 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Sat Aug 10 14:46:39 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:07
 
 

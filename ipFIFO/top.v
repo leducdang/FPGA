@@ -77,7 +77,7 @@ fifo u0(
 	.q(data_out),
 	.usedw(usedw)
 	);
-	
+	    
 assign	pin_data_out = data_out;
 assign 	pin_out_empty = pin_empty;
 assign 	pin_out_full = pin_full;	

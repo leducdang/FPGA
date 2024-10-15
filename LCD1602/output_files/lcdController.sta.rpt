@@ -1,13 +1,13 @@
-Timing Analyzer report for lcdController
-Thu Jun 27 15:30:43 2024
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+TimeQuest Timing Analyzer report for lcdController
+Wed Oct 02 15:41:28 2024
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Timing Analyzer Summary
+  2. TimeQuest Timing Analyzer Summary
   3. Parallel Compilation
   4. Clocks
   5. Slow 1200mV 85C Model Fmax Summary
@@ -51,16 +51,16 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
  43. Clock Status Summary
  44. Unconstrained Output Ports
  45. Unconstrained Output Ports
- 46. Timing Analyzer Messages
+ 46. TimeQuest Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -70,23 +70,22 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                        ;
-+-----------------------+--------------------------------------------------------+
-; Quartus Prime Version ; Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
-; Revision Name         ; lcdController                                          ;
-; Device Family         ; Cyclone IV E                                           ;
-; Device Name           ; EP4CE115F29C7                                          ;
-; Timing Models         ; Final                                                  ;
-; Delay Model           ; Combined                                               ;
-; Rise/Fall Delays      ; Enabled                                                ;
-+-----------------------+--------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; lcdController                                       ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -102,7 +101,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.7%      ;
+;     Processors 2-4         ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -313,7 +312,7 @@ No paths to report.
 ; 0.687 ; counter_lcd[5]  ; counter_lcd[5]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.953      ;
 ; 0.695 ; counter_lcd[2]  ; counter_lcd[2]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.961      ;
 ; 0.697 ; counter_lcd[3]  ; counter_lcd[3]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.963      ;
-; 0.698 ; counter[2]      ; counter[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.964      ;
+; 0.699 ; counter[2]      ; counter[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.965      ;
 ; 0.699 ; counter[3]      ; counter[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.965      ;
 ; 0.703 ; counter_lcd[1]  ; counter_lcd[1]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.969      ;
 ; 0.703 ; counter[4]      ; counter[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 0.969      ;
@@ -343,7 +342,7 @@ No paths to report.
 ; 1.006 ; counter_lcd[4]  ; counter_lcd[6]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.272      ;
 ; 1.014 ; counter_lcd[3]  ; counter_lcd[4]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.280      ;
 ; 1.015 ; char[6]         ; char[6]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.097      ; 1.298      ;
-; 1.015 ; counter[2]      ; counter[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.281      ;
+; 1.016 ; counter[2]      ; counter[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.282      ;
 ; 1.017 ; counter_lcd[0]  ; counter_lcd[1]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.283      ;
 ; 1.018 ; data[4]         ; data[4]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.097      ; 1.301      ;
 ; 1.020 ; counter_lcd[1]  ; counter_lcd[2]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.286      ;
@@ -366,7 +365,7 @@ No paths to report.
 ; 1.112 ; counter_1ms[0]  ; counter_1ms[3]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.378      ;
 ; 1.113 ; counter_1ms[2]  ; counter_1ms[5]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.379      ;
 ; 1.114 ; counter_char[7] ; counter_char[7] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.079      ; 1.379      ;
-; 1.120 ; counter[2]      ; data[3]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.510      ; 1.816      ;
+; 1.121 ; counter[2]      ; data[3]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.510      ; 1.817      ;
 ; 1.126 ; counter_lcd[5]  ; counter_lcd[7]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.392      ;
 ; 1.127 ; counter_lcd[4]  ; counter_lcd[7]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.393      ;
 ; 1.129 ; counter_lcd[5]  ; en              ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.511      ; 1.826      ;
@@ -376,7 +375,7 @@ No paths to report.
 ; 1.132 ; counter_lcd[4]  ; counter_lcd[8]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.398      ;
 ; 1.134 ; char[3]         ; char[3]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.097      ; 1.417      ;
 ; 1.135 ; counter_lcd[3]  ; counter_lcd[5]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.401      ;
-; 1.136 ; counter[2]      ; counter[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.402      ;
+; 1.137 ; counter[2]      ; counter[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.403      ;
 ; 1.140 ; counter_char[0] ; counter_char[1] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.078      ; 1.404      ;
 ; 1.140 ; counter_lcd[3]  ; counter_lcd[6]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.406      ;
 ; 1.141 ; counter_lcd[1]  ; counter_lcd[3]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.080      ; 1.407      ;
@@ -850,8 +849,8 @@ No paths to report.
 ; 0.324 ; counter[3]      ; counter[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.449      ;
 ; 0.324 ; counter[4]      ; counter[0]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.449      ;
 ; 0.327 ; counter_lcd[1]  ; counter_lcd[1]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.451      ;
+; 0.328 ; counter[0]      ; counter[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.453      ;
 ; 0.328 ; counter_lcd[0]  ; counter_lcd[0]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.452      ;
-; 0.329 ; counter[0]      ; counter[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.454      ;
 ; 0.337 ; counter[0]      ; data[0]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.243      ; 0.664      ;
 ; 0.404 ; counter_char[4] ; counter_char[5] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.243      ; 0.731      ;
 ; 0.406 ; counter[1]      ; counter[1]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.531      ;
@@ -880,12 +879,12 @@ No paths to report.
 ; 0.475 ; counter_lcd[0]  ; counter_lcd[1]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.599      ;
 ; 0.476 ; counter_lcd[1]  ; counter_lcd[2]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.600      ;
 ; 0.478 ; counter_lcd[0]  ; counter_lcd[2]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.602      ;
+; 0.481 ; counter[0]      ; counter[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.606      ;
 ; 0.481 ; counter_lcd[2]  ; counter_lcd[3]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.605      ;
 ; 0.482 ; counter[3]      ; counter[4]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.607      ;
-; 0.482 ; counter[0]      ; counter[2]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.607      ;
 ; 0.484 ; counter_char[9] ; counter_char[9] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.049      ; 0.617      ;
 ; 0.484 ; counter_lcd[2]  ; counter_lcd[4]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.608      ;
-; 0.485 ; counter[0]      ; counter[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.610      ;
+; 0.484 ; counter[0]      ; counter[3]      ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.609      ;
 ; 0.492 ; counter_lcd[0]  ; rs              ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.820      ;
 ; 0.505 ; counter_char[7] ; counter_char[7] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.630      ;
 ; 0.505 ; counter_lcd[5]  ; en              ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.243      ; 0.832      ;
@@ -896,9 +895,9 @@ No paths to report.
 ; 0.515 ; counter_lcd[7]  ; rs              ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.244      ; 0.843      ;
 ; 0.515 ; counter_char[1] ; counter_char[4] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.640      ;
 ; 0.516 ; counter_1ms[9]  ; counter_1ms[10] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.640      ;
-; 0.517 ; counter[2]      ; data[3]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.243      ; 0.844      ;
 ; 0.517 ; counter_1ms[7]  ; counter_1ms[10] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.641      ;
 ; 0.518 ; char[3]         ; char[3]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.049      ; 0.651      ;
+; 0.518 ; counter[2]      ; data[3]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.243      ; 0.845      ;
 ; 0.520 ; counter_char[0] ; counter_char[1] ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.041      ; 0.645      ;
 ; 0.521 ; char[7]         ; data[7]         ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.050      ; 0.655      ;
 ; 0.521 ; counter_lcd[6]  ; counter_lcd[9]  ; clock_50mhz  ; clock_50mhz ; 0.000        ; 0.040      ; 0.645      ;
@@ -1171,29 +1170,29 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+--------------------------+
-; Timing Analyzer Messages ;
-+--------------------------+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Timing Analyzer
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Jun 27 15:30:42 2024
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Oct 02 15:41:26 2024
 Info: Command: quartus_sta lcdController -c lcdController
-Info: qsta_default_script.tcl version: #1
+Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'lcdController.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'lcdController.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clock_50mhz clock_50mhz
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -2.959
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1211,9 +1210,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -2.652
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1229,9 +1228,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -78.815 clock_50mhz 
 Info: Analyzing Fast 1200mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -0.933
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1248,10 +1247,10 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000             -66.086 clock_50mhz 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Thu Jun 27 15:30:43 2024
-    Info: Elapsed time: 00:00:01
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Wed Oct 02 15:41:28 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

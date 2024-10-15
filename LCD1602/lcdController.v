@@ -23,7 +23,7 @@ reg 	[7:0] data;
 reg 	[7:0] char = 8'd48;				// 
 
 wire 	[7:0]	data_write[15:0];
-wire 	[127:0] chuoikitu = "** Thanh Hung **";
+wire 	[127:0] chuoikitu = "*Tuyen Xinh Gai*";
 
 reg	[4:0]	counter;
 reg	[9:0]		counter_char;

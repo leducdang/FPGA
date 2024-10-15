@@ -1,0 +1,23 @@
+IP Ports Diff Report for sdram
+Sat Aug 10 08:55:48 2024
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++------------------------------------------------+
+; IP Information                                 ;
++----------------------+-------------------------+
+; IP Variation Name    ; sdram                   ;
+; Prior Version        ; 1.0.0                   ;
+; New Version          ; 1.0.0                   ;
+; New File             ; sdram/synthesis/sdram.v ;
+; Has Port Differences ; No                      ;
++----------------------+-------------------------+
+
+

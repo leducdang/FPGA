@@ -1,0 +1,135 @@
+IP Upgrade report for sdram_controller
+Sat Aug 10 08:55:48 2024
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Successfully Upgraded IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; IP Upgrade Summary                                                            ;
++------------------------------+------------------------------------------------+
+; IP Components Upgrade Status ; Passed - Sat Aug 10 08:55:48 2024              ;
+; Quartus Prime Version        ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                ; sdram_controller                               ;
+; Top-level Entity Name        ; sdram_controller                               ;
+; Family                       ; Cyclone IV E                                   ;
++------------------------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Successfully Upgraded IP Components                                                                                                       ;
++-------------+--------------------------+---------+---------------------------+----------------------+---------------------------+---------+
+; Entity Name ; Component Name           ; Version ; Original Source File      ; Generation File Path ; New Source File           ; Message ;
++-------------+--------------------------+---------+---------------------------+----------------------+---------------------------+---------+
+; sdram       ; alt_mem_if_civ_ddr2_emif ; 1.0.0   ; sdram/synthesis/sdram.qip ; sdram.qsys           ; sdram/synthesis/sdram.qip ;         ;
++-------------+--------------------------+---------+---------------------------+----------------------+---------------------------+---------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "sdram.qsys" to "sdram.BAK.qsys"
+Info (11902): Backing up file "sdram/synthesis/sdram.v" to "sdram.BAK.v"
+Info (11837): Started upgrading IP component alt_mem_if_civ_ddr2_emif with file "sdram.qsys"
+Info: 2024.08.10.08:53:41 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2024.08.10.08:53:41 Info: Finished upgrading the ip cores
+Info: 2024.08.10.08:53:55 Info: Saving generation log to D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram
+Info: 2024.08.10.08:53:55 Info: Starting: Create simulation model
+Info: 2024.08.10.08:53:55 Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: 2024.08.10.08:53:55 Info: Loading SDRAM
+Info: 2024.08.10.08:53:56 Info: Reading input file
+Info: 2024.08.10.08:53:56 Info: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
+Info: 2024.08.10.08:53:56 Info: Parameterizing module alt_mem_if_civ_ddr2_emif_0
+Info: 2024.08.10.08:53:56 Info: Building connections
+Info: 2024.08.10.08:53:56 Info: Parameterizing connections
+Info: 2024.08.10.08:53:56 Info: Validating
+Info: 2024.08.10.08:54:05 Info: Done reading input file
+Warning: 2024.08.10.08:54:14 Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: 2024.08.10.08:54:14 Info: sdram: Generating sdram "sdram" for SIM_VERILOG
+Info: 2024.08.10.08:54:42 Info: alt_mem_if_civ_ddr2_emif_0: "sdram" instantiated alt_mem_if_civ_ddr2_emif "alt_mem_if_civ_ddr2_emif_0"
+Info: 2024.08.10.08:54:42 Info: phy: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_phy "phy"
+Info: 2024.08.10.08:54:42 Info: ctl: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_controller "ctl"
+Info: 2024.08.10.08:54:42 Info: status_bridge: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_status_bridge "status_bridge"
+Info: 2024.08.10.08:54:42 Info: sdram: Done "sdram" with 5 modules, 77 files
+Info: 2024.08.10.08:54:42 Info: qsys-generate succeeded.
+Info: 2024.08.10.08:54:42 Info: Finished: Create simulation model
+Info: 2024.08.10.08:54:42 Info: Starting: Create Modelsim Project.
+Info: 2024.08.10.08:54:42 Info: sim-script-gen --spd=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\sdram.spd --output-directory=D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation
+Info: 2024.08.10.08:54:42 Info: Doing: ip-make-simscript --spd=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\sdram.spd --output-directory=D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation
+Info: 2024.08.10.08:54:42 Info: Generating the following file(s) for RIVIERA simulator in D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation
+Info: 2024.08.10.08:54:42 Info:     aldec
+Info: 2024.08.10.08:54:42 Info: Generating the following file(s) for MODELSIM simulator in D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation
+Info: 2024.08.10.08:54:42 Info:     mentor
+Info: 2024.08.10.08:54:42 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation
+Info: 2024.08.10.08:54:42 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2024.08.10.08:54:42 Info: Finished: Create Modelsim Project.
+Info: 2024.08.10.08:54:42 Info: Starting: Create block symbol file (.bsf)
+Info: 2024.08.10.08:54:42 Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: 2024.08.10.08:54:42 Info: Loading SDRAM
+Info: 2024.08.10.08:54:43 Info: Reading input file
+Info: 2024.08.10.08:54:43 Info: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
+Info: 2024.08.10.08:54:43 Info: Parameterizing module alt_mem_if_civ_ddr2_emif_0
+Info: 2024.08.10.08:54:43 Info: Building connections
+Info: 2024.08.10.08:54:43 Info: Parameterizing connections
+Info: 2024.08.10.08:54:43 Info: Validating
+Info: 2024.08.10.08:54:52 Info: Done reading input file
+Warning: 2024.08.10.08:55:01 Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: 2024.08.10.08:55:01 Info: qsys-generate succeeded.
+Info: 2024.08.10.08:55:01 Info: Finished: Create block symbol file (.bsf)
+Info: 2024.08.10.08:55:01 Info:
+Info: 2024.08.10.08:55:01 Info: Starting: Create HDL design files for synthesis
+Info: 2024.08.10.08:55:01 Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: 2024.08.10.08:55:01 Info: Loading SDRAM
+Info: 2024.08.10.08:55:01 Info: Reading input file
+Info: 2024.08.10.08:55:01 Info: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
+Info: 2024.08.10.08:55:01 Info: Parameterizing module alt_mem_if_civ_ddr2_emif_0
+Info: 2024.08.10.08:55:01 Info: Building connections
+Info: 2024.08.10.08:55:01 Info: Parameterizing connections
+Info: 2024.08.10.08:55:01 Info: Validating
+Info: 2024.08.10.08:55:10 Info: Done reading input file
+Warning: 2024.08.10.08:55:20 Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: 2024.08.10.08:55:20 Info: sdram: Generating sdram "sdram" for QUARTUS_SYNTH
+Info: 2024.08.10.08:55:48 Info: alt_mem_if_civ_ddr2_emif_0: "sdram" instantiated alt_mem_if_civ_ddr2_emif "alt_mem_if_civ_ddr2_emif_0"
+Info: 2024.08.10.08:55:48 Info: phy: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_phy "phy"
+Info: 2024.08.10.08:55:48 Info: ctl: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_controller "ctl"
+Info: 2024.08.10.08:55:48 Info: status_bridge: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_status_bridge "status_bridge"
+Info: 2024.08.10.08:55:48 Info: sdram: Done "sdram" with 5 modules, 78 files
+Info: 2024.08.10.08:55:48 Info: qsys-generate succeeded.
+Info: 2024.08.10.08:55:48 Info: Finished: Create HDL design files for synthesis
+Info (11131): Completed upgrading IP component alt_mem_if_civ_ddr2_emif with file "sdram.qsys"
+Info (23030): Evaluation of Tcl script d:/fpga/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Sat Aug 10 08:55:48 2024
+    Info: Elapsed time: 00:02:28
+    Info: Total CPU time (on all processors): 00:00:28
+
+

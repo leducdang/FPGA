@@ -1,0 +1,221 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock_50mhz'
+Slack : -8.080
+TNS   : -406.776
+
+Type  : Slow 1200mV 85C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.395
+TNS   : -904.130
+
+Type  : Slow 1200mV 85C Model Setup 'PCLK_CAMERA'
+Slack : -1.848
+TNS   : -44.726
+
+Type  : Slow 1200mV 85C Model Setup 'VGA_Ctrl:u5|oVGA_HS'
+Slack : -1.769
+TNS   : -19.728
+
+Type  : Slow 1200mV 85C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -0.170
+TNS   : -0.170
+
+Type  : Slow 1200mV 85C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 9994.214
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -0.213
+TNS   : -0.213
+
+Type  : Slow 1200mV 85C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'VGA_Ctrl:u5|oVGA_HS'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_50mhz'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PCLK_CAMERA'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.013
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PCLK_CAMERA'
+Slack : -3.000
+TNS   : -51.830
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_Ctrl:u5|oVGA_HS'
+Slack : -1.285
+TNS   : -15.420
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_50mhz'
+Slack : 9.758
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 19.708
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 4999.709
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clock_50mhz'
+Slack : -7.238
+TNS   : -366.369
+
+Type  : Slow 1200mV 0C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.678
+TNS   : -560.439
+
+Type  : Slow 1200mV 0C Model Setup 'PCLK_CAMERA'
+Slack : -1.531
+TNS   : -36.869
+
+Type  : Slow 1200mV 0C Model Setup 'VGA_Ctrl:u5|oVGA_HS'
+Slack : -1.527
+TNS   : -17.014
+
+Type  : Slow 1200mV 0C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 9994.757
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -0.306
+TNS   : -0.306
+
+Type  : Slow 1200mV 0C Model Hold 'VGA_Ctrl:u5|oVGA_HS'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_50mhz'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PCLK_CAMERA'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.636
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PCLK_CAMERA'
+Slack : -3.000
+TNS   : -51.830
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_Ctrl:u5|oVGA_HS'
+Slack : -1.285
+TNS   : -15.420
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.351
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_50mhz'
+Slack : 9.779
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 19.710
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 4999.710
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clock_50mhz'
+Slack : -3.793
+TNS   : -168.898
+
+Type  : Fast 1200mV 0C Model Setup 'PCLK_CAMERA'
+Slack : -0.396
+TNS   : -3.453
+
+Type  : Fast 1200mV 0C Model Setup 'VGA_Ctrl:u5|oVGA_HS'
+Slack : -0.295
+TNS   : -2.815
+
+Type  : Fast 1200mV 0C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 0.081
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.949
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 9997.071
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -0.129
+TNS   : -0.129
+
+Type  : Fast 1200mV 0C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'VGA_Ctrl:u5|oVGA_HS'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_50mhz'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PCLK_CAMERA'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.572
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PCLK_CAMERA'
+Slack : -3.000
+TNS   : -48.641
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_Ctrl:u5|oVGA_HS'
+Slack : -1.000
+TNS   : -12.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.251
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_50mhz'
+Slack : 9.438
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 19.780
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u1|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 4999.755
+TNS   : 0.000
+
+------------------------------------------------------------
