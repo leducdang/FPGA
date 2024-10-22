@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2024.08.10.08:55:48"
- outputDirectory="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/">
+ date="2024.10.21.15:48:33"
+ outputDirectory="D:/2024/FPGA-TEST/SDRAM/sdram/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -34,473 +34,185 @@
      onHdl="0"
      affectsHdl="1" />
   <parameter
-     name="AUTO_PLL_REF_CLK_CLOCK_RATE"
+     name="AUTO_CLK_CLOCK_RATE"
      type="Long"
      defaultValue="-1"
      onHdl="0"
      affectsHdl="1" />
   <parameter
-     name="AUTO_PLL_REF_CLK_CLOCK_DOMAIN"
+     name="AUTO_CLK_CLOCK_DOMAIN"
      type="Integer"
      defaultValue="-1"
      onHdl="0"
      affectsHdl="1" />
   <parameter
-     name="AUTO_PLL_REF_CLK_RESET_DOMAIN"
+     name="AUTO_CLK_RESET_DOMAIN"
      type="Integer"
      defaultValue="-1"
      onHdl="0"
      affectsHdl="1" />
-  <interface name="aux_full_rate_clk" kind="clock" start="1">
-   <property name="associatedDirectClock" value="pll_ref_clk" />
+  <interface name="clk" kind="clock" start="0">
    <property name="clockRate" value="0" />
-   <property name="clockRateKnown" value="false" />
    <property name="externallyDriven" value="false" />
    <property name="ptfSchematicName" value="" />
-   <port name="aux_full_rate_clk" direction="output" role="clk" width="1" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
   </interface>
-  <interface name="aux_half_rate_clk" kind="clock" start="1">
-   <property name="associatedDirectClock" value="pll_ref_clk" />
-   <property name="clockRate" value="0" />
-   <property name="clockRateKnown" value="false" />
-   <property name="externallyDriven" value="false" />
-   <property name="ptfSchematicName" value="" />
-   <port name="aux_half_rate_clk" direction="output" role="clk" width="1" />
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_reset" direction="input" role="reset" width="1" />
   </interface>
-  <interface name="avl" kind="conduit" start="0">
+  <interface name="sdram_1" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="134217728" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
    <property name="associatedClock" value="" />
    <property name="associatedReset" value="" />
-   <port name="local_ready" direction="output" role="waitrequest_n" width="1" />
-   <port name="local_write_req" direction="input" role="write" width="1" />
-   <port name="local_read_req" direction="input" role="read" width="1" />
-   <port name="local_address" direction="input" role="address" width="24" />
-   <port name="local_be" direction="input" role="byteenable" width="2" />
-   <port name="local_wdata" direction="input" role="writedata" width="16" />
-   <port name="local_size" direction="input" role="burstcount" width="3" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="true" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="7" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port name="sdram_1_address" direction="input" role="address" width="25" />
    <port
-       name="local_burstbegin"
+       name="sdram_1_byteenable_n"
        direction="input"
-       role="beginbursttransfer"
-       width="1" />
-   <port name="local_rdata" direction="output" role="readdata" width="16" />
+       role="byteenable_n"
+       width="4" />
    <port
-       name="local_rdata_valid"
+       name="sdram_1_chipselect"
+       direction="input"
+       role="chipselect"
+       width="1" />
+   <port
+       name="sdram_1_writedata"
+       direction="input"
+       role="writedata"
+       width="32" />
+   <port name="sdram_1_read_n" direction="input" role="read_n" width="1" />
+   <port name="sdram_1_write_n" direction="input" role="write_n" width="1" />
+   <port name="sdram_1_readdata" direction="output" role="readdata" width="32" />
+   <port
+       name="sdram_1_readdatavalid"
        direction="output"
        role="readdatavalid"
        width="1" />
+   <port
+       name="sdram_1_waitrequest"
+       direction="output"
+       role="waitrequest"
+       width="1" />
   </interface>
-  <interface name="global_reset" kind="reset" start="0">
-   <property name="associatedClock" value="" />
-   <property name="synchronousEdges" value="NONE" />
-   <port name="global_reset_n" direction="input" role="reset_n" width="1" />
-  </interface>
-  <interface name="mem" kind="conduit" start="0">
-   <property name="associatedClock" value="" />
-   <property name="associatedReset" value="" />
-   <port name="mem_addr" direction="output" role="mem_a" width="13" />
-   <port name="mem_ba" direction="output" role="mem_ba" width="2" />
-   <port name="mem_cas_n" direction="output" role="mem_cas_n" width="1" />
-   <port name="mem_cke" direction="output" role="mem_cke" width="1" />
-   <port name="mem_clk" direction="bidir" role="mem_ck" width="1" />
-   <port name="mem_clk_n" direction="bidir" role="mem_ck_n" width="1" />
-   <port name="mem_cs_n" direction="output" role="mem_cs_n" width="1" />
-   <port name="mem_dm" direction="output" role="mem_dm" width="1" />
-   <port name="mem_dq" direction="bidir" role="mem_dq" width="8" />
-   <port name="mem_dqs" direction="bidir" role="mem_dqs" width="1" />
-   <port name="mem_dqs_n" direction="bidir" role="mem_dqs_n" width="1" />
-   <port name="mem_odt" direction="output" role="mem_odt" width="1" />
-   <port name="mem_ras_n" direction="output" role="mem_ras_n" width="1" />
-   <port name="mem_we_n" direction="output" role="mem_we_n" width="1" />
-  </interface>
-  <interface name="phy_clk" kind="clock" start="1">
-   <property name="associatedDirectClock" value="pll_ref_clk" />
-   <property name="clockRate" value="0" />
-   <property name="clockRateKnown" value="false" />
+  <interface name="sdram_clk" kind="clock" start="1">
+   <property name="associatedDirectClock" value="" />
+   <property name="clockRate" value="50000000" />
+   <property name="clockRateKnown" value="true" />
    <property name="externallyDriven" value="false" />
    <property name="ptfSchematicName" value="" />
-   <port name="phy_clk" direction="output" role="clk" width="1" />
+   <port name="sdram_clk_clk" direction="output" role="clk" width="1" />
   </interface>
-  <interface name="phy_reset" kind="reset" start="1">
-   <property name="associatedClock" value="" />
-   <property name="associatedDirectReset" value="" />
-   <property name="associatedResetSinks" value="global_reset" />
-   <property name="synchronousEdges" value="NONE" />
-   <port name="reset_phy_clk_n" direction="output" role="reset_n" width="1" />
-  </interface>
-  <interface name="pll_ref_clk" kind="clock" start="0">
-   <property name="clockRate" value="0" />
-   <property name="externallyDriven" value="false" />
-   <property name="ptfSchematicName" value="" />
-   <port name="pll_ref_clk" direction="input" role="clk" width="1" />
-  </interface>
-  <interface name="reset_request" kind="reset" start="1">
-   <property name="associatedClock" value="" />
-   <property name="associatedDirectReset" value="" />
-   <property name="associatedResetSinks" value="none" />
-   <property name="synchronousEdges" value="NONE" />
-   <port name="reset_request_n" direction="output" role="reset_n" width="1" />
-  </interface>
-  <interface name="status" kind="conduit" start="0">
+  <interface name="wire" kind="conduit" start="0">
    <property name="associatedClock" value="" />
    <property name="associatedReset" value="" />
-   <port
-       name="status_cal_fail"
-       direction="output"
-       role="local_cal_fail"
-       width="1" />
-   <port
-       name="status_cal_success"
-       direction="output"
-       role="local_cal_success"
-       width="1" />
-   <port
-       name="status_init_done"
-       direction="output"
-       role="local_init_done"
-       width="1" />
+   <port name="wire_addr" direction="output" role="addr" width="13" />
+   <port name="wire_ba" direction="output" role="ba" width="2" />
+   <port name="wire_cas_n" direction="output" role="cas_n" width="1" />
+   <port name="wire_cke" direction="output" role="cke" width="1" />
+   <port name="wire_cs_n" direction="output" role="cs_n" width="1" />
+   <port name="wire_dq" direction="bidir" role="dq" width="32" />
+   <port name="wire_dqm" direction="output" role="dqm" width="4" />
+   <port name="wire_ras_n" direction="output" role="ras_n" width="1" />
+   <port name="wire_we_n" direction="output" role="we_n" width="1" />
   </interface>
  </perimeter>
  <entity
    path=""
-   parameterizationKey="sdram:1.0:AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1723254920,AUTO_PLL_REF_CLK_CLOCK_DOMAIN=-1,AUTO_PLL_REF_CLK_CLOCK_RATE=-1,AUTO_PLL_REF_CLK_RESET_DOMAIN=-1,AUTO_UNIQUE_ID=(alt_mem_if_civ_ddr2_emif:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,AUTO_DEVICE_SPEEDGRADE=7,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_DATA_RATE=Full,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_REORDERING_STARVATION_LIMIT=10,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TOTAL_DQ_WIDTH=8,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E(altera_reset_bridge:22.1:ACTIVE_LOW_RESET=1,AUTO_CLK_CLOCK_RATE=-1,NUM_RESET_OUTPUTS=1,SYNCHRONOUS_EDGES=none,USE_RESET_REQUEST=0)(altera_clock_bridge:22.1:DERIVED_CLOCK_RATE=0,EXPLICIT_CLOCK_RATE=0,NUM_CLOCK_OUTPUTS=1)(alt_mem_if_civ_ddr2_phy:1.0.0:ADV_LAT_WIDTH=5,ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CAPABILITIES=2048,CAPTURE_PHASE_OFFSET=0,CHIP_OR_DIMM=Discrete Device,CLOCK_INDEX_WIDTH=3,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_DATA_RATE=Full,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_REORDERING_STARVATION_LIMIT=10,DBG_A_WIDTH=13,DLL_DELAY_BUFFER_MODE=HIGH,DLL_DELAY_CHAIN_LENGTH=12,DLL_EXPORT_IMPORT=EXPORT,DQS_DELAY_CTL_WIDTH=6,DQS_OUT_MODE=DELAY_CHAIN3,DQS_OUT_MODE_INT=3,DQS_PHASE=9000,DQS_PHASE_SETTING=3,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,FAMILY=Cyclone IV E,FAMILYGROUP_ID=2,FORCE_HC=0,GENERATE_ADDITIONAL_DBG_RTL=0,IOE_DELAYS_PER_PHS=5,IOE_PHASES_PER_TCK=12,IP_BUILDNUM=0,LEVELLING=0,LOCAL_IF_CLK_MHZ=200.0,LOCAL_IF_CLK_PERIOD_PS=5000,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_CMD_PHASE=90,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_CLK_PS_STR=5000 ps,MEM_IF_CS_PER_RANK=1,MEM_IF_CS_WIDTH=1,MEM_IF_DM_PINS_EN=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQSN_EN=0,MEM_IF_DQS_CAPTURE_EN=0,MEM_IF_DQS_WIDTH=1,MEM_IF_DQ_PER_DQS=8,MEM_IF_DWIDTH=8,MEM_IF_MEMTYPE=DDR2,MEM_IF_MR_0=1074,MEM_IF_MR_1=1024,MEM_IF_MR_2=0,MEM_IF_MR_3=0,MEM_IF_OCT_EN=0,MEM_IF_PRESET_RLAT=0,MEM_IF_RANKS_PER_SLOT=1,MEM_IF_RDV_PER_CHIP=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TOTAL_DQ_WIDTH=8,MEM_TWR=3,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,PLL_CLK0_DIVIDE_BY=1,PLL_CLK0_MULTIPLY_BY=1,PLL_CLK0_PHASE_SHIFT_PS=0,PLL_CLK1_DIVIDE_BY=1,PLL_CLK1_MULTIPLY_BY=2,PLL_CLK1_PHASE_SHIFT_PS=0,PLL_CLK2_DIVIDE_BY=1,PLL_CLK2_MULTIPLY_BY=2,PLL_CLK2_PHASE_SHIFT_PS=-1250,PLL_CLK3_DIVIDE_BY=1,PLL_CLK3_MULTIPLY_BY=2,PLL_CLK3_PHASE_SHIFT_PS=0,PLL_CLK4_DIVIDE_BY=1,PLL_CLK4_MULTIPLY_BY=2,PLL_CLK4_PHASE_SHIFT_PS=0,PLL_INCLK0_PERIOD_PS=10000,PLL_INTENDED_DEVICE_FAMILY=Cyclone IV E,PLL_REF_CLK_PERIOD_PS=10000,PLL_STEPS_PER_CYCLE=48,PLL_VCO_PHASE_SHIFT_STEP=104,PRESET_RLAT=0,RANK_HAS_ADDR_SWAP=0,RDIMM_CONFIG_BITS=0,RDP_ADDR_WIDTH=4,REDUCE_SIM_TIME=0,RESYNCHRONISE_AVALON_DBG=0,SCAN_CLK_DIVIDE_BY=2,SEQ_STRING_ID=seq_name,SINGLE_DQS_DELAY_CONTROL_CODE=0,SPEED_GRADE=C6,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,TINIT_RST=0,TINIT_TCK=200,WRITE_DESKEW_HC_T10=0,WRITE_DESKEW_HC_T9I=0,WRITE_DESKEW_HC_T9NI=0,WRITE_DESKEW_RANGE=0,WRITE_DESKEW_T10=0,WRITE_DESKEW_T9I=0,WRITE_DESKEW_T9NI=0)(alt_mem_if_civ_ddr2_controller:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CFG_ADDR_ORDER=0,CFG_BURST_LENGTH=4,CFG_CLR_INTR=0,CFG_DATA_REORDERING_TYPE=INTER_BANK,CFG_DEVICE_WIDTH=1,CFG_ENABLE_INTR=0,CFG_ENABLE_NO_DM=0,CFG_GEN_DBE=0,CFG_GEN_SBE=0,CFG_INTERFACE_WIDTH=8,CFG_MASK_CORRDROP_INTR=0,CFG_MASK_DBE_INTR=0,CFG_MASK_SBE_INTR=0,CFG_MEM_CLK_ENTRY_CYCLES=10,CFG_PDN_EXIT_CYCLES=3,CFG_PORT_WIDTH_READ_ODT_CHIP=1,CFG_PORT_WIDTH_WRITE_ODT_CHIP=1,CFG_POWER_SAVING_EXIT_CYCLES=5,CFG_READ_ODT_CHIP=0,CFG_REORDER_DATA=1,CFG_SELF_RFSH_EXIT_CYCLES=200,CFG_STARVE_LIMIT=10,CFG_TCCD=2,CFG_TYPE=1,CFG_WRITE_ODT_CHIP=1,CSR_ADDR_WIDTH=16,CSR_BE_WIDTH=4,CSR_DATA_WIDTH=32,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_CSR_ENABLED=0,CTL_DATA_RATE=Full,CTL_ECC_ENABLED=0,CTL_ECC_MULTIPLES_16_24_40_72=1,CTL_ECC_RMW_ENABLED=0,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_ODT_ENABLED=0,CTL_OUTPUT_REGD=0,CTL_RD_TO_PCH_EXTRA_CLK=0,CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK=0,CTL_REGDIMM_ENABLED=0,CTL_REORDERING_STARVATION_LIMIT=10,CTL_TBP_NUM=4,CTL_USR_REFRESH=0,CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK=0,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,LOCAL_ADDR_WIDTH=24,LOCAL_BE_WIDTH=2,LOCAL_CS_WIDTH=0,LOCAL_DATA_WIDTH=16,LOCAL_ID_WIDTH=8,LOCAL_IF_DWIDTH_AFTER_ECC=16,LOCAL_IF_TYPE=AVALON,LOCAL_SIZE_WIDTH=3,MAX_LOCAL_DATA_WIDTH=80,MAX_MEM_IF_BANKADDR_WIDTH=3,MAX_MEM_IF_CHIP=4,MAX_MEM_IF_COLADDR_WIDTH=12,MAX_MEM_IF_CS_WIDTH=30,MAX_MEM_IF_DQS_WIDTH=5,MAX_MEM_IF_DQ_WIDTH=40,MAX_MEM_IF_MASK_WIDTH=5,MAX_MEM_IF_ODT_WIDTH=1,MAX_MEM_IF_ROWADDR_WIDTH=16,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_ADD_LAT=0,MEM_AUTO_PD_CYCLES=0,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CAS_WR_LAT=5,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CHIP=1,MEM_IF_CKE_WIDTH=1,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_COL_WIDTH=10,MEM_IF_CS_WIDTH=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQS_WIDTH=1,MEM_IF_DWIDTH=8,MEM_IF_ODT_WIDTH=1,MEM_IF_RD_TO_WR_TURNAROUND_OCT=3,MEM_IF_ROW_WIDTH=13,MEM_IF_WR_TO_RD_TURNAROUND_OCT=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TCL=3,MEM_TFAW=8,MEM_TMRD_CK=10,MEM_TOTAL_DQ_WIDTH=8,MEM_TRAS=8,MEM_TRC=11,MEM_TRCD=3,MEM_TREFI=1400,MEM_TRFC=15,MEM_TRP=3,MEM_TRRD=2,MEM_TRTP=2,MEM_TWR=3,MEM_TWTR=2,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,RDBUFFER_ADDR_WIDTH=8,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,WRBUFFER_ADDR_WIDTH=6)(alt_mem_if_civ_ddr2_status_bridge:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CFG_ADDR_ORDER=0,CFG_BURST_LENGTH=4,CFG_CLR_INTR=0,CFG_DATA_REORDERING_TYPE=INTER_BANK,CFG_DEVICE_WIDTH=1,CFG_ENABLE_INTR=0,CFG_ENABLE_NO_DM=0,CFG_GEN_DBE=0,CFG_GEN_SBE=0,CFG_INTERFACE_WIDTH=8,CFG_MASK_CORRDROP_INTR=0,CFG_MASK_DBE_INTR=0,CFG_MASK_SBE_INTR=0,CFG_MEM_CLK_ENTRY_CYCLES=10,CFG_PDN_EXIT_CYCLES=3,CFG_PORT_WIDTH_READ_ODT_CHIP=1,CFG_PORT_WIDTH_WRITE_ODT_CHIP=1,CFG_POWER_SAVING_EXIT_CYCLES=5,CFG_READ_ODT_CHIP=0,CFG_REORDER_DATA=1,CFG_SELF_RFSH_EXIT_CYCLES=200,CFG_STARVE_LIMIT=10,CFG_TCCD=2,CFG_TYPE=1,CFG_WRITE_ODT_CHIP=1,CSR_ADDR_WIDTH=16,CSR_BE_WIDTH=4,CSR_DATA_WIDTH=32,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_CSR_ENABLED=0,CTL_DATA_RATE=Full,CTL_ECC_ENABLED=0,CTL_ECC_MULTIPLES_16_24_40_72=1,CTL_ECC_RMW_ENABLED=0,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_ODT_ENABLED=0,CTL_OUTPUT_REGD=0,CTL_RD_TO_PCH_EXTRA_CLK=0,CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK=0,CTL_REGDIMM_ENABLED=0,CTL_REORDERING_STARVATION_LIMIT=10,CTL_TBP_NUM=4,CTL_USR_REFRESH=0,CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK=0,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,LOCAL_ADDR_WIDTH=24,LOCAL_BE_WIDTH=2,LOCAL_CS_WIDTH=0,LOCAL_DATA_WIDTH=16,LOCAL_ID_WIDTH=8,LOCAL_IF_DWIDTH_AFTER_ECC=16,LOCAL_IF_TYPE=AVALON,LOCAL_SIZE_WIDTH=3,MAX_LOCAL_DATA_WIDTH=80,MAX_MEM_IF_BANKADDR_WIDTH=3,MAX_MEM_IF_CHIP=4,MAX_MEM_IF_COLADDR_WIDTH=12,MAX_MEM_IF_CS_WIDTH=30,MAX_MEM_IF_DQS_WIDTH=5,MAX_MEM_IF_DQ_WIDTH=40,MAX_MEM_IF_MASK_WIDTH=5,MAX_MEM_IF_ODT_WIDTH=1,MAX_MEM_IF_ROWADDR_WIDTH=16,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_ADD_LAT=0,MEM_AUTO_PD_CYCLES=0,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CAS_WR_LAT=5,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CHIP=1,MEM_IF_CKE_WIDTH=1,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_COL_WIDTH=10,MEM_IF_CS_WIDTH=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQS_WIDTH=1,MEM_IF_DWIDTH=8,MEM_IF_ODT_WIDTH=1,MEM_IF_RD_TO_WR_TURNAROUND_OCT=3,MEM_IF_ROW_WIDTH=13,MEM_IF_WR_TO_RD_TURNAROUND_OCT=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TCL=3,MEM_TFAW=8,MEM_TMRD_CK=10,MEM_TOTAL_DQ_WIDTH=8,MEM_TRAS=8,MEM_TRC=11,MEM_TRCD=3,MEM_TREFI=1400,MEM_TRFC=15,MEM_TRP=3,MEM_TRRD=2,MEM_TRTP=2,MEM_TWR=3,MEM_TWTR=2,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,RDBUFFER_ADDR_WIDTH=8,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,WRBUFFER_ADDR_WIDTH=6)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(clock:22.1:)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(clock:22.1:)(reset:22.1:)(reset:22.1:)(clock:22.1:))"
+   parameterizationKey="sdram:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1729500511,AUTO_UNIQUE_ID=(altera_avalon_new_sdram_controller:17.1:TAC=5.5,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=14.0,addressWidth=25,bankWidth=2,casLatency=3,clockRate=50000000,columnWidth=10,componentName=sdram_new_sdram_controller_0,dataWidth=32,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=200.0,refreshPeriod=7.8125,registerDataIn=true,rowWidth=13,size=134217728)(altera_up_avalon_sys_sdram_pll:17.1:AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_SPEEDGRADE=7,CIII_boards=DE0,CIV_boards=DE2-115,CV_boards=DE10-Standard,MAX10_boards=DE10-Lite,board=DE2-115,device_family=Cyclone IV E,gui_outclk=50.0,gui_refclk=50.0,other_boards=None,outclk=50.0,refclk=50.0(altera_up_altpll:17.1:DEVICE_FAMILY=Cyclone IV,OUTCLK0_DIV=1,OUTCLK0_MULT=1,OUTCLK1_DIV=1,OUTCLK1_MULT=1,OUTCLK2_DIV=1,OUTCLK2_MULT=1,PHASE_SHIFT=-3000,audio_clk_freq=12.288,gui_device_family=Cyclone IV E,type=System/SDRAM,video_in=5MP Digital Camera (THDB_D5M),video_out=4.3&quot; LCD (TRDB_LTM))(altera_up_avalon_reset_from_locked_signal:17.1:)(conduit:17.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0))(clock:17.1:)(reset:17.1:)"
    instancePathKey="sdram"
    kind="sdram"
    version="1.0"
    name="sdram">
-  <parameter name="AUTO_GENERATION_ID" value="1723254920" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1729500511" />
   <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
-  <parameter name="AUTO_PLL_REF_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
   <parameter name="AUTO_UNIQUE_ID" value="" />
-  <parameter name="AUTO_PLL_REF_CLK_CLOCK_RATE" value="-1" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
-  <parameter name="AUTO_PLL_REF_CLK_CLOCK_DOMAIN" value="-1" />
   <generatedFiles>
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/sdram.v"
-       type="VERILOG" />
+   <file path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/sdram.v" type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/sdram_new_sdram_controller_0.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/sdram_sys_sdram_pll_0.v"
        type="VERILOG" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_pin_assignments.tcl"
-       type="OTHER"
-       attributes="" />
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_up_altpll.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdc_params.tcl"
-       type="OTHER"
-       attributes="" />
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v"
+       type="VERILOG"
+       attributes="TOP_LEVEL_FILE" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_reset_controller.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_ac.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_reset_synchronizer.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_clk_reset.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_defines.iv"
-       type="VERILOG_INCLUDE"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_delay.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dp_io.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dqs_offset.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mimic.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mimic_debug.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mux.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_pll.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_postamble.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_rdata_valid.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_read_dp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_read_dp_group.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_reset_pipe.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_seq_wrapper.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_write_dp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_write_dp_fr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_constants_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_record_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_regs_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_addr_cmd_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram_addr_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_admin.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_ctrl.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dgrb.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dgwb.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram_ram.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mmi.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_seq.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_pins.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_report_timing.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_report_timing_core.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_timing.sdc"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_reset_controller.sdc"
        type="SDC"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_addr_cmd_wrap.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_arbiter.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_buffer.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_buffer_manager.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_burst_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_burst_tracking.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_cmd_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_controller.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_controller_st_top.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_csr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_dataid_manager.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ddr2_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ddr3_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_define.iv"
-       type="VERILOG_INCLUDE"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_32_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_64_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_fifo.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_input_if.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_list.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_lpddr2_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_mm_st_converter.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rank_timer.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rdata_path.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rdwr_data_tmg.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_sideband.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_tbp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_timing_param.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_wdata_path.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge.v"
-       type="VERILOG"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
-   <file path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram.qsys" />
+   <file path="D:/2024/FPGA-TEST/SDRAM/sdram.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_interfaces/alt_mem_if_civ_ddr2_emif/alt_mem_if_civ_ddr2_emif_hw.tcl" />
+       path="D:/fpga/ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/altera_avalon_new_sdram_controller_hw.tcl" />
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_phys/alt_mem_if_civ_ddr2_phy/alt_mem_if_civ_ddr2_phy_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_avalon_sys_sdram_pll/altera_up_avalon_sys_sdram_pll_hw.tcl" />
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_controllers/alt_mem_if_civ_ddr2_controller/alt_mem_if_civ_ddr2_controller_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_altpll/altera_up_altpll_hw.tcl" />
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/bridges/alt_mem_if_civ_ddr2_status_bridge/alt_mem_if_civ_ddr2_status_bridge_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_avalon_reset_from_locked_signal/altera_up_avalon_reset_from_locked_signal_hw.tcl" />
+   <file
+       path="D:/fpga/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
   </childSourceFiles>
   <messages>
    <message level="Debug" culprit="sdram">queue size: 0 starting:sdram "sdram"</message>
@@ -509,1339 +221,262 @@
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
-   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
    <message level="Debug">Transform: MMTransform</message>
    <message level="Debug">Transform: InterruptMapperTransform</message>
    <message level="Debug">Transform: InterruptSyncTransform</message>
    <message level="Debug">Transform: InterruptFanoutTransform</message>
    <message level="Debug">Transform: AvalonStreamingTransform</message>
    <message level="Debug">Transform: ResetAdaptation</message>
-   <message level="Debug" culprit="sdram"><![CDATA["<b>sdram</b>" reuses <b>alt_mem_if_civ_ddr2_emif</b> "<b>submodules/sdram_alt_mem_if_civ_ddr2_emif_0</b>"]]></message>
-   <message level="Debug" culprit="sdram">queue size: 0 starting:alt_mem_if_civ_ddr2_emif "submodules/sdram_alt_mem_if_civ_ddr2_emif_0"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>3</b> modules, <b>4</b> connections]]></message>
+   <message level="Debug" culprit="sdram"><![CDATA["<b>sdram</b>" reuses <b>altera_avalon_new_sdram_controller</b> "<b>submodules/sdram_new_sdram_controller_0</b>"]]></message>
+   <message level="Debug" culprit="sdram"><![CDATA["<b>sdram</b>" reuses <b>altera_up_avalon_sys_sdram_pll</b> "<b>submodules/sdram_sys_sdram_pll_0</b>"]]></message>
+   <message level="Debug" culprit="sdram"><![CDATA["<b>sdram</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 2 starting:altera_avalon_new_sdram_controller "submodules/sdram_new_sdram_controller_0"</message>
+   <message level="Info" culprit="new_sdram_controller_0">Starting RTL generation for module 'sdram_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0006_new_sdram_controller_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0006_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="new_sdram_controller_0">Done RTL generation for module 'sdram_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0"><![CDATA["<b>sdram</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>new_sdram_controller_0</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 1 starting:altera_up_avalon_sys_sdram_pll "submodules/sdram_sys_sdram_pll_0"</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
-   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>5</b> modules, <b>8</b> connections]]></message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>1</b> connections]]></message>
    <message level="Debug">Transform: MMTransform</message>
    <message level="Debug">Transform: InterruptMapperTransform</message>
    <message level="Debug">Transform: InterruptSyncTransform</message>
    <message level="Debug">Transform: InterruptFanoutTransform</message>
    <message level="Debug">Transform: AvalonStreamingTransform</message>
    <message level="Debug">Transform: ResetAdaptation</message>
-   <message level="Debug" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" reuses <b>alt_mem_if_civ_ddr2_phy</b> "<b>submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy</b>"]]></message>
-   <message level="Debug" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" reuses <b>alt_mem_if_civ_ddr2_controller</b> "<b>submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl</b>"]]></message>
-   <message level="Debug" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" reuses <b>alt_mem_if_civ_ddr2_status_bridge</b> "<b>submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge</b>"]]></message>
-   <message level="Info" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>sdram</b>" instantiated <b>alt_mem_if_civ_ddr2_emif</b> "<b>alt_mem_if_civ_ddr2_emif_0</b>"]]></message>
-   <message level="Debug" culprit="sdram">queue size: 2 starting:alt_mem_if_civ_ddr2_phy "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy"</message>
-   <message level="Info" culprit="phy"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_phy</b> "<b>phy</b>"]]></message>
-   <message level="Debug" culprit="sdram">queue size: 1 starting:alt_mem_if_civ_ddr2_controller "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl"</message>
-   <message level="Info" culprit="ctl"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_controller</b> "<b>ctl</b>"]]></message>
-   <message level="Debug" culprit="sdram">queue size: 0 starting:alt_mem_if_civ_ddr2_status_bridge "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge"</message>
-   <message level="Info" culprit="status_bridge"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_status_bridge</b> "<b>status_bridge</b>"]]></message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_altpll</b> "<b>submodules/altera_up_altpll</b>"]]></message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_avalon_reset_from_locked_signal</b> "<b>submodules/altera_up_avalon_reset_from_locked_signal</b>"]]></message>
+   <message level="Info" culprit="sys_sdram_pll_0"><![CDATA["<b>sdram</b>" instantiated <b>altera_up_avalon_sys_sdram_pll</b> "<b>sys_sdram_pll_0</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 1 starting:altera_up_altpll "submodules/altera_up_altpll"</message>
+   <message level="Info" culprit="sys_pll"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_altpll</b> "<b>sys_pll</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 0 starting:altera_up_avalon_reset_from_locked_signal "submodules/altera_up_avalon_reset_from_locked_signal"</message>
+   <message level="Info" culprit="reset_from_locked"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_avalon_reset_from_locked_signal</b> "<b>reset_from_locked</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 2 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>sdram</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
   </messages>
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="alt_mem_if_civ_ddr2_emif:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,AUTO_DEVICE_SPEEDGRADE=7,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_DATA_RATE=Full,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_REORDERING_STARVATION_LIMIT=10,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TOTAL_DQ_WIDTH=8,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E(altera_reset_bridge:22.1:ACTIVE_LOW_RESET=1,AUTO_CLK_CLOCK_RATE=-1,NUM_RESET_OUTPUTS=1,SYNCHRONOUS_EDGES=none,USE_RESET_REQUEST=0)(altera_clock_bridge:22.1:DERIVED_CLOCK_RATE=0,EXPLICIT_CLOCK_RATE=0,NUM_CLOCK_OUTPUTS=1)(alt_mem_if_civ_ddr2_phy:1.0.0:ADV_LAT_WIDTH=5,ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CAPABILITIES=2048,CAPTURE_PHASE_OFFSET=0,CHIP_OR_DIMM=Discrete Device,CLOCK_INDEX_WIDTH=3,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_DATA_RATE=Full,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_REORDERING_STARVATION_LIMIT=10,DBG_A_WIDTH=13,DLL_DELAY_BUFFER_MODE=HIGH,DLL_DELAY_CHAIN_LENGTH=12,DLL_EXPORT_IMPORT=EXPORT,DQS_DELAY_CTL_WIDTH=6,DQS_OUT_MODE=DELAY_CHAIN3,DQS_OUT_MODE_INT=3,DQS_PHASE=9000,DQS_PHASE_SETTING=3,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,FAMILY=Cyclone IV E,FAMILYGROUP_ID=2,FORCE_HC=0,GENERATE_ADDITIONAL_DBG_RTL=0,IOE_DELAYS_PER_PHS=5,IOE_PHASES_PER_TCK=12,IP_BUILDNUM=0,LEVELLING=0,LOCAL_IF_CLK_MHZ=200.0,LOCAL_IF_CLK_PERIOD_PS=5000,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_CMD_PHASE=90,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_CLK_PS_STR=5000 ps,MEM_IF_CS_PER_RANK=1,MEM_IF_CS_WIDTH=1,MEM_IF_DM_PINS_EN=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQSN_EN=0,MEM_IF_DQS_CAPTURE_EN=0,MEM_IF_DQS_WIDTH=1,MEM_IF_DQ_PER_DQS=8,MEM_IF_DWIDTH=8,MEM_IF_MEMTYPE=DDR2,MEM_IF_MR_0=1074,MEM_IF_MR_1=1024,MEM_IF_MR_2=0,MEM_IF_MR_3=0,MEM_IF_OCT_EN=0,MEM_IF_PRESET_RLAT=0,MEM_IF_RANKS_PER_SLOT=1,MEM_IF_RDV_PER_CHIP=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TOTAL_DQ_WIDTH=8,MEM_TWR=3,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,PLL_CLK0_DIVIDE_BY=1,PLL_CLK0_MULTIPLY_BY=1,PLL_CLK0_PHASE_SHIFT_PS=0,PLL_CLK1_DIVIDE_BY=1,PLL_CLK1_MULTIPLY_BY=2,PLL_CLK1_PHASE_SHIFT_PS=0,PLL_CLK2_DIVIDE_BY=1,PLL_CLK2_MULTIPLY_BY=2,PLL_CLK2_PHASE_SHIFT_PS=-1250,PLL_CLK3_DIVIDE_BY=1,PLL_CLK3_MULTIPLY_BY=2,PLL_CLK3_PHASE_SHIFT_PS=0,PLL_CLK4_DIVIDE_BY=1,PLL_CLK4_MULTIPLY_BY=2,PLL_CLK4_PHASE_SHIFT_PS=0,PLL_INCLK0_PERIOD_PS=10000,PLL_INTENDED_DEVICE_FAMILY=Cyclone IV E,PLL_REF_CLK_PERIOD_PS=10000,PLL_STEPS_PER_CYCLE=48,PLL_VCO_PHASE_SHIFT_STEP=104,PRESET_RLAT=0,RANK_HAS_ADDR_SWAP=0,RDIMM_CONFIG_BITS=0,RDP_ADDR_WIDTH=4,REDUCE_SIM_TIME=0,RESYNCHRONISE_AVALON_DBG=0,SCAN_CLK_DIVIDE_BY=2,SEQ_STRING_ID=seq_name,SINGLE_DQS_DELAY_CONTROL_CODE=0,SPEED_GRADE=C6,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,TINIT_RST=0,TINIT_TCK=200,WRITE_DESKEW_HC_T10=0,WRITE_DESKEW_HC_T9I=0,WRITE_DESKEW_HC_T9NI=0,WRITE_DESKEW_RANGE=0,WRITE_DESKEW_T10=0,WRITE_DESKEW_T9I=0,WRITE_DESKEW_T9NI=0)(alt_mem_if_civ_ddr2_controller:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CFG_ADDR_ORDER=0,CFG_BURST_LENGTH=4,CFG_CLR_INTR=0,CFG_DATA_REORDERING_TYPE=INTER_BANK,CFG_DEVICE_WIDTH=1,CFG_ENABLE_INTR=0,CFG_ENABLE_NO_DM=0,CFG_GEN_DBE=0,CFG_GEN_SBE=0,CFG_INTERFACE_WIDTH=8,CFG_MASK_CORRDROP_INTR=0,CFG_MASK_DBE_INTR=0,CFG_MASK_SBE_INTR=0,CFG_MEM_CLK_ENTRY_CYCLES=10,CFG_PDN_EXIT_CYCLES=3,CFG_PORT_WIDTH_READ_ODT_CHIP=1,CFG_PORT_WIDTH_WRITE_ODT_CHIP=1,CFG_POWER_SAVING_EXIT_CYCLES=5,CFG_READ_ODT_CHIP=0,CFG_REORDER_DATA=1,CFG_SELF_RFSH_EXIT_CYCLES=200,CFG_STARVE_LIMIT=10,CFG_TCCD=2,CFG_TYPE=1,CFG_WRITE_ODT_CHIP=1,CSR_ADDR_WIDTH=16,CSR_BE_WIDTH=4,CSR_DATA_WIDTH=32,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_CSR_ENABLED=0,CTL_DATA_RATE=Full,CTL_ECC_ENABLED=0,CTL_ECC_MULTIPLES_16_24_40_72=1,CTL_ECC_RMW_ENABLED=0,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_ODT_ENABLED=0,CTL_OUTPUT_REGD=0,CTL_RD_TO_PCH_EXTRA_CLK=0,CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK=0,CTL_REGDIMM_ENABLED=0,CTL_REORDERING_STARVATION_LIMIT=10,CTL_TBP_NUM=4,CTL_USR_REFRESH=0,CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK=0,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,LOCAL_ADDR_WIDTH=24,LOCAL_BE_WIDTH=2,LOCAL_CS_WIDTH=0,LOCAL_DATA_WIDTH=16,LOCAL_ID_WIDTH=8,LOCAL_IF_DWIDTH_AFTER_ECC=16,LOCAL_IF_TYPE=AVALON,LOCAL_SIZE_WIDTH=3,MAX_LOCAL_DATA_WIDTH=80,MAX_MEM_IF_BANKADDR_WIDTH=3,MAX_MEM_IF_CHIP=4,MAX_MEM_IF_COLADDR_WIDTH=12,MAX_MEM_IF_CS_WIDTH=30,MAX_MEM_IF_DQS_WIDTH=5,MAX_MEM_IF_DQ_WIDTH=40,MAX_MEM_IF_MASK_WIDTH=5,MAX_MEM_IF_ODT_WIDTH=1,MAX_MEM_IF_ROWADDR_WIDTH=16,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_ADD_LAT=0,MEM_AUTO_PD_CYCLES=0,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CAS_WR_LAT=5,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CHIP=1,MEM_IF_CKE_WIDTH=1,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_COL_WIDTH=10,MEM_IF_CS_WIDTH=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQS_WIDTH=1,MEM_IF_DWIDTH=8,MEM_IF_ODT_WIDTH=1,MEM_IF_RD_TO_WR_TURNAROUND_OCT=3,MEM_IF_ROW_WIDTH=13,MEM_IF_WR_TO_RD_TURNAROUND_OCT=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TCL=3,MEM_TFAW=8,MEM_TMRD_CK=10,MEM_TOTAL_DQ_WIDTH=8,MEM_TRAS=8,MEM_TRC=11,MEM_TRCD=3,MEM_TREFI=1400,MEM_TRFC=15,MEM_TRP=3,MEM_TRRD=2,MEM_TRTP=2,MEM_TWR=3,MEM_TWTR=2,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,RDBUFFER_ADDR_WIDTH=8,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,WRBUFFER_ADDR_WIDTH=6)(alt_mem_if_civ_ddr2_status_bridge:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CFG_ADDR_ORDER=0,CFG_BURST_LENGTH=4,CFG_CLR_INTR=0,CFG_DATA_REORDERING_TYPE=INTER_BANK,CFG_DEVICE_WIDTH=1,CFG_ENABLE_INTR=0,CFG_ENABLE_NO_DM=0,CFG_GEN_DBE=0,CFG_GEN_SBE=0,CFG_INTERFACE_WIDTH=8,CFG_MASK_CORRDROP_INTR=0,CFG_MASK_DBE_INTR=0,CFG_MASK_SBE_INTR=0,CFG_MEM_CLK_ENTRY_CYCLES=10,CFG_PDN_EXIT_CYCLES=3,CFG_PORT_WIDTH_READ_ODT_CHIP=1,CFG_PORT_WIDTH_WRITE_ODT_CHIP=1,CFG_POWER_SAVING_EXIT_CYCLES=5,CFG_READ_ODT_CHIP=0,CFG_REORDER_DATA=1,CFG_SELF_RFSH_EXIT_CYCLES=200,CFG_STARVE_LIMIT=10,CFG_TCCD=2,CFG_TYPE=1,CFG_WRITE_ODT_CHIP=1,CSR_ADDR_WIDTH=16,CSR_BE_WIDTH=4,CSR_DATA_WIDTH=32,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_CSR_ENABLED=0,CTL_DATA_RATE=Full,CTL_ECC_ENABLED=0,CTL_ECC_MULTIPLES_16_24_40_72=1,CTL_ECC_RMW_ENABLED=0,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_ODT_ENABLED=0,CTL_OUTPUT_REGD=0,CTL_RD_TO_PCH_EXTRA_CLK=0,CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK=0,CTL_REGDIMM_ENABLED=0,CTL_REORDERING_STARVATION_LIMIT=10,CTL_TBP_NUM=4,CTL_USR_REFRESH=0,CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK=0,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,LOCAL_ADDR_WIDTH=24,LOCAL_BE_WIDTH=2,LOCAL_CS_WIDTH=0,LOCAL_DATA_WIDTH=16,LOCAL_ID_WIDTH=8,LOCAL_IF_DWIDTH_AFTER_ECC=16,LOCAL_IF_TYPE=AVALON,LOCAL_SIZE_WIDTH=3,MAX_LOCAL_DATA_WIDTH=80,MAX_MEM_IF_BANKADDR_WIDTH=3,MAX_MEM_IF_CHIP=4,MAX_MEM_IF_COLADDR_WIDTH=12,MAX_MEM_IF_CS_WIDTH=30,MAX_MEM_IF_DQS_WIDTH=5,MAX_MEM_IF_DQ_WIDTH=40,MAX_MEM_IF_MASK_WIDTH=5,MAX_MEM_IF_ODT_WIDTH=1,MAX_MEM_IF_ROWADDR_WIDTH=16,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_ADD_LAT=0,MEM_AUTO_PD_CYCLES=0,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CAS_WR_LAT=5,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CHIP=1,MEM_IF_CKE_WIDTH=1,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_COL_WIDTH=10,MEM_IF_CS_WIDTH=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQS_WIDTH=1,MEM_IF_DWIDTH=8,MEM_IF_ODT_WIDTH=1,MEM_IF_RD_TO_WR_TURNAROUND_OCT=3,MEM_IF_ROW_WIDTH=13,MEM_IF_WR_TO_RD_TURNAROUND_OCT=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TCL=3,MEM_TFAW=8,MEM_TMRD_CK=10,MEM_TOTAL_DQ_WIDTH=8,MEM_TRAS=8,MEM_TRC=11,MEM_TRCD=3,MEM_TREFI=1400,MEM_TRFC=15,MEM_TRP=3,MEM_TRRD=2,MEM_TRTP=2,MEM_TWR=3,MEM_TWTR=2,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,RDBUFFER_ADDR_WIDTH=8,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,WRBUFFER_ADDR_WIDTH=6)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(clock:22.1:)(conduit:22.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)(clock:22.1:)(reset:22.1:)(reset:22.1:)(clock:22.1:)"
-   instancePathKey="sdram:.:alt_mem_if_civ_ddr2_emif_0"
-   kind="alt_mem_if_civ_ddr2_emif"
-   version="1.0.0"
-   name="sdram_alt_mem_if_civ_ddr2_emif_0">
-  <parameter name="MEM_DQS_DQ_SKEW" value="400" />
-  <parameter name="ALT_MEM_IF_SPEED_GRADE" value="6" />
-  <parameter name="EX_DESIGN_GEN_SIM" value="true" />
-  <parameter name="CTL_LOCAL_MAXIMUM_BURST_COUNT" value="4" />
-  <parameter name="MEM_ACTIVE_TO_PRECHARGE_TIME" value="40.0" />
-  <parameter name="PHY_ADDR_CMD_CLOCK_PHASE" value="90" />
-  <parameter name="MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME" value="0.2" />
-  <parameter name="MEM_DQ_HOLD_SKEW_FACTOR" value="450" />
-  <parameter name="MEM_DRIVE_DM_PINS_FROM_FPGA" value="true" />
-  <parameter name="CTL_ENABLE_AUTO_ECC" value="false" />
-  <parameter name="MEM_CHIP_SELECTS_PER_DIMM" value="1" />
-  <parameter name="MEM_REFRESH_COMMAND_INTERVAL" value="7.0" />
-  <parameter name="MEM_CAS_4_MAX_FREQ" value="200.0" />
-  <parameter name="PHY_CALIBRATION_TYPE_FOR_SIMULATION" value="Quick Calibration" />
-  <parameter name="MEM_TOTAL_DQ_WIDTH" value="8" />
-  <parameter name="MEM_AUTO_REFRESH_COMMAND_INTERVAL" value="75.0" />
-  <parameter name="MEM_BURST_ORDERING" value="Sequential" />
-  <parameter name="MEM_MEM_INIT_TIME_AT_POWER_UP" value="200.0" />
-  <parameter name="MEM_RAS_TO_RAS_DELAY" value="7.5" />
-  <parameter name="MEM_READ_TO_PRECHARGE_TIME" value="7.5" />
-  <parameter name="MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK" value="500" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_HOLD_TIME" value="600" />
-  <parameter name="ALT_MEM_IF_PLL_REFCLK_FREQ" value="100.0" />
-  <parameter name="MEM_MAX_MEM_FREQ" value="200.0" />
-  <parameter name="CTL_ENABLE_AUTO_POWER_DOWN" value="false" />
-  <parameter name="MEM_CAS_LATENCY" value="3" />
-  <parameter name="SYS_INFO_DEVICE" value="EP4CE115F29C7" />
-  <parameter name="CTL_ENABLE_AUTO_REFRESH_CONTROLS" value="false" />
-  <parameter name="MEM_NUM_CLOCK_PAIRS" value="1" />
-  <parameter name="MEM_WRITE_TO_READ_PERIOD" value="2" />
-  <parameter name="MEM_DRIVE_STRENGTH" value="Normal" />
-  <parameter name="CTL_ENABLE_REORDERING" value="true" />
-  <parameter name="MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK" value="0.2" />
-  <parameter name="MEM_FOUR_WINDOW_TIME" value="37.5" />
-  <parameter name="EX_DESIGN_GEN_SYNTH" value="true" />
-  <parameter name="MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD" value="10.0" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_SETUP_TIME" value="600" />
-  <parameter name="MEM_COLUMN_ADDR_WIDTH" value="10" />
-  <parameter name="MEM_CAS_6_MAX_FREQ" value="200.0" />
-  <parameter name="SYS_INFO_DEVICE_FAMILY" value="Cyclone IV E" />
-  <parameter name="MEM_CAS_3_MAX_FREQ" value="200.0" />
-  <parameter name="CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH" value="4" />
-  <parameter name="MEM_ROW_ADDR_WIDTH" value="13" />
-  <parameter name="MEM_DQ_PER_DQS" value="8" />
-  <parameter name="MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS" value="400" />
-  <parameter name="EX_DESIGN_HDL_FORMAT" value="Verilog" />
-  <parameter name="ALT_MEM_IF_MEM_CLK_FREQ" value="200.0" />
-  <parameter name="ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE" value="false" />
-  <parameter name="MEM_ENABLE_DEVICE_DLL" value="true" />
-  <parameter name="MEM_ODT_SETTING" value="Disabled" />
-  <parameter name="MEM_WRITE_RECOVERY_TIME" value="15.0" />
-  <parameter name="CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING" value="CHIP-ROW-BANK-COL" />
-  <parameter name="MEM_PRECHARGE_COMMAND_PERIOD" value="15.0" />
-  <parameter name="MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK" value="600" />
-  <parameter name="ALT_MEM_IF_DEVICE_FAMILY" value="Cyclone IV GX" />
-  <parameter name="MEM_BANK_ADDR_WIDTH" value="2" />
-  <parameter name="ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE" value="false" />
-  <parameter name="MEM_PRECHARGE_ADDR_BIT" value="10" />
-  <parameter name="MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS" value="400" />
-  <parameter name="MEM_ADDITIVE_CAS_LATENCY" value="Disabled" />
-  <parameter name="MEM_FORMAT" value="Discrete Device" />
-  <parameter name="MEM_ACTIVE_TO_READ_WRITE_TIME" value="15.0" />
-  <parameter name="CTL_AUTO_POWER_DOWN_CYCLES" value="0" />
-  <parameter name="MEM_NUM_CHIP_SELECTS" value="1" />
-  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
-  <parameter name="ALT_MEM_IF_ENABLE_DEBUG_INTERFACE" value="false" />
-  <parameter name="CTL_ENABLE_CONFIG_STATUS_INTERFACE" value="false" />
-  <parameter name="MEM_BURST_LENGTH" value="4" />
-  <parameter name="CTL_REORDERING_STARVATION_LIMIT" value="10" />
-  <parameter name="MEM_VENDOR" value="JEDEC" />
-  <parameter name="EX_DESIGN_SEL_DESIGN" value="AltMemPHY Example Design" />
-  <parameter name="CTL_ENABLE_SELF_REFRESH_CONTROLS" value="false" />
-  <parameter name="CTL_DATA_RATE" value="Full" />
-  <parameter name="CTL_ENABLE_AUTO_PRECHARGE_CONTROL" value="false" />
-  <parameter name="MEM_CAS_5_MAX_FREQ" value="200.0" />
-  <parameter name="CTL_ENABLE_ECC_LOGIC" value="false" />
-  <parameter name="MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE" value="0.25" />
+   parameterizationKey="altera_avalon_new_sdram_controller:17.1:TAC=5.5,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=14.0,addressWidth=25,bankWidth=2,casLatency=3,clockRate=50000000,columnWidth=10,componentName=sdram_new_sdram_controller_0,dataWidth=32,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=200.0,refreshPeriod=7.8125,registerDataIn=true,rowWidth=13,size=134217728"
+   instancePathKey="sdram:.:new_sdram_controller_0"
+   kind="altera_avalon_new_sdram_controller"
+   version="17.1"
+   name="sdram_new_sdram_controller_0">
+  <parameter name="registerDataIn" value="true" />
+  <parameter name="casLatency" value="3" />
+  <parameter name="refreshPeriod" value="7.8125" />
+  <parameter name="masteredTristateBridgeSlave" value="0" />
+  <parameter name="TMRD" value="3" />
+  <parameter name="pinsSharedViaTriState" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="TRP" value="20.0" />
+  <parameter name="numberOfChipSelects" value="1" />
+  <parameter name="columnWidth" value="10" />
+  <parameter name="componentName" value="sdram_new_sdram_controller_0" />
+  <parameter name="TRFC" value="70.0" />
+  <parameter name="generateSimulationModel" value="false" />
+  <parameter name="dataWidth" value="32" />
+  <parameter name="rowWidth" value="13" />
+  <parameter name="bankWidth" value="2" />
+  <parameter name="powerUpDelay" value="200.0" />
+  <parameter name="TWR" value="14.0" />
+  <parameter name="size" value="134217728" />
+  <parameter name="TAC" value="5.5" />
+  <parameter name="initRefreshCommands" value="2" />
+  <parameter name="TRCD" value="20.0" />
+  <parameter name="initNOPDelay" value="0.0" />
+  <parameter name="addressWidth" value="25" />
+  <parameter name="numberOfBanks" value="4" />
   <generatedFiles>
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/sdram_new_sdram_controller_0.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/fpga/ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/altera_avalon_new_sdram_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="sdram" as="new_sdram_controller_0" />
+  <messages>
+   <message level="Debug" culprit="sdram">queue size: 2 starting:altera_avalon_new_sdram_controller "submodules/sdram_new_sdram_controller_0"</message>
+   <message level="Info" culprit="new_sdram_controller_0">Starting RTL generation for module 'sdram_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0">  Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0006_new_sdram_controller_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0006_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="new_sdram_controller_0">Done RTL generation for module 'sdram_new_sdram_controller_0'</message>
+   <message level="Info" culprit="new_sdram_controller_0"><![CDATA["<b>sdram</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>new_sdram_controller_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_up_avalon_sys_sdram_pll:17.1:AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_SPEEDGRADE=7,CIII_boards=DE0,CIV_boards=DE2-115,CV_boards=DE10-Standard,MAX10_boards=DE10-Lite,board=DE2-115,device_family=Cyclone IV E,gui_outclk=50.0,gui_refclk=50.0,other_boards=None,outclk=50.0,refclk=50.0(altera_up_altpll:17.1:DEVICE_FAMILY=Cyclone IV,OUTCLK0_DIV=1,OUTCLK0_MULT=1,OUTCLK1_DIV=1,OUTCLK1_MULT=1,OUTCLK2_DIV=1,OUTCLK2_MULT=1,PHASE_SHIFT=-3000,audio_clk_freq=12.288,gui_device_family=Cyclone IV E,type=System/SDRAM,video_in=5MP Digital Camera (THDB_D5M),video_out=4.3&quot; LCD (TRDB_LTM))(altera_up_avalon_reset_from_locked_signal:17.1:)(conduit:17.1:endPort=,endPortLSB=0,startPort=,startPortLSB=0,width=0)"
+   instancePathKey="sdram:.:sys_sdram_pll_0"
+   kind="altera_up_avalon_sys_sdram_pll"
+   version="17.1"
+   name="sdram_sys_sdram_pll_0">
+  <parameter name="outclk" value="50.0" />
+  <parameter name="other_boards" value="None" />
+  <parameter name="refclk" value="50.0" />
+  <parameter name="device_family" value="Cyclone IV E" />
+  <parameter name="CIV_boards" value="DE2-115" />
+  <parameter name="MAX10_boards" value="DE10-Lite" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="gui_refclk" value="50.0" />
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="gui_outclk" value="50.0" />
+  <parameter name="CV_boards" value="DE10-Standard" />
+  <parameter name="CIII_boards" value="DE0" />
+  <parameter name="board" value="DE2-115" />
+  <generatedFiles>
+   <file
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/sdram_sys_sdram_pll_0.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_pin_assignments.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdc_params.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_up_altpll.v"
        type="VERILOG"
-       attributes="" />
+       attributes="TOP_LEVEL_FILE" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_ac.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v"
        type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_clk_reset.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_defines.iv"
-       type="VERILOG_INCLUDE"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_delay.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dp_io.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dqs_offset.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mimic.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mimic_debug.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mux.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_pll.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_postamble.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_rdata_valid.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_read_dp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_read_dp_group.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_reset_pipe.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_seq_wrapper.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_write_dp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_write_dp_fr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_constants_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_record_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_regs_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_addr_cmd_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram_addr_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_admin.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_ctrl.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dgrb.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dgwb.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram_ram.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mmi.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_seq.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_pins.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_report_timing.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_report_timing_core.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_timing.sdc"
-       type="SDC"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_addr_cmd_wrap.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_arbiter.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_buffer.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_buffer_manager.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_burst_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_burst_tracking.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_cmd_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_controller.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_controller_st_top.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_csr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_dataid_manager.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ddr2_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ddr3_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_define.iv"
-       type="VERILOG_INCLUDE"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_32_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_64_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_fifo.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_input_if.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_list.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_lpddr2_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_mm_st_converter.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rank_timer.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rdata_path.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rdwr_data_tmg.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_sideband.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_tbp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_timing_param.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_wdata_path.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge.v"
-       type="VERILOG"
-       attributes="" />
+       attributes="TOP_LEVEL_FILE" />
   </childGeneratedFiles>
   <sourceFiles>
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_interfaces/alt_mem_if_civ_ddr2_emif/alt_mem_if_civ_ddr2_emif_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_avalon_sys_sdram_pll/altera_up_avalon_sys_sdram_pll_hw.tcl" />
   </sourceFiles>
   <childSourceFiles>
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_phys/alt_mem_if_civ_ddr2_phy/alt_mem_if_civ_ddr2_phy_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_altpll/altera_up_altpll_hw.tcl" />
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_controllers/alt_mem_if_civ_ddr2_controller/alt_mem_if_civ_ddr2_controller_hw.tcl" />
-   <file
-       path="D:/fpga/ip/altera/alt_mem_if/bridges/alt_mem_if_civ_ddr2_status_bridge/alt_mem_if_civ_ddr2_status_bridge_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_avalon_reset_from_locked_signal/altera_up_avalon_reset_from_locked_signal_hw.tcl" />
   </childSourceFiles>
-  <instantiator instantiator="sdram" as="alt_mem_if_civ_ddr2_emif_0" />
+  <instantiator instantiator="sdram" as="sys_sdram_pll_0" />
   <messages>
-   <message level="Debug" culprit="sdram">queue size: 0 starting:alt_mem_if_civ_ddr2_emif "submodules/sdram_alt_mem_if_civ_ddr2_emif_0"</message>
+   <message level="Debug" culprit="sdram">queue size: 1 starting:altera_up_avalon_sys_sdram_pll "submodules/sdram_sys_sdram_pll_0"</message>
    <message level="Progress" culprit="min"></message>
    <message level="Progress" culprit="max"></message>
    <message level="Progress" culprit="current"></message>
    <message level="Debug">Transform: CustomInstructionTransform</message>
    <message level="Debug">No custom instruction connections, skipping transform </message>
-   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>5</b> modules, <b>8</b> connections]]></message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>1</b> connections]]></message>
    <message level="Debug">Transform: MMTransform</message>
    <message level="Debug">Transform: InterruptMapperTransform</message>
    <message level="Debug">Transform: InterruptSyncTransform</message>
    <message level="Debug">Transform: InterruptFanoutTransform</message>
    <message level="Debug">Transform: AvalonStreamingTransform</message>
    <message level="Debug">Transform: ResetAdaptation</message>
-   <message level="Debug" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" reuses <b>alt_mem_if_civ_ddr2_phy</b> "<b>submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy</b>"]]></message>
-   <message level="Debug" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" reuses <b>alt_mem_if_civ_ddr2_controller</b> "<b>submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl</b>"]]></message>
-   <message level="Debug" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" reuses <b>alt_mem_if_civ_ddr2_status_bridge</b> "<b>submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge</b>"]]></message>
-   <message level="Info" culprit="alt_mem_if_civ_ddr2_emif_0"><![CDATA["<b>sdram</b>" instantiated <b>alt_mem_if_civ_ddr2_emif</b> "<b>alt_mem_if_civ_ddr2_emif_0</b>"]]></message>
-   <message level="Debug" culprit="sdram">queue size: 2 starting:alt_mem_if_civ_ddr2_phy "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy"</message>
-   <message level="Info" culprit="phy"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_phy</b> "<b>phy</b>"]]></message>
-   <message level="Debug" culprit="sdram">queue size: 1 starting:alt_mem_if_civ_ddr2_controller "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl"</message>
-   <message level="Info" culprit="ctl"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_controller</b> "<b>ctl</b>"]]></message>
-   <message level="Debug" culprit="sdram">queue size: 0 starting:alt_mem_if_civ_ddr2_status_bridge "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge"</message>
-   <message level="Info" culprit="status_bridge"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_status_bridge</b> "<b>status_bridge</b>"]]></message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_altpll</b> "<b>submodules/altera_up_altpll</b>"]]></message>
+   <message level="Debug" culprit="sys_sdram_pll_0"><![CDATA["<b>sys_sdram_pll_0</b>" reuses <b>altera_up_avalon_reset_from_locked_signal</b> "<b>submodules/altera_up_avalon_reset_from_locked_signal</b>"]]></message>
+   <message level="Info" culprit="sys_sdram_pll_0"><![CDATA["<b>sdram</b>" instantiated <b>altera_up_avalon_sys_sdram_pll</b> "<b>sys_sdram_pll_0</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 1 starting:altera_up_altpll "submodules/altera_up_altpll"</message>
+   <message level="Info" culprit="sys_pll"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_altpll</b> "<b>sys_pll</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 0 starting:altera_up_avalon_reset_from_locked_signal "submodules/altera_up_avalon_reset_from_locked_signal"</message>
+   <message level="Info" culprit="reset_from_locked"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_avalon_reset_from_locked_signal</b> "<b>reset_from_locked</b>"]]></message>
   </messages>
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="alt_mem_if_civ_ddr2_phy:1.0.0:ADV_LAT_WIDTH=5,ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CAPABILITIES=2048,CAPTURE_PHASE_OFFSET=0,CHIP_OR_DIMM=Discrete Device,CLOCK_INDEX_WIDTH=3,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_DATA_RATE=Full,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_REORDERING_STARVATION_LIMIT=10,DBG_A_WIDTH=13,DLL_DELAY_BUFFER_MODE=HIGH,DLL_DELAY_CHAIN_LENGTH=12,DLL_EXPORT_IMPORT=EXPORT,DQS_DELAY_CTL_WIDTH=6,DQS_OUT_MODE=DELAY_CHAIN3,DQS_OUT_MODE_INT=3,DQS_PHASE=9000,DQS_PHASE_SETTING=3,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,FAMILY=Cyclone IV E,FAMILYGROUP_ID=2,FORCE_HC=0,GENERATE_ADDITIONAL_DBG_RTL=0,IOE_DELAYS_PER_PHS=5,IOE_PHASES_PER_TCK=12,IP_BUILDNUM=0,LEVELLING=0,LOCAL_IF_CLK_MHZ=200.0,LOCAL_IF_CLK_PERIOD_PS=5000,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_CMD_PHASE=90,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_CLK_PS_STR=5000 ps,MEM_IF_CS_PER_RANK=1,MEM_IF_CS_WIDTH=1,MEM_IF_DM_PINS_EN=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQSN_EN=0,MEM_IF_DQS_CAPTURE_EN=0,MEM_IF_DQS_WIDTH=1,MEM_IF_DQ_PER_DQS=8,MEM_IF_DWIDTH=8,MEM_IF_MEMTYPE=DDR2,MEM_IF_MR_0=1074,MEM_IF_MR_1=1024,MEM_IF_MR_2=0,MEM_IF_MR_3=0,MEM_IF_OCT_EN=0,MEM_IF_PRESET_RLAT=0,MEM_IF_RANKS_PER_SLOT=1,MEM_IF_RDV_PER_CHIP=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TOTAL_DQ_WIDTH=8,MEM_TWR=3,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,PLL_CLK0_DIVIDE_BY=1,PLL_CLK0_MULTIPLY_BY=1,PLL_CLK0_PHASE_SHIFT_PS=0,PLL_CLK1_DIVIDE_BY=1,PLL_CLK1_MULTIPLY_BY=2,PLL_CLK1_PHASE_SHIFT_PS=0,PLL_CLK2_DIVIDE_BY=1,PLL_CLK2_MULTIPLY_BY=2,PLL_CLK2_PHASE_SHIFT_PS=-1250,PLL_CLK3_DIVIDE_BY=1,PLL_CLK3_MULTIPLY_BY=2,PLL_CLK3_PHASE_SHIFT_PS=0,PLL_CLK4_DIVIDE_BY=1,PLL_CLK4_MULTIPLY_BY=2,PLL_CLK4_PHASE_SHIFT_PS=0,PLL_INCLK0_PERIOD_PS=10000,PLL_INTENDED_DEVICE_FAMILY=Cyclone IV E,PLL_REF_CLK_PERIOD_PS=10000,PLL_STEPS_PER_CYCLE=48,PLL_VCO_PHASE_SHIFT_STEP=104,PRESET_RLAT=0,RANK_HAS_ADDR_SWAP=0,RDIMM_CONFIG_BITS=0,RDP_ADDR_WIDTH=4,REDUCE_SIM_TIME=0,RESYNCHRONISE_AVALON_DBG=0,SCAN_CLK_DIVIDE_BY=2,SEQ_STRING_ID=seq_name,SINGLE_DQS_DELAY_CONTROL_CODE=0,SPEED_GRADE=C6,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,TINIT_RST=0,TINIT_TCK=200,WRITE_DESKEW_HC_T10=0,WRITE_DESKEW_HC_T9I=0,WRITE_DESKEW_HC_T9NI=0,WRITE_DESKEW_RANGE=0,WRITE_DESKEW_T10=0,WRITE_DESKEW_T9I=0,WRITE_DESKEW_T9NI=0"
-   instancePathKey="sdram:.:alt_mem_if_civ_ddr2_emif_0:.:phy"
-   kind="alt_mem_if_civ_ddr2_phy"
-   version="1.0.0"
-   name="sdram_alt_mem_if_civ_ddr2_emif_0_phy">
-  <parameter name="PLL_CLK4_DIVIDE_BY" value="1" />
-  <parameter name="MEM_IF_CS_WIDTH" value="1" />
-  <parameter name="RDIMM_CONFIG_BITS" value="0" />
-  <parameter name="MEM_ACTIVE_TO_PRECHARGE_TIME" value="40.0" />
-  <parameter name="PHY_ADDR_CMD_CLOCK_PHASE" value="90" />
-  <parameter name="PLL_CLK2_PHASE_SHIFT_PS" value="-1250" />
-  <parameter name="MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME" value="0.2" />
-  <parameter name="DQS_DELAY_CTL_WIDTH" value="6" />
-  <parameter name="MEM_DRIVE_DM_PINS_FROM_FPGA" value="true" />
-  <parameter name="SPEED_GRADE" value="C6" />
-  <parameter name="MEM_REFRESH_COMMAND_INTERVAL" value="7.0" />
-  <parameter name="MEM_CAS_4_MAX_FREQ" value="200.0" />
-  <parameter name="PHY_CALIBRATION_TYPE_FOR_SIMULATION" value="Quick Calibration" />
-  <parameter name="MEM_AUTO_REFRESH_COMMAND_INTERVAL" value="75.0" />
-  <parameter name="GENERATE_ADDITIONAL_DBG_RTL" value="0" />
-  <parameter name="DLL_DELAY_BUFFER_MODE" value="HIGH" />
-  <parameter name="MEM_RAS_TO_RAS_DELAY" value="7.5" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_HOLD_TIME" value="600" />
-  <parameter name="MEM_IF_OCT_EN" value="0" />
-  <parameter name="PLL_VCO_PHASE_SHIFT_STEP" value="104" />
-  <parameter name="WRITE_DESKEW_T9I" value="0" />
-  <parameter name="CTL_ENABLE_AUTO_POWER_DOWN" value="false" />
-  <parameter name="DWIDTH_RATIO" value="2" />
-  <parameter name="MEM_IF_CLK_PAIR_COUNT" value="1" />
-  <parameter name="MEM_IF_RDV_PER_CHIP" value="0" />
-  <parameter name="MEM_NUM_CLOCK_PAIRS" value="1" />
-  <parameter name="MEM_IF_DM_WIDTH" value="1" />
-  <parameter name="MEM_WRITE_TO_READ_PERIOD" value="2" />
-  <parameter name="RANK_HAS_ADDR_SWAP" value="0" />
-  <parameter name="LEVELLING" value="0" />
-  <parameter name="WRITE_DESKEW_RANGE" value="0" />
-  <parameter name="CTL_ENABLE_REORDERING" value="true" />
-  <parameter name="EX_DESIGN_GEN_SYNTH" value="true" />
-  <parameter name="MEM_IF_CLK_PS" value="5000" />
-  <parameter name="MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD" value="10.0" />
-  <parameter name="MEM_COLUMN_ADDR_WIDTH" value="10" />
-  <parameter name="MEM_IF_MR_3" value="0" />
-  <parameter name="MEM_IF_MR_2" value="0" />
-  <parameter name="MEM_CAS_6_MAX_FREQ" value="200.0" />
-  <parameter name="SYS_INFO_DEVICE_FAMILY" value="Cyclone IV E" />
-  <parameter name="WRITE_DESKEW_T10" value="0" />
-  <parameter name="CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH" value="4" />
-  <parameter name="FAMILY" value="Cyclone IV E" />
-  <parameter name="TINIT_TCK" value="200" />
-  <parameter name="MEM_ROW_ADDR_WIDTH" value="13" />
-  <parameter name="MEM_DQ_PER_DQS" value="8" />
-  <parameter name="MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS" value="400" />
-  <parameter name="PLL_INCLK0_PERIOD_PS" value="10000" />
-  <parameter name="EX_DESIGN_HDL_FORMAT" value="Verilog" />
-  <parameter name="MEM_IF_DQ_PER_DQS" value="8" />
-  <parameter name="PLL_STEPS_PER_CYCLE" value="48" />
-  <parameter name="ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE" value="false" />
-  <parameter name="MEM_WRITE_RECOVERY_TIME" value="15.0" />
-  <parameter name="REDUCE_SIM_TIME" value="0" />
-  <parameter name="MEM_PRECHARGE_COMMAND_PERIOD" value="15.0" />
-  <parameter name="MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK" value="600" />
-  <parameter name="MEM_IF_MR_1" value="1024" />
-  <parameter name="MEM_IF_MR_0" value="1074" />
-  <parameter name="ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE" value="false" />
-  <parameter name="MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS" value="400" />
-  <parameter name="MEM_ADDITIVE_CAS_LATENCY" value="Disabled" />
-  <parameter name="PLL_CLK3_DIVIDE_BY" value="1" />
-  <parameter name="MEM_FORMAT" value="Discrete Device" />
-  <parameter name="PLL_CLK0_PHASE_SHIFT_PS" value="0" />
-  <parameter name="ALT_MEM_IF_ENABLE_DEBUG_INTERFACE" value="false" />
-  <parameter name="CTL_ENABLE_CONFIG_STATUS_INTERFACE" value="false" />
-  <parameter name="CTL_REORDERING_STARVATION_LIMIT" value="10" />
-  <parameter name="MEM_VENDOR" value="JEDEC" />
-  <parameter name="PLL_REF_CLK_PERIOD_PS" value="10000" />
-  <parameter name="PRESET_RLAT" value="0" />
-  <parameter name="CTL_ENABLE_SELF_REFRESH_CONTROLS" value="false" />
-  <parameter name="MEM_IF_CS_PER_RANK" value="1" />
-  <parameter name="CTL_ENABLE_AUTO_PRECHARGE_CONTROL" value="false" />
-  <parameter name="CLOCK_INDEX_WIDTH" value="3" />
-  <parameter name="WRITE_DESKEW_HC_T9NI" value="0" />
-  <parameter name="CTL_ENABLE_ECC_LOGIC" value="false" />
-  <parameter name="MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE" value="0.25" />
-  <parameter name="MEM_DQS_DQ_SKEW" value="400" />
-  <parameter name="MEM_IF_ADDR_CMD_PHASE" value="90" />
-  <parameter name="ALT_MEM_IF_SPEED_GRADE" value="6" />
-  <parameter name="EX_DESIGN_GEN_SIM" value="true" />
-  <parameter name="CTL_LOCAL_MAXIMUM_BURST_COUNT" value="4" />
-  <parameter name="MEM_IF_DM_PINS_EN" value="1" />
-  <parameter name="MEM_DQ_HOLD_SKEW_FACTOR" value="450" />
-  <parameter name="CTL_ENABLE_AUTO_ECC" value="false" />
-  <parameter name="MEM_CHIP_SELECTS_PER_DIMM" value="1" />
-  <parameter name="PLL_CLK0_DIVIDE_BY" value="1" />
-  <parameter name="MEM_TOTAL_DQ_WIDTH" value="8" />
-  <parameter name="MEM_BURST_ORDERING" value="Sequential" />
-  <parameter name="MEM_MEM_INIT_TIME_AT_POWER_UP" value="200.0" />
-  <parameter name="MEM_READ_TO_PRECHARGE_TIME" value="7.5" />
-  <parameter name="MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK" value="500" />
-  <parameter name="DQS_PHASE_SETTING" value="3" />
-  <parameter name="IP_BUILDNUM" value="0" />
-  <parameter name="ADV_LAT_WIDTH" value="5" />
-  <parameter name="PLL_CLK2_MULTIPLY_BY" value="2" />
-  <parameter name="ALT_MEM_IF_PLL_REFCLK_FREQ" value="100.0" />
-  <parameter name="MEM_MAX_MEM_FREQ" value="200.0" />
-  <parameter name="RESYNCHRONISE_AVALON_DBG" value="0" />
-  <parameter name="FAMILYGROUP_ID" value="2" />
-  <parameter name="PLL_CLK3_MULTIPLY_BY" value="2" />
-  <parameter name="DQS_OUT_MODE" value="DELAY_CHAIN3" />
-  <parameter name="MEM_CAS_LATENCY" value="3" />
-  <parameter name="SYS_INFO_DEVICE" value="EP4CE115F29C7" />
-  <parameter name="CTL_ENABLE_AUTO_REFRESH_CONTROLS" value="false" />
-  <parameter name="MEM_IF_BANKADDR_WIDTH" value="2" />
-  <parameter name="PLL_CLK4_MULTIPLY_BY" value="2" />
-  <parameter name="PLL_INTENDED_DEVICE_FAMILY" value="Cyclone IV E" />
-  <parameter name="MEM_DRIVE_STRENGTH" value="Normal" />
-  <parameter name="WRITE_DESKEW_HC_T9I" value="0" />
-  <parameter name="MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK" value="0.2" />
-  <parameter name="MEM_FOUR_WINDOW_TIME" value="37.5" />
-  <parameter name="PLL_CLK4_PHASE_SHIFT_PS" value="0" />
-  <parameter name="FORCE_HC" value="0" />
-  <parameter name="PLL_CLK1_DIVIDE_BY" value="1" />
-  <parameter name="WRITE_DESKEW_T9NI" value="0" />
-  <parameter name="WRITE_DESKEW_HC_T10" value="0" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_SETUP_TIME" value="600" />
-  <parameter name="PLL_CLK0_MULTIPLY_BY" value="1" />
-  <parameter name="MEM_IF_CLK_PS_STR" value="5000 ps" />
-  <parameter name="PLL_CLK1_MULTIPLY_BY" value="2" />
-  <parameter name="DLL_EXPORT_IMPORT" value="EXPORT" />
-  <parameter name="MEM_TWR" value="3" />
-  <parameter name="PLL_CLK3_PHASE_SHIFT_PS" value="0" />
-  <parameter name="SEQ_STRING_ID" value="seq_name" />
-  <parameter name="DBG_A_WIDTH" value="13" />
-  <parameter name="CAPABILITIES" value="2048" />
-  <parameter name="CHIP_OR_DIMM" value="Discrete Device" />
-  <parameter name="MEM_CAS_3_MAX_FREQ" value="200.0" />
-  <parameter name="PLL_CLK2_DIVIDE_BY" value="1" />
-  <parameter name="LOCAL_IF_CLK_MHZ" value="200.0" />
-  <parameter name="MEM_IF_DQS_WIDTH" value="1" />
-  <parameter name="MEM_IF_RANKS_PER_SLOT" value="1" />
-  <parameter name="CAPTURE_PHASE_OFFSET" value="0" />
-  <parameter name="ALT_MEM_IF_MEM_CLK_FREQ" value="200.0" />
-  <parameter name="PLL_CLK1_PHASE_SHIFT_PS" value="0" />
-  <parameter name="MEM_ENABLE_DEVICE_DLL" value="true" />
-  <parameter name="MEM_ODT_SETTING" value="Disabled" />
-  <parameter name="DLL_DELAY_CHAIN_LENGTH" value="12" />
-  <parameter name="MEM_IF_PRESET_RLAT" value="0" />
-  <parameter name="CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING" value="CHIP-ROW-BANK-COL" />
-  <parameter name="ALT_MEM_IF_DEVICE_FAMILY" value="Cyclone IV GX" />
-  <parameter name="MEM_BANK_ADDR_WIDTH" value="2" />
-  <parameter name="MEM_IF_ADDR_WIDTH" value="13" />
-  <parameter name="MEM_PRECHARGE_ADDR_BIT" value="10" />
-  <parameter name="DQS_OUT_MODE_INT" value="3" />
-  <parameter name="MEM_ACTIVE_TO_READ_WRITE_TIME" value="15.0" />
-  <parameter name="MEM_IF_DQSN_EN" value="0" />
-  <parameter name="CTL_AUTO_POWER_DOWN_CYCLES" value="0" />
-  <parameter name="MEM_IF_DWIDTH" value="8" />
-  <parameter name="MEM_NUM_CHIP_SELECTS" value="1" />
-  <parameter name="IOE_PHASES_PER_TCK" value="12" />
-  <parameter name="MEM_BURST_LENGTH" value="4" />
-  <parameter name="SINGLE_DQS_DELAY_CONTROL_CODE" value="0" />
-  <parameter name="DQS_PHASE" value="9000" />
-  <parameter name="SCAN_CLK_DIVIDE_BY" value="2" />
-  <parameter name="TINIT_RST" value="0" />
-  <parameter name="IOE_DELAYS_PER_PHS" value="5" />
-  <parameter name="MEM_IF_DQS_CAPTURE_EN" value="0" />
-  <parameter name="EX_DESIGN_SEL_DESIGN" value="AltMemPHY Example Design" />
-  <parameter name="MEM_IF_MEMTYPE" value="DDR2" />
-  <parameter name="LOCAL_IF_CLK_PERIOD_PS" value="5000" />
-  <parameter name="RDP_ADDR_WIDTH" value="4" />
-  <parameter name="CTL_DATA_RATE" value="Full" />
-  <parameter name="MEM_CAS_5_MAX_FREQ" value="200.0" />
+   parameterizationKey="altera_reset_controller:17.1:ADAPT_RESET_REQUEST=0,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="sdram:.:rst_controller"
+   kind="altera_reset_controller"
+   version="17.1"
+   name="altera_reset_controller">
   <generatedFiles>
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_pin_assignments.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdc_params.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_reset_controller.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_ac.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_reset_synchronizer.v"
        type="VERILOG"
        attributes="" />
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_clk_reset.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_defines.iv"
-       type="VERILOG_INCLUDE"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_delay.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dp_io.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dqs_offset.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mimic.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mimic_debug.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mux.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_pll.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_postamble.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_rdata_valid.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_read_dp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_read_dp_group.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_reset_pipe.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_seq_wrapper.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_write_dp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_write_dp_fr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_constants_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_record_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_regs_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_addr_cmd_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram_addr_pkg.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_admin.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_ctrl.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dgrb.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_dgwb.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram_ram.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_iram.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_mmi.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_phy_seq.vhd"
-       type="VHDL"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_pins.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_report_timing.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_report_timing_core.tcl"
-       type="OTHER"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/memphy_timing.sdc"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_reset_controller.sdc"
        type="SDC"
        attributes="" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_phys/alt_mem_if_civ_ddr2_phy/alt_mem_if_civ_ddr2_phy_hw.tcl" />
+       path="D:/fpga/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
-  <instantiator instantiator="sdram_alt_mem_if_civ_ddr2_emif_0" as="phy" />
+  <instantiator instantiator="sdram" as="rst_controller" />
   <messages>
-   <message level="Debug" culprit="sdram">queue size: 2 starting:alt_mem_if_civ_ddr2_phy "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_phy"</message>
-   <message level="Info" culprit="phy"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_phy</b> "<b>phy</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 2 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>sdram</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
   </messages>
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="alt_mem_if_civ_ddr2_controller:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CFG_ADDR_ORDER=0,CFG_BURST_LENGTH=4,CFG_CLR_INTR=0,CFG_DATA_REORDERING_TYPE=INTER_BANK,CFG_DEVICE_WIDTH=1,CFG_ENABLE_INTR=0,CFG_ENABLE_NO_DM=0,CFG_GEN_DBE=0,CFG_GEN_SBE=0,CFG_INTERFACE_WIDTH=8,CFG_MASK_CORRDROP_INTR=0,CFG_MASK_DBE_INTR=0,CFG_MASK_SBE_INTR=0,CFG_MEM_CLK_ENTRY_CYCLES=10,CFG_PDN_EXIT_CYCLES=3,CFG_PORT_WIDTH_READ_ODT_CHIP=1,CFG_PORT_WIDTH_WRITE_ODT_CHIP=1,CFG_POWER_SAVING_EXIT_CYCLES=5,CFG_READ_ODT_CHIP=0,CFG_REORDER_DATA=1,CFG_SELF_RFSH_EXIT_CYCLES=200,CFG_STARVE_LIMIT=10,CFG_TCCD=2,CFG_TYPE=1,CFG_WRITE_ODT_CHIP=1,CSR_ADDR_WIDTH=16,CSR_BE_WIDTH=4,CSR_DATA_WIDTH=32,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_CSR_ENABLED=0,CTL_DATA_RATE=Full,CTL_ECC_ENABLED=0,CTL_ECC_MULTIPLES_16_24_40_72=1,CTL_ECC_RMW_ENABLED=0,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_ODT_ENABLED=0,CTL_OUTPUT_REGD=0,CTL_RD_TO_PCH_EXTRA_CLK=0,CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK=0,CTL_REGDIMM_ENABLED=0,CTL_REORDERING_STARVATION_LIMIT=10,CTL_TBP_NUM=4,CTL_USR_REFRESH=0,CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK=0,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,LOCAL_ADDR_WIDTH=24,LOCAL_BE_WIDTH=2,LOCAL_CS_WIDTH=0,LOCAL_DATA_WIDTH=16,LOCAL_ID_WIDTH=8,LOCAL_IF_DWIDTH_AFTER_ECC=16,LOCAL_IF_TYPE=AVALON,LOCAL_SIZE_WIDTH=3,MAX_LOCAL_DATA_WIDTH=80,MAX_MEM_IF_BANKADDR_WIDTH=3,MAX_MEM_IF_CHIP=4,MAX_MEM_IF_COLADDR_WIDTH=12,MAX_MEM_IF_CS_WIDTH=30,MAX_MEM_IF_DQS_WIDTH=5,MAX_MEM_IF_DQ_WIDTH=40,MAX_MEM_IF_MASK_WIDTH=5,MAX_MEM_IF_ODT_WIDTH=1,MAX_MEM_IF_ROWADDR_WIDTH=16,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_ADD_LAT=0,MEM_AUTO_PD_CYCLES=0,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CAS_WR_LAT=5,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CHIP=1,MEM_IF_CKE_WIDTH=1,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_COL_WIDTH=10,MEM_IF_CS_WIDTH=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQS_WIDTH=1,MEM_IF_DWIDTH=8,MEM_IF_ODT_WIDTH=1,MEM_IF_RD_TO_WR_TURNAROUND_OCT=3,MEM_IF_ROW_WIDTH=13,MEM_IF_WR_TO_RD_TURNAROUND_OCT=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TCL=3,MEM_TFAW=8,MEM_TMRD_CK=10,MEM_TOTAL_DQ_WIDTH=8,MEM_TRAS=8,MEM_TRC=11,MEM_TRCD=3,MEM_TREFI=1400,MEM_TRFC=15,MEM_TRP=3,MEM_TRRD=2,MEM_TRTP=2,MEM_TWR=3,MEM_TWTR=2,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,RDBUFFER_ADDR_WIDTH=8,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,WRBUFFER_ADDR_WIDTH=6"
-   instancePathKey="sdram:.:alt_mem_if_civ_ddr2_emif_0:.:ctl"
-   kind="alt_mem_if_civ_ddr2_controller"
-   version="1.0.0"
-   name="sdram_alt_mem_if_civ_ddr2_emif_0_ctl">
-  <parameter name="MEM_TWTR" value="2" />
-  <parameter name="MEM_IF_CS_WIDTH" value="1" />
-  <parameter name="MEM_ACTIVE_TO_PRECHARGE_TIME" value="40.0" />
-  <parameter name="PHY_ADDR_CMD_CLOCK_PHASE" value="90" />
-  <parameter name="CFG_MASK_DBE_INTR" value="0" />
-  <parameter name="CFG_PORT_WIDTH_WRITE_ODT_CHIP" value="1" />
-  <parameter name="MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME" value="0.2" />
-  <parameter name="CFG_DATA_REORDERING_TYPE" value="INTER_BANK" />
-  <parameter name="MEM_DRIVE_DM_PINS_FROM_FPGA" value="true" />
-  <parameter name="MEM_REFRESH_COMMAND_INTERVAL" value="7.0" />
-  <parameter name="MEM_CAS_4_MAX_FREQ" value="200.0" />
-  <parameter name="CTL_USR_REFRESH" value="0" />
-  <parameter name="PHY_CALIBRATION_TYPE_FOR_SIMULATION" value="Quick Calibration" />
-  <parameter name="MEM_AUTO_REFRESH_COMMAND_INTERVAL" value="75.0" />
-  <parameter name="MEM_ADD_LAT" value="0" />
-  <parameter name="LOCAL_ADDR_WIDTH" value="24" />
-  <parameter name="CFG_SELF_RFSH_EXIT_CYCLES" value="200" />
-  <parameter name="MEM_RAS_TO_RAS_DELAY" value="7.5" />
-  <parameter name="CFG_ENABLE_INTR" value="0" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_HOLD_TIME" value="600" />
-  <parameter name="CTL_REGDIMM_ENABLED" value="0" />
-  <parameter name="CTL_ENABLE_AUTO_POWER_DOWN" value="false" />
-  <parameter name="MEM_TRCD" value="3" />
-  <parameter name="DWIDTH_RATIO" value="2" />
-  <parameter name="MEM_IF_CLK_PAIR_COUNT" value="1" />
-  <parameter name="CTL_RD_TO_PCH_EXTRA_CLK" value="0" />
-  <parameter name="CFG_CLR_INTR" value="0" />
-  <parameter name="MEM_IF_WR_TO_RD_TURNAROUND_OCT" value="0" />
-  <parameter name="MEM_NUM_CLOCK_PAIRS" value="1" />
-  <parameter name="MEM_CAS_WR_LAT" value="5" />
-  <parameter name="MEM_IF_DM_WIDTH" value="1" />
-  <parameter name="MEM_WRITE_TO_READ_PERIOD" value="2" />
-  <parameter name="LOCAL_CS_WIDTH" value="0" />
-  <parameter name="CTL_ECC_RMW_ENABLED" value="0" />
-  <parameter name="CTL_ENABLE_REORDERING" value="true" />
-  <parameter name="LOCAL_BE_WIDTH" value="2" />
-  <parameter name="CTL_ECC_ENABLED" value="0" />
-  <parameter name="CFG_TYPE" value="1" />
-  <parameter name="EX_DESIGN_GEN_SYNTH" value="true" />
-  <parameter name="MEM_IF_CLK_PS" value="5000" />
-  <parameter name="CFG_ADDR_ORDER" value="0" />
-  <parameter name="MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD" value="10.0" />
-  <parameter name="MEM_IF_COL_WIDTH" value="10" />
-  <parameter name="CFG_REORDER_DATA" value="1" />
-  <parameter name="MEM_COLUMN_ADDR_WIDTH" value="10" />
-  <parameter name="CTL_ODT_ENABLED" value="0" />
-  <parameter name="MEM_CAS_6_MAX_FREQ" value="200.0" />
-  <parameter name="CFG_TCCD" value="2" />
-  <parameter name="SYS_INFO_DEVICE_FAMILY" value="Cyclone IV E" />
-  <parameter name="MEM_TRTP" value="2" />
-  <parameter name="MAX_MEM_IF_CS_WIDTH" value="30" />
-  <parameter name="CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH" value="4" />
-  <parameter name="MEM_ROW_ADDR_WIDTH" value="13" />
-  <parameter name="MEM_DQ_PER_DQS" value="8" />
-  <parameter name="MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS" value="400" />
-  <parameter name="MEM_TCL" value="3" />
-  <parameter name="CFG_WRITE_ODT_CHIP" value="1" />
-  <parameter name="EX_DESIGN_HDL_FORMAT" value="Verilog" />
-  <parameter name="ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE" value="false" />
-  <parameter name="MEM_WRITE_RECOVERY_TIME" value="15.0" />
-  <parameter name="MAX_MEM_IF_COLADDR_WIDTH" value="12" />
-  <parameter name="MEM_PRECHARGE_COMMAND_PERIOD" value="15.0" />
-  <parameter name="MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK" value="600" />
-  <parameter name="MAX_MEM_IF_CHIP" value="4" />
-  <parameter name="ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE" value="false" />
-  <parameter name="MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS" value="400" />
-  <parameter name="MEM_IF_ODT_WIDTH" value="1" />
-  <parameter name="CFG_PORT_WIDTH_READ_ODT_CHIP" value="1" />
-  <parameter name="MEM_ADDITIVE_CAS_LATENCY" value="Disabled" />
-  <parameter name="MEM_FORMAT" value="Discrete Device" />
-  <parameter name="CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK" value="0" />
-  <parameter name="MEM_TRP" value="3" />
-  <parameter name="ALT_MEM_IF_ENABLE_DEBUG_INTERFACE" value="false" />
-  <parameter name="CTL_ENABLE_CONFIG_STATUS_INTERFACE" value="false" />
-  <parameter name="CTL_REORDERING_STARVATION_LIMIT" value="10" />
-  <parameter name="MEM_VENDOR" value="JEDEC" />
-  <parameter name="LOCAL_DATA_WIDTH" value="16" />
-  <parameter name="CFG_GEN_DBE" value="0" />
-  <parameter name="CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK" value="0" />
-  <parameter name="CFG_POWER_SAVING_EXIT_CYCLES" value="5" />
-  <parameter name="CTL_ENABLE_SELF_REFRESH_CONTROLS" value="false" />
-  <parameter name="CFG_INTERFACE_WIDTH" value="8" />
-  <parameter name="MEM_TMRD_CK" value="10" />
-  <parameter name="CTL_ENABLE_AUTO_PRECHARGE_CONTROL" value="false" />
-  <parameter name="CTL_OUTPUT_REGD" value="0" />
-  <parameter name="CTL_ENABLE_ECC_LOGIC" value="false" />
-  <parameter name="MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE" value="0.25" />
-  <parameter name="MEM_DQS_DQ_SKEW" value="400" />
-  <parameter name="CTL_CSR_ENABLED" value="0" />
-  <parameter name="ALT_MEM_IF_SPEED_GRADE" value="6" />
-  <parameter name="EX_DESIGN_GEN_SIM" value="true" />
-  <parameter name="CTL_LOCAL_MAXIMUM_BURST_COUNT" value="4" />
-  <parameter name="MEM_IF_CHIP" value="1" />
-  <parameter name="MEM_TRFC" value="15" />
-  <parameter name="MEM_DQ_HOLD_SKEW_FACTOR" value="450" />
-  <parameter name="CFG_PDN_EXIT_CYCLES" value="3" />
-  <parameter name="CTL_ENABLE_AUTO_ECC" value="false" />
-  <parameter name="MEM_CHIP_SELECTS_PER_DIMM" value="1" />
-  <parameter name="CFG_READ_ODT_CHIP" value="0" />
-  <parameter name="MEM_TOTAL_DQ_WIDTH" value="8" />
-  <parameter name="CFG_BURST_LENGTH" value="4" />
-  <parameter name="MEM_BURST_ORDERING" value="Sequential" />
-  <parameter name="CTL_TBP_NUM" value="4" />
-  <parameter name="MEM_MEM_INIT_TIME_AT_POWER_UP" value="200.0" />
-  <parameter name="MEM_READ_TO_PRECHARGE_TIME" value="7.5" />
-  <parameter name="LOCAL_ID_WIDTH" value="8" />
-  <parameter name="MAX_MEM_IF_DQ_WIDTH" value="40" />
-  <parameter name="MEM_TRC" value="11" />
-  <parameter name="MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK" value="500" />
-  <parameter name="ALT_MEM_IF_PLL_REFCLK_FREQ" value="100.0" />
-  <parameter name="MEM_MAX_MEM_FREQ" value="200.0" />
-  <parameter name="MAX_MEM_IF_ODT_WIDTH" value="1" />
-  <parameter name="MEM_CAS_LATENCY" value="3" />
-  <parameter name="SYS_INFO_DEVICE" value="EP4CE115F29C7" />
-  <parameter name="CTL_ENABLE_AUTO_REFRESH_CONTROLS" value="false" />
-  <parameter name="MEM_IF_BANKADDR_WIDTH" value="2" />
-  <parameter name="MEM_IF_CKE_WIDTH" value="1" />
-  <parameter name="MEM_DRIVE_STRENGTH" value="Normal" />
-  <parameter name="MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK" value="0.2" />
-  <parameter name="MEM_FOUR_WINDOW_TIME" value="37.5" />
-  <parameter name="MAX_LOCAL_DATA_WIDTH" value="80" />
-  <parameter name="CFG_MEM_CLK_ENTRY_CYCLES" value="10" />
-  <parameter name="CFG_ENABLE_NO_DM" value="0" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_SETUP_TIME" value="600" />
-  <parameter name="WRBUFFER_ADDR_WIDTH" value="6" />
-  <parameter name="LOCAL_IF_TYPE" value="AVALON" />
-  <parameter name="CFG_MASK_CORRDROP_INTR" value="0" />
-  <parameter name="CSR_DATA_WIDTH" value="32" />
-  <parameter name="CTL_ECC_MULTIPLES_16_24_40_72" value="1" />
-  <parameter name="MEM_TWR" value="3" />
-  <parameter name="CFG_GEN_SBE" value="0" />
-  <parameter name="MEM_CAS_3_MAX_FREQ" value="200.0" />
-  <parameter name="CFG_DEVICE_WIDTH" value="1" />
-  <parameter name="MEM_AUTO_PD_CYCLES" value="0" />
-  <parameter name="MEM_IF_DQS_WIDTH" value="1" />
-  <parameter name="LOCAL_IF_DWIDTH_AFTER_ECC" value="16" />
-  <parameter name="MAX_MEM_IF_DQS_WIDTH" value="5" />
-  <parameter name="CSR_BE_WIDTH" value="4" />
-  <parameter name="ALT_MEM_IF_MEM_CLK_FREQ" value="200.0" />
-  <parameter name="MEM_ENABLE_DEVICE_DLL" value="true" />
-  <parameter name="MEM_ODT_SETTING" value="Disabled" />
-  <parameter name="CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING" value="CHIP-ROW-BANK-COL" />
-  <parameter name="CFG_STARVE_LIMIT" value="10" />
-  <parameter name="ALT_MEM_IF_DEVICE_FAMILY" value="Cyclone IV GX" />
-  <parameter name="MEM_BANK_ADDR_WIDTH" value="2" />
-  <parameter name="MEM_IF_ADDR_WIDTH" value="13" />
-  <parameter name="LOCAL_SIZE_WIDTH" value="3" />
-  <parameter name="MEM_PRECHARGE_ADDR_BIT" value="10" />
-  <parameter name="CSR_ADDR_WIDTH" value="16" />
-  <parameter name="MEM_ACTIVE_TO_READ_WRITE_TIME" value="15.0" />
-  <parameter name="MAX_MEM_IF_BANKADDR_WIDTH" value="3" />
-  <parameter name="MEM_TREFI" value="1400" />
-  <parameter name="CTL_AUTO_POWER_DOWN_CYCLES" value="0" />
-  <parameter name="MEM_IF_DWIDTH" value="8" />
-  <parameter name="MEM_NUM_CHIP_SELECTS" value="1" />
-  <parameter name="MEM_IF_RD_TO_WR_TURNAROUND_OCT" value="3" />
-  <parameter name="CFG_MASK_SBE_INTR" value="0" />
-  <parameter name="MEM_IF_ROW_WIDTH" value="13" />
-  <parameter name="MEM_BURST_LENGTH" value="4" />
-  <parameter name="MEM_TRRD" value="2" />
-  <parameter name="MEM_TRAS" value="8" />
-  <parameter name="MAX_MEM_IF_MASK_WIDTH" value="5" />
-  <parameter name="RDBUFFER_ADDR_WIDTH" value="8" />
-  <parameter name="MAX_MEM_IF_ROWADDR_WIDTH" value="16" />
-  <parameter name="EX_DESIGN_SEL_DESIGN" value="AltMemPHY Example Design" />
-  <parameter name="CTL_DATA_RATE" value="Full" />
-  <parameter name="MEM_CAS_5_MAX_FREQ" value="200.0" />
-  <parameter name="MEM_TFAW" value="8" />
+   parameterizationKey="altera_up_altpll:17.1:DEVICE_FAMILY=Cyclone IV,OUTCLK0_DIV=1,OUTCLK0_MULT=1,OUTCLK1_DIV=1,OUTCLK1_MULT=1,OUTCLK2_DIV=1,OUTCLK2_MULT=1,PHASE_SHIFT=-3000,audio_clk_freq=12.288,gui_device_family=Cyclone IV E,type=System/SDRAM,video_in=5MP Digital Camera (THDB_D5M),video_out=4.3&quot; LCD (TRDB_LTM)"
+   instancePathKey="sdram:.:sys_sdram_pll_0:.:sys_pll"
+   kind="altera_up_altpll"
+   version="17.1"
+   name="altera_up_altpll">
+  <parameter name="OUTCLK0_DIV" value="1" />
+  <parameter name="OUTCLK2_MULT" value="1" />
+  <parameter name="PHASE_SHIFT" value="-3000" />
+  <parameter name="OUTCLK1_DIV" value="1" />
+  <parameter name="OUTCLK0_MULT" value="1" />
+  <parameter name="DEVICE_FAMILY" value="Cyclone IV" />
+  <parameter name="video_in" value="5MP Digital Camera (THDB_D5M)" />
+  <parameter name="gui_device_family" value="Cyclone IV E" />
+  <parameter name="OUTCLK2_DIV" value="1" />
+  <parameter name="OUTCLK1_MULT" value="1" />
   <generatedFiles>
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_up_altpll.v"
        type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_addr_cmd_wrap.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_arbiter.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_buffer.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_buffer_manager.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_burst_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_burst_tracking.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_cmd_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_controller.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_controller_st_top.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_csr.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_dataid_manager.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ddr2_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ddr3_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_define.iv"
-       type="VERILOG_INCLUDE"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder_32_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_decoder_64_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_32_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_64_syn.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_ecc_encoder_decoder_wrapper.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_fifo.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_input_if.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_list.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_lpddr2_addr_cmd.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_mm_st_converter.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_odt_gen.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rank_timer.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rdata_path.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_rdwr_data_tmg.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_sideband.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_tbp.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_timing_param.v"
-       type="VERILOG"
-       attributes="" />
-   <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/alt_mem_ddrx_wdata_path.v"
-       type="VERILOG"
-       attributes="" />
+       attributes="TOP_LEVEL_FILE" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/alt_mem_if_controllers/alt_mem_if_civ_ddr2_controller/alt_mem_if_civ_ddr2_controller_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_altpll/altera_up_altpll_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
-  <instantiator instantiator="sdram_alt_mem_if_civ_ddr2_emif_0" as="ctl" />
+  <instantiator instantiator="sdram_sys_sdram_pll_0" as="sys_pll" />
   <messages>
-   <message level="Debug" culprit="sdram">queue size: 1 starting:alt_mem_if_civ_ddr2_controller "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_ctl"</message>
-   <message level="Info" culprit="ctl"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_controller</b> "<b>ctl</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 1 starting:altera_up_altpll "submodules/altera_up_altpll"</message>
+   <message level="Info" culprit="sys_pll"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_altpll</b> "<b>sys_pll</b>"]]></message>
   </messages>
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="alt_mem_if_civ_ddr2_status_bridge:1.0.0:ALT_MEM_IF_DEVICE_FAMILY=Cyclone IV GX,ALT_MEM_IF_ENABLE_DEBUG_INTERFACE=false,ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE=false,ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE=false,ALT_MEM_IF_MEM_CLK_FREQ=200.0,ALT_MEM_IF_PLL_REFCLK_FREQ=100.0,ALT_MEM_IF_SPEED_GRADE=6,CFG_ADDR_ORDER=0,CFG_BURST_LENGTH=4,CFG_CLR_INTR=0,CFG_DATA_REORDERING_TYPE=INTER_BANK,CFG_DEVICE_WIDTH=1,CFG_ENABLE_INTR=0,CFG_ENABLE_NO_DM=0,CFG_GEN_DBE=0,CFG_GEN_SBE=0,CFG_INTERFACE_WIDTH=8,CFG_MASK_CORRDROP_INTR=0,CFG_MASK_DBE_INTR=0,CFG_MASK_SBE_INTR=0,CFG_MEM_CLK_ENTRY_CYCLES=10,CFG_PDN_EXIT_CYCLES=3,CFG_PORT_WIDTH_READ_ODT_CHIP=1,CFG_PORT_WIDTH_WRITE_ODT_CHIP=1,CFG_POWER_SAVING_EXIT_CYCLES=5,CFG_READ_ODT_CHIP=0,CFG_REORDER_DATA=1,CFG_SELF_RFSH_EXIT_CYCLES=200,CFG_STARVE_LIMIT=10,CFG_TCCD=2,CFG_TYPE=1,CFG_WRITE_ODT_CHIP=1,CSR_ADDR_WIDTH=16,CSR_BE_WIDTH=4,CSR_DATA_WIDTH=32,CTL_AUTO_POWER_DOWN_CYCLES=0,CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH=4,CTL_CSR_ENABLED=0,CTL_DATA_RATE=Full,CTL_ECC_ENABLED=0,CTL_ECC_MULTIPLES_16_24_40_72=1,CTL_ECC_RMW_ENABLED=0,CTL_ENABLE_AUTO_ECC=false,CTL_ENABLE_AUTO_POWER_DOWN=false,CTL_ENABLE_AUTO_PRECHARGE_CONTROL=false,CTL_ENABLE_AUTO_REFRESH_CONTROLS=false,CTL_ENABLE_CONFIG_STATUS_INTERFACE=false,CTL_ENABLE_ECC_LOGIC=false,CTL_ENABLE_REORDERING=true,CTL_ENABLE_SELF_REFRESH_CONTROLS=false,CTL_LOCAL_MAXIMUM_BURST_COUNT=4,CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING=CHIP-ROW-BANK-COL,CTL_ODT_ENABLED=0,CTL_OUTPUT_REGD=0,CTL_RD_TO_PCH_EXTRA_CLK=0,CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK=0,CTL_REGDIMM_ENABLED=0,CTL_REORDERING_STARVATION_LIMIT=10,CTL_TBP_NUM=4,CTL_USR_REFRESH=0,CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK=0,DWIDTH_RATIO=2,EX_DESIGN_GEN_SIM=true,EX_DESIGN_GEN_SYNTH=true,EX_DESIGN_HDL_FORMAT=Verilog,EX_DESIGN_SEL_DESIGN=AltMemPHY Example Design,LOCAL_ADDR_WIDTH=24,LOCAL_BE_WIDTH=2,LOCAL_CS_WIDTH=0,LOCAL_DATA_WIDTH=16,LOCAL_ID_WIDTH=8,LOCAL_IF_DWIDTH_AFTER_ECC=16,LOCAL_IF_TYPE=AVALON,LOCAL_SIZE_WIDTH=3,MAX_LOCAL_DATA_WIDTH=80,MAX_MEM_IF_BANKADDR_WIDTH=3,MAX_MEM_IF_CHIP=4,MAX_MEM_IF_COLADDR_WIDTH=12,MAX_MEM_IF_CS_WIDTH=30,MAX_MEM_IF_DQS_WIDTH=5,MAX_MEM_IF_DQ_WIDTH=40,MAX_MEM_IF_MASK_WIDTH=5,MAX_MEM_IF_ODT_WIDTH=1,MAX_MEM_IF_ROWADDR_WIDTH=16,MEM_ACTIVE_TO_PRECHARGE_TIME=40.0,MEM_ACTIVE_TO_READ_WRITE_TIME=15.0,MEM_ADDITIVE_CAS_LATENCY=Disabled,MEM_ADDR_COMMAND_INPUT_HOLD_TIME=600,MEM_ADDR_COMMAND_INPUT_SETUP_TIME=600,MEM_ADD_LAT=0,MEM_AUTO_PD_CYCLES=0,MEM_AUTO_REFRESH_COMMAND_INTERVAL=75.0,MEM_BANK_ADDR_WIDTH=2,MEM_BURST_LENGTH=4,MEM_BURST_ORDERING=Sequential,MEM_CAS_3_MAX_FREQ=200.0,MEM_CAS_4_MAX_FREQ=200.0,MEM_CAS_5_MAX_FREQ=200.0,MEM_CAS_6_MAX_FREQ=200.0,MEM_CAS_LATENCY=3,MEM_CAS_WR_LAT=5,MEM_CHIP_SELECTS_PER_DIMM=1,MEM_COLUMN_ADDR_WIDTH=10,MEM_DQS_DQ_SKEW=400,MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK=0.2,MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME=0.2,MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK=500,MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS=400,MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS=400,MEM_DQ_HOLD_SKEW_FACTOR=450,MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK=600,MEM_DQ_PER_DQS=8,MEM_DRIVE_DM_PINS_FROM_FPGA=true,MEM_DRIVE_STRENGTH=Normal,MEM_ENABLE_DEVICE_DLL=true,MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE=0.25,MEM_FORMAT=Discrete Device,MEM_FOUR_WINDOW_TIME=37.5,MEM_IF_ADDR_WIDTH=13,MEM_IF_BANKADDR_WIDTH=2,MEM_IF_CHIP=1,MEM_IF_CKE_WIDTH=1,MEM_IF_CLK_PAIR_COUNT=1,MEM_IF_CLK_PS=5000,MEM_IF_COL_WIDTH=10,MEM_IF_CS_WIDTH=1,MEM_IF_DM_WIDTH=1,MEM_IF_DQS_WIDTH=1,MEM_IF_DWIDTH=8,MEM_IF_ODT_WIDTH=1,MEM_IF_RD_TO_WR_TURNAROUND_OCT=3,MEM_IF_ROW_WIDTH=13,MEM_IF_WR_TO_RD_TURNAROUND_OCT=0,MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD=10.0,MEM_MAX_MEM_FREQ=200.0,MEM_MEM_INIT_TIME_AT_POWER_UP=200.0,MEM_NUM_CHIP_SELECTS=1,MEM_NUM_CLOCK_PAIRS=1,MEM_ODT_SETTING=Disabled,MEM_PRECHARGE_ADDR_BIT=10,MEM_PRECHARGE_COMMAND_PERIOD=15.0,MEM_RAS_TO_RAS_DELAY=7.5,MEM_READ_TO_PRECHARGE_TIME=7.5,MEM_REFRESH_COMMAND_INTERVAL=7.0,MEM_ROW_ADDR_WIDTH=13,MEM_TCL=3,MEM_TFAW=8,MEM_TMRD_CK=10,MEM_TOTAL_DQ_WIDTH=8,MEM_TRAS=8,MEM_TRC=11,MEM_TRCD=3,MEM_TREFI=1400,MEM_TRFC=15,MEM_TRP=3,MEM_TRRD=2,MEM_TRTP=2,MEM_TWR=3,MEM_TWTR=2,MEM_VENDOR=JEDEC,MEM_WRITE_RECOVERY_TIME=15.0,MEM_WRITE_TO_READ_PERIOD=2,PHY_ADDR_CMD_CLOCK_PHASE=90,PHY_CALIBRATION_TYPE_FOR_SIMULATION=Quick Calibration,RDBUFFER_ADDR_WIDTH=8,SYS_INFO_DEVICE=EP4CE115F29C7,SYS_INFO_DEVICE_FAMILY=Cyclone IV E,WRBUFFER_ADDR_WIDTH=6"
-   instancePathKey="sdram:.:alt_mem_if_civ_ddr2_emif_0:.:status_bridge"
-   kind="alt_mem_if_civ_ddr2_status_bridge"
-   version="1.0.0"
-   name="sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge">
-  <parameter name="MEM_TWTR" value="2" />
-  <parameter name="MEM_IF_CS_WIDTH" value="1" />
-  <parameter name="MEM_ACTIVE_TO_PRECHARGE_TIME" value="40.0" />
-  <parameter name="PHY_ADDR_CMD_CLOCK_PHASE" value="90" />
-  <parameter name="CFG_MASK_DBE_INTR" value="0" />
-  <parameter name="CFG_PORT_WIDTH_WRITE_ODT_CHIP" value="1" />
-  <parameter name="MEM_DQS_FALLING_EDGE_TO_CK_SETUP_TIME" value="0.2" />
-  <parameter name="CFG_DATA_REORDERING_TYPE" value="INTER_BANK" />
-  <parameter name="MEM_DRIVE_DM_PINS_FROM_FPGA" value="true" />
-  <parameter name="MEM_REFRESH_COMMAND_INTERVAL" value="7.0" />
-  <parameter name="MEM_CAS_4_MAX_FREQ" value="200.0" />
-  <parameter name="CTL_USR_REFRESH" value="0" />
-  <parameter name="PHY_CALIBRATION_TYPE_FOR_SIMULATION" value="Quick Calibration" />
-  <parameter name="MEM_AUTO_REFRESH_COMMAND_INTERVAL" value="75.0" />
-  <parameter name="MEM_ADD_LAT" value="0" />
-  <parameter name="LOCAL_ADDR_WIDTH" value="24" />
-  <parameter name="CFG_SELF_RFSH_EXIT_CYCLES" value="200" />
-  <parameter name="MEM_RAS_TO_RAS_DELAY" value="7.5" />
-  <parameter name="CFG_ENABLE_INTR" value="0" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_HOLD_TIME" value="600" />
-  <parameter name="CTL_REGDIMM_ENABLED" value="0" />
-  <parameter name="CTL_ENABLE_AUTO_POWER_DOWN" value="false" />
-  <parameter name="MEM_TRCD" value="3" />
-  <parameter name="DWIDTH_RATIO" value="2" />
-  <parameter name="MEM_IF_CLK_PAIR_COUNT" value="1" />
-  <parameter name="CTL_RD_TO_PCH_EXTRA_CLK" value="0" />
-  <parameter name="CFG_CLR_INTR" value="0" />
-  <parameter name="MEM_IF_WR_TO_RD_TURNAROUND_OCT" value="0" />
-  <parameter name="MEM_NUM_CLOCK_PAIRS" value="1" />
-  <parameter name="MEM_CAS_WR_LAT" value="5" />
-  <parameter name="MEM_IF_DM_WIDTH" value="1" />
-  <parameter name="MEM_WRITE_TO_READ_PERIOD" value="2" />
-  <parameter name="LOCAL_CS_WIDTH" value="0" />
-  <parameter name="CTL_ECC_RMW_ENABLED" value="0" />
-  <parameter name="CTL_ENABLE_REORDERING" value="true" />
-  <parameter name="LOCAL_BE_WIDTH" value="2" />
-  <parameter name="CTL_ECC_ENABLED" value="0" />
-  <parameter name="CFG_TYPE" value="1" />
-  <parameter name="EX_DESIGN_GEN_SYNTH" value="true" />
-  <parameter name="MEM_IF_CLK_PS" value="5000" />
-  <parameter name="CFG_ADDR_ORDER" value="0" />
-  <parameter name="MEM_LOAD_MODE_REGISTER_COMMAND_PERIOD" value="10.0" />
-  <parameter name="MEM_IF_COL_WIDTH" value="10" />
-  <parameter name="CFG_REORDER_DATA" value="1" />
-  <parameter name="MEM_COLUMN_ADDR_WIDTH" value="10" />
-  <parameter name="CTL_ODT_ENABLED" value="0" />
-  <parameter name="MEM_CAS_6_MAX_FREQ" value="200.0" />
-  <parameter name="CFG_TCCD" value="2" />
-  <parameter name="SYS_INFO_DEVICE_FAMILY" value="Cyclone IV E" />
-  <parameter name="MEM_TRTP" value="2" />
-  <parameter name="MAX_MEM_IF_CS_WIDTH" value="30" />
-  <parameter name="CTL_COMMAND_QUEUE_LOOK_AHEAD_DEPTH" value="4" />
-  <parameter name="MEM_ROW_ADDR_WIDTH" value="13" />
-  <parameter name="MEM_DQ_PER_DQS" value="8" />
-  <parameter name="MEM_DQ_DM_INPUT_HOLD_TIME_TO_DQS" value="400" />
-  <parameter name="MEM_TCL" value="3" />
-  <parameter name="CFG_WRITE_ODT_CHIP" value="1" />
-  <parameter name="EX_DESIGN_HDL_FORMAT" value="Verilog" />
-  <parameter name="ALT_MEM_IF_ENABLE_LOCAL_CTRL_INTERFACE" value="false" />
-  <parameter name="MEM_WRITE_RECOVERY_TIME" value="15.0" />
-  <parameter name="MAX_MEM_IF_COLADDR_WIDTH" value="12" />
-  <parameter name="MEM_PRECHARGE_COMMAND_PERIOD" value="15.0" />
-  <parameter name="MEM_DQ_OUTPUT_ACCESS_TIME_FROM_CK" value="600" />
-  <parameter name="MAX_MEM_IF_CHIP" value="4" />
-  <parameter name="ALT_MEM_IF_ENABLE_SOFT_RESET_INTERFACE" value="false" />
-  <parameter name="MEM_DQ_DM_INPUT_SETUP_TIME_TO_DQS" value="400" />
-  <parameter name="MEM_IF_ODT_WIDTH" value="1" />
-  <parameter name="CFG_PORT_WIDTH_READ_ODT_CHIP" value="1" />
-  <parameter name="MEM_ADDITIVE_CAS_LATENCY" value="Disabled" />
-  <parameter name="MEM_FORMAT" value="Discrete Device" />
-  <parameter name="CTL_RD_TO_RD_DIFF_CHIP_EXTRA_CLK" value="0" />
-  <parameter name="MEM_TRP" value="3" />
-  <parameter name="ALT_MEM_IF_ENABLE_DEBUG_INTERFACE" value="false" />
-  <parameter name="CTL_ENABLE_CONFIG_STATUS_INTERFACE" value="false" />
-  <parameter name="CTL_REORDERING_STARVATION_LIMIT" value="10" />
-  <parameter name="MEM_VENDOR" value="JEDEC" />
-  <parameter name="LOCAL_DATA_WIDTH" value="16" />
-  <parameter name="CFG_GEN_DBE" value="0" />
-  <parameter name="CTL_WR_TO_WR_DIFF_CHIP_EXTRA_CLK" value="0" />
-  <parameter name="CFG_POWER_SAVING_EXIT_CYCLES" value="5" />
-  <parameter name="CTL_ENABLE_SELF_REFRESH_CONTROLS" value="false" />
-  <parameter name="CFG_INTERFACE_WIDTH" value="8" />
-  <parameter name="MEM_TMRD_CK" value="10" />
-  <parameter name="CTL_ENABLE_AUTO_PRECHARGE_CONTROL" value="false" />
-  <parameter name="CTL_OUTPUT_REGD" value="0" />
-  <parameter name="CTL_ENABLE_ECC_LOGIC" value="false" />
-  <parameter name="MEM_FIRST_DQS_EDGE_TO_ASSOC_CLOCK_EDGE" value="0.25" />
-  <parameter name="MEM_DQS_DQ_SKEW" value="400" />
-  <parameter name="CTL_CSR_ENABLED" value="0" />
-  <parameter name="ALT_MEM_IF_SPEED_GRADE" value="6" />
-  <parameter name="EX_DESIGN_GEN_SIM" value="true" />
-  <parameter name="CTL_LOCAL_MAXIMUM_BURST_COUNT" value="4" />
-  <parameter name="MEM_IF_CHIP" value="1" />
-  <parameter name="MEM_TRFC" value="15" />
-  <parameter name="MEM_DQ_HOLD_SKEW_FACTOR" value="450" />
-  <parameter name="CFG_PDN_EXIT_CYCLES" value="3" />
-  <parameter name="CTL_ENABLE_AUTO_ECC" value="false" />
-  <parameter name="MEM_CHIP_SELECTS_PER_DIMM" value="1" />
-  <parameter name="CFG_READ_ODT_CHIP" value="0" />
-  <parameter name="MEM_TOTAL_DQ_WIDTH" value="8" />
-  <parameter name="CFG_BURST_LENGTH" value="4" />
-  <parameter name="MEM_BURST_ORDERING" value="Sequential" />
-  <parameter name="CTL_TBP_NUM" value="4" />
-  <parameter name="MEM_MEM_INIT_TIME_AT_POWER_UP" value="200.0" />
-  <parameter name="MEM_READ_TO_PRECHARGE_TIME" value="7.5" />
-  <parameter name="LOCAL_ID_WIDTH" value="8" />
-  <parameter name="MAX_MEM_IF_DQ_WIDTH" value="40" />
-  <parameter name="MEM_TRC" value="11" />
-  <parameter name="MEM_DQS_OUTPUT_ACCESS_TIME_FROM_CK" value="500" />
-  <parameter name="ALT_MEM_IF_PLL_REFCLK_FREQ" value="100.0" />
-  <parameter name="MEM_MAX_MEM_FREQ" value="200.0" />
-  <parameter name="MAX_MEM_IF_ODT_WIDTH" value="1" />
-  <parameter name="MEM_CAS_LATENCY" value="3" />
-  <parameter name="SYS_INFO_DEVICE" value="EP4CE115F29C7" />
-  <parameter name="CTL_ENABLE_AUTO_REFRESH_CONTROLS" value="false" />
-  <parameter name="MEM_IF_BANKADDR_WIDTH" value="2" />
-  <parameter name="MEM_IF_CKE_WIDTH" value="1" />
-  <parameter name="MEM_DRIVE_STRENGTH" value="Normal" />
-  <parameter name="MEM_DQS_FALLING_EDGE_HOLD_TIME_FROM_CK" value="0.2" />
-  <parameter name="MEM_FOUR_WINDOW_TIME" value="37.5" />
-  <parameter name="MAX_LOCAL_DATA_WIDTH" value="80" />
-  <parameter name="CFG_MEM_CLK_ENTRY_CYCLES" value="10" />
-  <parameter name="CFG_ENABLE_NO_DM" value="0" />
-  <parameter name="MEM_ADDR_COMMAND_INPUT_SETUP_TIME" value="600" />
-  <parameter name="WRBUFFER_ADDR_WIDTH" value="6" />
-  <parameter name="LOCAL_IF_TYPE" value="AVALON" />
-  <parameter name="CFG_MASK_CORRDROP_INTR" value="0" />
-  <parameter name="CSR_DATA_WIDTH" value="32" />
-  <parameter name="CTL_ECC_MULTIPLES_16_24_40_72" value="1" />
-  <parameter name="MEM_TWR" value="3" />
-  <parameter name="CFG_GEN_SBE" value="0" />
-  <parameter name="MEM_CAS_3_MAX_FREQ" value="200.0" />
-  <parameter name="CFG_DEVICE_WIDTH" value="1" />
-  <parameter name="MEM_AUTO_PD_CYCLES" value="0" />
-  <parameter name="MEM_IF_DQS_WIDTH" value="1" />
-  <parameter name="LOCAL_IF_DWIDTH_AFTER_ECC" value="16" />
-  <parameter name="MAX_MEM_IF_DQS_WIDTH" value="5" />
-  <parameter name="CSR_BE_WIDTH" value="4" />
-  <parameter name="ALT_MEM_IF_MEM_CLK_FREQ" value="200.0" />
-  <parameter name="MEM_ENABLE_DEVICE_DLL" value="true" />
-  <parameter name="MEM_ODT_SETTING" value="Disabled" />
-  <parameter name="CTL_LOCAL_TO_MEMORY_ADDRESS_MAPPING" value="CHIP-ROW-BANK-COL" />
-  <parameter name="CFG_STARVE_LIMIT" value="10" />
-  <parameter name="ALT_MEM_IF_DEVICE_FAMILY" value="Cyclone IV GX" />
-  <parameter name="MEM_BANK_ADDR_WIDTH" value="2" />
-  <parameter name="MEM_IF_ADDR_WIDTH" value="13" />
-  <parameter name="LOCAL_SIZE_WIDTH" value="3" />
-  <parameter name="MEM_PRECHARGE_ADDR_BIT" value="10" />
-  <parameter name="CSR_ADDR_WIDTH" value="16" />
-  <parameter name="MEM_ACTIVE_TO_READ_WRITE_TIME" value="15.0" />
-  <parameter name="MAX_MEM_IF_BANKADDR_WIDTH" value="3" />
-  <parameter name="MEM_TREFI" value="1400" />
-  <parameter name="CTL_AUTO_POWER_DOWN_CYCLES" value="0" />
-  <parameter name="MEM_IF_DWIDTH" value="8" />
-  <parameter name="MEM_NUM_CHIP_SELECTS" value="1" />
-  <parameter name="MEM_IF_RD_TO_WR_TURNAROUND_OCT" value="3" />
-  <parameter name="CFG_MASK_SBE_INTR" value="0" />
-  <parameter name="MEM_IF_ROW_WIDTH" value="13" />
-  <parameter name="MEM_BURST_LENGTH" value="4" />
-  <parameter name="MEM_TRRD" value="2" />
-  <parameter name="MEM_TRAS" value="8" />
-  <parameter name="MAX_MEM_IF_MASK_WIDTH" value="5" />
-  <parameter name="RDBUFFER_ADDR_WIDTH" value="8" />
-  <parameter name="MAX_MEM_IF_ROWADDR_WIDTH" value="16" />
-  <parameter name="EX_DESIGN_SEL_DESIGN" value="AltMemPHY Example Design" />
-  <parameter name="CTL_DATA_RATE" value="Full" />
-  <parameter name="MEM_CAS_5_MAX_FREQ" value="200.0" />
-  <parameter name="MEM_TFAW" value="8" />
+   parameterizationKey="altera_up_avalon_reset_from_locked_signal:17.1:"
+   instancePathKey="sdram:.:sys_sdram_pll_0:.:reset_from_locked"
+   kind="altera_up_avalon_reset_from_locked_signal"
+   version="17.1"
+   name="altera_up_avalon_reset_from_locked_signal">
   <generatedFiles>
    <file
-       path="D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/synthesis/submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge.v"
+       path="D:/2024/FPGA-TEST/SDRAM/sdram/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v"
        type="VERILOG"
-       attributes="" />
+       attributes="TOP_LEVEL_FILE" />
   </generatedFiles>
   <childGeneratedFiles/>
   <sourceFiles>
    <file
-       path="D:/fpga/ip/altera/alt_mem_if/bridges/alt_mem_if_civ_ddr2_status_bridge/alt_mem_if_civ_ddr2_status_bridge_hw.tcl" />
+       path="D:/fpga/ip/altera/university_program/clocks/altera_up_avalon_reset_from_locked_signal/altera_up_avalon_reset_from_locked_signal_hw.tcl" />
   </sourceFiles>
   <childSourceFiles/>
-  <instantiator instantiator="sdram_alt_mem_if_civ_ddr2_emif_0" as="status_bridge" />
+  <instantiator instantiator="sdram_sys_sdram_pll_0" as="reset_from_locked" />
   <messages>
-   <message level="Debug" culprit="sdram">queue size: 0 starting:alt_mem_if_civ_ddr2_status_bridge "submodules/sdram_alt_mem_if_civ_ddr2_emif_0_status_bridge"</message>
-   <message level="Info" culprit="status_bridge"><![CDATA["<b>alt_mem_if_civ_ddr2_emif_0</b>" instantiated <b>alt_mem_if_civ_ddr2_status_bridge</b> "<b>status_bridge</b>"]]></message>
+   <message level="Debug" culprit="sdram">queue size: 0 starting:altera_up_avalon_reset_from_locked_signal "submodules/altera_up_avalon_reset_from_locked_signal"</message>
+   <message level="Info" culprit="reset_from_locked"><![CDATA["<b>sys_sdram_pll_0</b>" instantiated <b>altera_up_avalon_reset_from_locked_signal</b> "<b>reset_from_locked</b>"]]></message>
   </messages>
  </entity>
 </deploy>

@@ -1,62 +1,47 @@
-Info: Starting: Create simulation model
-Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\simulation --family="Cyclone IV E" --part=EP4CE115F29C7
-Progress: Loading SDRAM/sdram.qsys
-Progress: Reading input file
-Progress: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
-Progress: Parameterizing module alt_mem_if_civ_ddr2_emif_0
-Progress: Building connections
-Progress: Parameterizing connections
-Progress: Validating
-Progress: Done reading input file
-Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
-Info: sdram: Generating sdram "sdram" for SIM_VERILOG
-Info: alt_mem_if_civ_ddr2_emif_0: "sdram" instantiated alt_mem_if_civ_ddr2_emif "alt_mem_if_civ_ddr2_emif_0"
-Info: phy: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_phy "phy"
-Info: ctl: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_controller "ctl"
-Info: status_bridge: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_status_bridge "status_bridge"
-Info: sdram: Done "sdram" with 5 modules, 77 files
-Info: qsys-generate succeeded.
-Info: Finished: Create simulation model
-Info: Starting: Create Modelsim Project.
-Info: sim-script-gen --spd=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\sdram.spd --output-directory=D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation/ --use-relative-paths=true
-Info: Doing: ip-make-simscript --spd=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\sdram.spd --output-directory=D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation/ --use-relative-paths=true
-Info: Generating the following file(s) for RIVIERA simulator in D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation/ directory:
-Info: 	aldec/rivierapro_setup.tcl
-Info: Generating the following file(s) for MODELSIM simulator in D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation/ directory:
-Info: 	mentor/msim_setup.tcl
-Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/2024/FPGA/codeFPGAL_LIB/SDRAM/sdram/simulation/.
-Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
-Info: Finished: Create Modelsim Project.
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: qsys-generate D:\2024\FPGA-TEST\SDRAM\sdram.qsys --block-symbol-file --output-directory=D:\2024\FPGA-TEST\SDRAM\sdram --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading SDRAM/sdram.qsys
 Progress: Reading input file
-Progress: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
-Progress: Parameterizing module alt_mem_if_civ_ddr2_emif_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 17.1]
+Progress: Parameterizing module sys_sdram_pll_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: sdram.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: sdram.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated clock interface.  Export the driver of new_sdram_controller_0.clk
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated reset interface.  Export the driver(s) of new_sdram_controller_0.reset
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: qsys-generate D:\2024\FPGA-TEST\SDRAM\sdram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA-TEST\SDRAM\sdram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading SDRAM/sdram.qsys
 Progress: Reading input file
-Progress: Adding alt_mem_if_civ_ddr2_emif_0 [alt_mem_if_civ_ddr2_emif 1.0.0]
-Progress: Parameterizing module alt_mem_if_civ_ddr2_emif_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 17.1]
+Progress: Parameterizing module sys_sdram_pll_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Warning: sdram.alt_mem_if_civ_ddr2_emif_0.phy.RESET_REQUEST: Associated reset sinks not declared
+Info: sdram.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: sdram.sys_sdram_pll_0: Refclk Freq: 50.0
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated clock interface.  Export the driver of new_sdram_controller_0.clk
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated reset interface.  Export the driver(s) of new_sdram_controller_0.reset
 Info: sdram: Generating sdram "sdram" for QUARTUS_SYNTH
-Info: alt_mem_if_civ_ddr2_emif_0: "sdram" instantiated alt_mem_if_civ_ddr2_emif "alt_mem_if_civ_ddr2_emif_0"
-Info: phy: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_phy "phy"
-Info: ctl: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_controller "ctl"
-Info: status_bridge: "alt_mem_if_civ_ddr2_emif_0" instantiated alt_mem_if_civ_ddr2_status_bridge "status_bridge"
-Info: sdram: Done "sdram" with 5 modules, 78 files
+Info: new_sdram_controller_0: Starting RTL generation for module 'sdram_new_sdram_controller_0'
+Info: new_sdram_controller_0:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0006_new_sdram_controller_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0006_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: new_sdram_controller_0: Done RTL generation for module 'sdram_new_sdram_controller_0'
+Info: new_sdram_controller_0: "sdram" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
+Info: sys_sdram_pll_0: "sdram" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
+Info: rst_controller: "sdram" instantiated altera_reset_controller "rst_controller"
+Info: sys_pll: "sys_sdram_pll_0" instantiated altera_up_altpll "sys_pll"
+Info: reset_from_locked: "sys_sdram_pll_0" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: sdram: Done "sdram" with 6 modules, 8 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="d076e0bceb613ba73442"/>
+  </project>
+  <file_info>
+    <file device="EP4CE115F29C7" path="sdramControl.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="sdram:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME sdram HAS_SOPCINFO 1 GENERATION_ID 1729500511"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

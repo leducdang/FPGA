@@ -1,0 +1,38 @@
+module sdramControl(
+		input  wire        clk_50mhz,       //       clk.clk
+		input  wire        reset,   //     reset.reset
+		output wire [12:0] SDRAM_addr,    //     sdram.addr
+		output wire [1:0]  SDRAM_ba,      //          .ba
+		output wire        SDRAM_cas_n,   //          .cas_n
+		output wire        SDRAM_cke,     //          .cke
+		output wire        SDRAM_cs_n,    //          .cs_n
+		inout  wire [31:0] SDRAM_dq,      //          .dq
+		output wire [3:0]  SDRAM_dqm,     //          .dqm
+		output wire        SDRAM_ras_n,   //          .ras_n
+		output wire        SDRAM_we_n,    //          .we_n
+		output wire        SDRAM_clk_clk  // sdram_clk.clk
+);
+
+
+
+
+
+sdram u0 (
+        .sdram_addr    (SDRAM_addr),    //     sdram.addr
+        .sdram_ba      (SDRAM_ba),      //          .ba
+        .sdram_cas_n   (SDRAM_cas_n),   //          .cas_n
+        .sdram_cke     (SDRAM_cke),     //          .cke
+        .sdram_cs_n    (SDRAM_cs_n),    //          .cs_n
+        .sdram_dq      (SDRAM_dq),      //          .dq
+        .sdram_dqm     (SDRAM_dqm),     //          .dqm
+        .sdram_ras_n   (SDRAM_ras_n),   //          .ras_n
+        .sdram_we_n    (SDRAM_we_n),    //          .we_n
+        .sdram_clk_clk (SDRAM_clk_clk), // sdram_clk.clk
+        .clk_clk       (clk_50mhz),       //       clk.clk
+        .reset_reset   (reset)    //     reset.reset
+    );
+
+
+
+
+endmodule 

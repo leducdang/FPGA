@@ -1,72 +1,46 @@
 
 module sdram (
-	phy_clk,
-	reset_phy_clk_n,
-	status_cal_fail,
-	status_cal_success,
-	status_init_done,
-	global_reset_n,
-	reset_request_n,
-	local_ready,
-	local_write_req,
-	local_read_req,
-	local_address,
-	local_be,
-	local_wdata,
-	local_size,
-	local_burstbegin,
-	local_rdata,
-	local_rdata_valid,
-	mem_addr,
-	mem_ba,
-	mem_cas_n,
-	mem_cke,
-	mem_clk,
-	mem_clk_n,
-	mem_cs_n,
-	mem_dm,
-	mem_dq,
-	mem_dqs,
-	mem_dqs_n,
-	mem_odt,
-	mem_ras_n,
-	mem_we_n,
-	aux_full_rate_clk,
-	aux_half_rate_clk,
-	pll_ref_clk);	
+	wire_addr,
+	wire_ba,
+	wire_cas_n,
+	wire_cke,
+	wire_cs_n,
+	wire_dq,
+	wire_dqm,
+	wire_ras_n,
+	wire_we_n,
+	sdram_clk_clk,
+	clk_clk,
+	reset_reset,
+	sdram_1_address,
+	sdram_1_byteenable_n,
+	sdram_1_chipselect,
+	sdram_1_writedata,
+	sdram_1_read_n,
+	sdram_1_write_n,
+	sdram_1_readdata,
+	sdram_1_readdatavalid,
+	sdram_1_waitrequest);	
 
-	output		phy_clk;
-	output		reset_phy_clk_n;
-	output		status_cal_fail;
-	output		status_cal_success;
-	output		status_init_done;
-	input		global_reset_n;
-	output		reset_request_n;
-	output		local_ready;
-	input		local_write_req;
-	input		local_read_req;
-	input	[23:0]	local_address;
-	input	[1:0]	local_be;
-	input	[15:0]	local_wdata;
-	input	[2:0]	local_size;
-	input		local_burstbegin;
-	output	[15:0]	local_rdata;
-	output		local_rdata_valid;
-	output	[12:0]	mem_addr;
-	output	[1:0]	mem_ba;
-	output		mem_cas_n;
-	output		mem_cke;
-	inout		mem_clk;
-	inout		mem_clk_n;
-	output		mem_cs_n;
-	output		mem_dm;
-	inout	[7:0]	mem_dq;
-	inout		mem_dqs;
-	inout		mem_dqs_n;
-	output		mem_odt;
-	output		mem_ras_n;
-	output		mem_we_n;
-	output		aux_full_rate_clk;
-	output		aux_half_rate_clk;
-	input		pll_ref_clk;
+	output	[12:0]	wire_addr;
+	output	[1:0]	wire_ba;
+	output		wire_cas_n;
+	output		wire_cke;
+	output		wire_cs_n;
+	inout	[31:0]	wire_dq;
+	output	[3:0]	wire_dqm;
+	output		wire_ras_n;
+	output		wire_we_n;
+	output		sdram_clk_clk;
+	input		clk_clk;
+	input		reset_reset;
+	input	[24:0]	sdram_1_address;
+	input	[3:0]	sdram_1_byteenable_n;
+	input		sdram_1_chipselect;
+	input	[31:0]	sdram_1_writedata;
+	input		sdram_1_read_n;
+	input		sdram_1_write_n;
+	output	[31:0]	sdram_1_readdata;
+	output		sdram_1_readdatavalid;
+	output		sdram_1_waitrequest;
 endmodule

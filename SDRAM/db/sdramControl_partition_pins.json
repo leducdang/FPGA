@@ -1,0 +1,389 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SDRAM_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_addr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_ba[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_ba[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_cas_n",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_cs_n",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_ras_n",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_we_n",
+					"strict" : false
+				},
+				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "led[8]",
+					"strict" : false
+				},
+				{
+					"name" : "led[9]",
+					"strict" : false
+				},
+				{
+					"name" : "led[10]",
+					"strict" : false
+				},
+				{
+					"name" : "led[11]",
+					"strict" : false
+				},
+				{
+					"name" : "led[12]",
+					"strict" : false
+				},
+				{
+					"name" : "led[13]",
+					"strict" : false
+				},
+				{
+					"name" : "led[14]",
+					"strict" : false
+				},
+				{
+					"name" : "led[15]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[22]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[23]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[24]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[25]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[26]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[27]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[28]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[29]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[30]",
+					"strict" : false
+				},
+				{
+					"name" : "SDRAM_dq[31]",
+					"strict" : false
+				},
+				{
+					"name" : "button_addr",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "button_read",
+					"strict" : false
+				},
+				{
+					"name" : "button_write",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_data[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
