@@ -1,0 +1,99 @@
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# File: D:\2024\FPGA\codeFPGA_NIOS2\Bai10_VGA\vga.csv
+# Generated on: Sat Nov 09 08:30:50 2024
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+altera_reserved_tck,Input,,,,PIN_P5,,,,,,
+altera_reserved_tdi,Input,,,,PIN_P7,,,,,,
+altera_reserved_tdo,Output,,,,PIN_P6,,,,,,
+altera_reserved_tms,Input,,,,PIN_P8,,,,,,
+clk_clk,Input,PIN_Y2,2,B2_N0,PIN_Y2,2.5 V,,,,,
+clk_sdram_clk,Output,PIN_AE5,3,B3_N2,PIN_AE5,2.5 V,,,,,
+reset_reset_n,Input,PIN_M23,6,B6_N2,PIN_M23,2.5 V,,,,,
+sdcard_b_SD_cmd,Bidir,PIN_AD14,3,B3_N0,PIN_AA15,,,,,,
+sdcard_b_SD_dat,Bidir,PIN_AE14,3,B3_N0,PIN_R23,,,,,,
+sdcard_b_SD_dat3,Bidir,PIN_AC14,3,B3_N0,PIN_AD4,,,,,,
+sdcard_o_SD_clock,Output,PIN_AE13,3,B3_N0,PIN_AB16,,,,,,
+sdram_wire_addr[12],Output,PIN_Y7,2,B2_N2,PIN_Y7,2.5 V,,,,,
+sdram_wire_addr[11],Output,PIN_AA5,2,B2_N2,PIN_AA5,2.5 V,,,,,
+sdram_wire_addr[10],Output,PIN_R5,2,B2_N0,PIN_R5,2.5 V,,,,,
+sdram_wire_addr[9],Output,PIN_Y6,2,B2_N2,PIN_Y6,2.5 V,,,,,
+sdram_wire_addr[8],Output,PIN_Y5,2,B2_N2,PIN_Y5,2.5 V,,,,,
+sdram_wire_addr[7],Output,PIN_AA7,2,B2_N2,PIN_AA7,2.5 V,,,,,
+sdram_wire_addr[6],Output,PIN_W7,2,B2_N2,PIN_W7,2.5 V,,,,,
+sdram_wire_addr[5],Output,PIN_W8,2,B2_N2,PIN_W8,2.5 V,,,,,
+sdram_wire_addr[4],Output,PIN_V5,2,B2_N1,PIN_V5,2.5 V,,,,,
+sdram_wire_addr[3],Output,PIN_P1,1,B1_N2,PIN_P1,2.5 V,,,,,
+sdram_wire_addr[2],Output,PIN_U8,2,B2_N1,PIN_U8,2.5 V,,,,,
+sdram_wire_addr[1],Output,PIN_V8,2,B2_N1,PIN_V8,2.5 V,,,,,
+sdram_wire_addr[0],Output,PIN_R6,2,B2_N0,PIN_R6,2.5 V,,,,,
+sdram_wire_ba[1],Output,PIN_R4,2,B2_N0,PIN_R4,2.5 V,,,,,
+sdram_wire_ba[0],Output,PIN_U7,2,B2_N1,PIN_U7,2.5 V,,,,,
+sdram_wire_cas_n,Output,PIN_V7,2,B2_N1,PIN_V7,2.5 V,,,,,
+sdram_wire_cke,Output,PIN_AA6,2,B2_N2,PIN_AA6,2.5 V,,,,,
+sdram_wire_cs_n,Output,PIN_T4,2,B2_N0,PIN_T4,2.5 V,,,,,
+sdram_wire_dq[15],Bidir,PIN_AC2,2,B2_N1,PIN_AC2,2.5 V,,,,,
+sdram_wire_dq[14],Bidir,PIN_AB3,2,B2_N1,PIN_AB3,2.5 V,,,,,
+sdram_wire_dq[13],Bidir,PIN_AC1,2,B2_N1,PIN_AC1,2.5 V,,,,,
+sdram_wire_dq[12],Bidir,PIN_AB2,2,B2_N0,PIN_AB2,2.5 V,,,,,
+sdram_wire_dq[11],Bidir,PIN_AA3,2,B2_N1,PIN_AA3,2.5 V,,,,,
+sdram_wire_dq[10],Bidir,PIN_AB1,2,B2_N0,PIN_AB1,2.5 V,,,,,
+sdram_wire_dq[9],Bidir,PIN_Y4,2,B2_N1,PIN_Y4,2.5 V,,,,,
+sdram_wire_dq[8],Bidir,PIN_Y3,2,B2_N1,PIN_Y3,2.5 V,,,,,
+sdram_wire_dq[7],Bidir,PIN_U3,2,B2_N0,PIN_U3,2.5 V,,,,,
+sdram_wire_dq[6],Bidir,PIN_V1,2,B2_N0,PIN_V1,2.5 V,,,,,
+sdram_wire_dq[5],Bidir,PIN_V2,2,B2_N0,PIN_V2,2.5 V,,,,,
+sdram_wire_dq[4],Bidir,PIN_V3,2,B2_N0,PIN_V3,2.5 V,,,,,
+sdram_wire_dq[3],Bidir,PIN_W1,2,B2_N1,PIN_W1,2.5 V,,,,,
+sdram_wire_dq[2],Bidir,PIN_V4,2,B2_N0,PIN_V4,2.5 V,,,,,
+sdram_wire_dq[1],Bidir,PIN_W2,2,B2_N0,PIN_W2,2.5 V,,,,,
+sdram_wire_dq[0],Bidir,PIN_W3,2,B2_N2,PIN_W3,2.5 V,,,,,
+sdram_wire_dqm[1],Output,PIN_W4,2,B2_N2,PIN_W4,2.5 V,,,,,
+sdram_wire_dqm[0],Output,PIN_U2,2,B2_N0,PIN_U2,2.5 V,,,,,
+sdram_wire_ras_n,Output,PIN_U6,2,B2_N1,PIN_U6,2.5 V,,,,,
+sdram_wire_we_n,Output,PIN_V6,2,B2_N1,PIN_V6,2.5 V,,,,,
+vga_out_B[7],Output,PIN_D12,8,B8_N0,PIN_D12,2.5 V,,,,,
+vga_out_B[6],Output,PIN_D11,8,B8_N1,PIN_D11,2.5 V,,,,,
+vga_out_B[5],Output,PIN_C12,8,B8_N0,PIN_C12,2.5 V,,,,,
+vga_out_B[4],Output,PIN_A11,8,B8_N0,PIN_A11,2.5 V,,,,,
+vga_out_B[3],Output,PIN_B11,8,B8_N0,PIN_B11,2.5 V,,,,,
+vga_out_B[2],Output,PIN_C11,8,B8_N1,PIN_C11,2.5 V,,,,,
+vga_out_B[1],Output,PIN_A10,8,B8_N0,PIN_A10,2.5 V,,,,,
+vga_out_B[0],Output,PIN_B10,8,B8_N0,PIN_B10,2.5 V,,,,,
+vga_out_BLANK,Output,PIN_F11,8,B8_N1,PIN_F11,2.5 V,,,,,
+vga_out_CLK,Output,PIN_A12,8,B8_N0,PIN_A12,2.5 V,,,,,
+vga_out_G[7],Output,PIN_C9,8,B8_N1,PIN_C9,2.5 V,,,,,
+vga_out_G[6],Output,PIN_F10,8,B8_N1,PIN_F10,2.5 V,,,,,
+vga_out_G[5],Output,PIN_B8,8,B8_N1,PIN_B8,2.5 V,,,,,
+vga_out_G[4],Output,PIN_C8,8,B8_N1,PIN_C8,2.5 V,,,,,
+vga_out_G[3],Output,PIN_H12,8,B8_N1,PIN_H12,2.5 V,,,,,
+vga_out_G[2],Output,PIN_F8,8,B8_N2,PIN_F8,2.5 V,,,,,
+vga_out_G[1],Output,PIN_G11,8,B8_N1,PIN_G11,2.5 V,,,,,
+vga_out_G[0],Output,PIN_G8,8,B8_N2,PIN_G8,2.5 V,,,,,
+vga_out_HS,Output,PIN_G13,8,B8_N0,PIN_G13,2.5 V,,,,,
+vga_out_R[7],Output,PIN_H10,8,B8_N1,PIN_H10,2.5 V,,,,,
+vga_out_R[6],Output,PIN_H8,8,B8_N2,PIN_H8,2.5 V,,,,,
+vga_out_R[5],Output,PIN_J12,8,B8_N0,PIN_J12,2.5 V,,,,,
+vga_out_R[4],Output,PIN_G10,8,B8_N1,PIN_G10,2.5 V,,,,,
+vga_out_R[3],Output,PIN_F12,8,B8_N1,PIN_F12,2.5 V,,,,,
+vga_out_R[2],Output,PIN_D10,8,B8_N1,PIN_D10,2.5 V,,,,,
+vga_out_R[1],Output,PIN_E11,8,B8_N1,PIN_E11,2.5 V,,,,,
+vga_out_R[0],Output,PIN_E12,8,B8_N1,PIN_E12,2.5 V,,,,,
+vga_out_SYNC,Output,PIN_C10,8,B8_N0,PIN_C10,2.5 V,,,,,
+vga_out_VS,Output,PIN_C13,8,B8_N0,PIN_C13,2.5 V,,,,,

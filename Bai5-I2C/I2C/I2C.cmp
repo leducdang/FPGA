@@ -1,0 +1,11 @@
+	component I2C is
+		port (
+			clk_clk       : in  std_logic := 'X'; -- clk
+			i2c_sda_in    : in  std_logic := 'X'; -- sda_in
+			i2c_scl_in    : in  std_logic := 'X'; -- scl_in
+			i2c_sda_oe    : out std_logic;        -- sda_oe
+			i2c_scl_oe    : out std_logic;        -- scl_oe
+			reset_reset_n : in  std_logic := 'X'  -- reset_n
+		);
+	end component I2C;
+

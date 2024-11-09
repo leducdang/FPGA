@@ -1,0 +1,15 @@
+	component led_blink is
+		port (
+			button_export  : in    std_logic                    := 'X';             -- export
+			clk_clk        : in    std_logic                    := 'X';             -- clk
+			lcd1602_DATA   : inout std_logic_vector(7 downto 0) := (others => 'X'); -- DATA
+			lcd1602_ON     : out   std_logic;                                       -- ON
+			lcd1602_BLON   : out   std_logic;                                       -- BLON
+			lcd1602_EN     : out   std_logic;                                       -- EN
+			lcd1602_RS     : out   std_logic;                                       -- RS
+			lcd1602_RW     : out   std_logic;                                       -- RW
+			led_out_export : out   std_logic_vector(7 downto 0);                    -- export
+			reset_reset_n  : in    std_logic                    := 'X'              -- reset_n
+		);
+	end component led_blink;
+

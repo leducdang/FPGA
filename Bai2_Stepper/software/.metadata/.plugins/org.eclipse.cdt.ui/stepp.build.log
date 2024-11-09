@@ -1,0 +1,9 @@
+08:16:35 **** Incremental Build of configuration Nios II for project stepp ****
+make all 
+Info: Building ../stepp_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../stepp_bsp/
+[BSP build complete]
+[stepp build complete]
+
+08:16:36 Build Finished (took 503ms)
+

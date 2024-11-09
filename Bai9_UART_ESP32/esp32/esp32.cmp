@@ -1,0 +1,12 @@
+	component esp32 is
+		port (
+			clk_clk       : in  std_logic := 'X'; -- clk
+			led1_export   : out std_logic;        -- export
+			led2_export   : out std_logic;        -- export
+			led3_export   : out std_logic;        -- export
+			reset_reset_n : in  std_logic := 'X'; -- reset_n
+			rs232_RXD     : in  std_logic := 'X'; -- RXD
+			rs232_TXD     : out std_logic         -- TXD
+		);
+	end component esp32;
+

@@ -1,0 +1,25 @@
+09:01:55 **** Incremental Build of configuration Nios II for project uart ****
+make all 
+Info: Building ../uart_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../uart_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../uart_bsp//HAL/inc -I../uart_bsp/ -I../uart_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:54:5: warning: implicit declaration of function 'alt_printf' [-Wimplicit-function-declaration]
+     alt_printf("%x ",ch);
+     ^
+hello_world.c:33:14: warning: variable 'rx_buf' set but not used [-Wunused-but-set-variable]
+   int rx_cnt,rx_buf[16];
+              ^
+Info: Linking uart.elf
+nios2-elf-g++  -T'../uart_bsp//linker.x' -msys-crt0='../uart_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../uart_bsp/   -Wl,-Map=uart.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o uart.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert uart.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart_0 --stdin_dev uart_0 --stdout_dev uart_0 --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Bai4-UART" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Bai4-UART/software/uart_bsp/../../uart.sopcinfo
+Info: (uart.elf) 25 KBytes program size (code + initialized data).
+Info:            171 KBytes free for stack + heap.
+Info: Creating uart.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source uart.elf >uart.objdump
+[uart build complete]
+
+09:01:57 Build Finished (took 1s.685ms)
+

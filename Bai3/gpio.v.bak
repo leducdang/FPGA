@@ -1,0 +1,20 @@
+module gpio( clock_50mhz,
+				 led_out
+				);
+
+input clock_50mhz;
+output [7:0] led_out;
+
+led_blink u0 (
+        .clk_clk        (clock_50mhz),        //     clk.clk
+        .led_out_export (led_out), // led_out.export
+        .reset_reset_n  (1'b1)   //   reset.reset_n
+    );
+
+
+endmodule
+				
+				
+				
+				
+				

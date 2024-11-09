@@ -1,0 +1,9 @@
+16:30:18 **** Incremental Build of configuration Nios II for project interrupt ****
+make all 
+Info: Building ../interrupt_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../interrupt_bsp/
+[BSP build complete]
+[interrupt build complete]
+
+16:30:18 Build Finished (took 619ms)
+

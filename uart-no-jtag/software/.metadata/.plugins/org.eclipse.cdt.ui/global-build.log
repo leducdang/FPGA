@@ -1,0 +1,1338 @@
+08:34:27 **** Clean-only build of configuration Nios II for project test_bsp ****
+make clean 
+[BSP clean complete]
+08:34:29 **** Clean-only build of configuration Nios II for project test ****
+make clean 
+[test clean complete]
+08:34:48 **** Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+Compiling alt_alarm_start.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_alarm_start.o HAL/src/alt_alarm_start.c
+Compiling alt_busy_sleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_busy_sleep.o HAL/src/alt_busy_sleep.c
+Compiling alt_close.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_close.o HAL/src/alt_close.c
+Compiling alt_dcache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush.o HAL/src/alt_dcache_flush.c
+Compiling alt_dcache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_all.o HAL/src/alt_dcache_flush_all.c
+Compiling alt_dcache_flush_no_writeback.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dcache_flush_no_writeback.o HAL/src/alt_dcache_flush_no_writeback.c
+Compiling alt_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev.o HAL/src/alt_dev.c
+Compiling alt_dev_llist_insert.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dev_llist_insert.o HAL/src/alt_dev_llist_insert.c
+Compiling alt_dma_rxchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_rxchan_open.o HAL/src/alt_dma_rxchan_open.c
+Compiling alt_dma_txchan_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_dma_txchan_open.o HAL/src/alt_dma_txchan_open.c
+Compiling alt_do_ctors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_ctors.o HAL/src/alt_do_ctors.c
+Compiling alt_do_dtors.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_do_dtors.o HAL/src/alt_do_dtors.c
+Compiling alt_ecc_fatal_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_ecc_fatal_entry.o HAL/src/alt_ecc_fatal_entry.S
+Compiling alt_ecc_fatal_exception.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ecc_fatal_exception.o HAL/src/alt_ecc_fatal_exception.c
+Compiling alt_env_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_env_lock.o HAL/src/alt_env_lock.c
+Compiling alt_environ.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_environ.o HAL/src/alt_environ.c
+Compiling alt_errno.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_errno.o HAL/src/alt_errno.c
+Compiling alt_exception_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_entry.o HAL/src/alt_exception_entry.S
+Compiling alt_exception_muldiv.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_muldiv.o HAL/src/alt_exception_muldiv.S
+Compiling alt_exception_trap.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_exception_trap.o HAL/src/alt_exception_trap.S
+Compiling alt_execve.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_execve.o HAL/src/alt_execve.c
+Compiling alt_exit.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_exit.o HAL/src/alt_exit.c
+Compiling alt_fcntl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fcntl.o HAL/src/alt_fcntl.c
+Compiling alt_fd_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_lock.o HAL/src/alt_fd_lock.c
+Compiling alt_fd_unlock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fd_unlock.o HAL/src/alt_fd_unlock.c
+Compiling alt_find_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_dev.o HAL/src/alt_find_dev.c
+Compiling alt_find_file.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_find_file.o HAL/src/alt_find_file.c
+Compiling alt_flash_dev.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_flash_dev.o HAL/src/alt_flash_dev.c
+Compiling alt_fork.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fork.o HAL/src/alt_fork.c
+Compiling alt_fs_reg.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fs_reg.o HAL/src/alt_fs_reg.c
+Compiling alt_fstat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_fstat.o HAL/src/alt_fstat.c
+Compiling alt_get_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_get_fd.o HAL/src/alt_get_fd.c
+Compiling alt_getchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getchar.o HAL/src/alt_getchar.c
+Compiling alt_getpid.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_getpid.o HAL/src/alt_getpid.c
+Compiling alt_gettod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gettod.o HAL/src/alt_gettod.c
+Compiling alt_gmon.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_gmon.o HAL/src/alt_gmon.c
+Compiling alt_icache_flush.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush.o HAL/src/alt_icache_flush.c
+Compiling alt_icache_flush_all.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_icache_flush_all.o HAL/src/alt_icache_flush_all.c
+Compiling alt_iic.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic.o HAL/src/alt_iic.c
+Compiling alt_iic_isr_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_iic_isr_register.o HAL/src/alt_iic_isr_register.c
+Compiling alt_instruction_exception_entry.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_entry.o HAL/src/alt_instruction_exception_entry.c
+Compiling alt_instruction_exception_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_instruction_exception_register.o HAL/src/alt_instruction_exception_register.c
+Compiling alt_io_redirect.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_io_redirect.o HAL/src/alt_io_redirect.c
+Compiling alt_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_ioctl.o HAL/src/alt_ioctl.c
+Compiling alt_irq_entry.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_irq_entry.o HAL/src/alt_irq_entry.S
+Compiling alt_irq_handler.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_handler.o HAL/src/alt_irq_handler.c
+Compiling alt_irq_register.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_register.o HAL/src/alt_irq_register.c
+Compiling alt_irq_vars.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_irq_vars.o HAL/src/alt_irq_vars.c
+Compiling alt_isatty.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_isatty.o HAL/src/alt_isatty.c
+Compiling alt_kill.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_kill.o HAL/src/alt_kill.c
+Compiling alt_link.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_link.o HAL/src/alt_link.c
+Compiling alt_load.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_load.o HAL/src/alt_load.c
+Compiling alt_log_macro.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_log_macro.o HAL/src/alt_log_macro.S
+Compiling alt_log_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_log_printf.o HAL/src/alt_log_printf.c
+Compiling alt_lseek.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_lseek.o HAL/src/alt_lseek.c
+Compiling alt_main.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_main.o HAL/src/alt_main.c
+Compiling alt_malloc_lock.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_malloc_lock.o HAL/src/alt_malloc_lock.c
+Compiling alt_mcount.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_mcount.o HAL/src/alt_mcount.S
+Compiling alt_open.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_open.o HAL/src/alt_open.c
+Compiling alt_printf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_printf.o HAL/src/alt_printf.c
+Compiling alt_putchar.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putchar.o HAL/src/alt_putchar.c
+Compiling alt_putcharbuf.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putcharbuf.o HAL/src/alt_putcharbuf.c
+Compiling alt_putstr.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_putstr.o HAL/src/alt_putstr.c
+Compiling alt_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_read.o HAL/src/alt_read.c
+Compiling alt_release_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_release_fd.o HAL/src/alt_release_fd.c
+Compiling alt_remap_cached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_cached.o HAL/src/alt_remap_cached.c
+Compiling alt_remap_uncached.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_remap_uncached.o HAL/src/alt_remap_uncached.c
+Compiling alt_rename.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_rename.o HAL/src/alt_rename.c
+Compiling alt_sbrk.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_sbrk.o HAL/src/alt_sbrk.c
+Compiling alt_settod.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_settod.o HAL/src/alt_settod.c
+Compiling alt_software_exception.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/alt_software_exception.o HAL/src/alt_software_exception.S
+Compiling alt_stat.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_stat.o HAL/src/alt_stat.c
+Compiling alt_tick.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_tick.o HAL/src/alt_tick.c
+Compiling alt_times.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_times.o HAL/src/alt_times.c
+Compiling alt_uncached_free.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_free.o HAL/src/alt_uncached_free.c
+Compiling alt_uncached_malloc.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_uncached_malloc.o HAL/src/alt_uncached_malloc.c
+Compiling alt_unlink.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_unlink.o HAL/src/alt_unlink.c
+Compiling alt_usleep.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_usleep.o HAL/src/alt_usleep.c
+Compiling alt_wait.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_wait.o HAL/src/alt_wait.c
+Compiling alt_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/alt_write.o HAL/src/alt_write.c
+Compiling altera_nios2_gen2_irq.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/HAL/src/altera_nios2_gen2_irq.o HAL/src/altera_nios2_gen2_irq.c
+Compiling crt0.S...
+nios2-elf-gcc -MP -MMD -c   -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global    -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED  -Wa,-gdwarf2  -o obj/HAL/src/crt0.o HAL/src/crt0.S
+Compiling alt_sys_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/alt_sys_init.o alt_sys_init.c
+Compiling altera_avalon_uart_fd.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_uart_fd.o drivers/src/altera_avalon_uart_fd.c
+Compiling altera_avalon_uart_init.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_uart_init.o drivers/src/altera_avalon_uart_init.c
+Compiling altera_avalon_uart_ioctl.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_uart_ioctl.o drivers/src/altera_avalon_uart_ioctl.c
+Compiling altera_avalon_uart_read.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_uart_read.o drivers/src/altera_avalon_uart_read.c
+Compiling altera_avalon_uart_write.c...
+nios2-elf-gcc -xc -MP -MMD -c  -I./HAL/inc -I. -I./drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global   -o obj/drivers/src/altera_avalon_uart_write.o drivers/src/altera_avalon_uart_write.c
+Creating libhal_bsp.a...
+rm -f -f libhal_bsp.a
+nios2-elf-ar -src libhal_bsp.a obj/HAL/src/alt_alarm_start.o obj/HAL/src/alt_busy_sleep.o obj/HAL/src/alt_close.o obj/HAL/src/alt_dcache_flush.o obj/HAL/src/alt_dcache_flush_all.o obj/HAL/src/alt_dcache_flush_no_writeback.o obj/HAL/src/alt_dev.o obj/HAL/src/alt_dev_llist_insert.o obj/HAL/src/alt_dma_rxchan_open.o obj/HAL/src/alt_dma_txchan_open.o obj/HAL/src/alt_do_ctors.o obj/HAL/src/alt_do_dtors.o obj/HAL/src/alt_ecc_fatal_entry.o obj/HAL/src/alt_ecc_fatal_exception.o obj/HAL/src/alt_env_lock.o obj/HAL/src/alt_environ.o obj/HAL/src/alt_errno.o obj/HAL/src/alt_exception_entry.o obj/HAL/src/alt_exception_muldiv.o obj/HAL/src/alt_exception_trap.o obj/HAL/src/alt_execve.o obj/HAL/src/alt_exit.o obj/HAL/src/alt_fcntl.o obj/HAL/src/alt_fd_lock.o obj/HAL/src/alt_fd_unlock.o obj/HAL/src/alt_find_dev.o obj/HAL/src/alt_find_file.o obj/HAL/src/alt_flash_dev.o obj/HAL/src/alt_fork.o obj/HAL/src/alt_fs_reg.o obj/HAL/src/alt_fstat.o obj/HAL/src/alt_get_fd.o obj/HAL/src/alt_getchar.o obj/HAL/src/alt_getpid.o obj/HAL/src/alt_gettod.o obj/HAL/src/alt_gmon.o obj/HAL/src/alt_icache_flush.o obj/HAL/src/alt_icache_flush_all.o obj/HAL/src/alt_iic.o obj/HAL/src/alt_iic_isr_register.o obj/HAL/src/alt_instruction_exception_entry.o obj/HAL/src/alt_instruction_exception_register.o obj/HAL/src/alt_io_redirect.o obj/HAL/src/alt_ioctl.o obj/HAL/src/alt_irq_entry.o obj/HAL/src/alt_irq_handler.o obj/HAL/src/alt_irq_register.o obj/HAL/src/alt_irq_vars.o obj/HAL/src/alt_isatty.o obj/HAL/src/alt_kill.o obj/HAL/src/alt_link.o obj/HAL/src/alt_load.o obj/HAL/src/alt_log_macro.o obj/HAL/src/alt_log_printf.o obj/HAL/src/alt_lseek.o obj/HAL/src/alt_main.o obj/HAL/src/alt_malloc_lock.o obj/HAL/src/alt_mcount.o obj/HAL/src/alt_open.o obj/HAL/src/alt_printf.o obj/HAL/src/alt_putchar.o obj/HAL/src/alt_putcharbuf.o obj/HAL/src/alt_putstr.o obj/HAL/src/alt_read.o obj/HAL/src/alt_release_fd.o obj/HAL/src/alt_remap_cached.o obj/HAL/src/alt_remap_uncached.o obj/HAL/src/alt_rename.o obj/HAL/src/alt_sbrk.o obj/HAL/src/alt_settod.o obj/HAL/src/alt_software_exception.o obj/HAL/src/alt_stat.o obj/HAL/src/alt_tick.o obj/HAL/src/alt_times.o obj/HAL/src/alt_uncached_free.o obj/HAL/src/alt_uncached_malloc.o obj/HAL/src/alt_unlink.o obj/HAL/src/alt_usleep.o obj/HAL/src/alt_wait.o obj/HAL/src/alt_write.o obj/HAL/src/altera_nios2_gen2_irq.o obj/HAL/src/crt0.o obj/alt_sys_init.o obj/drivers/src/altera_avalon_uart_fd.o obj/drivers/src/altera_avalon_uart_init.o obj/drivers/src/altera_avalon_uart_ioctl.o obj/drivers/src/altera_avalon_uart_read.o obj/drivers/src/altera_avalon_uart_write.o
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 23 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+08:34:58 **** Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+08:35:12 **** Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+08:35:13 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+08:36:13 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from ../test_bsp//drivers/inc/altera_avalon_uart_regs.h:34:0,
+                 from hello_world.c:20:
+hello_world.c: In function 'main':
+hello_world.c:35:33: error: 'RS232_BASE' undeclared (first use in this function)
+  IOWR_ALTERA_AVALON_UART_TXDATA(RS232_BASE, 'a');
+                                 ^
+../test_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test_bsp//drivers/inc/altera_avalon_uart_regs.h:50:9: note: in expansion of macro 'IOWR'
+         IOWR(base, ALTERA_AVALON_UART_TXDATA_REG, data)
+         ^
+hello_world.c:35:2: note: in expansion of macro 'IOWR_ALTERA_AVALON_UART_TXDATA'
+  IOWR_ALTERA_AVALON_UART_TXDATA(RS232_BASE, 'a');
+  ^
+hello_world.c:35:33: note: each undeclared identifier is reported only once for each function it appears in
+  IOWR_ALTERA_AVALON_UART_TXDATA(RS232_BASE, 'a');
+                                 ^
+../test_bsp//HAL/inc/io.h:70:23: note: in definition of macro '__IO_CALC_ADDRESS_NATIVE'
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                       ^
+../test_bsp//drivers/inc/altera_avalon_uart_regs.h:50:9: note: in expansion of macro 'IOWR'
+         IOWR(base, ALTERA_AVALON_UART_TXDATA_REG, data)
+         ^
+hello_world.c:35:2: note: in expansion of macro 'IOWR_ALTERA_AVALON_UART_TXDATA'
+  IOWR_ALTERA_AVALON_UART_TXDATA(RS232_BASE, 'a');
+  ^
+make: *** [obj/default/hello_world.o] Error 1
+08:36:48 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+08:39:46 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+08:41:49 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 23 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+08:44:19 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 23 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+08:58:21 **** Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+08:58:22 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+08:59:05 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 23 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+08:59:55 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:40:49: warning: multi-character character constant [-Wmultichar]
+   IOWR_ALTERA_AVALON_UART_TXDATA(UART_BASE, '12');
+                                                 ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 23 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:00:41 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 23 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:06:42 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:25:16: error: expected ')' before string constant
+ sprintf(buffer,"12345");
+                ^
+make: *** [obj/default/hello_world.o] Error 1
+09:09:55 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:25:16: error: expected ')' before string constant
+ sprintf(buffer,"12345");
+                ^
+make: *** [obj/default/hello_world.o] Error 1
+09:09:56 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+09:10:33 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:25:16: error: expected ')' before string constant
+ sprintf(buffer,"12345");
+                ^
+make: *** [obj/default/hello_world.o] Error 1
+09:10:34 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+09:10:36 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:11:16 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:26:16: error: expected ')' before string constant
+ sprintf(buffer,"12345");
+                ^
+make: *** [obj/default/hello_world.o] Error 1
+09:12:53 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:26:16: error: expected ')' before string constant
+ sprintf(buffer,"1234");
+                ^
+make: *** [obj/default/hello_world.o] Error 1
+09:15:01 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:18:48 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:52:8: warning: comparison between pointer and integer
+   if(a != NULL)
+        ^
+hello_world.c:54:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:20:22 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:52:8: warning: comparison between pointer and integer
+   if(a != NULL)
+        ^
+hello_world.c:54:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:21:04 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:52:8: warning: comparison between pointer and integer
+   if(a != NULL)
+        ^
+hello_world.c:54:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:23:40 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from ../test_bsp//drivers/inc/altera_avalon_uart_regs.h:34:0,
+                 from hello_world.c:21:
+hello_world.c: In function 'main':
+../test_bsp//HAL/inc/io.h:70:41: error: invalid operands to binary * (have 'char *' and 'int')
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                                         ^
+../test_bsp//HAL/inc/io.h:73:20: note: in expansion of macro '__IO_CALC_ADDRESS_NATIVE'
+   __builtin_ldwio (__IO_CALC_ADDRESS_NATIVE ((BASE), (REGNUM)))
+                    ^
+hello_world.c:51:3: note: in expansion of macro 'IORD'
+   IORD(UART_BASE, buffer);
+   ^
+hello_world.c:37:7: warning: unused variable 'counter' [-Wunused-variable]
+  char counter = 0;
+       ^
+hello_world.c:36:8: warning: unused variable 'a' [-Wunused-variable]
+ { char a=0;
+        ^
+make: *** [obj/default/hello_world.o] Error 1
+09:24:00 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from ../test_bsp//drivers/inc/altera_avalon_uart_regs.h:34:0,
+                 from hello_world.c:21:
+hello_world.c: In function 'main':
+../test_bsp//HAL/inc/io.h:70:41: error: invalid operands to binary * (have 'char *' and 'int')
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                                         ^
+../test_bsp//HAL/inc/io.h:73:20: note: in expansion of macro '__IO_CALC_ADDRESS_NATIVE'
+   __builtin_ldwio (__IO_CALC_ADDRESS_NATIVE ((BASE), (REGNUM)))
+                    ^
+hello_world.c:52:3: note: in expansion of macro 'IORD'
+   IORD(UART_BASE, buffer);
+   ^
+hello_world.c:38:7: warning: unused variable 'counter' [-Wunused-variable]
+  char counter = 0;
+       ^
+hello_world.c:37:7: warning: unused variable 'a' [-Wunused-variable]
+  char a=0;
+       ^
+make: *** [obj/default/hello_world.o] Error 1
+09:24:13 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from ../test_bsp//drivers/inc/altera_avalon_uart_regs.h:34:0,
+                 from hello_world.c:21:
+hello_world.c: In function 'main':
+../test_bsp//HAL/inc/io.h:70:41: error: invalid operands to binary * (have 'char *' and 'int')
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                                         ^
+../test_bsp//HAL/inc/io.h:73:20: note: in expansion of macro '__IO_CALC_ADDRESS_NATIVE'
+   __builtin_ldwio (__IO_CALC_ADDRESS_NATIVE ((BASE), (REGNUM)))
+                    ^
+hello_world.c:52:3: note: in expansion of macro 'IORD'
+   IORD(UART_BASE, buffer);
+   ^
+make: *** [obj/default/hello_world.o] Error 1
+09:24:25 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from ../test_bsp//drivers/inc/altera_avalon_uart_regs.h:34:0,
+                 from hello_world.c:21:
+hello_world.c: In function 'main':
+../test_bsp//HAL/inc/io.h:70:41: error: invalid operands to binary * (have 'char *' and 'int')
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                                         ^
+../test_bsp//HAL/inc/io.h:73:20: note: in expansion of macro '__IO_CALC_ADDRESS_NATIVE'
+   __builtin_ldwio (__IO_CALC_ADDRESS_NATIVE ((BASE), (REGNUM)))
+                    ^
+hello_world.c:52:3: note: in expansion of macro 'IORD'
+   IORD(UART_BASE, buffer);
+   ^
+make: *** [obj/default/hello_world.o] Error 1
+09:24:26 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+09:24:30 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from ../test_bsp//drivers/inc/altera_avalon_uart_regs.h:34:0,
+                 from hello_world.c:21:
+hello_world.c: In function 'main':
+../test_bsp//HAL/inc/io.h:70:41: error: invalid operands to binary * (have 'char *' and 'int')
+   ((void *)(((alt_u8*)BASE) + ((REGNUM) * (SYSTEM_BUS_WIDTH/8))))
+                                         ^
+../test_bsp//HAL/inc/io.h:73:20: note: in expansion of macro '__IO_CALC_ADDRESS_NATIVE'
+   __builtin_ldwio (__IO_CALC_ADDRESS_NATIVE ((BASE), (REGNUM)))
+                    ^
+hello_world.c:52:3: note: in expansion of macro 'IORD'
+   IORD(UART_BASE, buffer);
+   ^
+make: *** [obj/default/hello_world.o] Error 1
+09:26:39 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:27:23 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:55:29 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:01:32 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:01:51 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:03:40 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:05:24 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:06:14 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:14:48 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:57:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:17:13 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:21:10 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:22:20 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:60:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:23:08 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:60:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:25:27 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:60:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:27:46 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:60:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:39:7: warning: unused variable 'ready' [-Wunused-variable]
+  char ready = 0;
+       ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            132 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+11:28:15 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:60:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:22:24 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:23:50 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:25:52 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:26:21 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:26:42 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:27:08 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:27:29 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:59:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:30:28 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:33:26 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:38:20: warning: variable 'ready' set but not used [-Wunused-but-set-variable]
+  char counter = 0, ready = 0;
+                    ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:35:37 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:69:23: error: expected expression before ']' token
+   if(a == '0') buffer[] = {0};
+                       ^
+hello_world.c:38:20: warning: variable 'ready' set but not used [-Wunused-but-set-variable]
+  char counter = 0, ready = 0;
+                    ^
+make: *** [obj/default/hello_world.o] Error 1
+13:35:50 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:69:23: error: expected expression before ']' token
+   if(a == '0') buffer[] = {};
+                       ^
+hello_world.c:38:20: warning: variable 'ready' set but not used [-Wunused-but-set-variable]
+  char counter = 0, ready = 0;
+                    ^
+make: *** [obj/default/hello_world.o] Error 1
+13:36:07 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:38:20: warning: variable 'ready' set but not used [-Wunused-but-set-variable]
+  char counter = 0, ready = 0;
+                    ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:38:45 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:38:20: warning: variable 'ready' set but not used [-Wunused-but-set-variable]
+  char counter = 0, ready = 0;
+                    ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:40:18 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:38:20: warning: unused variable 'ready' [-Wunused-variable]
+  char counter = 0, ready = 0;
+                    ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+13:46:34 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:58:10: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buffer[counter] = a;
+          ^
+hello_world.c:38:20: warning: unused variable 'ready' [-Wunused-variable]
+  char counter = 0, ready = 0;
+                    ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 65 KBytes program size (code + initialized data).
+Info:            131 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+15:45:16 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:38:20: warning: unused variable 'ready' [-Wunused-variable]
+  char counter = 0, ready = 0;
+                    ^
+hello_world.c:38:7: warning: variable 'counter' set but not used [-Wunused-but-set-variable]
+  char counter = 0, ready = 0;
+       ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 24 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+15:46:48 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:54:3: error: 'a' undeclared (first use in this function)
+   a= IORD_ALTERA_AVALON_UART_RXDATA(UART_BASE);
+   ^
+hello_world.c:54:3: note: each undeclared identifier is reported only once for each function it appears in
+hello_world.c:68:16: error: 'counter' undeclared (first use in this function)
+   if(a == '1') counter = 0;
+                ^
+make: *** [obj/default/hello_world.o] Error 1
+15:47:08 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:68:16: error: 'counter' undeclared (first use in this function)
+   if(a == '1') counter = 0;
+                ^
+hello_world.c:68:16: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/default/hello_world.o] Error 1
+15:47:26 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 10168 Bytes program size (code + initialized data).
+Info:            188 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+15:48:33 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev uart --stdin_dev uart --stdout_dev uart --sopc_system_name uart --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag" --jdi ../..//output_files/uart.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/uart-no-jtag/software/test_bsp/../../uart.sopcinfo
+Info: (test.elf) 23 KBytes program size (code + initialized data).
+Info:            173 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:19:55 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+09:19:57 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]

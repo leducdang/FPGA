@@ -1,0 +1,186 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\2024\FPGA\codeFPGA_NIOS2\Bai10_VGA\vga.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGA_NIOS2\Bai10_VGA\vga --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Bai10_VGA/vga.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 17.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 17.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 17.1]
+Progress: Parameterizing module timer_0
+Progress: Adding video_dual_clock_buffer_0 [altera_up_avalon_video_dual_clock_buffer 17.1]
+Progress: Parameterizing module video_dual_clock_buffer_0
+Progress: Adding video_pixel_buffer_dma_0 [altera_up_avalon_video_pixel_buffer_dma 17.1]
+Progress: Parameterizing module video_pixel_buffer_dma_0
+Progress: Adding video_rgb_resampler_0 [altera_up_avalon_video_rgb_resampler 17.1]
+Progress: Parameterizing module video_rgb_resampler_0
+Progress: Adding video_scaler_0 [altera_up_avalon_video_scaler 17.1]
+Progress: Parameterizing module video_scaler_0
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 17.1]
+Progress: Parameterizing module video_vga_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: vga.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: vga.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: vga.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: vga.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: vga.video_rgb_resampler_0: RGB Resampling: 16 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info: vga.video_scaler_0: Change in Resolution: 320 x 240 -> 640 x 480
+Info: vga.video_vga_controller_0: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: vga.video_scaler_0.avalon_scaler_source/video_dual_clock_buffer_0.avalon_dc_buffer_sink: The source has a channel signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\2024\FPGA\codeFPGA_NIOS2\Bai10_VGA\vga.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGA_NIOS2\Bai10_VGA\vga\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Bai10_VGA/vga.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 17.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 17.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding timer_0 [altera_avalon_timer 17.1]
+Progress: Parameterizing module timer_0
+Progress: Adding video_dual_clock_buffer_0 [altera_up_avalon_video_dual_clock_buffer 17.1]
+Progress: Parameterizing module video_dual_clock_buffer_0
+Progress: Adding video_pixel_buffer_dma_0 [altera_up_avalon_video_pixel_buffer_dma 17.1]
+Progress: Parameterizing module video_pixel_buffer_dma_0
+Progress: Adding video_rgb_resampler_0 [altera_up_avalon_video_rgb_resampler 17.1]
+Progress: Parameterizing module video_rgb_resampler_0
+Progress: Adding video_scaler_0 [altera_up_avalon_video_scaler 17.1]
+Progress: Parameterizing module video_scaler_0
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 17.1]
+Progress: Parameterizing module video_vga_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: vga.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: vga.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: vga.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: vga.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: vga.video_rgb_resampler_0: RGB Resampling: 16 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info: vga.video_scaler_0: Change in Resolution: 320 x 240 -> 640 x 480
+Info: vga.video_vga_controller_0: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: vga.video_scaler_0.avalon_scaler_source/video_dual_clock_buffer_0.avalon_dc_buffer_sink: The source has a channel signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: vga: Generating vga "vga" for QUARTUS_SYNTH
+Info: Inserting clock-crossing logic between cmd_demux_001.src5 and cmd_mux_005.sink0
+Info: Inserting clock-crossing logic between rsp_demux_005.src0 and rsp_mux_001.sink5
+Info: avalon_st_adapter: Inserting channel_adapter: channel_adapter_0
+Info: altpll_0: "vga" instantiated altpll "altpll_0"
+Info: jtag_uart_0: Starting RTL generation for module 'vga_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=vga_jtag_uart_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0004_jtag_uart_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0004_jtag_uart_0_gen//vga_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'vga_jtag_uart_0'
+Info: jtag_uart_0: "vga" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: new_sdram_controller_0: Starting RTL generation for module 'vga_new_sdram_controller_0'
+Info: new_sdram_controller_0:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=vga_new_sdram_controller_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0005_new_sdram_controller_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0005_new_sdram_controller_0_gen//vga_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: new_sdram_controller_0: Done RTL generation for module 'vga_new_sdram_controller_0'
+Info: new_sdram_controller_0: "vga" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
+Info: nios2_gen2_0: "vga" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'vga_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=vga_onchip_memory2_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0006_onchip_memory2_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0006_onchip_memory2_0_gen//vga_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'vga_onchip_memory2_0'
+Info: onchip_memory2_0: "vga" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: sysid_qsys_0: "vga" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: timer_0: Starting RTL generation for module 'vga_timer_0'
+Info: timer_0:   Generation command is [exec D:/FPGA/quartus/bin64//perl/bin/perl.exe -I D:/FPGA/quartus/bin64//perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=vga_timer_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0008_timer_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0008_timer_0_gen//vga_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'vga_timer_0'
+Info: timer_0: "vga" instantiated altera_avalon_timer "timer_0"
+Info: video_dual_clock_buffer_0: Starting Generation of the Dual Clock Buffer
+Info: video_dual_clock_buffer_0: "vga" instantiated altera_up_avalon_video_dual_clock_buffer "video_dual_clock_buffer_0"
+Info: video_pixel_buffer_dma_0: Starting Generation of VGA Pixel Buffer
+Info: video_pixel_buffer_dma_0: "vga" instantiated altera_up_avalon_video_pixel_buffer_dma "video_pixel_buffer_dma_0"
+Info: video_rgb_resampler_0: Starting Generation of Video RGB Resampler
+Info: video_rgb_resampler_0: "vga" instantiated altera_up_avalon_video_rgb_resampler "video_rgb_resampler_0"
+Info: video_scaler_0: Starting Generation of Video Scaler
+Info: video_scaler_0: "vga" instantiated altera_up_avalon_video_scaler "video_scaler_0"
+Info: video_vga_controller_0: Starting Generation of VGA Controller
+Info: video_vga_controller_0: "vga" instantiated altera_up_avalon_video_vga_controller "video_vga_controller_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "vga" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "vga" instantiated altera_irq_mapper "irq_mapper"
+Info: avalon_st_adapter: "vga" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: rst_controller: "vga" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'vga_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec D:/FPGA/quartus/bin64//eperlcmd.exe -I D:/FPGA/quartus/bin64//perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=vga_nios2_gen2_0_cpu --dir=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0016_cpu_gen/ --quartus_bindir=D:/FPGA/quartus/bin64/ --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0035_5616838832966488065.dir/0016_cpu_gen//vga_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.11.08 09:02:06 (*) Starting Nios II generation
+Info: cpu: # 2024.11.08 09:02:06 (*)   Checking for plaintext license.
+Info: cpu: # 2024.11.08 09:02:07 (*)   Plaintext license not found.
+Info: cpu: # 2024.11.08 09:02:07 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.11.08 09:02:07 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.11.08 09:02:07 (*)   Creating all objects for CPU
+Info: cpu: # 2024.11.08 09:02:08 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.11.08 09:02:08 (*)   Creating plain-text RTL
+Info: cpu: # 2024.11.08 09:02:09 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'vga_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: video_pixel_buffer_dma_0_avalon_pixel_dma_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "video_pixel_buffer_dma_0_avalon_pixel_dma_master_translator"
+Info: new_sdram_controller_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "new_sdram_controller_0_s1_translator"
+Info: video_pixel_buffer_dma_0_avalon_pixel_dma_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "video_pixel_buffer_dma_0_avalon_pixel_dma_master_agent"
+Info: new_sdram_controller_0_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "new_sdram_controller_0_s1_agent"
+Info: new_sdram_controller_0_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "new_sdram_controller_0_s1_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
+Info: new_sdram_controller_0_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "new_sdram_controller_0_s1_burst_adapter"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: nios2_gen2_0_data_master_to_new_sdram_controller_0_s1_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "nios2_gen2_0_data_master_to_new_sdram_controller_0_s1_cmd_width_adapter"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/vga/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: channel_adapter_0: "avalon_st_adapter" instantiated channel_adapter "channel_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: vga: Done "vga" with 48 modules, 77 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

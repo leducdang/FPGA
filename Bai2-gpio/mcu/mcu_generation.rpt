@@ -1,0 +1,130 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\2024\FPGA\codeFPGA_NIOS2\Bai2-gpio\mcu.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGA_NIOS2\Bai2-gpio\mcu --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Bai2-gpio/mcu.qsys
+Progress: Reading input file
+Progress: Adding O_reg [altera_avalon_pio 17.1]
+Progress: Parameterizing module O_reg
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding led_don [altera_avalon_pio 17.1]
+Progress: Parameterizing module led_don
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding nut_nhan [altera_avalon_pio 17.1]
+Progress: Parameterizing module nut_nhan
+Progress: Adding ram [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module ram
+Progress: Adding sw_reg [altera_avalon_pio 17.1]
+Progress: Parameterizing module sw_reg
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: mcu.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: mcu.nut_nhan: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: mcu.sw_reg: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\2024\FPGA\codeFPGA_NIOS2\Bai2-gpio\mcu.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGA_NIOS2\Bai2-gpio\mcu\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Bai2-gpio/mcu.qsys
+Progress: Reading input file
+Progress: Adding O_reg [altera_avalon_pio 17.1]
+Progress: Parameterizing module O_reg
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding led_don [altera_avalon_pio 17.1]
+Progress: Parameterizing module led_don
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 17.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding nut_nhan [altera_avalon_pio 17.1]
+Progress: Parameterizing module nut_nhan
+Progress: Adding ram [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module ram
+Progress: Adding sw_reg [altera_avalon_pio 17.1]
+Progress: Parameterizing module sw_reg
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: mcu.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: mcu.nut_nhan: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: mcu.sw_reg: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: mcu: Generating mcu "mcu" for QUARTUS_SYNTH
+Info: O_reg: Starting RTL generation for module 'mcu_O_reg'
+Info: O_reg:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=mcu_O_reg --dir=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0002_O_reg_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0002_O_reg_gen//mcu_O_reg_component_configuration.pl  --do_build_sim=0  ]
+Info: O_reg: Done RTL generation for module 'mcu_O_reg'
+Info: O_reg: "mcu" instantiated altera_avalon_pio "O_reg"
+Info: jtag_uart_0: Starting RTL generation for module 'mcu_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=mcu_jtag_uart_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0003_jtag_uart_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0003_jtag_uart_0_gen//mcu_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'mcu_jtag_uart_0'
+Info: jtag_uart_0: "mcu" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: led_don: Starting RTL generation for module 'mcu_led_don'
+Info: led_don:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=mcu_led_don --dir=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0004_led_don_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0004_led_don_gen//mcu_led_don_component_configuration.pl  --do_build_sim=0  ]
+Info: led_don: Done RTL generation for module 'mcu_led_don'
+Info: led_don: "mcu" instantiated altera_avalon_pio "led_don"
+Info: nios2_gen2_0: "mcu" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: nut_nhan: Starting RTL generation for module 'mcu_nut_nhan'
+Info: nut_nhan:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=mcu_nut_nhan --dir=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0005_nut_nhan_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0005_nut_nhan_gen//mcu_nut_nhan_component_configuration.pl  --do_build_sim=0  ]
+Info: nut_nhan: Done RTL generation for module 'mcu_nut_nhan'
+Info: nut_nhan: "mcu" instantiated altera_avalon_pio "nut_nhan"
+Info: ram: Starting RTL generation for module 'mcu_ram'
+Info: ram:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=mcu_ram --dir=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0006_ram_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0006_ram_gen//mcu_ram_component_configuration.pl  --do_build_sim=0  ]
+Info: ram: Done RTL generation for module 'mcu_ram'
+Info: ram: "mcu" instantiated altera_avalon_onchip_memory2 "ram"
+Info: sw_reg: Starting RTL generation for module 'mcu_sw_reg'
+Info: sw_reg:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=mcu_sw_reg --dir=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0007_sw_reg_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0007_sw_reg_gen//mcu_sw_reg_component_configuration.pl  --do_build_sim=0  ]
+Info: sw_reg: Done RTL generation for module 'mcu_sw_reg'
+Info: sw_reg: "mcu" instantiated altera_avalon_pio "sw_reg"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "mcu" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "mcu" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "mcu" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'mcu_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec D:/FPGA/quartus/bin64//eperlcmd.exe -I D:/FPGA/quartus/bin64//perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=mcu_nios2_gen2_0_cpu --dir=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0010_cpu_gen/ --quartus_bindir=D:/FPGA/quartus/bin64/ --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt9999_257451070737318432.dir/0010_cpu_gen//mcu_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.10.03 14:20:52 (*) Starting Nios II generation
+Info: cpu: # 2024.10.03 14:20:52 (*)   Checking for plaintext license.
+Info: cpu: # 2024.10.03 14:20:53 (*)   Plaintext license not found.
+Info: cpu: # 2024.10.03 14:20:53 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.10.03 14:20:53 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.10.03 14:20:53 (*)   Creating all objects for CPU
+Info: cpu: # 2024.10.03 14:20:54 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.10.03 14:20:54 (*)   Creating plain-text RTL
+Info: cpu: # 2024.10.03 14:20:54 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'mcu_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai2-gpio/mcu/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai2-gpio/mcu/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/2024/FPGA/codeFPGA_NIOS2/Bai2-gpio/mcu/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: mcu: Done "mcu" with 30 modules, 43 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

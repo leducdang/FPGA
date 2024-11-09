@@ -1,0 +1,15 @@
+	component ledMatrix is
+		port (
+			c1_export     : in  std_logic := 'X'; -- export
+			c2_export     : in  std_logic := 'X'; -- export
+			c3_export     : in  std_logic := 'X'; -- export
+			c4_export     : in  std_logic := 'X'; -- export
+			clk_clk       : in  std_logic := 'X'; -- clk
+			r1_export     : out std_logic;        -- export
+			r2_export     : out std_logic;        -- export
+			r3_export     : out std_logic;        -- export
+			r4_export     : out std_logic;        -- export
+			reset_reset_n : in  std_logic := 'X'  -- reset_n
+		);
+	end component ledMatrix;
+

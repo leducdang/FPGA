@@ -1,0 +1,18 @@
+08:19:50 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "D:/2024/FPGA-TEST/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo D:/2024/FPGA-TEST/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             104 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+
+08:19:51 Build Finished (took 1s.533ms)
+

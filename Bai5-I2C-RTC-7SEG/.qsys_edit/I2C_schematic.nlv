@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst I2C.I2C -pg 1 -lvl 3 -y 30
+preplace inst I2C.DEBUG -pg 1 -lvl 3 -y 150
+preplace inst I2C.CPU.clock_bridge -pg 1
+preplace inst I2C.CPU -pg 1 -lvl 2 -y 140
+preplace inst I2C.clk_0 -pg 1 -lvl 1 -y 160
+preplace inst I2C.timer_0 -pg 1 -lvl 3 -y 250
+preplace inst I2C.sysid_qsys_0 -pg 1 -lvl 3 -y 430
+preplace inst I2C -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst I2C.RAM -pg 1 -lvl 3 -y 350
+preplace inst I2C.CPU.cpu -pg 1
+preplace inst I2C.CPU.reset_bridge -pg 1
+preplace netloc FAN_OUT<net_container>I2C</net_container>(SLAVE)I2C.interrupt_sender,(MASTER)CPU.irq,(SLAVE)DEBUG.irq,(SLAVE)timer_0.irq) 1 2 1 740
+preplace netloc EXPORT<net_container>I2C</net_container>(SLAVE)I2C.i2c_serial,(SLAVE)I2C.i2c) 1 0 3 NJ 80 NJ 80 NJ
+preplace netloc EXPORT<net_container>I2C</net_container>(SLAVE)I2C.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>I2C</net_container>(SLAVE)DEBUG.clk,(SLAVE)sysid_qsys_0.clk,(MASTER)clk_0.clk,(SLAVE)timer_0.clk,(SLAVE)CPU.clk,(SLAVE)RAM.clk1,(SLAVE)I2C.clock) 1 1 2 260 40 720
+preplace netloc FAN_OUT<net_container>I2C</net_container>(SLAVE)DEBUG.reset,(SLAVE)RAM.reset1,(SLAVE)timer_0.reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)I2C.reset_sink,(MASTER)clk_0.clk_reset,(SLAVE)CPU.reset) 1 1 2 280 100 680
+preplace netloc INTERCONNECT<net_container>I2C</net_container>(MASTER)CPU.data_master,(SLAVE)RAM.s1,(SLAVE)I2C.csr,(SLAVE)timer_0.s1,(MASTER)CPU.instruction_master,(SLAVE)DEBUG.avalon_jtag_slave,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)CPU.debug_mem_slave) 1 1 2 300 60 660
+preplace netloc EXPORT<net_container>I2C</net_container>(SLAVE)I2C.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+levelinfo -pg 1 0 50 920
+levelinfo -hier I2C 60 90 420 770 910

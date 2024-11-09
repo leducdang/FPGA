@@ -1,0 +1,9 @@
+09:45:18 **** Incremental Build of configuration Nios II for project bluetooth ****
+make all 
+Info: Building ../bluetooth_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../bluetooth_bsp/
+[BSP build complete]
+[bluetooth build complete]
+
+09:45:19 Build Finished (took 507ms)
+

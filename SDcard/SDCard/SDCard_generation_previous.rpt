@@ -1,0 +1,91 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\2024\FPGA-TEST\SDcard\SDCard.qsys --block-symbol-file --output-directory=D:\2024\FPGA-TEST\SDcard\SDCard --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading SDcard/SDCard.qsys
+Progress: Reading input file
+Progress: Adding SDCard [Altera_UP_SD_Card_Avalon_Interface 17.1]
+Progress: Parameterizing module SDCard
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_gen2 17.1]
+Progress: Parameterizing module cpu
+Progress: Adding debug [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module debug
+Progress: Adding ram [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module ram
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: SDCard.debug: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\2024\FPGA-TEST\SDcard\SDCard.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA-TEST\SDcard\SDCard\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading SDcard/SDCard.qsys
+Progress: Reading input file
+Progress: Adding SDCard [Altera_UP_SD_Card_Avalon_Interface 17.1]
+Progress: Parameterizing module SDCard
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cpu [altera_nios2_gen2 17.1]
+Progress: Parameterizing module cpu
+Progress: Adding debug [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module debug
+Progress: Adding ram [altera_avalon_onchip_memory2 17.1]
+Progress: Parameterizing module ram
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: SDCard.debug: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: SDCard: Generating SDCard "SDCard" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master cpu.data_master and slave SDCard.avalon_sdcard_slave because the master has address signal 19 bit wide, but the slave is 8 bit wide.
+Info: Interconnect is inserted between master cpu.data_master and slave SDCard.avalon_sdcard_slave because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+Info: SDCard: "SDCard" instantiated Altera_UP_SD_Card_Avalon_Interface "SDCard"
+Info: cpu: "SDCard" instantiated altera_nios2_gen2 "cpu"
+Info: debug: Starting RTL generation for module 'SDCard_debug'
+Info: debug:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=SDCard_debug --dir=C:/Users/DELL/AppData/Local/Temp/alt0020_4469874097739832881.dir/0006_debug_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0020_4469874097739832881.dir/0006_debug_gen//SDCard_debug_component_configuration.pl  --do_build_sim=0  ]
+Info: debug: Done RTL generation for module 'SDCard_debug'
+Info: debug: "SDCard" instantiated altera_avalon_jtag_uart "debug"
+Info: ram: Starting RTL generation for module 'SDCard_ram'
+Info: ram:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=SDCard_ram --dir=C:/Users/DELL/AppData/Local/Temp/alt0020_4469874097739832881.dir/0007_ram_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0020_4469874097739832881.dir/0007_ram_gen//SDCard_ram_component_configuration.pl  --do_build_sim=0  ]
+Info: ram: Done RTL generation for module 'SDCard_ram'
+Info: ram: "SDCard" instantiated altera_avalon_onchip_memory2 "ram"
+Info: mm_interconnect_0: "SDCard" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "SDCard" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: irq_mapper: "SDCard" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "SDCard" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'SDCard_cpu_cpu'
+Info: cpu:   Generation command is [exec D:/FPGA/quartus/bin64//eperlcmd.exe -I D:/FPGA/quartus/bin64//perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/fpga/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=SDCard_cpu_cpu --dir=C:/Users/DELL/AppData/Local/Temp/alt0020_4469874097739832881.dir/0010_cpu_gen/ --quartus_bindir=D:/FPGA/quartus/bin64/ --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0020_4469874097739832881.dir/0010_cpu_gen//SDCard_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.10.24 09:55:29 (*) Starting Nios II generation
+Info: cpu: # 2024.10.24 09:55:29 (*)   Checking for plaintext license.
+Info: cpu: # 2024.10.24 09:55:30 (*)   Plaintext license not found.
+Info: cpu: # 2024.10.24 09:55:30 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.10.24 09:55:30 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.10.24 09:55:30 (*)   Creating all objects for CPU
+Info: cpu: # 2024.10.24 09:55:31 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.10.24 09:55:31 (*)   Creating plain-text RTL
+Info: cpu: # 2024.10.24 09:55:31 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'SDCard_cpu_cpu'
+Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
+Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
+Info: SDCard_avalon_sdcard_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "SDCard_avalon_sdcard_slave_translator"
+Info: cpu_instruction_master_agent: "mm_interconnect_1" instantiated altera_merlin_master_agent "cpu_instruction_master_agent"
+Info: debug_avalon_jtag_slave_agent: "mm_interconnect_1" instantiated altera_merlin_slave_agent "debug_avalon_jtag_slave_agent"
+Info: debug_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_1" instantiated altera_avalon_sc_fifo "debug_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/2024/FPGA-TEST/SDcard/SDCard/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: SDCard: Done "SDCard" with 23 modules, 46 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

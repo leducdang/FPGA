@@ -1,0 +1,18 @@
+14:02:31 **** Build of configuration Nios II for project i2c_rtc_7seg ****
+make all 
+Info: Building ../i2c_rtc_7seg_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../i2c_rtc_7seg_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../i2c_rtc_7seg_bsp//HAL/inc -I../i2c_rtc_7seg_bsp/ -I../i2c_rtc_7seg_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking i2c_rtc_7seg.elf
+nios2-elf-g++  -T'../i2c_rtc_7seg_bsp//linker.x' -msys-crt0='../i2c_rtc_7seg_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../i2c_rtc_7seg_bsp/   -Wl,-Map=i2c_rtc_7seg.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o i2c_rtc_7seg.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert i2c_rtc_7seg.elf --thread_model hal --cpu_name CPU --qsys true --simulation_enabled false --id 0 --sidp 0x81108 --timestamp 1729045351 --stderr_dev DEBUG --stdin_dev DEBUG --stdout_dev DEBUG --sopc_system_name I2C --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Bai5-I2C-RTC-7SEG" --jdi ../..//output_files/I2C.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Bai5-I2C-RTC-7SEG/software/i2c_rtc_7seg_bsp/../../I2C.sopcinfo
+Info: (i2c_rtc_7seg.elf) 93 KBytes program size (code + initialized data).
+Info:                    99 KBytes free for stack + heap.
+Info: Creating i2c_rtc_7seg.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source i2c_rtc_7seg.elf >i2c_rtc_7seg.objdump
+[i2c_rtc_7seg build complete]
+
+14:02:37 Build Finished (took 6s.214ms)
+

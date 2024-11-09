@@ -1,0 +1,18 @@
+10:48:24 **** Incremental Build of configuration Nios II for project vga ****
+make all 
+Info: Building ../vga_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../vga_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../vga_bsp//HAL/inc -I../vga_bsp/ -I../vga_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking vga.elf
+nios2-elf-g++  -T'../vga_bsp//linker.x' -msys-crt0='../vga_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../vga_bsp/   -Wl,-Map=vga.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o vga.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert vga.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x4041840 --timestamp 1731115541 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name vga --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA" --jdi ../..//output_files/vga.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga_bsp/../../vga.sopcinfo
+Info: (vga.elf) 94 KBytes program size (code + initialized data).
+Info:           65526 KBytes free for stack + heap.
+Info: Creating vga.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source vga.elf >vga.objdump
+[vga build complete]
+
+10:48:25 Build Finished (took 1s.473ms)
+

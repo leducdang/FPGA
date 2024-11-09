@@ -1,0 +1,11 @@
+	component mcu is
+		port (
+			bt_export      : in  std_logic                    := 'X';             -- export
+			clk_clk        : in  std_logic                    := 'X';             -- clk
+			led_don_export : out std_logic;                                       -- export
+			o_reg_export   : out std_logic_vector(7 downto 0);                    -- export
+			reset_reset_n  : in  std_logic                    := 'X';             -- reset_n
+			sw_reg_export  : in  std_logic_vector(2 downto 0) := (others => 'X')  -- export
+		);
+	end component mcu;
+

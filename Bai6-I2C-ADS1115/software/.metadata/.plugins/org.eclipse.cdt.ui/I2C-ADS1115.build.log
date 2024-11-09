@@ -1,0 +1,9 @@
+15:59:24 **** Incremental Build of configuration Nios II for project I2C-ADS1115 ****
+make all 
+Info: Building ../I2C-ADS1115_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../I2C-ADS1115_bsp/
+[BSP build complete]
+[I2C-ADS1115 build complete]
+
+15:59:25 Build Finished (took 667ms)
+

@@ -1,0 +1,41 @@
+07:50:28 **** Incremental Build of configuration Nios II for project lm35 ****
+make all 
+Info: Building ../lm35_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lm35_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lm35_bsp//HAL/inc -I../lm35_bsp/ -I../lm35_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:129:19: warning: passing argument 1 of 'rs232_write_str' from incompatible pointer type [-Wincompatible-pointer-types]
+   rs232_write_str(rs232_dev, finaloutput, 8);
+                   ^
+hello_world.c:25:6: note: expected 'alt_fd * {aka struct alt_fd_s *}' but argument is of type 'alt_up_rs232_dev * {aka struct alt_up_rs232_dev *}'
+ void rs232_write_str(alt_fd* fd, char *ptr, int len);
+      ^
+hello_world.c: In function 'rs232_read_str':
+hello_world.c:144:30: warning: passing argument 1 of 'alt_up_rs232_read_data' from incompatible pointer type [-Wincompatible-pointer-types]
+   if (alt_up_rs232_read_data(fd, (alt_u8 *)ptr++, &parity_error)==0)
+                              ^
+In file included from hello_world.c:22:0:
+../lm35_bsp//drivers/inc/altera_up_avalon_rs232.h:129:5: note: expected 'alt_up_rs232_dev * {aka struct alt_up_rs232_dev *}' but argument is of type 'alt_fd * {aka struct alt_fd_s *}'
+ int alt_up_rs232_read_data(alt_up_rs232_dev *rs232, alt_u8 *data, alt_u8 *parity_error);
+     ^
+hello_world.c: In function 'rs232_write_str':
+hello_world.c:162:31: warning: passing argument 1 of 'alt_up_rs232_write_data' from incompatible pointer type [-Wincompatible-pointer-types]
+   if (alt_up_rs232_write_data(fd, *ptr)==0)
+                               ^
+In file included from hello_world.c:22:0:
+../lm35_bsp//drivers/inc/altera_up_avalon_rs232.h:114:5: note: expected 'alt_up_rs232_dev * {aka struct alt_up_rs232_dev *}' but argument is of type 'alt_fd * {aka struct alt_fd_s *}'
+ int alt_up_rs232_write_data(alt_up_rs232_dev *rs232, alt_u8 data);
+     ^
+Info: Linking lm35.elf
+nios2-elf-g++  -T'../lm35_bsp//linker.x' -msys-crt0='../lm35_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lm35_bsp/   -Wl,-Map=lm35.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lm35.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert lm35.elf --thread_model hal --cpu_name CPU --qsys true --simulation_enabled false --id 0 --sidp 0x81118 --timestamp 1730797485 --stderr_dev DEBUG --stdin_dev DEBUG --stdout_dev DEBUG --sopc_system_name I2C --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Bai6-I2C-ADS1115-BLUE" --jdi ../..//output_files/I2C.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Bai6-I2C-ADS1115-BLUE/software/lm35_bsp/../../I2C.sopcinfo
+Info: (lm35.elf) 98 KBytes program size (code + initialized data).
+Info:            95 KBytes free for stack + heap.
+Info: Creating lm35.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lm35.elf >lm35.objdump
+[lm35 build complete]
+
+07:50:30 Build Finished (took 1s.952ms)
+

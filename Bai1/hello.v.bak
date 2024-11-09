@@ -1,0 +1,12 @@
+module hello ( input clk,
+					output [7:0] led
+					);
+					
+					
+bai1 u0(
+		.clk_clk(clk),       //   clk.clk
+		.led_export(led),    //   led.export
+		.reset_reset_n(1'b1)  // reset.reset_n
+	);					
+					
+endmodule					

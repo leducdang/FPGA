@@ -1,0 +1,20 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst I2C.I2C -pg 1 -lvl 3 -y 30
+preplace inst I2C.DEBUG -pg 1 -lvl 3 -y 150
+preplace inst I2C.CPU.clock_bridge -pg 1
+preplace inst I2C.CPU -pg 1 -lvl 2 -y 140
+preplace inst I2C.clk_0 -pg 1 -lvl 1 -y 160
+preplace inst I2C -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst I2C.RAM -pg 1 -lvl 3 -y 250
+preplace inst I2C.CPU.cpu -pg 1
+preplace inst I2C.CPU.reset_bridge -pg 1
+preplace netloc INTERCONNECT<net_container>I2C</net_container>(MASTER)CPU.instruction_master,(SLAVE)CPU.debug_mem_slave,(SLAVE)I2C.csr,(SLAVE)RAM.s1,(MASTER)CPU.data_master,(SLAVE)DEBUG.avalon_jtag_slave) 1 1 2 280 80 660
+preplace netloc FAN_OUT<net_container>I2C</net_container>(SLAVE)DEBUG.irq,(MASTER)CPU.irq,(SLAVE)I2C.interrupt_sender) 1 2 1 680
+preplace netloc EXPORT<net_container>I2C</net_container>(SLAVE)I2C.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>I2C</net_container>(SLAVE)I2C.clock,(MASTER)clk_0.clk,(SLAVE)RAM.clk1,(SLAVE)CPU.clk,(SLAVE)DEBUG.clk) 1 1 2 260 60 640
+preplace netloc FAN_OUT<net_container>I2C</net_container>(SLAVE)CPU.reset,(SLAVE)DEBUG.reset,(MASTER)clk_0.clk_reset,(SLAVE)RAM.reset1,(SLAVE)I2C.reset_sink) 1 1 2 260 280 700
+preplace netloc EXPORT<net_container>I2C</net_container>(SLAVE)I2C.i2c,(SLAVE)I2C.i2c_serial) 1 0 3 NJ 100 NJ 100 NJ
+preplace netloc EXPORT<net_container>I2C</net_container>(SLAVE)clk_0.clk_in,(SLAVE)I2C.clk) 1 0 1 NJ
+levelinfo -pg 1 0 50 880
+levelinfo -hier I2C 60 90 400 730 870

@@ -1,0 +1,11 @@
+	component step is
+		port (
+			clk_clk       : in  std_logic := 'X'; -- clk
+			out1_export   : out std_logic;        -- export
+			out2_export   : out std_logic;        -- export
+			out3_export   : out std_logic;        -- export
+			out4_export   : out std_logic;        -- export
+			reset_reset_n : in  std_logic := 'X'  -- reset_n
+		);
+	end component step;
+

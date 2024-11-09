@@ -1,0 +1,629 @@
+!SESSION 2024-11-08 09:16:21.824 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data D:\2024\FPGA\codeFPGA_NIOS2\Bai10_VGA\software -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-11-08 09:16:30.883
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-08 09:17:49.428
+!MESSAGE Indexed 'vga_bsp' (84 sources, 152 headers) in 2.39 sec: 5,477 declarations; 9,350 references; 44 unresolved inclusions; 3 syntax errors; 94 unresolved names (0.63%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-08 09:17:50.059
+!MESSAGE Indexed 'vga' (1 sources, 0 headers) in 0.01 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:18:44.280
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:18:46.375
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:30:45.494
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:30:46.224
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:30:48.297
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:45:32.962
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:45:33.698
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:45:35.876
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:53:58.509
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:53:59.227
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:54:01.318
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:54:38.568
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:54:39.274
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:54:41.347
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:58:26.656
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:58:27.379
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:58:29.469
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:59:00.894
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:59:01.613
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 09:59:03.684
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 10:03:06.458
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 10:03:07.174
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 10:03:09.247
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:25:26.516
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:25:27.415
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:25:29.591
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:29:14.208
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:29:14.938
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:29:17.044
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:30:42.171
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:30:42.894
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:30:44.971
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:32:13.465
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:32:14.190
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041040 --id=0x0 --timestamp=1731031302]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-08 13:32:16.286
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041040 --id=0x0 --timestamp=1731031302 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+!SESSION 2024-11-09 07:45:06.818 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-11-09 07:45:26.180
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+!SESSION 2024-11-09 08:32:48.572 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data D:\2024\FPGA\codeFPGA_NIOS2\Bai10_VGA\software -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-11-09 08:32:58.593
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:45:52.571
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:45:54.753
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:47:13.161
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:47:13.900
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:47:15.998
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:49:06.219
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:49:06.940
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:49:09.045
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:50:55.501
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:50:56.208
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:50:58.278
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:51:20.849
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:51:21.601
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:51:24.424
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:52:06.981
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:52:07.720
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:52:10.609
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:54:43.257
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:54:45.349
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:58:04.783
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:58:05.497
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 08:58:07.584
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:01:00.088
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:01:00.804
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:01:02.894
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:02:52.859
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:02:53.589
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:02:55.689
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:07:04.388
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:07:05.107
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:07:07.177
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:09:43.125
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:09:43.868
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:09:48.048
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:11:10.770
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:11:11.497
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:11:13.592
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:11:43.215
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:11:43.947
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:11:46.793
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:13:55.087
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:13:55.808
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:13:57.880
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:14:51.326
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:14:52.046
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:14:55.865
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:20:06.042
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:20:06.794
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:20:08.893
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:21:10.866
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:21:11.585
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:21:13.669
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:25:47.752
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:25:49.810
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:27:09.596
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:27:10.333
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:27:14.173
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:28:41.470
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:28:42.224
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:28:45.646
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:28:58.904
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:28:59.621
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:29:03.774
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:36:11.737
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:36:12.457
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:36:16.591
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:38:18.643
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:38:19.385
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:38:22.647
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:39:52.200
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:39:52.932
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:39:55.013
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:40:18.534
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:40:19.274
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:40:22.465
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:42:25.606
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:42:27.679
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+!SESSION 2024-11-09 09:50:47.860 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization D:/fpga/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-11-09 09:50:48.948
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-11-09 09:50:58.358
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:53:45.608
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:53:47.722
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:54:02.673
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:54:03.409
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:54:09.466
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:56:01.703
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:56:02.448
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:56:08.568
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:57:14.693
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:57:15.446
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:57:22.300
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:57:41.084
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:57:45.418
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:58:50.420
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:58:51.174
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 09:58:55.438
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:03:46.540
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:03:48.597
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:04:07.732
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:04:08.455
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:04:12.278
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:09:14.870
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:09:15.574
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:09:17.681
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:10:29.657
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:10:30.355
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:10:32.435
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:11:58.263
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:11:58.976
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:12:01.074
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:12:55.164
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:12:55.861
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:12:57.927
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:23:39.243
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:23:39.957
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:23:42.021
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:23:56.645
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:23:57.355
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:23:59.416
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:34:33.809
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:34:34.528
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:34:36.617
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:38:08.337
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:38:09.039
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:38:11.111
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:38:30.818
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:38:31.527
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:38:33.602
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:45:10.765
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:45:11.471
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:45:13.544
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:46:31.788
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:46:32.629
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:46:34.715
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:47:14.506
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:47:15.206
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:47:17.278
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:48:25.662
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:48:26.372
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x4041840 --id=0x0 --timestamp=1731115541]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-11-09 10:48:28.442
+!MESSAGE Executing: [D:/fpga/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x4041840 --id=0x0 --timestamp=1731115541 /cygdrive/d/2024/FPGA/codeFPGA_NIOS2/Bai10_VGA/software/vga/vga.elf]

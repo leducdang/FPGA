@@ -1,0 +1,20 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst esp32.RS232 -pg 1 -lvl 3 -y 210
+preplace inst esp32.RAM -pg 1 -lvl 3 -y 30
+preplace inst esp32.CPU -pg 1 -lvl 2 -y 80
+preplace inst esp32.CLK -pg 1 -lvl 1 -y 270
+preplace inst esp32.DEBUG -pg 1 -lvl 3 -y 110
+preplace inst esp32.CPU.clock_bridge -pg 1
+preplace inst esp32.CPU.cpu -pg 1
+preplace inst esp32.CPU.reset_bridge -pg 1
+preplace inst esp32 -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>esp32</net_container>(SLAVE)CLK.clk_in_reset,(SLAVE)esp32.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>esp32</net_container>(SLAVE)esp32.clk,(SLAVE)CLK.clk_in) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>esp32</net_container>(SLAVE)CPU.debug_mem_slave,(SLAVE)RAM.s1,(MASTER)CPU.instruction_master,(SLAVE)DEBUG.avalon_jtag_slave,(MASTER)CPU.data_master,(SLAVE)RS232.avalon_rs232_slave) 1 1 2 280 40 640
+preplace netloc FAN_OUT<net_container>esp32</net_container>(SLAVE)DEBUG.reset,(SLAVE)CPU.reset,(SLAVE)RS232.reset,(SLAVE)RAM.reset1,(MASTER)CLK.clk_reset) 1 1 2 280 220 700
+preplace netloc FAN_OUT<net_container>esp32</net_container>(SLAVE)RAM.clk1,(SLAVE)CPU.clk,(SLAVE)RS232.clk,(MASTER)CLK.clk,(SLAVE)DEBUG.clk) 1 1 2 260 240 680
+preplace netloc EXPORT<net_container>esp32</net_container>(SLAVE)esp32.rs232,(SLAVE)RS232.external_interface) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc FAN_OUT<net_container>esp32</net_container>(SLAVE)DEBUG.irq,(MASTER)CPU.irq,(SLAVE)RS232.interrupt) 1 2 1 660
+levelinfo -pg 1 0 50 890
+levelinfo -hier esp32 60 90 400 730 880

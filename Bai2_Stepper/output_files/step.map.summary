@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Nov 07 14:36:42 2024
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : step
+Top-level Entity Name : step
+Family : Cyclone IV E
+Total logic elements : 2,048
+    Total combinational functions : 1,867
+    Dedicated logic registers : 951
+Total registers : 951
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 1,649,664
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

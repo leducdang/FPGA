@@ -1,0 +1,15 @@
+/*
+ * mfrc522.h
+ *
+ *  Created on: Oct 19, 2024
+ *      Author: DELL
+ */
+
+#ifndef LIB_MFRC522_H_
+#define LIB_MFRC522_H_
+
+
+
+
+
+#endif /* LIB_MFRC522_H_ */

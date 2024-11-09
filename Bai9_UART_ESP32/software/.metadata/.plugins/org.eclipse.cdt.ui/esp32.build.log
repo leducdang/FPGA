@@ -1,0 +1,9 @@
+13:08:34 **** Incremental Build of configuration Nios II for project esp32 ****
+make all 
+Info: Building ../esp32_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../esp32_bsp/
+[BSP build complete]
+[esp32 build complete]
+
+13:08:35 Build Finished (took 628ms)
+

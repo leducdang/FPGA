@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Nov 07 16:29:10 2024
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : interrupt
+Top-level Entity Name : interrupt
+Family : Cyclone IV E
+Total logic elements : 1,980
+    Total combinational functions : 1,800
+    Dedicated logic registers : 927
+Total registers : 927
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 1,649,664
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

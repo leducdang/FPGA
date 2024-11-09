@@ -1,0 +1,483 @@
+09:52:23 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+09:53:34 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling mfrc522.c to obj/default/mfrc522.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/mfrc522.o mfrc522.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/delay.o obj/default/hello_world.o obj/default/mfrc522.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios2 --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Test_include" --jdi ../..//output_files/nios2.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Test_include/software/test_bsp/../../nios2.sopcinfo
+Info: (test.elf) 28 KBytes program size (code + initialized data).
+Info:            164 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+09:53:45 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+09:53:46 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+09:54:20 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+09:54:20 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+10:03:09 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+10:03:14 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+10:03:50 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from hello_world.c:22:0:
+lib/mfrc522.h:37:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Check(char * id);
+        ^
+lib/mfrc522.h:51:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Compare(char* CardID, char* CompareID);
+        ^
+lib/mfrc522.h:63:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Request(char reqMode, char* TagType);
+        ^
+lib/mfrc522.h:64:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_ToCard(char command, char* sendData, char sendLen, char* backData, int* backLen);
+        ^
+lib/mfrc522.h:65:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Anticoll(char* serNum);
+        ^
+lib/mfrc522.h:68:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Auth(char authMode, char BlockAddr, char* Sectorkey, char* serNum);
+        ^
+lib/mfrc522.h:69:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Read(char blockAddr, char* recvData);
+        ^
+lib/mfrc522.h:70:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Write(char blockAddr, char* writeData);
+        ^
+make: *** [obj/default/hello_world.o] Error 1
+10:06:56 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from hello_world.c:22:0:
+lib/mfrc522.h:37:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Check(char * id);
+        ^
+lib/mfrc522.h:51:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Compare(char* CardID, char* CompareID);
+        ^
+lib/mfrc522.h:63:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Request(char reqMode, char* TagType);
+        ^
+lib/mfrc522.h:64:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_ToCard(char command, char* sendData, char sendLen, char* backData, int* backLen);
+        ^
+lib/mfrc522.h:65:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Anticoll(char* serNum);
+        ^
+lib/mfrc522.h:68:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Auth(char authMode, char BlockAddr, char* Sectorkey, char* serNum);
+        ^
+lib/mfrc522.h:69:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Read(char blockAddr, char* recvData);
+        ^
+lib/mfrc522.h:70:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Write(char blockAddr, char* writeData);
+        ^
+make: *** [obj/default/hello_world.o] Error 1
+10:06:57 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+10:12:46 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from hello_world.c:22:0:
+lib/mfrc522.h:37:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Check(char * id);
+        ^
+lib/mfrc522.h:51:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Compare(char* CardID, char* CompareID);
+        ^
+lib/mfrc522.h:63:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Request(char reqMode, char* TagType);
+        ^
+lib/mfrc522.h:64:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_ToCard(char command, char* sendData, char sendLen, char* backData, int* backLen);
+        ^
+lib/mfrc522.h:65:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Anticoll(char* serNum);
+        ^
+lib/mfrc522.h:68:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Auth(char authMode, char BlockAddr, char* Sectorkey, char* serNum);
+        ^
+lib/mfrc522.h:69:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Read(char blockAddr, char* recvData);
+        ^
+lib/mfrc522.h:70:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Write(char blockAddr, char* writeData);
+        ^
+make: *** [obj/default/hello_world.o] Error 1
+10:12:47 **** Incremental Build of configuration Nios II for project test_bsp ****
+make all 
+[BSP build complete]
+10:12:53 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from hello_world.c:22:0:
+lib/mfrc522.h:37:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Check(char * id);
+        ^
+lib/mfrc522.h:51:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Compare(char* CardID, char* CompareID);
+        ^
+lib/mfrc522.h:63:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Request(char reqMode, char* TagType);
+        ^
+lib/mfrc522.h:64:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_ToCard(char command, char* sendData, char sendLen, char* backData, int* backLen);
+        ^
+lib/mfrc522.h:65:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Anticoll(char* serNum);
+        ^
+lib/mfrc522.h:68:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Auth(char authMode, char BlockAddr, char* Sectorkey, char* serNum);
+        ^
+lib/mfrc522.h:69:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Read(char blockAddr, char* recvData);
+        ^
+lib/mfrc522.h:70:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Write(char blockAddr, char* writeData);
+        ^
+make: *** [obj/default/hello_world.o] Error 1
+10:14:39 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+In file included from hello_world.c:22:0:
+lib/mfrc522.h:37:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Check(char * id);
+        ^
+lib/mfrc522.h:51:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Compare(char* CardID, char* CompareID);
+        ^
+lib/mfrc522.h:63:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Request(char reqMode, char* TagType);
+        ^
+lib/mfrc522.h:64:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_ToCard(char command, char* sendData, char sendLen, char* backData, int* backLen);
+        ^
+lib/mfrc522.h:65:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Anticoll(char* serNum);
+        ^
+lib/mfrc522.h:68:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Auth(char authMode, char BlockAddr, char* Sectorkey, char* serNum);
+        ^
+lib/mfrc522.h:69:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Read(char blockAddr, char* recvData);
+        ^
+lib/mfrc522.h:70:8: error: unknown type name 'TM_MFRC522_Status_t'
+ extern TM_MFRC522_Status_t TM_MFRC522_Write(char blockAddr, char* writeData);
+        ^
+make: *** [obj/default/hello_world.o] Error 1
+10:15:55 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Compiling mfrc522.c to obj/default/mfrc522.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/mfrc522.o mfrc522.c
+mfrc522.c:33:2: error: redeclaration of enumerator 'MI_OK'
+  MI_OK = 0,
+  ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:16:2: note: previous definition of 'MI_OK' was here
+  MI_OK = 0,
+  ^
+mfrc522.c:34:2: error: redeclaration of enumerator 'MI_NOTAGERR'
+  MI_NOTAGERR,
+  ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:17:2: note: previous definition of 'MI_NOTAGERR' was here
+  MI_NOTAGERR,
+  ^
+mfrc522.c:35:2: error: redeclaration of enumerator 'MI_ERR'
+  MI_ERR
+  ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:18:2: note: previous definition of 'MI_ERR' was here
+  MI_ERR
+  ^
+mfrc522.c:36:3: error: conflicting types for 'TM_MFRC522_Status_t'
+ } TM_MFRC522_Status_t;
+   ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:19:3: note: previous declaration of 'TM_MFRC522_Status_t' was here
+ } TM_MFRC522_Status_t;
+   ^
+mfrc522.c: In function 'TM_MFRC522_Init':
+mfrc522.c:142:2: warning: implicit declaration of function 'TM_MFRC522_InitPins' [-Wimplicit-function-declaration]
+  TM_MFRC522_InitPins();
+  ^
+mfrc522.c:143:2: warning: implicit declaration of function 'TM_SPI_Init' [-Wimplicit-function-declaration]
+  TM_SPI_Init();
+  ^
+mfrc522.c: At top level:
+mfrc522.c:161:21: error: conflicting types for 'TM_MFRC522_Check'
+ TM_MFRC522_Status_t TM_MFRC522_Check(char* id) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:41:28: note: previous declaration of 'TM_MFRC522_Check' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_Check(char * id);
+                            ^
+mfrc522.c:175:21: error: conflicting types for 'TM_MFRC522_Compare'
+ TM_MFRC522_Status_t TM_MFRC522_Compare(char* CardID, char* CompareID) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:55:28: note: previous declaration of 'TM_MFRC522_Compare' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_Compare(char* CardID, char* CompareID);
+                            ^
+mfrc522.c: In function 'TM_MFRC522_Compare':
+mfrc522.c:178:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (CardID[i] != CompareID[i]) {
+             ^
+mfrc522.c:178:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (CardID[i] != CompareID[i]) {
+                             ^
+mfrc522.c: At top level:
+mfrc522.c:240:21: error: conflicting types for 'TM_MFRC522_Request'
+ TM_MFRC522_Status_t TM_MFRC522_Request(char reqMode, char* TagType) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:66:28: note: previous declaration of 'TM_MFRC522_Request' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_Request(char reqMode, char* TagType);
+                            ^
+mfrc522.c:256:21: error: conflicting types for 'TM_MFRC522_ToCard'
+ TM_MFRC522_Status_t TM_MFRC522_ToCard(char command, char* sendData, char sendLen, char* backData, int* backLen) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:67:28: note: previous declaration of 'TM_MFRC522_ToCard' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_ToCard(char command, char* sendData, char sendLen, char* backData, int* backLen);
+                            ^
+mfrc522.c:343:21: error: conflicting types for 'TM_MFRC522_Anticoll'
+ TM_MFRC522_Status_t TM_MFRC522_Anticoll(char* serNum) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:68:28: note: previous declaration of 'TM_MFRC522_Anticoll' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_Anticoll(char* serNum);
+                            ^
+mfrc522.c: In function 'TM_MFRC522_Anticoll':
+mfrc522.c:358:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+    serNumCheck ^= serNum[i];
+                         ^
+mfrc522.c:360:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (serNumCheck != serNum[i]) {
+                            ^
+mfrc522.c: At top level:
+mfrc522.c:416:21: error: conflicting types for 'TM_MFRC522_Auth'
+ TM_MFRC522_Status_t TM_MFRC522_Auth(char authMode, char BlockAddr, char* Sectorkey, char* serNum) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:71:28: note: previous declaration of 'TM_MFRC522_Auth' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_Auth(char authMode, char BlockAddr, char* Sectorkey, char* serNum);
+                            ^
+mfrc522.c:440:21: error: conflicting types for 'TM_MFRC522_Read'
+ TM_MFRC522_Status_t TM_MFRC522_Read(char blockAddr, char* recvData) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:72:28: note: previous declaration of 'TM_MFRC522_Read' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_Read(char blockAddr, char* recvData);
+                            ^
+mfrc522.c:456:21: error: conflicting types for 'TM_MFRC522_Write'
+ TM_MFRC522_Status_t TM_MFRC522_Write(char blockAddr, char* writeData) {
+                     ^
+In file included from mfrc522.c:26:0:
+lib/mfrc522.h:73:28: note: previous declaration of 'TM_MFRC522_Write' was here
+ extern TM_MFRC522_Status_t TM_MFRC522_Write(char blockAddr, char* writeData);
+                            ^
+mfrc522.c: In function 'TM_MFRC522_Write':
+mfrc522.c:474:8: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buff[i] = *(writeData+i);
+        ^
+make: *** [obj/default/mfrc522.o] Error 1
+10:16:09 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling mfrc522.c to obj/default/mfrc522.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/mfrc522.o mfrc522.c
+mfrc522.c: In function 'TM_MFRC522_Init':
+mfrc522.c:136:2: warning: implicit declaration of function 'TM_MFRC522_InitPins' [-Wimplicit-function-declaration]
+  TM_MFRC522_InitPins();
+  ^
+mfrc522.c:137:2: warning: implicit declaration of function 'TM_SPI_Init' [-Wimplicit-function-declaration]
+  TM_SPI_Init();
+  ^
+mfrc522.c: In function 'TM_MFRC522_Compare':
+mfrc522.c:172:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (CardID[i] != CompareID[i]) {
+             ^
+mfrc522.c:172:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (CardID[i] != CompareID[i]) {
+                             ^
+mfrc522.c: In function 'TM_MFRC522_Anticoll':
+mfrc522.c:352:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+    serNumCheck ^= serNum[i];
+                         ^
+mfrc522.c:354:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (serNumCheck != serNum[i]) {
+                            ^
+mfrc522.c: In function 'TM_MFRC522_Write':
+mfrc522.c:468:8: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buff[i] = *(writeData+i);
+        ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/delay.o obj/default/hello_world.o obj/default/mfrc522.o -lm -msys-lib=m
+obj/default/mfrc522.o: In function `TM_MFRC522_Init':
+D:\2024\FPGA\codeFPGA_NIOS2\Test_include\software\test/mfrc522.c:136: undefined reference to `TM_MFRC522_InitPins'
+D:\2024\FPGA\codeFPGA_NIOS2\Test_include\software\test/mfrc522.c:137: undefined reference to `TM_SPI_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [test.elf] Error 1
+10:17:33 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling mfrc522.c to obj/default/mfrc522.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/mfrc522.o mfrc522.c
+mfrc522.c: In function 'TM_MFRC522_Compare':
+mfrc522.c:172:13: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (CardID[i] != CompareID[i]) {
+             ^
+mfrc522.c:172:29: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (CardID[i] != CompareID[i]) {
+                             ^
+mfrc522.c: In function 'TM_MFRC522_Anticoll':
+mfrc522.c:352:25: warning: array subscript has type 'char' [-Wchar-subscripts]
+    serNumCheck ^= serNum[i];
+                         ^
+mfrc522.c:354:28: warning: array subscript has type 'char' [-Wchar-subscripts]
+   if (serNumCheck != serNum[i]) {
+                            ^
+mfrc522.c: In function 'TM_MFRC522_Write':
+mfrc522.c:468:8: warning: array subscript has type 'char' [-Wchar-subscripts]
+    buff[i] = *(writeData+i);
+        ^
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/delay.o obj/default/hello_world.o obj/default/mfrc522.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios2 --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Test_include" --jdi ../..//output_files/nios2.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Test_include/software/test_bsp/../../nios2.sopcinfo
+Info: (test.elf) 32 KBytes program size (code + initialized data).
+Info:            161 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:17:56 **** Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+10:17:57 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+[test build complete]
+10:24:28 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/delay.o obj/default/hello_world.o obj/default/mfrc522.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios2 --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Test_include" --jdi ../..//output_files/nios2.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Test_include/software/test_bsp/../../nios2.sopcinfo
+Info: (test.elf) 32 KBytes program size (code + initialized data).
+Info:            161 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:24:59 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/delay.o obj/default/hello_world.o obj/default/mfrc522.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios2 --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Test_include" --jdi ../..//output_files/nios2.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Test_include/software/test_bsp/../../nios2.sopcinfo
+Info: (test.elf) 32 KBytes program size (code + initialized data).
+Info:            161 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
+10:28:42 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:23:36: fatal error: altera_avalon_pio_regs.h: No such file or directory
+compilation terminated.
+make: *** [obj/default/hello_world.o] Error 1
+10:35:05 **** Incremental Build of configuration Nios II for project test ****
+make all 
+Info: Building ../test_bsp/
+D:/FPGA/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../test_bsp//HAL/inc -I../test_bsp/ -I../test_bsp//drivers/inc -Ilib  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking test.elf
+nios2-elf-g++  -T'../test_bsp//linker.x' -msys-crt0='../test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../test_bsp/   -Wl,-Map=test.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o test.elf obj/default/delay.o obj/default/hello_world.o obj/default/mfrc522.o -lm -msys-lib=m
+nios2-elf-insert test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios2 --quartus_project_dir "D:/2024/FPGA/codeFPGA_NIOS2/Test_include" --jdi ../..//output_files/nios2.jdi --sopcinfo D:/2024/FPGA/codeFPGA_NIOS2/Test_include/software/test_bsp/../../nios2.sopcinfo
+Info: (test.elf) 32 KBytes program size (code + initialized data).
+Info:            161 KBytes free for stack + heap.
+Info: Creating test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source test.elf >test.objdump
+[test build complete]
