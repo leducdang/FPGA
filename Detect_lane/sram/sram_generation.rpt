@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\Camera_OV7670\sram.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGAL_LIB\Camera_OV7670\sram --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Camera_OV7670/sram.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 18.0]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\Camera_OV7670\sram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGAL_LIB\Camera_OV7670\sram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Camera_OV7670/sram.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 18.0]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sram: Generating sram "sram" for QUARTUS_SYNTH
+Info: sram_0: Starting Generation of the SRAM Controller
+Info: sram_0: "sram" instantiated altera_up_avalon_sram "sram_0"
+Info: sram: Done "sram" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

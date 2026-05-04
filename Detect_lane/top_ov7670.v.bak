@@ -1,0 +1,30 @@
+module top_ov7670(
+						clock_50mhz,
+						PIN_XCLK
+						);
+						
+						
+input clock_50mhz;
+ouput PIN_XCLK;
+
+wire 	clock_25Mhz;
+wire 	clock_24Mhz;
+wire 	clock_48Mhz;
+wire 	clock_100Khz;
+/* c0 - 25Mhz
+	c1 - 24Mhz
+	c2 - 48Mhz
+	c3 - 100Khz
+*/
+
+pll_ov7670 u1(
+		.inclk0(clock_50mhz),
+		.c0(clock_25Mhz),
+		.c1(clock_24Mhz),
+		.c2(clock_48Mhz),
+		.c3(clock_100Khz)
+				);						
+						
+						
+
+endmodule

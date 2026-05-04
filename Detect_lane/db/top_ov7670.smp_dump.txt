@@ -1,0 +1,88 @@
+
+State Machine - |top_ov7670|win_pipe_state
+Name win_pipe_state.11 win_pipe_state.10 win_pipe_state.01 win_pipe_state.00 
+win_pipe_state.00 0 0 0 0 
+win_pipe_state.01 0 0 1 1 
+win_pipe_state.10 0 1 0 1 
+win_pipe_state.11 1 0 0 1 
+
+State Machine - |top_ov7670|step
+Name step.01011 step.01010 step.01001 step.01000 step.00111 step.00110 step.00101 step.00100 step.00011 step.00010 step.00001 step.00000 
+step.00000 0 0 0 0 0 0 0 0 0 0 0 0 
+step.00001 0 0 0 0 0 0 0 0 0 0 1 1 
+step.00010 0 0 0 0 0 0 0 0 0 1 0 1 
+step.00011 0 0 0 0 0 0 0 0 1 0 0 1 
+step.00100 0 0 0 0 0 0 0 1 0 0 0 1 
+step.00101 0 0 0 0 0 0 1 0 0 0 0 1 
+step.00110 0 0 0 0 0 1 0 0 0 0 0 1 
+step.00111 0 0 0 0 1 0 0 0 0 0 0 1 
+step.01000 0 0 0 1 0 0 0 0 0 0 0 1 
+step.01001 0 0 1 0 0 0 0 0 0 0 0 1 
+step.01010 0 1 0 0 0 0 0 0 0 0 0 1 
+step.01011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top_ov7670|state_handle
+Name state_handle.DETECT_IMAGE_1 state_handle.DETECT_IMAGE state_handle.DETECT_LANE state_handle.DETECT_LANE_1 
+state_handle.DETECT_IMAGE 0 0 0 0 
+state_handle.DETECT_IMAGE_1 1 1 0 0 
+state_handle.DETECT_LANE_1 0 1 0 1 
+state_handle.DETECT_LANE 0 1 1 0 
+
+State Machine - |top_ov7670|FMS
+Name FMS.011 FMS.010 FMS.001 FMS.000 FMS.100 
+FMS.000 0 0 0 0 0 
+FMS.001 0 0 1 1 0 
+FMS.010 0 1 0 1 0 
+FMS.011 1 0 0 1 0 
+FMS.100 0 0 0 1 1 
+
+State Machine - |top_ov7670|sdram:u7|sdram_new_sdram_controller_0:new_sdram_controller_0|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |top_ov7670|sdram:u7|sdram_new_sdram_controller_0:new_sdram_controller_0|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |top_ov7670|sdram:u7|sdram_new_sdram_controller_0:new_sdram_controller_0|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |top_ov7670|sdram:u7|sdram_new_sdram_controller_0:new_sdram_controller_0|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |top_ov7670|camera_read:u4|FSM_state
+Name FSM_state.ROW_CAPTURE 
+FSM_state.00 0 
+FSM_state.ROW_CAPTURE 1 
+
+State Machine - |top_ov7670|config_camera:u2|stt
+Name stt.00000 stt.00110 stt.00101 stt.00100 stt.00011 stt.00010 stt.00001 stt.11111 
+stt.11111 0 0 0 0 0 0 0 0 
+stt.00001 0 0 0 0 0 0 1 1 
+stt.00010 0 0 0 0 0 1 0 1 
+stt.00011 0 0 0 0 1 0 0 1 
+stt.00100 0 0 0 1 0 0 0 1 
+stt.00101 0 0 1 0 0 0 0 1 
+stt.00110 0 1 0 0 0 0 0 1 
+stt.00000 1 0 0 0 0 0 0 1 
