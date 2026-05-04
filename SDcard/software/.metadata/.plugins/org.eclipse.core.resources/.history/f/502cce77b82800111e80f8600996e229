@@ -1,0 +1,772 @@
+///*
+// * "Hello World" example.
+// *
+// * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+// * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+// * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+// * device in your system's hardware.
+// * The memory footprint of this hosted application is ~69 kbytes by default
+// * using the standard reference design.
+// *
+// * For a reduced footprint version of this template, and an explanation of how
+// * to reduce the memory footprint for a given application, see the
+// * "small_hello_world" template.
+// *
+// */
+//#include "sys/alt_stdio.h"
+//#include "stdio.h"
+//#include "system.h"
+//#include "Altera_UP_SD_Card_Avalon_Interface.h"
+//#include "unistd.h"
+//
+//
+//int pixel;
+//	int main(void)
+//	{
+//	    alt_up_sd_card_dev *device_reference = NULL;
+//	    int connected = 0;
+//
+//	    device_reference = alt_up_sd_card_open_dev("/dev/SDCard");
+//	    if (device_reference != NULL)
+//	    {
+//		printf("Initialized. Waiting for SD card...\n");
+//		while(1)
+//		{
+//		    if ((connected == 0) && (alt_up_sd_card_is_Present()))
+//		    {
+//		        printf("Card connected.\n");
+//		        if (alt_up_sd_card_is_FAT16())
+//		        {
+//			    printf("FAT16 file system detected.\n");
+//
+//			    printf("Looking for first file.\n");
+//			    char * firstFile = "filenameunchanged";
+//			    alt_up_sd_card_find_first(".", firstFile);
+//			    printf("Volume Name: '%s'\n\n", firstFile);
+//
+//			    short file;
+//			    while((file = alt_up_sd_card_find_next(firstFile)) != -1)
+//			    {
+//			        int contentCount = 0;
+//			        printf("===========================\n");
+//			        printf("Found file: '%s'\n", firstFile);
+//
+//			        short fileHandle = alt_up_sd_card_fopen(firstFile,false);
+//			        printf("File handle: %i\n", fileHandle);
+//
+//			        printf("Contents:\n");
+//			        short int readCharacter;
+//			        short int readCharacter1;
+//			        while ((readCharacter = alt_up_sd_card_read(fileHandle)) != -1)
+//			        {
+//			        	pixel = readCharacter;
+//			        	readCharacter1 = alt_up_sd_card_read(fileHandle);
+//			        	pixel = (pixel<<8)|readCharacter1;
+//			            printf("%x\n", pixel);
+//			            ++contentCount;
+//
+//			        }
+//			        printf("\nContent size: %i", contentCount);
+//			        printf("\n===========================\n\n");
+//			    }
+//		        }
+//		        else
+//		        {
+//			    printf("Unknown file system.\n");
+//		        }
+//
+//		        connected = 1;
+//		    }
+//		    else if ((connected == 1) && (alt_up_sd_card_is_Present() == false))
+//		    {
+//		        printf("Card disconnected.\n");
+//		        connected = 0;
+//		    }
+//		}
+//	    }
+//	    else
+//	    {
+//		printf("Initialization failed.\n");
+//	    }
+//	}
+
+
+
+/*
+#include <stdio.h>
+#include <altera_up_sd_card_avalon_interface.h>
+int main(void) {
+
+	printf("hello FPGA");
+	alt_up_sd_card_dev *device_reference = NULL;
+	int connected = 0;
+	device_reference = alt_up_sd_card_open_dev("/dev/SDCard");
+	if (device_reference != NULL) {
+		while(1) {
+			if ((connected == 0) && (alt_up_sd_card_is_Present())) {
+				printf("Card connected.\n");
+				if (alt_up_sd_card_is_FAT16()) {
+					printf("FAT16 file system detected.\n");
+				} else {
+					printf("Unknown file system.\n");
+				}
+				connected = 1;
+			} else if ((connected == 1) && (alt_up_sd_card_is_Present() == false)) {
+				printf("Card disconnected.\n");
+				connected = 0;
+			}
+		}
+	}
+	return 0;
+}
+*/
+
+
+// ĐỌC TẤT CẢ KO THEO DÒNG
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include "altera_up_sd_card_avalon_interface.h"
+////{
+//    alt_up_sd_card_dev *device_reference = NULL;
+//    int fileHandle;
+//    int ch;
+//
+//    // Mở thiết bị SD Card
+//    device_reference = alt_up_sd_card_open_dev("/dev/SDCard");
+//    if (device_reference == NULL) {
+//        printf("Khong mo duoc SD Card device\n");
+//        return 1;
+//    }
+//
+//    // Kiểm tra thẻ có cắm chưa
+//    if (!alt_up_sd_card_is_Present()) {
+//        printf("Chua cam the SD\n");
+//        return 1;
+//    }
+//
+//    // Kiểm tra định dạng FAT16
+//    if (!alt_up_sd_card_is_FAT16()) {
+//        printf("The khong phai FAT16\n");
+//        return 1;
+//    }
+//
+//    // Mở file TXT để đọc
+//    fileHandle = alt_up_sd_card_fopen("TEST.TXT", false);
+//    if (fileHandle < 0) {
+//        printf("Khong mo duoc file TEST.TXT\n");
+//        return 1;
+//    }
+//
+//    printf("Noi dung file:\n");
+//
+//    // Đọc từng ký tự cho đến hết file
+//    while ((ch = alt_up_sd_card_read(fileHandle)) >= 0) {
+//        putchar((char)ch);
+//    }
+//
+//    // Đóng file
+//    alt_up_sd_card_fclose(fileHandle);
+//
+//    printf("\nDoc file xong\n");
+//    return 0;
+//}
+
+
+
+//ĐỌC TỪNG DÒNG
+
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include "altera_up_sd_card_avalon_interface.h"
+//
+//int main(void)
+//{
+//    alt_up_sd_card_dev *device_reference = NULL;
+//    int fileHandle;
+//    int ch;
+//    char line[128];
+//    int idx = 0;
+//
+//    device_reference = alt_up_sd_card_open_dev("/dev/SDCard");
+//    if (device_reference == NULL) {
+//        printf("Khong mo duoc SD Card device\n");
+//        return 1;
+//    }
+//
+//    if (!alt_up_sd_card_is_Present() || !alt_up_sd_card_is_FAT16()) {
+//        printf("SD Card loi hoac khong phai FAT16\n");
+//        return 1;
+//    }
+//
+//    fileHandle = alt_up_sd_card_fopen("TEST.TXT", false);
+//    if (fileHandle < 0) {
+//        printf("Khong mo duoc file\n");
+//        return 1;
+//    }
+//
+//    while ((ch = alt_up_sd_card_read(fileHandle)) >= 0) {
+//        if (ch == '\n' || idx >= sizeof(line) - 1) {
+//            line[idx] = '\0';
+//            printf("Dong vua doc: %s\n", line);
+//            idx = 0;
+//        } else if (ch != '\r') {
+//            line[idx++] = (char)ch;
+//        }
+//    }
+//
+//    // In nốt dòng cuối nếu chưa có \n
+//    if (idx > 0) {
+//        line[idx] = '\0';
+//        printf("Dong vua doc: %s\n", line);
+//    }
+//
+//    alt_up_sd_card_fclose(fileHandle);
+//    return 0;
+//}
+
+
+/* --------------- GHI DU LIEU VAO SD-CARD ----------------------*/
+/*
+#include <stdio.h>
+#include <stdbool.h>
+#include "altera_up_sd_card_avalon_interface.h"
+
+int main(void)
+{
+    alt_up_sd_card_dev *sd_dev;
+    short int fd;
+    const char *msg = "Xin chao SD Card!\r\n";
+    int i;
+
+    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+    if (sd_dev == NULL) {
+        printf("Khong mo duoc SD device\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_Present()) {
+        printf("Chua cam the SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_FAT16()) {
+        printf("The SD khong phai FAT16\n");
+        return 1;
+    }
+
+    // true = tao file neu chua ton tai
+    fd = alt_up_sd_card_fopen("LOG.TXT", true);
+    if (fd < 0) {
+        printf("Khong mo/tao duoc file LOG.TXT\n");
+        return 1;
+    }
+
+    for (i = 0; msg[i] != '\0'; i++) {
+        if (!alt_up_sd_card_write(fd, (char)msg[i])) {
+            printf("Loi ghi tai byte %d\n", i);
+            alt_up_sd_card_fclose(fd);
+            return 1;
+        }
+    }
+
+    alt_up_sd_card_fclose(fd);
+    printf("Da ghi xong file LOG.TXT\n");
+    return 0;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+// KIỂM TRA HEADER FILE ẢNH BMP
+//#include <stdio.h>
+//#include "altera_up_sd_card_avalon_interface.h"
+//
+//int main()
+//{
+//    alt_up_sd_card_dev *sd_dev;
+//    short int fd;
+//    int i, ch;
+//
+//    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+//    if (sd_dev == NULL) {
+//        printf("Khong mo duoc SD device\n");
+//        return 1;
+//    }
+//
+//    if (!alt_up_sd_card_is_Present()) {
+//        printf("Khong co the SD\n");
+//        return 1;
+//    }
+//
+//    if (!alt_up_sd_card_is_FAT16()) {
+//        printf("The khong phai FAT16\n");
+//        return 1;
+//    }
+//
+//    fd = alt_up_sd_card_fopen("CAYCOI.BMP", false);
+//    if (fd < 0) {
+//        printf("Mo file BMP that bai, fd = %d\n", fd);
+//        return 1;
+//    }
+//
+//    printf("Mo file BMP thanh cong\n");
+//
+//
+//    printf("16 byte dau cua file:\n");
+//    for (i = 0; i < 16; i++) {
+//        ch = alt_up_sd_card_read(fd);
+//        if (ch < 0) {
+//            printf("\nDoc loi tai byte %d\n", i);
+//            break;
+//        }
+//        printf("%02X ", ch & 0xFF);
+//    }
+//    printf("\n");
+//
+//
+//    alt_up_sd_card_fclose(fd);
+//    return 0;
+//}
+
+
+
+
+
+/* KIEM TRA THONG TIN BUC ANH
+
+#include <stdio.h>
+#include "altera_up_sd_card_avalon_interface.h"
+
+static int rd8(short int fd)
+{
+    return alt_up_sd_card_read(fd);
+}
+
+static unsigned short rd16le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    if (b0 < 0 || b1 < 0) return 0xFFFF;
+    return (unsigned short)(b0 | (b1 << 8));
+}
+
+static unsigned int rd32le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    int b2 = rd8(fd);
+    int b3 = rd8(fd);
+    if (b0 < 0 || b1 < 0 || b2 < 0 || b3 < 0) return 0xFFFFFFFF;
+    return (unsigned int)(b0 | (b1 << 8) | (b2 << 16) | (b3 << 24));
+}
+
+int main()
+{
+    alt_up_sd_card_dev *sd_dev;
+    short int fd;
+    unsigned short bfType;
+    unsigned int bfSize, bfOffBits;
+    unsigned int dibSize;
+    int width, height;
+    unsigned short planes, bpp;
+    unsigned int compression;
+    int i, ch;
+
+    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+    if (sd_dev == NULL) {
+        printf("Khong mo duoc SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_Present()) {
+        printf("Khong co the SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_FAT16()) {
+        printf("Khong phai FAT16\n");
+        return 1;
+    }
+
+    fd = alt_up_sd_card_fopen("CAYCOI.BMP", false);
+    if (fd < 0) {
+        printf("Mo file loi\n");
+        return 1;
+    }
+
+    // BITMAPFILEHEADER
+    bfType    = rd16le(fd);
+    bfSize    = rd32le(fd);
+    rd16le(fd);              // reserved1
+    rd16le(fd);              // reserved2
+    bfOffBits = rd32le(fd);
+
+    // DIB header
+    dibSize   = rd32le(fd);
+    width     = (int)rd32le(fd);
+    height    = (int)rd32le(fd);
+    planes    = rd16le(fd);
+    bpp       = rd16le(fd);
+    compression = rd32le(fd);
+
+    printf("bfType      = 0x%04X\n", bfType);
+    printf("bfSize      = %u\n", bfSize);
+    printf("bfOffBits   = %u\n", bfOffBits);
+    printf("dibSize     = %u\n", dibSize);
+    printf("width       = %d\n", width);
+    printf("height      = %d\n", height);
+    printf("planes      = %u\n", planes);
+    printf("bpp         = %u\n", bpp);
+    printf("compression = %u\n", compression);
+
+    if (bfType != 0x4D42) {
+        printf("Khong phai BMP\n");
+        alt_up_sd_card_fclose(fd);
+        return 1;
+    }
+
+    // Bo qua den dung vi tri pixel data
+    // Da doc 14 + 20 = 34 byte
+    for (i = 34; i < (int)bfOffBits; i++) {
+        if (rd8(fd) < 0) {
+            printf("Loi khi nhay den pixel data\n");
+            alt_up_sd_card_fclose(fd);
+            return 1;
+        }
+    }
+
+    printf("16 byte dau cua pixel data:\n");
+    for (i = 0; i < 16; i++) {
+        ch = rd8(fd);
+        if (ch < 0) {
+            printf("\nHet du lieu\n");
+            break;
+        }
+        printf("%02X ", ch & 0xFF);
+    }
+    printf("\n");
+
+    alt_up_sd_card_fclose(fd);
+    return 0;
+}
+*/
+
+
+
+
+/*
+ // DOC FILE DU LIEU TU FILE ANH BMP //
+
+
+#include <stdio.h>
+#include "altera_up_sd_card_avalon_interface.h"
+
+#define WIDTH   320
+#define HEIGHT  240
+
+static int rd8(short int fd)
+{
+    return alt_up_sd_card_read(fd);
+}
+
+int main()
+{
+    alt_up_sd_card_dev *sd_dev;
+    short int fd;
+    int x, y;
+    int b, g, r;
+
+    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+    if (sd_dev == NULL) {
+        printf("Khong mo duoc SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_Present()) {
+        printf("Khong co the SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_FAT16()) {
+        printf("Khong phai FAT16\n");
+        return 1;
+    }
+
+    fd = alt_up_sd_card_fopen("CAYCOI.BMP", false);
+    if (fd < 0) {
+        printf("Mo file loi\n");
+        return 1;
+    }
+
+    // Bo qua 138 byte header
+    for (int i = 0; i < 138; i++) {
+        if (rd8(fd) < 0) {
+            printf("Loi doc header\n");
+            alt_up_sd_card_fclose(fd);
+            return 1;
+        }
+    }
+
+    for (y = 0; y < HEIGHT; y++) {
+        for (x = 0; x < WIDTH; x++) {
+            b = rd8(fd);
+            g = rd8(fd);
+            r = rd8(fd);
+
+            if (b < 0 || g < 0 || r < 0) {
+                printf("Loi doc pixel tai x=%d y=%d\n", x, y);
+                alt_up_sd_card_fclose(fd);
+                return 1;
+            }
+
+            // In thử 10 pixel đầu tiên
+            if (y == 0 && x < 10) {
+                printf("Pixel[%d,%d] = R=%3d G=%3d B=%3d\n",
+                       x, y, r, g, b);
+            }
+        }
+    }
+
+    alt_up_sd_card_fclose(fd);
+    printf("Doc xong anh BMP\n");
+    return 0;
+}
+*/
+
+
+
+/*
+
+// CODE KIEM TRA HEADER FILE WAV
+
+#include <stdio.h>
+#include "altera_up_sd_card_avalon_interface.h"
+
+static int rd8(short int fd)
+{
+    return alt_up_sd_card_read(fd);
+}
+
+static unsigned short rd16le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    if (b0 < 0 || b1 < 0) return 0xFFFF;
+    return (unsigned short)(b0 | (b1 << 8));
+}
+
+static unsigned int rd32le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    int b2 = rd8(fd);
+    int b3 = rd8(fd);
+    if (b0 < 0 || b1 < 0 || b2 < 0 || b3 < 0) return 0xFFFFFFFF;
+    return (unsigned int)(b0 | (b1 << 8) | (b2 << 16) | (b3 << 24));
+}
+
+int main()
+{
+    alt_up_sd_card_dev *sd_dev;
+    short int fd;
+    char id[5];
+    unsigned int chunk_size;
+    unsigned short audio_format, num_channels, block_align, bits_per_sample;
+    unsigned int sample_rate, byte_rate;
+    unsigned int data_size;
+    int i;
+
+    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+    if (sd_dev == NULL) {
+        printf("Khong mo duoc SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_Present()) {
+        printf("Khong co the SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_FAT16()) {
+        printf("The khong phai FAT16\n");
+        return 1;
+    }
+
+    fd = alt_up_sd_card_fopen("AUDIO.WAV", false);
+    if (fd < 0) {
+        printf("Khong mo duoc file WAV\n");
+        return 1;
+    }
+
+    // RIFF
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("ChunkID: %s\n", id);
+
+    chunk_size = rd32le(fd);
+
+    // WAVE
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Format : %s\n", id);
+
+    // fmt
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Subchunk1 ID: %s\n", id);
+
+    chunk_size = rd32le(fd);
+    audio_format = rd16le(fd);
+    num_channels = rd16le(fd);
+    sample_rate = rd32le(fd);
+    byte_rate = rd32le(fd);
+    block_align = rd16le(fd);
+    bits_per_sample = rd16le(fd);
+
+    printf("audio_format    = %u\n", audio_format);
+    printf("num_channels    = %u\n", num_channels);
+    printf("sample_rate     = %u\n", sample_rate);
+    printf("byte_rate       = %u\n", byte_rate);
+    printf("block_align     = %u\n", block_align);
+    printf("bits_per_sample = %u\n", bits_per_sample);
+
+    // data
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Subchunk2 ID: %s\n", id);
+
+    data_size = rd32le(fd);
+    printf("data_size       = %u\n", data_size);
+
+    alt_up_sd_card_fclose(fd);
+    return 0;
+}
+*/
+
+
+
+#include <stdio.h>
+#include "altera_up_sd_card_avalon_interface.h"
+
+static int rd8(short int fd)
+{
+    return alt_up_sd_card_read(fd);
+}
+
+static unsigned short rd16le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    if (b0 < 0 || b1 < 0) return 0xFFFF;
+    return (unsigned short)(b0 | (b1 << 8));
+}
+
+static unsigned int rd32le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    int b2 = rd8(fd);
+    int b3 = rd8(fd);
+    if (b0 < 0 || b1 < 0 || b2 < 0 || b3 < 0) return 0xFFFFFFFF;
+    return (unsigned int)(b0 | (b1 << 8) | (b2 << 16) | (b3 << 24));
+}
+
+static short rd16le_signed(short int fd)
+{
+    return (short)rd16le(fd);
+}
+
+int main()
+{
+    alt_up_sd_card_dev *sd_dev;
+    short int fd;
+    char id[5];
+    unsigned int chunk_size;
+    unsigned short audio_format, num_channels, block_align, bits_per_sample;
+    unsigned int sample_rate, byte_rate;
+    unsigned int data_size;
+    unsigned int n, num_frames;
+    short left, right;
+    int i;
+
+    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+    if (sd_dev == NULL) {
+        printf("Khong mo duoc SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_Present()) {
+        printf("Khong co the SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_FAT16()) {
+        printf("The khong phai FAT16\n");
+        return 1;
+    }
+
+    fd = alt_up_sd_card_fopen("AUDIO.WAV", false);
+    if (fd < 0) {
+        printf("Khong mo duoc file WAV\n");
+        return 1;
+    }
+
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("ChunkID: %s\n", id);
+
+    chunk_size = rd32le(fd);
+
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Format : %s\n", id);
+
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Subchunk1 ID: %s\n", id);
+
+    chunk_size = rd32le(fd);
+    audio_format = rd16le(fd);
+    num_channels = rd16le(fd);
+    sample_rate = rd32le(fd);
+    byte_rate = rd32le(fd);
+    block_align = rd16le(fd);
+    bits_per_sample = rd16le(fd);
+
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Subchunk2 ID: %s\n", id);
+
+    data_size = rd32le(fd);
+
+    printf("audio_format    = %u\n", audio_format);
+    printf("num_channels    = %u\n", num_channels);
+    printf("sample_rate     = %u\n", sample_rate);
+    printf("byte_rate       = %u\n", byte_rate);
+    printf("block_align     = %u\n", block_align);
+    printf("bits_per_sample = %u\n", bits_per_sample);
+    printf("data_size       = %u\n", data_size);
+
+    num_frames = data_size / block_align;
+    printf("num_frames      = %u\n", num_frames);
+
+    for (n = 0; n < 10; n++) {
+        left  = rd16le_signed(fd);
+        right = rd16le_signed(fd);
+        printf("Frame %u: L=%d R=%d\n", n, left, right);
+    }
+
+    alt_up_sd_card_fclose(fd);
+    return 0;
+}

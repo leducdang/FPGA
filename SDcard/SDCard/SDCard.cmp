@@ -1,0 +1,11 @@
+	component SDCard is
+		port (
+			clk_clk           : in    std_logic := 'X'; -- clk
+			reset_reset_n     : in    std_logic := 'X'; -- reset_n
+			sdcard_b_SD_cmd   : inout std_logic := 'X'; -- b_SD_cmd
+			sdcard_b_SD_dat   : inout std_logic := 'X'; -- b_SD_dat
+			sdcard_b_SD_dat3  : inout std_logic := 'X'; -- b_SD_dat3
+			sdcard_o_SD_clock : out   std_logic         -- o_SD_clock
+		);
+	end component SDCard;
+

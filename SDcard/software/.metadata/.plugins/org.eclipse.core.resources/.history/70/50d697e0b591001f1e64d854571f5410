@@ -1,0 +1,63 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+#include "sys/alt_stdio.h"
+#include "stdio.h"
+#include "system.h"
+#include "Altera_UP_SD_Card_Avalon_Interface.h"
+//#include "altera_avalon_pio_regs.h"
+
+//void VGA_box(int, int, int, int, int);
+//volatile int i, j;
+char root_filename[13];
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+  printf("Hello from Nios II!\n");
+
+    int handler;
+    char att1=0, att2=0, att3=0, att;
+    int pixel;
+    /* SD CARD */
+  	alt_up_sd_card_dev *sd_card_dev = alt_up_sd_card_open_dev(SDCARD_NAME);
+  	if(sd_card_dev != 0){
+  		if(alt_up_sd_card_is_Present()){
+  			if(alt_up_sd_card_is_FAT16())
+  				alt_putstr("Cartao conectado...\n");
+  			else
+  				alt_putstr("Erro: Sistema desconhecido!\n");
+  			//lista arquivos do root
+  			alt_putstr("----------\narquivos raiz: \n----------\n");
+  			 int first_file_result = alt_up_sd_card_find_first("/.", root_filename);
+  			 if (first_file_result == 0){
+  				 printf("Cartao: %s \n",root_filename);
+  			 }
+  			while(alt_up_sd_card_find_next(root_filename) != -1){
+  				 printf("- %s \n",root_filename);
+  			}
+  			printf("\n------------\n");
+  		}
+
+  		printf("1");
+  	}
+
+
+  return 0;
+}

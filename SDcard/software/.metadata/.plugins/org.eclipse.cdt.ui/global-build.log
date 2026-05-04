@@ -1,0 +1,384 @@
+14:17:48 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 88 KBytes program size (code + initialized data).
+Info:             104 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+14:18:01 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+14:18:12 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+14:18:25 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+14:18:25 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+14:33:31 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:579:18: warning: variable 'chunk_size' set but not used [-Wunused-but-set-variable]
+     unsigned int chunk_size;
+                  ^
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             103 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+14:37:39 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:695:18: warning: variable 'chunk_size' set but not used [-Wunused-but-set-variable]
+     unsigned int chunk_size;
+                  ^
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             103 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+14:37:56 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:695:18: warning: variable 'chunk_size' set but not used [-Wunused-but-set-variable]
+     unsigned int chunk_size;
+                  ^
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             103 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:02:36 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:03:23 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:03:23 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:06:57 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 88 KBytes program size (code + initialized data).
+Info:             104 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:09:52 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c:135:5: warning: data definition has no type or storage class
+     device_reference = alt_up_sd_card_open_dev("/dev/SDCard");
+     ^
+hello_world.c:135:5: warning: type defaults to 'int' in declaration of 'device_reference' [-Wimplicit-int]
+hello_world.c:135:5: error: conflicting types for 'device_reference'
+hello_world.c:130:25: note: previous definition of 'device_reference' was here
+     alt_up_sd_card_dev *device_reference = NULL;
+                         ^
+hello_world.c:135:24: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+     device_reference = alt_up_sd_card_open_dev("/dev/SDCard");
+                        ^
+hello_world.c:135:24: error: initializer element is not constant
+hello_world.c:136:5: error: expected identifier or '(' before 'if'
+     if (device_reference == NULL) {
+     ^
+hello_world.c:142:5: error: expected identifier or '(' before 'if'
+     if (!alt_up_sd_card_is_Present()) {
+     ^
+hello_world.c:148:5: error: expected identifier or '(' before 'if'
+     if (!alt_up_sd_card_is_FAT16()) {
+     ^
+hello_world.c:154:5: warning: data definition has no type or storage class
+     fileHandle = alt_up_sd_card_fopen("TEST.TXT", false);
+     ^
+hello_world.c:154:5: warning: type defaults to 'int' in declaration of 'fileHandle' [-Wimplicit-int]
+hello_world.c:154:18: error: initializer element is not constant
+     fileHandle = alt_up_sd_card_fopen("TEST.TXT", false);
+                  ^
+hello_world.c:155:5: error: expected identifier or '(' before 'if'
+     if (fileHandle < 0) {
+     ^
+hello_world.c:160:12: error: expected declaration specifiers or '...' before string constant
+     printf("Noi dung file:\n");
+            ^
+hello_world.c:163:5: error: expected identifier or '(' before 'while'
+     while ((ch = alt_up_sd_card_read(fileHandle)) >= 0) {
+     ^
+hello_world.c:168:5: warning: data definition has no type or storage class
+     alt_up_sd_card_fclose(fileHandle);
+     ^
+hello_world.c:168:5: warning: type defaults to 'int' in declaration of 'alt_up_sd_card_fclose' [-Wimplicit-int]
+hello_world.c:168:5: warning: parameter names (without types) in function declaration
+hello_world.c:168:5: error: conflicting types for 'alt_up_sd_card_fclose'
+In file included from hello_world.c:128:0:
+../hello_bsp//drivers/inc/altera_up_sd_card_avalon_interface.h:115:6: note: previous declaration of 'alt_up_sd_card_fclose' was here
+ bool alt_up_sd_card_fclose(short int file_handle);
+      ^
+hello_world.c:170:12: error: expected declaration specifiers or '...' before string constant
+     printf("\nDoc file xong\n");
+            ^
+hello_world.c:171:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^
+hello_world.c:172:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+09:10:38 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 48 KBytes program size (code + initialized data).
+Info:             145 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:13:39 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 88 KBytes program size (code + initialized data).
+Info:             104 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:14:00 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:14:00 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:19:59 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             104 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:20:18 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:20:19 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:22:43 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:22:44 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:23:46 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:23:47 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:26:36 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 90 KBytes program size (code + initialized data).
+Info:             103 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:28:31 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             104 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:30:50 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:584:18: warning: variable 'chunk_size' set but not used [-Wunused-but-set-variable]
+     unsigned int chunk_size;
+                  ^
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             103 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
+09:31:11 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:31:12 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:31:38 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:33:36 **** Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:33:37 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+[hello build complete]
+09:37:45 **** Incremental Build of configuration Nios II for project hello ****
+make all 
+Info: Building ../hello_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../hello_bsp//HAL/inc -I../hello_bsp/ -I../hello_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:696:18: warning: variable 'chunk_size' set but not used [-Wunused-but-set-variable]
+     unsigned int chunk_size;
+                  ^
+Info: Linking hello.elf
+nios2-elf-g++  -T'../hello_bsp//linker.x' -msys-crt0='../hello_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hello_bsp/   -Wl,-Map=hello.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hello.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert hello.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev debug --stdin_dev debug --stdout_dev debug --sopc_system_name SDCard --quartus_project_dir "C:/Users/DELL/Desktop/SDcard" --jdi ../..//output_files/sdCardControl.jdi --sopcinfo C:/Users/DELL/Desktop/SDcard/software/hello_bsp/../../SDCard.sopcinfo
+Info: (hello.elf) 89 KBytes program size (code + initialized data).
+Info:             103 KBytes free for stack + heap.
+Info: Creating hello.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source hello.elf >hello.objdump
+[hello build complete]
