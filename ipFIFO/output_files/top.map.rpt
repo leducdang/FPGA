@@ -1,6 +1,6 @@
 Analysis & Synthesis report for top
-Sat Jul 13 15:30:21 2024
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Sat Nov 22 16:02:37 2025
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -29,9 +29,9 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -41,115 +41,114 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jul 13 15:30:21 2024          ;
-; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                      ; top                                            ;
-; Top-level Entity Name              ; top                                            ;
-; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 99                                             ;
-;     Total combinational functions  ; 97                                             ;
-;     Dedicated logic registers      ; 65                                             ;
-; Total registers                    ; 65                                             ;
-; Total pins                         ; 29                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 2,048                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-+------------------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 22 16:02:37 2025       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; top                                         ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 99                                          ;
+;     Total combinational functions  ; 97                                          ;
+;     Dedicated logic registers      ; 65                                          ;
+; Total registers                    ; 65                                          ;
+; Total pins                         ; 29                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 2,048                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; top                ; top                ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; top                ; top                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -170,28 +169,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
-; top.v                            ; yes             ; User Verilog HDL File        ; D:/2024/FPGA-TEST/ipSDRAM/top.v                        ;         ;
-; fifo.v                           ; yes             ; User Wizard-Generated File   ; D:/2024/FPGA-TEST/ipSDRAM/fifo.v                       ;         ;
-; scfifo.tdf                       ; yes             ; Megafunction                 ; d:/fpga/quartus/libraries/megafunctions/scfifo.tdf     ;         ;
-; a_regfifo.inc                    ; yes             ; Megafunction                 ; d:/fpga/quartus/libraries/megafunctions/a_regfifo.inc  ;         ;
-; a_dpfifo.inc                     ; yes             ; Megafunction                 ; d:/fpga/quartus/libraries/megafunctions/a_dpfifo.inc   ;         ;
-; a_i2fifo.inc                     ; yes             ; Megafunction                 ; d:/fpga/quartus/libraries/megafunctions/a_i2fifo.inc   ;         ;
-; a_fffifo.inc                     ; yes             ; Megafunction                 ; d:/fpga/quartus/libraries/megafunctions/a_fffifo.inc   ;         ;
-; a_f2fifo.inc                     ; yes             ; Megafunction                 ; d:/fpga/quartus/libraries/megafunctions/a_f2fifo.inc   ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; d:/fpga/quartus/libraries/megafunctions/aglobal221.inc ;         ;
-; db/scfifo_fj31.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/2024/FPGA-TEST/ipSDRAM/db/scfifo_fj31.tdf           ;         ;
-; db/a_dpfifo_mp31.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf         ;         ;
-; db/altsyncram_7bh1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/2024/FPGA-TEST/ipSDRAM/db/altsyncram_7bh1.tdf       ;         ;
-; db/cmpr_ls8.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2024/FPGA-TEST/ipSDRAM/db/cmpr_ls8.tdf              ;         ;
-; db/cntr_0ab.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2024/FPGA-TEST/ipSDRAM/db/cntr_0ab.tdf              ;         ;
-; db/cntr_da7.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2024/FPGA-TEST/ipSDRAM/db/cntr_da7.tdf              ;         ;
-; db/cntr_1ab.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2024/FPGA-TEST/ipSDRAM/db/cntr_1ab.tdf              ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; top.v                            ; yes             ; User Verilog HDL File        ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/top.v                       ;         ;
+; fifo.v                           ; yes             ; User Wizard-Generated File   ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/fifo.v                      ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/scfifo.tdf     ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_regfifo.inc  ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_dpfifo.inc   ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_i2fifo.inc   ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_fffifo.inc   ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_f2fifo.inc   ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc ;         ;
+; db/scfifo_fj31.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/scfifo_fj31.tdf          ;         ;
+; db/a_dpfifo_mp31.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf        ;         ;
+; db/altsyncram_7bh1.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/altsyncram_7bh1.tdf      ;         ;
+; db/cmpr_ls8.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cmpr_ls8.tdf             ;         ;
+; db/cntr_0ab.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cntr_0ab.tdf             ;         ;
+; db/cntr_da7.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cntr_da7.tdf             ;         ;
+; db/cntr_1ab.tdf                  ; yes             ; Auto-Generated Megafunction  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cntr_1ab.tdf             ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -382,21 +381,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sat Jul 13 15:30:13 2024
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Nov 22 16:02:28 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
-    Info (12023): Found entity 1: top File: D:/2024/FPGA-TEST/ipSDRAM/top.v Line: 1
+    Info (12023): Found entity 1: top File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
-    Info (12023): Found entity 1: fifo File: D:/2024/FPGA-TEST/ipSDRAM/fifo.v Line: 40
+    Info (12023): Found entity 1: fifo File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/fifo.v Line: 40
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.v(41): truncated value with size 32 to match size of target (24) File: D:/2024/FPGA-TEST/ipSDRAM/top.v Line: 41
-Info (12128): Elaborating entity "fifo" for hierarchy "fifo:u0" File: D:/2024/FPGA-TEST/ipSDRAM/top.v Line: 79
-Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:u0|scfifo:scfifo_component" File: D:/2024/FPGA-TEST/ipSDRAM/fifo.v Line: 81
-Info (12130): Elaborated megafunction instantiation "fifo:u0|scfifo:scfifo_component" File: D:/2024/FPGA-TEST/ipSDRAM/fifo.v Line: 81
-Info (12133): Instantiated megafunction "fifo:u0|scfifo:scfifo_component" with the following parameter: File: D:/2024/FPGA-TEST/ipSDRAM/fifo.v Line: 81
+Warning (10230): Verilog HDL assignment warning at top.v(41): truncated value with size 32 to match size of target (24) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/top.v Line: 41
+Info (12128): Elaborating entity "fifo" for hierarchy "fifo:u0" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/top.v Line: 79
+Info (12128): Elaborating entity "scfifo" for hierarchy "fifo:u0|scfifo:scfifo_component" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/fifo.v Line: 81
+Info (12130): Elaborated megafunction instantiation "fifo:u0|scfifo:scfifo_component" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/fifo.v Line: 81
+Info (12133): Instantiated megafunction "fifo:u0|scfifo:scfifo_component" with the following parameter: File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/fifo.v Line: 81
     Info (12134): Parameter "add_ram_output_register" = "ON"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
     Info (12134): Parameter "lpm_numwords" = "256"
@@ -408,32 +407,32 @@ Info (12133): Instantiated megafunction "fifo:u0|scfifo:scfifo_component" with t
     Info (12134): Parameter "underflow_checking" = "ON"
     Info (12134): Parameter "use_eab" = "ON"
 Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_fj31.tdf
-    Info (12023): Found entity 1: scfifo_fj31 File: D:/2024/FPGA-TEST/ipSDRAM/db/scfifo_fj31.tdf Line: 25
-Info (12128): Elaborating entity "scfifo_fj31" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated" File: d:/fpga/quartus/libraries/megafunctions/scfifo.tdf Line: 300
+    Info (12023): Found entity 1: scfifo_fj31 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/scfifo_fj31.tdf Line: 24
+Info (12128): Elaborating entity "scfifo_fj31" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/scfifo.tdf Line: 299
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_mp31.tdf
-    Info (12023): Found entity 1: a_dpfifo_mp31 File: D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf Line: 33
-Info (12128): Elaborating entity "a_dpfifo_mp31" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo" File: D:/2024/FPGA-TEST/ipSDRAM/db/scfifo_fj31.tdf Line: 37
+    Info (12023): Found entity 1: a_dpfifo_mp31 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf Line: 32
+Info (12128): Elaborating entity "a_dpfifo_mp31" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/scfifo_fj31.tdf Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7bh1.tdf
-    Info (12023): Found entity 1: altsyncram_7bh1 File: D:/2024/FPGA-TEST/ipSDRAM/db/altsyncram_7bh1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_7bh1" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|altsyncram_7bh1:FIFOram" File: D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf Line: 46
+    Info (12023): Found entity 1: altsyncram_7bh1 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/altsyncram_7bh1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_7bh1" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|altsyncram_7bh1:FIFOram" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ls8.tdf
-    Info (12023): Found entity 1: cmpr_ls8 File: D:/2024/FPGA-TEST/ipSDRAM/db/cmpr_ls8.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cmpr_ls8:almost_full_comparer" File: D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf Line: 54
-Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cmpr_ls8:two_comparison" File: D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf Line: 55
+    Info (12023): Found entity 1: cmpr_ls8 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cmpr_ls8.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cmpr_ls8:almost_full_comparer" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf Line: 53
+Info (12128): Elaborating entity "cmpr_ls8" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cmpr_ls8:two_comparison" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0ab.tdf
-    Info (12023): Found entity 1: cntr_0ab File: D:/2024/FPGA-TEST/ipSDRAM/db/cntr_0ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_0ab" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cntr_0ab:rd_ptr_msb" File: D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf Line: 56
+    Info (12023): Found entity 1: cntr_0ab File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cntr_0ab.tdf Line: 25
+Info (12128): Elaborating entity "cntr_0ab" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cntr_0ab:rd_ptr_msb" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf Line: 55
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_da7.tdf
-    Info (12023): Found entity 1: cntr_da7 File: D:/2024/FPGA-TEST/ipSDRAM/db/cntr_da7.tdf Line: 26
-Info (12128): Elaborating entity "cntr_da7" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cntr_da7:usedw_counter" File: D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf Line: 57
+    Info (12023): Found entity 1: cntr_da7 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cntr_da7.tdf Line: 25
+Info (12128): Elaborating entity "cntr_da7" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cntr_da7:usedw_counter" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf Line: 56
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1ab.tdf
-    Info (12023): Found entity 1: cntr_1ab File: D:/2024/FPGA-TEST/ipSDRAM/db/cntr_1ab.tdf Line: 26
-Info (12128): Elaborating entity "cntr_1ab" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cntr_1ab:wr_ptr" File: D:/2024/FPGA-TEST/ipSDRAM/db/a_dpfifo_mp31.tdf Line: 58
-Info (13000): Registers with preset signals will power-up high File: D:/2024/FPGA-TEST/ipSDRAM/top.v Line: 27
+    Info (12023): Found entity 1: cntr_1ab File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/cntr_1ab.tdf Line: 25
+Info (12128): Elaborating entity "cntr_1ab" for hierarchy "fifo:u0|scfifo:scfifo_component|scfifo_fj31:auto_generated|a_dpfifo_mp31:dpfifo|cntr_1ab:wr_ptr" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/db/a_dpfifo_mp31.tdf Line: 57
+Info (13000): Registers with preset signals will power-up high File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/top.v Line: 27
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "write_en" is converted into an equivalent circuit using register "write_en~_emulated" and latch "write_en~1" File: D:/2024/FPGA-TEST/ipSDRAM/top.v Line: 22
-    Warning (13310): Register "read_en" is converted into an equivalent circuit using register "read_en~_emulated" and latch "read_en~1" File: D:/2024/FPGA-TEST/ipSDRAM/top.v Line: 21
+    Warning (13310): Register "write_en" is converted into an equivalent circuit using register "write_en~_emulated" and latch "write_en~1" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/top.v Line: 22
+    Warning (13310): Register "read_en" is converted into an equivalent circuit using register "read_en~_emulated" and latch "read_en~1" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/ipFIFO/top.v Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -443,9 +442,9 @@ Info (21057): Implemented 147 device resources after synthesis - the final resou
     Info (21061): Implemented 110 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Sat Jul 13 15:30:21 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4784 megabytes
+    Info: Processing ended: Sat Nov 22 16:02:37 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 

@@ -1,5 +1,5 @@
 Fitter report for top_ov7670
-Wed Aug 21 21:23:06 2024
+Sat Jan 10 10:36:44 2026
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -33,7 +33,7 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  25. Control Signals
  26. Global & Other Fast Signals
  27. Fitter RAM Summary
- 28. |top_ov7670|config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM
+ 28. |top_ov7670|config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM
  29. Routing Usage Summary
  30. LAB Logic Elements
  31. LAB-wide Signals
@@ -74,7 +74,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Aug 21 21:23:06 2024       ;
+; Fitter Status                      ; Successful - Sat Jan 10 10:36:44 2026       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_ov7670                                  ;
 ; Top-level Entity Name              ; top_ov7670                                  ;
@@ -178,22 +178,22 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------------+------------------+-----------------------+
 ; Node                                      ; Action          ; Operation        ; Reason              ; Node Port ; Node Port Name ; Destination Node                                                                       ; Destination Port ; Destination Port Name ;
 +-------------------------------------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------------+------------------+-----------------------+
-; config_camera:u2|i2c:config_camera|SD[0]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[1]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a1  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[2]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a2  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[3]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a3  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[4]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a4  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[5]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a5  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[6]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a6  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[7]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a7  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[8]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a8  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[9]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a9  ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[10] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a10 ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[11] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a11 ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[12] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a12 ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[13] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a13 ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[14] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a14 ; PORTADATAOUT     ;                       ;
-; config_camera:u2|i2c:config_camera|SD[15] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a15 ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[0]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a0  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[1]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a1  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[2]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a2  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[3]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a3  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[4]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a4  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[5]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a5  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[6]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a6  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[7]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a7  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[8]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a8  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[9]  ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a9  ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[10] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a10 ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[11] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a11 ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[12] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a12 ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[13] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a13 ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[14] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a14 ; PORTADATAOUT     ;                       ;
+; config_camera:u2|i2c:config_camera|SD[15] ; Packed Register ; Register Packing ; Timing optimization ; Q         ;                ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a15 ; PORTADATAOUT     ;                       ;
 +-------------------------------------------+-----------------+------------------+---------------------+-----------+----------------+----------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -221,8 +221,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1092 ) ; 0.00 % ( 0 / 1092 )        ; 0.00 % ( 0 / 1092 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1092 ) ; 0.00 % ( 0 / 1092 )        ; 0.00 % ( 0 / 1092 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 1091 ) ; 0.00 % ( 0 / 1091 )        ; 0.00 % ( 0 / 1091 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1091 ) ; 0.00 % ( 0 / 1091 )        ; 0.00 % ( 0 / 1091 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -246,14 +246,14 @@ refer to the applicable agreement for further details.
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Top                            ; 0.00 % ( 0 / 1077 )   ; N/A                     ; Source File       ; N/A                 ;       ;
-; hard_block:auto_generated_inst ; 0.00 % ( 0 / 15 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; hard_block:auto_generated_inst ; 0.00 % ( 0 / 14 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/output_files/top_ov7670.pin.
+The pin-out file can be found in D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/output_files/top_ov7670.pin.
 
 
 +------------------------------------------------------------------------------+
@@ -280,7 +280,7 @@ The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream
 ;     -- Dedicated logic registers            ; 221 / 114,480 ( < 1 % )        ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )              ;
 ;                                             ;                                ;
-; Total LABs:  partially or completely used   ; 39 / 7,155 ( < 1 % )           ;
+; Total LABs:  partially or completely used   ; 40 / 7,155 ( < 1 % )           ;
 ; Virtual pins                                ; 0                              ;
 ; I/O pins                                    ; 108 / 529 ( 20 % )             ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )                 ;
@@ -291,19 +291,19 @@ The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream
 ; Total block memory implementation bits      ; 1,483,776 / 3,981,312 ( 37 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 532 ( 0 % )                ;
 ; PLLs                                        ; 1 / 4 ( 25 % )                 ;
-; Global signals                              ; 6                              ;
-;     -- Global clocks                        ; 6 / 20 ( 30 % )                ;
+; Global signals                              ; 5                              ;
+;     -- Global clocks                        ; 5 / 20 ( 25 % )                ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )                  ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )                  ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                  ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )                  ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )                  ;
-; Average interconnect usage (total/H/V)      ; 1.6% / 1.5% / 1.7%             ;
-; Peak interconnect usage (total/H/V)         ; 11.8% / 11.4% / 12.2%          ;
+; Average interconnect usage (total/H/V)      ; 1.7% / 1.7% / 1.7%             ;
+; Peak interconnect usage (total/H/V)         ; 14.0% / 14.2% / 13.8%          ;
 ; Maximum fan-out                             ; 218                            ;
 ; Highest non-global fan-out                  ; 160                            ;
-; Total fan-out                               ; 5128                           ;
-; Average fan-out                             ; 4.53                           ;
+; Total fan-out                               ; 5129                           ;
+; Average fan-out                             ; 4.52                           ;
 +---------------------------------------------+--------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -335,7 +335,7 @@ The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream
 ;     -- Dedicated logic registers            ; 221 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 39 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 40 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 108                    ; 0                              ;
@@ -344,7 +344,7 @@ The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream
 ; Total RAM block bits                        ; 1483776                ; 0                              ;
 ; PLL                                         ; 0 / 4 ( 0 % )          ; 1 / 4 ( 25 % )                 ;
 ; M9K                                         ; 161 / 432 ( 37 % )     ; 0 / 432 ( 0 % )                ;
-; Clock control block                         ; 2 / 24 ( 8 % )         ; 4 / 24 ( 16 % )                ;
+; Clock control block                         ; 2 / 24 ( 8 % )         ; 3 / 24 ( 12 % )                ;
 ;                                             ;                        ;                                ;
 ; Connections                                 ;                        ;                                ;
 ;     -- Input Connections                    ; 277                    ; 1                              ;
@@ -353,7 +353,7 @@ The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 5127                   ; 271                            ;
+;     -- Total Connections                    ; 5129                   ; 270                            ;
 ;     -- Registered Connections               ; 3278                   ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
@@ -362,7 +362,7 @@ The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream
 ;                                             ;                        ;                                ;
 ; Partition Interface                         ;                        ;                                ;
 ;     -- Input Ports                          ; 15                     ; 1                              ;
-;     -- Output Ports                         ; 76                     ; 4                              ;
+;     -- Output Ports                         ; 76                     ; 3                              ;
 ;     -- Bidir Ports                          ; 17                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Registered Ports                            ;                        ;                                ;
@@ -1396,10 +1396,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Name                                                                                 ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Phase Shift Step ; Duty Cycle ; Counter ; Counter Value ; High / Low   ; Cascade Input ; Initial ; VCO Tap ; SDC Pin Name                                   ;
 +--------------------------------------------------------------------------------------+--------------+------+-----+------------------+-------------+------------------+------------+---------+---------------+--------------+---------------+---------+---------+------------------------------------------------+
 ; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0]            ; clock0       ; 4    ; 1   ; 200.0 MHz        ; 0 (0 ps)    ; 15.00 (208 ps)   ; 50/50      ; C0      ; 3             ; 2/1 Odd      ; --            ; 1       ; 0       ; u1|altpll_component|auto_generated|pll1|clk[0] ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[1]            ; clock1       ; 12   ; 25  ; 24.0 MHz         ; 0 (0 ps)    ; 1.80 (208 ps)    ; 50/50      ; C1      ; 25            ; 13/12 Odd    ; --            ; 1       ; 0       ; u1|altpll_component|auto_generated|pll1|clk[1] ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2]            ; clock2       ; 1    ; 2   ; 25.0 MHz         ; 0 (0 ps)    ; 1.88 (208 ps)    ; 50/50      ; C2      ; 24            ; 12/12 Even   ; --            ; 1       ; 0       ; u1|altpll_component|auto_generated|pll1|clk[2] ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3]            ; clock3       ; 1    ; 500 ; 0.1 MHz          ; 0 (0 ps)    ; 0.09 (208 ps)    ; 50/50      ; C4      ; 500           ; 250/250 Even ; C3            ; 1       ; 0       ; u1|altpll_component|auto_generated|pll1|clk[3] ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3]~cascade_in ; --           ; --   ; --  ; --               ; --          ; --               ; --         ; C3      ; 12            ; 6/6 Even     ; --            ; 1       ; 0       ;                                                ;
+; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2]            ; clock2       ; 1    ; 2   ; 25.0 MHz         ; 0 (0 ps)    ; 1.88 (208 ps)    ; 50/50      ; C1      ; 24            ; 12/12 Even   ; --            ; 1       ; 0       ; u1|altpll_component|auto_generated|pll1|clk[2] ;
+; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3]            ; clock3       ; 1    ; 500 ; 0.1 MHz          ; 0 (0 ps)    ; 0.09 (208 ps)    ; 50/50      ; C3      ; 500           ; 250/250 Even ; C2            ; 1       ; 0       ; u1|altpll_component|auto_generated|pll1|clk[3] ;
+; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3]~cascade_in ; --           ; --   ; --  ; --               ; --          ; --               ; --         ; C2      ; 12            ; 6/6 Even     ; --            ; 1       ; 0       ;                                                ;
 +--------------------------------------------------------------------------------------+--------------+------+-----+------------------+-------------+------------------+------------+---------+---------------+--------------+---------------+---------+---------+------------------------------------------------+
 
 
@@ -1510,24 +1509,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                      ; Entity Name     ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top_ov7670                               ; 510 (164)   ; 221 (76)                  ; 0 (0)         ; 1281616     ; 161  ; 0            ; 0       ; 0         ; 108  ; 0            ; 289 (86)     ; 82 (33)           ; 139 (62)         ; |top_ov7670                                                                                              ; top_ov7670      ; work         ;
+; |top_ov7670                               ; 510 (166)   ; 221 (76)                  ; 0 (0)         ; 1281616     ; 161  ; 0            ; 0       ; 0         ; 108  ; 0            ; 289 (87)     ; 82 (34)           ; 139 (61)         ; |top_ov7670                                                                                              ; top_ov7670      ; work         ;
 ;    |PLL:u1|                               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_ov7670|PLL:u1                                                                                       ; PLL             ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_ov7670|PLL:u1|altpll:altpll_component                                                               ; altpll          ; work         ;
 ;          |PLL_altpll:auto_generated|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_ov7670|PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated                                     ; PLL_altpll      ; work         ;
-;    |RAM:u6|                               ; 120 (0)     ; 4 (0)                     ; 0 (0)         ; 1280000     ; 160  ; 0            ; 0       ; 0         ; 0    ; 0            ; 116 (0)      ; 2 (0)             ; 2 (0)            ; |top_ov7670|RAM:u6                                                                                       ; RAM             ; work         ;
-;       |altsyncram:altsyncram_component|   ; 120 (0)     ; 4 (0)                     ; 0 (0)         ; 1280000     ; 160  ; 0            ; 0       ; 0         ; 0    ; 0            ; 116 (0)      ; 2 (0)             ; 2 (0)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component                                                       ; altsyncram      ; work         ;
-;          |altsyncram_1bg1:auto_generated| ; 120 (4)     ; 4 (4)                     ; 0 (0)         ; 1280000     ; 160  ; 0            ; 0       ; 0         ; 0    ; 0            ; 116 (0)      ; 2 (2)             ; 2 (0)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated                        ; altsyncram_1bg1 ; work         ;
+;    |RAM:u6|                               ; 119 (0)     ; 4 (0)                     ; 0 (0)         ; 1280000     ; 160  ; 0            ; 0       ; 0         ; 0    ; 0            ; 115 (0)      ; 1 (0)             ; 3 (0)            ; |top_ov7670|RAM:u6                                                                                       ; RAM             ; work         ;
+;       |altsyncram:altsyncram_component|   ; 119 (0)     ; 4 (0)                     ; 0 (0)         ; 1280000     ; 160  ; 0            ; 0       ; 0         ; 0    ; 0            ; 115 (0)      ; 1 (0)             ; 3 (0)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component                                                       ; altsyncram      ; work         ;
+;          |altsyncram_1bg1:auto_generated| ; 119 (4)     ; 4 (4)                     ; 0 (0)         ; 1280000     ; 160  ; 0            ; 0       ; 0         ; 0    ; 0            ; 115 (0)      ; 1 (1)             ; 3 (0)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated                        ; altsyncram_1bg1 ; work         ;
 ;             |decode_5ua:decode3|          ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3     ; decode_5ua      ; work         ;
 ;             |decode_u9a:rden_decode|      ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode ; decode_u9a      ; work         ;
-;             |mux_4qb:mux2|                ; 96 (96)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 96 (96)      ; 0 (0)             ; 0 (0)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|mux_4qb:mux2           ; mux_4qb         ; work         ;
+;             |mux_4qb:mux2|                ; 96 (96)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 95 (95)      ; 0 (0)             ; 1 (1)            ; |top_ov7670|RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|mux_4qb:mux2           ; mux_4qb         ; work         ;
 ;    |VGA_Ctrl:u5|                          ; 73 (73)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 48 (48)      ; 0 (0)             ; 25 (25)          ; |top_ov7670|VGA_Ctrl:u5                                                                                  ; VGA_Ctrl        ; work         ;
-;    |camera_read:u4|                       ; 39 (39)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 14 (14)           ; 24 (24)          ; |top_ov7670|camera_read:u4                                                                               ; camera_read     ; work         ;
+;    |camera_read:u4|                       ; 39 (39)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 15 (15)           ; 23 (23)          ; |top_ov7670|camera_read:u4                                                                               ; camera_read     ; work         ;
 ;    |config_camera:u2|                     ; 63 (27)     ; 25 (16)                   ; 0 (0)         ; 1616        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 38 (11)      ; 0 (0)             ; 25 (16)          ; |top_ov7670|config_camera:u2                                                                             ; config_camera   ; work         ;
-;       |altsyncram:message_rtl_0|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1616        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_ov7670|config_camera:u2|altsyncram:message_rtl_0                                                    ; altsyncram      ; work         ;
-;          |altsyncram_si81:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1616        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_ov7670|config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated                     ; altsyncram_si81 ; work         ;
+;       |altsyncram:cam_cfg_rtl_0|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1616        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_ov7670|config_camera:u2|altsyncram:cam_cfg_rtl_0                                                    ; altsyncram      ; work         ;
+;          |altsyncram_si81:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 1616        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_ov7670|config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated                     ; altsyncram_si81 ; work         ;
 ;       |i2c:config_camera|                 ; 36 (36)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 9 (9)            ; |top_ov7670|config_camera:u2|i2c:config_camera                                                           ; i2c             ; work         ;
-;    |sram:u3|                              ; 54 (0)      ; 54 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 33 (0)            ; 21 (0)           ; |top_ov7670|sram:u3                                                                                      ; sram            ; sram         ;
-;       |sram_sram_0:sram_0|                ; 54 (54)     ; 54 (54)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 33 (33)           ; 21 (21)          ; |top_ov7670|sram:u3|sram_sram_0:sram_0                                                                   ; sram_sram_0     ; sram         ;
+;    |sram:u3|                              ; 54 (0)      ; 54 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 32 (0)            ; 22 (0)           ; |top_ov7670|sram:u3                                                                                      ; sram            ; sram         ;
+;       |sram_sram_0:sram_0|                ; 54 (54)     ; 54 (54)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 32 (32)           ; 22 (22)          ; |top_ov7670|sram:u3|sram_sram_0:sram_0                                                                   ; sram_sram_0     ; sram         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1614,37 +1613,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_test[18]   ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led_g0         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; pin_sda        ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[0]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[1]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[2]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[3]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[4]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[5]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[6]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[0]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[1]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[2]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[3]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[4]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[5]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[6]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SRAM_DQ[7]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[8]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[8]     ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SRAM_DQ[9]     ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[10]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[11]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[12]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[13]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[14]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[14]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[15]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; pin_reset      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; pin_reset      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; clock_50mhz    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; bt_config      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; pin_start      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; PCLK_CAMERA    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; HREF_CAMERA    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DATA_CAMERA[3] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; VSYNC_CAMERA   ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DATA_CAMERA[3] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; VSYNC_CAMERA   ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; DATA_CAMERA[4] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DATA_CAMERA[5] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; DATA_CAMERA[5] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; DATA_CAMERA[6] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; DATA_CAMERA[7] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; DATA_CAMERA[7] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; DATA_CAMERA[0] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; DATA_CAMERA[1] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; DATA_CAMERA[2] ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; DATA_CAMERA[2] ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +----------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1655,23 +1654,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------+-------------------+---------+
 ; pin_sda                                                 ;                   ;         ;
 ; SRAM_DQ[0]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[0]           ; 1                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[0]           ; 0                 ; 6       ;
 ; SRAM_DQ[1]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[1]           ; 0                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[1]           ; 1                 ; 6       ;
 ; SRAM_DQ[2]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[2]           ; 1                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[2]           ; 0                 ; 6       ;
 ; SRAM_DQ[3]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[3]           ; 0                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[3]           ; 1                 ; 6       ;
 ; SRAM_DQ[4]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[4]           ; 0                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[4]           ; 1                 ; 6       ;
 ; SRAM_DQ[5]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[5]           ; 0                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[5]           ; 1                 ; 6       ;
 ; SRAM_DQ[6]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[6]           ; 0                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[6]           ; 1                 ; 6       ;
 ; SRAM_DQ[7]                                              ;                   ;         ;
 ;      - sram:u3|sram_sram_0:sram_0|readdata[7]           ; 1                 ; 6       ;
 ; SRAM_DQ[8]                                              ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[8]           ; 0                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[8]           ; 1                 ; 6       ;
 ; SRAM_DQ[9]                                              ;                   ;         ;
 ;      - sram:u3|sram_sram_0:sram_0|readdata[9]           ; 0                 ; 6       ;
 ; SRAM_DQ[10]                                             ;                   ;         ;
@@ -1683,63 +1682,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SRAM_DQ[13]                                             ;                   ;         ;
 ;      - sram:u3|sram_sram_0:sram_0|readdata[13]          ; 1                 ; 6       ;
 ; SRAM_DQ[14]                                             ;                   ;         ;
-;      - sram:u3|sram_sram_0:sram_0|readdata[14]          ; 1                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|readdata[14]          ; 0                 ; 6       ;
 ; SRAM_DQ[15]                                             ;                   ;         ;
 ;      - sram:u3|sram_sram_0:sram_0|readdata[15]          ; 0                 ; 6       ;
 ; pin_reset                                               ;                   ;         ;
-;      - config_camera:u2|i2c:config_camera|SD_COUNTER[2] ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SD_COUNTER[3] ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SD_COUNTER[0] ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SD_COUNTER[1] ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SD_COUNTER[4] ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SD_COUNTER[5] ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[5]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[6]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[7]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[8]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[9]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[10]                           ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[0]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[1]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[2]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[3]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[4]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[5]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[6]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[7]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[8]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[9]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|V_Cont[10]                           ; 1                 ; 6       ;
-;      - config_camera:u2|index[1]                        ; 1                 ; 6       ;
-;      - config_camera:u2|index[2]                        ; 1                 ; 6       ;
-;      - config_camera:u2|index[3]                        ; 1                 ; 6       ;
-;      - config_camera:u2|index[4]                        ; 1                 ; 6       ;
-;      - config_camera:u2|index[5]                        ; 1                 ; 6       ;
-;      - config_camera:u2|index[6]                        ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[4]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[0]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[1]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[2]                            ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|H_Cont[3]                            ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SCLK          ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|oVGA_HS                              ; 1                 ; 6       ;
-;      - VGA_Ctrl:u5|oVGA_VS                              ; 1                 ; 6       ;
-;      - config_camera:u2|i_GO                            ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|END           ; 1                 ; 6       ;
-;      - config_camera:u2|stt.00010                       ; 1                 ; 6       ;
-;      - config_camera:u2|stt.00001                       ; 1                 ; 6       ;
-;      - config_camera:u2|stt.00100                       ; 1                 ; 6       ;
-;      - config_camera:u2|stt.00011                       ; 1                 ; 6       ;
-;      - config_camera:u2|stt.00101                       ; 1                 ; 6       ;
-;      - config_camera:u2|stt.11111                       ; 1                 ; 6       ;
-;      - config_camera:u2|stt.00110                       ; 1                 ; 6       ;
-;      - Selector0~7                                      ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SDO           ; 1                 ; 6       ;
-;      - config_camera:u2|stt.00000                       ; 1                 ; 6       ;
-;      - config_camera:u2|index[0]                        ; 1                 ; 6       ;
-;      - sram:u3|sram_sram_0:sram_0|is_write~0            ; 1                 ; 6       ;
-;      - config_camera:u2|i2c:config_camera|SD[15]~0      ; 1                 ; 6       ;
-;      - config_camera:u2|i_i2c_data[0]~0                 ; 1                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SD_COUNTER[2] ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SD_COUNTER[3] ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SD_COUNTER[0] ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SD_COUNTER[1] ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SD_COUNTER[4] ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SD_COUNTER[5] ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[5]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[6]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[7]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[8]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[9]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[10]                           ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[0]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[1]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[2]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[3]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[4]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[5]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[6]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[7]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[8]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[9]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|V_Cont[10]                           ; 0                 ; 6       ;
+;      - config_camera:u2|index[1]                        ; 0                 ; 6       ;
+;      - config_camera:u2|index[2]                        ; 0                 ; 6       ;
+;      - config_camera:u2|index[3]                        ; 0                 ; 6       ;
+;      - config_camera:u2|index[4]                        ; 0                 ; 6       ;
+;      - config_camera:u2|index[5]                        ; 0                 ; 6       ;
+;      - config_camera:u2|index[6]                        ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[4]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[0]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[1]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[2]                            ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|H_Cont[3]                            ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SCLK          ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|oVGA_HS                              ; 0                 ; 6       ;
+;      - VGA_Ctrl:u5|oVGA_VS                              ; 0                 ; 6       ;
+;      - config_camera:u2|i_GO                            ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|END           ; 0                 ; 6       ;
+;      - config_camera:u2|stt.00010                       ; 0                 ; 6       ;
+;      - config_camera:u2|stt.00001                       ; 0                 ; 6       ;
+;      - config_camera:u2|stt.00100                       ; 0                 ; 6       ;
+;      - config_camera:u2|stt.00011                       ; 0                 ; 6       ;
+;      - config_camera:u2|stt.00101                       ; 0                 ; 6       ;
+;      - config_camera:u2|stt.11111                       ; 0                 ; 6       ;
+;      - config_camera:u2|stt.00110                       ; 0                 ; 6       ;
+;      - Selector0~7                                      ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SDO           ; 0                 ; 6       ;
+;      - config_camera:u2|stt.00000                       ; 0                 ; 6       ;
+;      - config_camera:u2|index[0]                        ; 0                 ; 6       ;
+;      - sram:u3|sram_sram_0:sram_0|is_write~0            ; 0                 ; 6       ;
+;      - config_camera:u2|i2c:config_camera|SD[15]~0      ; 0                 ; 6       ;
+;      - config_camera:u2|i_i2c_data[0]~0                 ; 0                 ; 6       ;
 ; clock_50mhz                                             ;                   ;         ;
 ; bt_config                                               ;                   ;         ;
 ;      - config_camera:u2|always0~0                       ; 1                 ; 6       ;
@@ -1798,31 +1797,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - camera_read:u4|pixel_data[5]~1                   ; 0                 ; 6       ;
 ;      - camera_read:u4|pixel_data[11]~2                  ; 0                 ; 6       ;
 ; DATA_CAMERA[3]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[11]                    ; 0                 ; 6       ;
-;      - camera_read:u4|pixel_data[3]~feeder              ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[11]~feeder             ; 1                 ; 6       ;
+;      - camera_read:u4|pixel_data[3]~feeder              ; 1                 ; 6       ;
 ; VSYNC_CAMERA                                            ;                   ;         ;
-;      - camera_read:u4|FSM_state.ROW_CAPTURE~0           ; 0                 ; 6       ;
+;      - camera_read:u4|FSM_state.ROW_CAPTURE~0           ; 1                 ; 6       ;
 ; DATA_CAMERA[4]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[12]~feeder             ; 0                 ; 6       ;
-;      - camera_read:u4|pixel_data[4]~feeder              ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[12]                    ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[4]                     ; 0                 ; 6       ;
 ; DATA_CAMERA[5]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[13]~feeder             ; 1                 ; 6       ;
-;      - camera_read:u4|pixel_data[5]~feeder              ; 1                 ; 6       ;
+;      - camera_read:u4|pixel_data[13]~feeder             ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[5]~feeder              ; 0                 ; 6       ;
 ; DATA_CAMERA[6]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[14]                    ; 1                 ; 6       ;
 ;      - camera_read:u4|pixel_data[6]                     ; 1                 ; 6       ;
+;      - camera_read:u4|pixel_data[14]~feeder             ; 1                 ; 6       ;
 ; DATA_CAMERA[7]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[15]~feeder             ; 0                 ; 6       ;
-;      - camera_read:u4|pixel_data[7]~feeder              ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[7]~feeder              ; 1                 ; 6       ;
+;      - camera_read:u4|pixel_data[15]~feeder             ; 1                 ; 6       ;
 ; DATA_CAMERA[0]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[8]~feeder              ; 0                 ; 6       ;
 ;      - camera_read:u4|pixel_data[0]~feeder              ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[8]~feeder              ; 0                 ; 6       ;
 ; DATA_CAMERA[1]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[9]~feeder              ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[9]                     ; 0                 ; 6       ;
 ;      - camera_read:u4|pixel_data[1]~feeder              ; 0                 ; 6       ;
 ; DATA_CAMERA[2]                                          ;                   ;         ;
-;      - camera_read:u4|pixel_data[10]~feeder             ; 1                 ; 6       ;
-;      - camera_read:u4|pixel_data[2]~feeder              ; 1                 ; 6       ;
+;      - camera_read:u4|pixel_data[10]                    ; 0                 ; 6       ;
+;      - camera_read:u4|pixel_data[2]~feeder              ; 0                 ; 6       ;
 +---------------------------------------------------------+-------------------+---------+
 
 
@@ -1833,50 +1832,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------+---------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 ; PCLK_CAMERA                                                                                                    ; PIN_AE15            ; 38      ; Clock         ; no     ; --                   ; --               ; --                        ;
 ; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0]                                      ; PLL_1               ; 218     ; Clock         ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2]                                      ; PLL_1               ; 13      ; Clock         ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3]                                      ; PLL_1               ; 27      ; Clock         ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1035w[3]       ; LCCOMB_X55_Y34_N8   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1052w[3]       ; LCCOMB_X55_Y34_N30  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1062w[3]       ; LCCOMB_X55_Y34_N24  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1072w[3]       ; LCCOMB_X55_Y34_N22  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1082w[3]       ; LCCOMB_X55_Y34_N0   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1092w[3]       ; LCCOMB_X55_Y34_N16  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1102w[3]       ; LCCOMB_X55_Y34_N20  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1112w[3]       ; LCCOMB_X55_Y34_N2   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1131w[3]~0     ; LCCOMB_X55_Y34_N6   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1142w[3]~0     ; LCCOMB_X56_Y34_N10  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1217w[3]   ; LCCOMB_X56_Y34_N14  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1234w[3]~0 ; LCCOMB_X56_Y34_N20  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1244w[3]~0 ; LCCOMB_X56_Y34_N6   ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1254w[3]~0 ; LCCOMB_X56_Y34_N12  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1264w[3]~0 ; LCCOMB_X56_Y34_N2   ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1274w[3]~0 ; LCCOMB_X56_Y34_N16  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1284w[3]~0 ; LCCOMB_X56_Y34_N22  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1294w[3]~0 ; LCCOMB_X56_Y34_N24  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1304w[3]~0 ; LCCOMB_X56_Y34_N0   ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1315w[3]~0 ; LCCOMB_X56_Y34_N8   ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u5|LessThan2~1                                                                                        ; LCCOMB_X56_Y30_N14  ; 11      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u5|LessThan3~1                                                                                        ; LCCOMB_X60_Y32_N26  ; 11      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; VGA_Ctrl:u5|oVGA_HS                                                                                            ; FF_X57_Y30_N31      ; 12      ; Clock         ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; address_ram[12]~5                                                                                              ; LCCOMB_X59_Y31_N4   ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; address_ram~9                                                                                                  ; LCCOMB_X59_Y31_N2   ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; address_sram[7]~5                                                                                              ; LCCOMB_X57_Y31_N6   ; 19      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; address_sram~24                                                                                                ; LCCOMB_X59_Y29_N18  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; camera_read:u4|FSM_state.ROW_CAPTURE                                                                           ; FF_X58_Y28_N3       ; 24      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
-; camera_read:u4|pixel_data[11]~0                                                                                ; LCCOMB_X59_Y28_N4   ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; camera_read:u4|pixel_data[5]~1                                                                                 ; LCCOMB_X59_Y28_N16  ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; camera_read:u4|wraddr[18]~21                                                                                   ; LCCOMB_X58_Y28_N12  ; 19      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2]                                      ; PLL_1               ; 14      ; Clock         ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3]                                      ; PLL_1               ; 27      ; Clock         ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1035w[3]       ; LCCOMB_X49_Y31_N30  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1052w[3]       ; LCCOMB_X49_Y31_N24  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1062w[3]       ; LCCOMB_X49_Y31_N2   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1072w[3]       ; LCCOMB_X49_Y31_N0   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1082w[3]       ; LCCOMB_X49_Y31_N6   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1092w[3]       ; LCCOMB_X49_Y31_N18  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1102w[3]       ; LCCOMB_X49_Y31_N10  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1112w[3]       ; LCCOMB_X49_Y31_N4   ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1131w[3]~0     ; LCCOMB_X50_Y31_N18  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3|w_anode1142w[3]~0     ; LCCOMB_X50_Y31_N30  ; 16      ; Write enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1217w[3]   ; LCCOMB_X50_Y31_N6   ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1234w[3]~0 ; LCCOMB_X50_Y31_N20  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1244w[3]~0 ; LCCOMB_X50_Y31_N10  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1254w[3]~0 ; LCCOMB_X50_Y31_N16  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1264w[3]~0 ; LCCOMB_X50_Y31_N14  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1274w[3]~0 ; LCCOMB_X50_Y31_N24  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1284w[3]~0 ; LCCOMB_X50_Y31_N26  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1294w[3]~0 ; LCCOMB_X50_Y31_N0   ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1304w[3]~0 ; LCCOMB_X50_Y31_N28  ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode|w_anode1315w[3]~0 ; LCCOMB_X50_Y31_N4   ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u5|LessThan2~1                                                                                        ; LCCOMB_X56_Y30_N0   ; 11      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u5|LessThan3~1                                                                                        ; LCCOMB_X56_Y31_N30  ; 11      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; VGA_Ctrl:u5|oVGA_HS                                                                                            ; FF_X56_Y30_N29      ; 12      ; Clock         ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; address_ram[12]~5                                                                                              ; LCCOMB_X58_Y31_N14  ; 17      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; address_ram~9                                                                                                  ; LCCOMB_X58_Y29_N6   ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; address_sram[7]~5                                                                                              ; LCCOMB_X54_Y31_N28  ; 19      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; address_sram~24                                                                                                ; LCCOMB_X58_Y31_N16  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; camera_read:u4|FSM_state.ROW_CAPTURE                                                                           ; FF_X59_Y30_N31      ; 24      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
+; camera_read:u4|pixel_data[11]~0                                                                                ; LCCOMB_X60_Y29_N12  ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; camera_read:u4|pixel_data[5]~1                                                                                 ; LCCOMB_X60_Y30_N12  ; 8       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; camera_read:u4|wraddr[18]~21                                                                                   ; LCCOMB_X59_Y30_N20  ; 19      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
 ; clock_50mhz                                                                                                    ; PIN_Y2              ; 2       ; Clock         ; no     ; --                   ; --               ; --                        ;
 ; clock_50mhz                                                                                                    ; PIN_Y2              ; 76      ; Clock         ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; config_camera:u2|i2c:config_camera|SD[15]~1                                                                    ; LCCOMB_X107_Y36_N20 ; 1       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; config_camera:u2|i2c:config_camera|SD_COUNTER[0]~17                                                            ; LCCOMB_X108_Y36_N16 ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; config_camera:u2|i_GO                                                                                          ; FF_X106_Y36_N25     ; 8       ; Sync. load    ; no     ; --                   ; --               ; --                        ;
-; config_camera:u2|i_i2c_data[0]~0                                                                               ; LCCOMB_X105_Y36_N28 ; 1       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; config_camera:u2|index[6]~6                                                                                    ; LCCOMB_X105_Y36_N0  ; 7       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; config_camera:u2|i2c:config_camera|SD[15]~1                                                                    ; LCCOMB_X105_Y36_N30 ; 1       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; config_camera:u2|i2c:config_camera|SD_COUNTER[0]~17                                                            ; LCCOMB_X106_Y36_N16 ; 6       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; config_camera:u2|i_GO                                                                                          ; FF_X107_Y36_N21     ; 8       ; Sync. load    ; no     ; --                   ; --               ; --                        ;
+; config_camera:u2|i_i2c_data[0]~0                                                                               ; LCCOMB_X108_Y36_N14 ; 1       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; config_camera:u2|index[6]~6                                                                                    ; LCCOMB_X107_Y36_N26 ; 7       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
 ; pin_reset                                                                                                      ; PIN_M23             ; 53      ; Async. clear  ; no     ; --                   ; --               ; --                        ;
-; slectMemory[0]~0                                                                                               ; LCCOMB_X57_Y27_N30  ; 4       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
-; sram:u3|sram_sram_0:sram_0|is_write                                                                            ; FF_X57_Y30_N29      ; 16      ; Output enable ; no     ; --                   ; --               ; --                        ;
-; write_ram                                                                                                      ; FF_X55_Y34_N29      ; 27      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slectMemory[0]~0                                                                                               ; LCCOMB_X58_Y30_N30  ; 4       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; sram:u3|sram_sram_0:sram_0|is_write                                                                            ; FF_X48_Y28_N29      ; 16      ; Output enable ; no     ; --                   ; --               ; --                        ;
+; write_ram                                                                                                      ; FF_X49_Y31_N15      ; 27      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------------------------------------------------------+---------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1886,33 +1885,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                      ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1          ; 218     ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[1] ; PLL_1          ; 1       ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2] ; PLL_1          ; 13      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3] ; PLL_1          ; 27      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; VGA_Ctrl:u5|oVGA_HS                                                       ; FF_X57_Y30_N31 ; 12      ; 3                                    ; Global Clock         ; GCLK11           ; --                        ;
+; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2] ; PLL_1          ; 14      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3] ; PLL_1          ; 27      ; 0                                    ; Global Clock         ; GCLK1            ; --                        ;
+; VGA_Ctrl:u5|oVGA_HS                                                       ; FF_X56_Y30_N29 ; 12      ; 4                                    ; Global Clock         ; GCLK10           ; --                        ;
 ; clock_50mhz                                                               ; PIN_Y2         ; 76      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
 +---------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
-+-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+---------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; Name                                                                                ; Type ; Mode        ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size    ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                                               ; Location                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
-+-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+---------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|ALTSYNCRAM    ; AUTO ; Single Port ; Single Clock ; 80000        ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 1280000 ; 80000                       ; 16                          ; --                          ; --                          ; 1280000             ; 160  ; None                                              ; M9K_X51_Y41_N0, M9K_X37_Y41_N0, M9K_X51_Y36_N0, M9K_X51_Y51_N0, M9K_X37_Y39_N0, M9K_X37_Y25_N0, M9K_X51_Y42_N0, M9K_X51_Y40_N0, M9K_X37_Y43_N0, M9K_X51_Y53_N0, M9K_X51_Y27_N0, M9K_X78_Y47_N0, M9K_X64_Y30_N0, M9K_X37_Y33_N0, M9K_X78_Y28_N0, M9K_X78_Y50_N0, M9K_X78_Y45_N0, M9K_X51_Y47_N0, M9K_X37_Y44_N0, M9K_X51_Y39_N0, M9K_X37_Y23_N0, M9K_X51_Y14_N0, M9K_X51_Y17_N0, M9K_X51_Y16_N0, M9K_X37_Y28_N0, M9K_X37_Y20_N0, M9K_X51_Y28_N0, M9K_X51_Y24_N0, M9K_X37_Y16_N0, M9K_X37_Y31_N0, M9K_X64_Y44_N0, M9K_X37_Y22_N0, M9K_X64_Y36_N0, M9K_X51_Y54_N0, M9K_X78_Y38_N0, M9K_X78_Y53_N0, M9K_X78_Y36_N0, M9K_X64_Y39_N0, M9K_X37_Y26_N0, M9K_X51_Y55_N0, M9K_X64_Y52_N0, M9K_X37_Y18_N0, M9K_X64_Y35_N0, M9K_X37_Y40_N0, M9K_X78_Y40_N0, M9K_X78_Y52_N0, M9K_X64_Y41_N0, M9K_X64_Y47_N0, M9K_X37_Y19_N0, M9K_X51_Y52_N0, M9K_X64_Y51_N0, M9K_X78_Y41_N0, M9K_X64_Y34_N0, M9K_X64_Y42_N0, M9K_X64_Y38_N0, M9K_X78_Y49_N0, M9K_X78_Y33_N0, M9K_X78_Y35_N0, M9K_X37_Y45_N0, M9K_X51_Y49_N0, M9K_X64_Y46_N0, M9K_X78_Y17_N0, M9K_X64_Y26_N0, M9K_X64_Y37_N0, M9K_X64_Y40_N0, M9K_X78_Y48_N0, M9K_X78_Y37_N0, M9K_X78_Y34_N0, M9K_X51_Y12_N0, M9K_X51_Y46_N0, M9K_X64_Y48_N0, M9K_X78_Y43_N0, M9K_X64_Y29_N0, M9K_X64_Y45_N0, M9K_X78_Y32_N0, M9K_X78_Y51_N0, M9K_X64_Y33_N0, M9K_X78_Y39_N0, M9K_X78_Y24_N0, M9K_X64_Y53_N0, M9K_X51_Y25_N0, M9K_X64_Y15_N0, M9K_X51_Y22_N0, M9K_X51_Y20_N0, M9K_X78_Y26_N0, M9K_X78_Y22_N0, M9K_X51_Y32_N0, M9K_X51_Y33_N0, M9K_X78_Y44_N0, M9K_X51_Y45_N0, M9K_X64_Y21_N0, M9K_X78_Y23_N0, M9K_X51_Y19_N0, M9K_X64_Y16_N0, M9K_X64_Y25_N0, M9K_X78_Y21_N0, M9K_X64_Y31_N0, M9K_X64_Y27_N0, M9K_X78_Y16_N0, M9K_X51_Y31_N0, M9K_X64_Y23_N0, M9K_X78_Y18_N0, M9K_X64_Y17_N0, M9K_X64_Y20_N0, M9K_X78_Y25_N0, M9K_X78_Y19_N0, M9K_X64_Y28_N0, M9K_X64_Y24_N0, M9K_X37_Y17_N0, M9K_X37_Y34_N0, M9K_X64_Y32_N0, M9K_X78_Y20_N0, M9K_X51_Y15_N0, M9K_X51_Y23_N0, M9K_X78_Y31_N0, M9K_X78_Y27_N0, M9K_X78_Y29_N0, M9K_X78_Y30_N0, M9K_X64_Y12_N0, M9K_X51_Y30_N0, M9K_X37_Y36_N0, M9K_X37_Y47_N0, M9K_X51_Y34_N0, M9K_X37_Y35_N0, M9K_X37_Y37_N0, M9K_X37_Y49_N0, M9K_X51_Y44_N0, M9K_X51_Y48_N0, M9K_X37_Y46_N0, M9K_X37_Y48_N0, M9K_X64_Y50_N0, M9K_X37_Y42_N0, M9K_X51_Y35_N0, M9K_X64_Y54_N0, M9K_X51_Y38_N0, M9K_X64_Y55_N0, M9K_X78_Y42_N0, M9K_X64_Y49_N0, M9K_X37_Y27_N0, M9K_X37_Y32_N0, M9K_X51_Y21_N0, M9K_X51_Y13_N0, M9K_X64_Y18_N0, M9K_X51_Y18_N0, M9K_X37_Y29_N0, M9K_X64_Y19_N0, M9K_X51_Y29_N0, M9K_X51_Y26_N0, M9K_X64_Y14_N0, M9K_X37_Y30_N0, M9K_X51_Y50_N0, M9K_X78_Y46_N0, M9K_X64_Y22_N0, M9K_X51_Y37_N0, M9K_X37_Y38_N0, M9K_X37_Y21_N0, M9K_X64_Y43_N0, M9K_X51_Y43_N0, M9K_X37_Y24_N0, M9K_X37_Y50_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; Single Clock ; 101          ; 16           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 1616    ; 101                         ; 16                          ; --                          ; --                          ; 1616                ; 1    ; db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ; M9K_X104_Y36_N0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-+-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+---------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+---------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; Name                                                                                ; Type ; Mode        ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size    ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                                               ; Location                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
++-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+---------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
+; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|ALTSYNCRAM    ; AUTO ; Single Port ; Single Clock ; 80000        ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 1280000 ; 80000                       ; 16                          ; --                          ; --                          ; 1280000             ; 160  ; None                                              ; M9K_X64_Y50_N0, M9K_X37_Y28_N0, M9K_X37_Y47_N0, M9K_X51_Y51_N0, M9K_X37_Y37_N0, M9K_X37_Y31_N0, M9K_X15_Y32_N0, M9K_X37_Y29_N0, M9K_X15_Y30_N0, M9K_X37_Y43_N0, M9K_X78_Y37_N0, M9K_X78_Y30_N0, M9K_X64_Y41_N0, M9K_X51_Y42_N0, M9K_X78_Y25_N0, M9K_X37_Y30_N0, M9K_X78_Y18_N0, M9K_X64_Y15_N0, M9K_X37_Y14_N0, M9K_X37_Y13_N0, M9K_X64_Y49_N0, M9K_X78_Y32_N0, M9K_X78_Y45_N0, M9K_X78_Y34_N0, M9K_X64_Y34_N0, M9K_X64_Y27_N0, M9K_X78_Y43_N0, M9K_X64_Y30_N0, M9K_X78_Y26_N0, M9K_X78_Y24_N0, M9K_X64_Y44_N0, M9K_X37_Y32_N0, M9K_X64_Y43_N0, M9K_X51_Y44_N0, M9K_X51_Y40_N0, M9K_X51_Y36_N0, M9K_X37_Y44_N0, M9K_X37_Y33_N0, M9K_X37_Y19_N0, M9K_X37_Y18_N0, M9K_X37_Y48_N0, M9K_X37_Y27_N0, M9K_X64_Y47_N0, M9K_X51_Y48_N0, M9K_X37_Y39_N0, M9K_X37_Y36_N0, M9K_X37_Y24_N0, M9K_X15_Y31_N0, M9K_X15_Y35_N0, M9K_X37_Y42_N0, M9K_X37_Y49_N0, M9K_X37_Y35_N0, M9K_X37_Y22_N0, M9K_X51_Y49_N0, M9K_X51_Y39_N0, M9K_X37_Y34_N0, M9K_X37_Y41_N0, M9K_X51_Y21_N0, M9K_X37_Y40_N0, M9K_X37_Y21_N0, M9K_X64_Y10_N0, M9K_X51_Y34_N0, M9K_X64_Y40_N0, M9K_X51_Y41_N0, M9K_X64_Y36_N0, M9K_X64_Y32_N0, M9K_X64_Y18_N0, M9K_X51_Y15_N0, M9K_X51_Y10_N0, M9K_X78_Y17_N0, M9K_X78_Y38_N0, M9K_X51_Y31_N0, M9K_X37_Y23_N0, M9K_X51_Y28_N0, M9K_X78_Y27_N0, M9K_X51_Y25_N0, M9K_X78_Y19_N0, M9K_X51_Y20_N0, M9K_X78_Y36_N0, M9K_X78_Y40_N0, M9K_X78_Y16_N0, M9K_X51_Y26_N0, M9K_X78_Y21_N0, M9K_X51_Y29_N0, M9K_X37_Y26_N0, M9K_X51_Y27_N0, M9K_X15_Y28_N0, M9K_X51_Y19_N0, M9K_X64_Y16_N0, M9K_X51_Y14_N0, M9K_X78_Y41_N0, M9K_X78_Y31_N0, M9K_X51_Y46_N0, M9K_X78_Y33_N0, M9K_X78_Y35_N0, M9K_X64_Y35_N0, M9K_X78_Y44_N0, M9K_X64_Y33_N0, M9K_X78_Y39_N0, M9K_X78_Y42_N0, M9K_X64_Y11_N0, M9K_X51_Y22_N0, M9K_X64_Y45_N0, M9K_X51_Y45_N0, M9K_X64_Y39_N0, M9K_X64_Y24_N0, M9K_X37_Y46_N0, M9K_X51_Y17_N0, M9K_X64_Y13_N0, M9K_X51_Y13_N0, M9K_X51_Y12_N0, M9K_X78_Y23_N0, M9K_X78_Y22_N0, M9K_X78_Y29_N0, M9K_X64_Y25_N0, M9K_X37_Y25_N0, M9K_X78_Y20_N0, M9K_X51_Y18_N0, M9K_X37_Y16_N0, M9K_X78_Y15_N0, M9K_X64_Y12_N0, M9K_X51_Y23_N0, M9K_X64_Y23_N0, M9K_X64_Y28_N0, M9K_X64_Y26_N0, M9K_X51_Y24_N0, M9K_X64_Y19_N0, M9K_X51_Y16_N0, M9K_X37_Y12_N0, M9K_X64_Y14_N0, M9K_X51_Y9_N0, M9K_X64_Y20_N0, M9K_X64_Y21_N0, M9K_X78_Y28_N0, M9K_X51_Y30_N0, M9K_X51_Y32_N0, M9K_X64_Y22_N0, M9K_X64_Y29_N0, M9K_X51_Y11_N0, M9K_X64_Y17_N0, M9K_X64_Y48_N0, M9K_X51_Y35_N0, M9K_X37_Y45_N0, M9K_X51_Y47_N0, M9K_X51_Y38_N0, M9K_X51_Y37_N0, M9K_X51_Y43_N0, M9K_X51_Y33_N0, M9K_X37_Y38_N0, M9K_X64_Y42_N0, M9K_X37_Y50_N0, M9K_X64_Y31_N0, M9K_X64_Y46_N0, M9K_X51_Y50_N0, M9K_X64_Y38_N0, M9K_X64_Y37_N0, M9K_X37_Y20_N0, M9K_X37_Y17_N0, M9K_X37_Y11_N0, M9K_X37_Y15_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; Single Clock ; 101          ; 16           ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 1616    ; 101                         ; 16                          ; --                          ; --                          ; 1616                ; 1    ; db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ; M9K_X104_Y36_N0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
++-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+---------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
 RAM content values are presented in the following format: (Binary) (Octal) (Decimal) (Hexadecimal) 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; |top_ov7670|config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM                                                                                                                                                                  ;
+; |top_ov7670|config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM                                                                                                                                                                  ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
 ;0;(0001001010000000) (11200) (4736) (1280)    ;(1111111111110000) (177760) (65520) (FFF0)   ;(0001001000010100) (11024) (4628) (1214)   ;(0001000110000000) (10600) (4480) (1180)   ;(0000110000000000) (6000) (3072) (C00)   ;(0011111000000001) (37001) (15873) (3E01)   ;(0000010000000000) (2000) (1024) (400)   ;(0100000011010000) (40320) (16592) (40D0)   ;
-;8;(0011101000000100) (35004) (14852) (3A04)    ;(0001010000011000) (12030) (5144) (1418)   ;(0100111110110011) (47663) (20403) (4FB3)   ;(0101000010110011) (50263) (20659) (50B3)   ;(0101000100000000) (50400) (20736) (5100)   ;(0101001000111101) (51075) (21053) (523D)   ;(0101001110100111) (51647) (21415) (53A7)   ;(0101010011100100) (52344) (21732) (54E4)   ;
+;8;(0011101000000100) (35004) (14852) (3A04)    ;(0001010000011000) (12030) (5144) (1418)   ;(0100111110000000) (47600) (20352) (4F80)   ;(0101000010000000) (50200) (20608) (5080)   ;(0101000100000000) (50400) (20736) (5100)   ;(0101001000100010) (51042) (21026) (5222)   ;(0101001101011110) (51536) (21342) (535E)   ;(0101010010000000) (52200) (21632) (5480)   ;
 ;16;(0101100010011110) (54236) (22686) (589E)    ;(0011110111000000) (36700) (15808) (3DC0)   ;(0001011100010100) (13424) (5908) (1714)   ;(0001100000000010) (14002) (6146) (1802)   ;(0011001010000000) (31200) (12928) (3280)   ;(0001100100000011) (14403) (6403) (1903)   ;(0001101001111011) (15173) (6779) (1A7B)   ;(0000001100001010) (1412) (778) (30A)   ;
 ;24;(0000111101000001) (7501) (3905) (F41)    ;(0001111000110000) (17060) (7728) (1E30)   ;(0011001100001011) (31413) (13067) (330B)   ;(0011110001111000) (36170) (15480) (3C78)   ;(0110100100000000) (64400) (26880) (6900)   ;(0111010000000000) (72000) (29696) (7400)   ;(1011000010000100) (130204) (45188) (B084)   ;(1011000100001100) (130414) (45324) (B10C)   ;
 ;32;(1011001000001110) (131016) (45582) (B20E)    ;(1011001110000000) (131600) (45952) (B380)   ;(0111000000111010) (70072) (28730) (703A)   ;(0111000100110101) (70465) (28981) (7135)   ;(0111001000010001) (71021) (29201) (7211)   ;(0111001111110000) (71760) (29680) (73F0)   ;(1010001000000010) (121002) (41474) (A202)   ;(0111101000100000) (75040) (31264) (7A20)   ;
@@ -1931,51 +1929,51 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+---------------------------+
 ; Routing Resource Type ; Usage                     ;
 +-----------------------+---------------------------+
-; Block interconnects   ; 3,321 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 483 / 10,120 ( 5 % )      ;
-; C4 interconnects      ; 2,242 / 209,544 ( 1 % )   ;
-; Direct links          ; 132 / 342,891 ( < 1 % )   ;
-; Global clocks         ; 6 / 20 ( 30 % )           ;
-; Local interconnects   ; 247 / 119,088 ( < 1 % )   ;
-; R24 interconnects     ; 446 / 9,963 ( 4 % )       ;
-; R4 interconnects      ; 2,329 / 289,782 ( < 1 % ) ;
+; Block interconnects   ; 3,327 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 473 / 10,120 ( 5 % )      ;
+; C4 interconnects      ; 2,173 / 209,544 ( 1 % )   ;
+; Direct links          ; 107 / 342,891 ( < 1 % )   ;
+; Global clocks         ; 5 / 20 ( 25 % )           ;
+; Local interconnects   ; 266 / 119,088 ( < 1 % )   ;
+; R24 interconnects     ; 493 / 9,963 ( 5 % )       ;
+; R4 interconnects      ; 2,595 / 289,782 ( < 1 % ) ;
 +-----------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.08) ; Number of LABs  (Total = 39) ;
+; Number of Logic Elements  (Average = 12.75) ; Number of LABs  (Total = 40) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 0                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 2                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
+; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 0                            ;
 ; 11                                          ; 1                            ;
-; 12                                          ; 3                            ;
+; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 6                            ;
-; 16                                          ; 19                           ;
+; 14                                          ; 2                            ;
+; 15                                          ; 4                            ;
+; 16                                          ; 22                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.21) ; Number of LABs  (Total = 39) ;
+; LAB-wide Signals  (Average = 1.23) ; Number of LABs  (Total = 40) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 5                            ;
-; 1 Clock                            ; 19                           ;
-; 1 Clock enable                     ; 10                           ;
-; 1 Sync. clear                      ; 2                            ;
-; 2 Clock enables                    ; 3                            ;
+; 1 Async. clear                     ; 7                            ;
+; 1 Clock                            ; 20                           ;
+; 1 Clock enable                     ; 12                           ;
+; 1 Sync. clear                      ; 1                            ;
+; 1 Sync. load                       ; 1                            ;
 ; 2 Clocks                           ; 8                            ;
 +------------------------------------+------------------------------+
 
@@ -1983,37 +1981,37 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.51) ; Number of LABs  (Total = 39) ;
+; Number of Signals Sourced  (Average = 18.10) ; Number of LABs  (Total = 40) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
+; 1                                            ; 2                            ;
 ; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 3                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 2                            ;
+; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 2                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 3                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 6                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 3                            ;
+; 16                                           ; 4                            ;
+; 17                                           ; 3                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 1                            ;
 ; 20                                           ; 2                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 0                            ;
+; 21                                           ; 2                            ;
+; 22                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 3                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 4                            ;
-; 28                                           ; 2                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 4                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 1                            ;
 ; 31                                           ; 1                            ;
@@ -2024,25 +2022,25 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.97) ; Number of LABs  (Total = 39) ;
+; Number of Signals Sourced Out  (Average = 8.53) ; Number of LABs  (Total = 40) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 1                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 6                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 3                            ;
 ; 4                                               ; 3                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 3                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 2                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 5                            ;
+; 5                                               ; 4                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 6                            ;
+; 9                                               ; 4                            ;
+; 10                                              ; 1                            ;
+; 11                                              ; 1                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 1                            ;
 ; 14                                              ; 0                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 6                            ;
+; 15                                              ; 2                            ;
+; 16                                              ; 4                            ;
 ; 17                                              ; 3                            ;
 +-------------------------------------------------+------------------------------+
 
@@ -2050,43 +2048,44 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 15.59) ; Number of LABs  (Total = 39) ;
+; Number of Distinct Inputs  (Average = 16.02) ; Number of LABs  (Total = 40) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 1                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 4                            ;
+; 3                                            ; 3                            ;
+; 4                                            ; 3                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 4                            ;
+; 6                                            ; 3                            ;
 ; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 2                            ;
 ; 11                                           ; 2                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 3                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 2                            ;
+; 12                                           ; 4                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 0                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 4                            ;
-; 27                                           ; 0                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 3                            ;
+; 27                                           ; 1                            ;
 ; 28                                           ; 3                            ;
 ; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 2                            ;
+; 32                                           ; 1                            ;
 ; 33                                           ; 0                            ;
-; 34                                           ; 1                            ;
+; 34                                           ; 0                            ;
+; 35                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2303,10 +2302,10 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +------------------------------------------------+----------------------------------------------------------------+-------------------+
 ; Source Clock(s)                                ; Destination Clock(s)                                           ; Delay Added in ns ;
 +------------------------------------------------+----------------------------------------------------------------+-------------------+
-; u1|altpll_component|auto_generated|pll1|clk[2] ; clock_50mhz                                                    ; 100.8             ;
-; PCLK_CAMERA                                    ; clock_50mhz                                                    ; 9.0               ;
-; u1|altpll_component|auto_generated|pll1|clk[2] ; clock_50mhz,I/O                                                ; 5.4               ;
-; u1|altpll_component|auto_generated|pll1|clk[2] ; clock_50mhz,u1|altpll_component|auto_generated|pll1|clk[2],I/O ; 3.7               ;
+; u1|altpll_component|auto_generated|pll1|clk[2] ; clock_50mhz                                                    ; 92.1              ;
+; PCLK_CAMERA                                    ; clock_50mhz                                                    ; 7.8               ;
+; u1|altpll_component|auto_generated|pll1|clk[2] ; clock_50mhz,I/O                                                ; 6.2               ;
+; u1|altpll_component|auto_generated|pll1|clk[2] ; clock_50mhz,u1|altpll_component|auto_generated|pll1|clk[2],I/O ; 4.1               ;
 +------------------------------------------------+----------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
@@ -2317,69 +2316,48 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------+----------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register               ; Destination Register                                                                                     ; Delay Added in ns ;
 +-------------------------------+----------------------------------------------------------------------------------------------------------+-------------------+
-; VGA_Ctrl:u5|H_Cont[4]         ; address_sram[4]                                                                                          ; 4.796             ;
-; VGA_Ctrl:u5|H_Cont[3]         ; address_sram[3]                                                                                          ; 4.796             ;
-; VGA_Ctrl:u5|H_Cont[1]         ; address_sram[1]                                                                                          ; 4.788             ;
-; VGA_Ctrl:u5|H_Cont[2]         ; address_sram[2]                                                                                          ; 4.766             ;
-; VGA_Ctrl:u5|H_Cont[0]         ; address_sram[0]                                                                                          ; 4.638             ;
-; VGA_Ctrl:u5|H_Cont[5]         ; address_sram[5]                                                                                          ; 4.145             ;
-; VGA_Ctrl:u5|H_Cont[6]         ; address_sram[5]                                                                                          ; 4.087             ;
-; VGA_Ctrl:u5|H_Cont[10]        ; stt_vga[0]                                                                                               ; 3.924             ;
-; VGA_Ctrl:u5|H_Cont[7]         ; address_sram[5]                                                                                          ; 3.909             ;
-; VGA_Ctrl:u5|H_Cont[8]         ; address_sram[5]                                                                                          ; 3.814             ;
-; VGA_Ctrl:u5|H_Cont[9]         ; address_sram[5]                                                                                          ; 3.806             ;
-; camera_read:u4|pixel_data[3]  ; data_ram[3]                                                                                              ; 0.479             ;
-; camera_read:u4|pixel_data[1]  ; writedata_sram[1]                                                                                        ; 0.386             ;
-; camera_read:u4|pixel_data[10] ; writedata_sram[10]                                                                                       ; 0.386             ;
-; camera_read:u4|pixel_data[8]  ; writedata_sram[8]                                                                                        ; 0.386             ;
-; camera_read:u4|pixel_data[14] ; writedata_sram[14]                                                                                       ; 0.386             ;
-; camera_read:u4|pixel_data[11] ; writedata_sram[11]                                                                                       ; 0.386             ;
-; camera_read:u4|frame_done     ; FMS.100                                                                                                  ; 0.381             ;
-; FMS.011                       ; FMS.100                                                                                                  ; 0.381             ;
-; FMS.100                       ; FMS.100                                                                                                  ; 0.381             ;
-; camera_read:u4|wraddr[5]      ; address_sram[5]                                                                                          ; 0.370             ;
-; camera_read:u4|wraddr[1]      ; address_ram[1]                                                                                           ; 0.330             ;
-; camera_read:u4|wraddr[6]      ; address_ram[6]                                                                                           ; 0.318             ;
-; camera_read:u4|wraddr[2]      ; address_ram[2]                                                                                           ; 0.316             ;
-; camera_read:u4|wraddr[4]      ; address_ram[4]                                                                                           ; 0.284             ;
-; camera_read:u4|wraddr[3]      ; address_ram[3]                                                                                           ; 0.284             ;
-; config_camera:u2|index[1]     ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.267             ;
-; config_camera:u2|index[6]     ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.266             ;
-; config_camera:u2|index[4]     ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.266             ;
-; config_camera:u2|index[3]     ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.266             ;
-; config_camera:u2|index[2]     ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.266             ;
-; config_camera:u2|index[5]     ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.266             ;
-; camera_read:u4|wraddr[17]     ; FMS.011                                                                                                  ; 0.249             ;
-; camera_read:u4|wraddr[8]      ; address_sram[8]                                                                                          ; 0.209             ;
-; camera_read:u4|wraddr[10]     ; address_ram[10]                                                                                          ; 0.185             ;
-; camera_read:u4|wraddr[11]     ; address_ram[11]                                                                                          ; 0.185             ;
-; camera_read:u4|wraddr[0]      ; address_ram[0]                                                                                           ; 0.147             ;
-; camera_read:u4|pixel_data[2]  ; data_ram[2]                                                                                              ; 0.144             ;
-; camera_read:u4|wraddr[12]     ; address_ram[12]                                                                                          ; 0.141             ;
-; camera_read:u4|pixel_data[6]  ; data_ram[6]                                                                                              ; 0.137             ;
-; camera_read:u4|pixel_data[4]  ; data_ram[4]                                                                                              ; 0.134             ;
-; camera_read:u4|pixel_data[0]  ; data_ram[0]                                                                                              ; 0.134             ;
-; camera_read:u4|pixel_data[9]  ; data_ram[9]                                                                                              ; 0.134             ;
-; camera_read:u4|pixel_data[15] ; data_ram[15]                                                                                             ; 0.134             ;
-; camera_read:u4|pixel_data[12] ; data_ram[12]                                                                                             ; 0.134             ;
-; camera_read:u4|pixel_data[5]  ; data_ram[5]                                                                                              ; 0.122             ;
-; camera_read:u4|wraddr[7]      ; address_ram[7]                                                                                           ; 0.116             ;
-; PCLK_CAMERA                   ; camera_read:u4|pixel_data[5]                                                                             ; 0.111             ;
-; camera_read:u4|pixel_data[13] ; writedata_sram[13]                                                                                       ; 0.098             ;
-; camera_read:u4|wraddr[18]     ; FMS.011                                                                                                  ; 0.085             ;
-; camera_read:u4|pixel_data[7]  ; data_ram[7]                                                                                              ; 0.082             ;
-; config_camera:u2|index[0]     ; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.058             ;
-; FMS.010                       ; FMS.011                                                                                                  ; 0.027             ;
-; camera_read:u4|wraddr[15]     ; FMS.011                                                                                                  ; 0.027             ;
-; camera_read:u4|wraddr[14]     ; FMS.011                                                                                                  ; 0.027             ;
-; camera_read:u4|wraddr[13]     ; FMS.011                                                                                                  ; 0.027             ;
-; camera_read:u4|wraddr[16]     ; FMS.011                                                                                                  ; 0.027             ;
-; camera_read:u4|wraddr[9]      ; FMS.011                                                                                                  ; 0.027             ;
-; pin_start                     ; FMS.011                                                                                                  ; 0.013             ;
-; FMS.001                       ; FMS.011                                                                                                  ; 0.013             ;
-; pin_reset                     ; FMS.011                                                                                                  ; 0.013             ;
+; VGA_Ctrl:u5|H_Cont[2]         ; address_ram[2]                                                                                           ; 4.703             ;
+; VGA_Ctrl:u5|H_Cont[1]         ; address_ram[1]                                                                                           ; 4.682             ;
+; VGA_Ctrl:u5|H_Cont[0]         ; address_ram[0]                                                                                           ; 4.679             ;
+; VGA_Ctrl:u5|H_Cont[4]         ; address_ram[4]                                                                                           ; 4.674             ;
+; VGA_Ctrl:u5|H_Cont[3]         ; address_sram[3]                                                                                          ; 4.649             ;
+; VGA_Ctrl:u5|H_Cont[5]         ; address_sram[5]                                                                                          ; 4.141             ;
+; VGA_Ctrl:u5|H_Cont[6]         ; address_sram[5]                                                                                          ; 4.132             ;
+; VGA_Ctrl:u5|H_Cont[7]         ; address_sram[5]                                                                                          ; 3.953             ;
+; VGA_Ctrl:u5|H_Cont[8]         ; address_sram[5]                                                                                          ; 3.783             ;
+; VGA_Ctrl:u5|H_Cont[9]         ; address_sram[5]                                                                                          ; 3.775             ;
+; VGA_Ctrl:u5|H_Cont[10]        ; address_sram[5]                                                                                          ; 3.750             ;
+; camera_read:u4|wraddr[5]      ; address_ram[5]                                                                                           ; 0.582             ;
+; camera_read:u4|wraddr[4]      ; address_ram[4]                                                                                           ; 0.582             ;
+; camera_read:u4|wraddr[2]      ; address_ram[2]                                                                                           ; 0.582             ;
+; camera_read:u4|wraddr[1]      ; address_ram[1]                                                                                           ; 0.578             ;
+; camera_read:u4|wraddr[6]      ; address_ram[6]                                                                                           ; 0.537             ;
+; camera_read:u4|pixel_data[13] ; data_ram[13]                                                                                             ; 0.432             ;
+; camera_read:u4|wraddr[3]      ; address_ram[3]                                                                                           ; 0.432             ;
+; camera_read:u4|wraddr[0]      ; address_ram[0]                                                                                           ; 0.430             ;
+; camera_read:u4|wraddr[8]      ; address_ram[8]                                                                                           ; 0.385             ;
+; camera_read:u4|wraddr[9]      ; address_ram[9]                                                                                           ; 0.291             ;
+; camera_read:u4|wraddr[17]     ; FMS.001                                                                                                  ; 0.246             ;
+; camera_read:u4|wraddr[10]     ; address_ram[10]                                                                                          ; 0.192             ;
+; camera_read:u4|wraddr[11]     ; address_ram[11]                                                                                          ; 0.192             ;
+; camera_read:u4|wraddr[7]      ; address_ram[7]                                                                                           ; 0.184             ;
+; camera_read:u4|pixel_data[10] ; data_ram[10]                                                                                             ; 0.180             ;
+; camera_read:u4|pixel_data[8]  ; data_ram[8]                                                                                              ; 0.180             ;
+; camera_read:u4|pixel_data[15] ; data_ram[15]                                                                                             ; 0.180             ;
+; camera_read:u4|pixel_data[14] ; data_ram[14]                                                                                             ; 0.180             ;
+; camera_read:u4|pixel_data[12] ; data_ram[12]                                                                                             ; 0.180             ;
+; camera_read:u4|pixel_data[11] ; data_ram[11]                                                                                             ; 0.180             ;
+; PCLK_CAMERA                   ; camera_read:u4|pixel_data[5]                                                                             ; 0.136             ;
+; camera_read:u4|wraddr[18]     ; FMS.001                                                                                                  ; 0.136             ;
+; camera_read:u4|pixel_data[9]  ; data_ram[9]                                                                                              ; 0.086             ;
+; config_camera:u2|index[0]     ; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.082             ;
+; camera_read:u4|wraddr[12]     ; address_ram[12]                                                                                          ; 0.073             ;
+; camera_read:u4|pixel_data[3]  ; data_ram[3]                                                                                              ; 0.033             ;
+; camera_read:u4|pixel_data[1]  ; data_ram[1]                                                                                              ; 0.033             ;
+; camera_read:u4|pixel_data[7]  ; data_ram[7]                                                                                              ; 0.033             ;
+; camera_read:u4|pixel_data[5]  ; data_ram[5]                                                                                              ; 0.033             ;
 +-------------------------------+----------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 61 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 40 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2389,11 +2367,10 @@ Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (119006): Selected device EP4CE115F29C7 for design "top_ov7670"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Info (15535): Implemented PLL "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|pll1" as Cyclone IV E PLL type File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
-    Info (15099): Implementing clock multiplication of 4, clock division of 1, and phase shift of 0 degrees (0 ps) for PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] port File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
-    Info (15099): Implementing clock multiplication of 12, clock division of 25, and phase shift of 0 degrees (0 ps) for PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[1] port File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
-    Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2] port File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
-    Info (15099): Implementing clock multiplication of 1, clock division of 500, and phase shift of 0 degrees (0 ps) for PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3] port File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
+Info (15535): Implemented PLL "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|pll1" as Cyclone IV E PLL type File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
+    Info (15099): Implementing clock multiplication of 4, clock division of 1, and phase shift of 0 degrees (0 ps) for PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] port File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
+    Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2] port File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
+    Info (15099): Implementing clock multiplication of 1, clock division of 500, and phase shift of 0 degrees (0 ps) for PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3] port File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
@@ -2420,63 +2397,61 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clock_50mhz~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 56
+Info (176353): Automatically promoted node clock_50mhz~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 56
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
-Info (176353): Automatically promoted node PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 77
+Info (176353): Automatically promoted node PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 77
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G0
-Info (176353): Automatically promoted node PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[1] (placed in counter C1 of PLL_1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 77
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
-Info (176353): Automatically promoted node PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2] (placed in counter C2 of PLL_1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 77
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3] (placed in counter C4 of PLL_1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 77
+Info (176353): Automatically promoted node PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[2] (placed in counter C1 of PLL_1) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 77
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
-Info (176353): Automatically promoted node VGA_Ctrl:u5|oVGA_HS  File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 33
+Info (176353): Automatically promoted node PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|wire_pll1_clk[3] (placed in counter C3 of PLL_1) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 77
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
+Info (176353): Automatically promoted node VGA_Ctrl:u5|oVGA_HS  File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 33
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node VGA_Ctrl:u5|oVGA_HS~0 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 33
-        Info (176357): Destination node pin_hs~output File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 128
+        Info (176357): Destination node VGA_Ctrl:u5|oVGA_HS~0 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 33
+        Info (176357): Destination node pin_hs~output File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 128
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176218): Packed 16 registers into blocks of type Block RAM
-Warning (15064): PLL "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|pll1" output port clk[1] feeds output pin "XCLK_CAMERA~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
-Warning (15064): PLL "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|pll1" output port clk[2] feeds output pin "pin_vga_clock~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
+Warning (15064): PLL "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|pll1" output port clk[2] feeds output pin "pin_vga_clock~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
+Warning (15064): PLL "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|pll1" output port clk[2] feeds output pin "XCLK_CAMERA~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "pin_read_sram" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sw_addr[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sw_addr[1]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sw_read" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sw_write" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:07
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 11% of the available device resources in the region that extends from location X46_Y24 to location X57_Y36
+    Info (170196): Router estimated peak interconnect usage is 12% of the available device resources in the region that extends from location X46_Y24 to location X57_Y36
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
-Info (11888): Total time spent on timing analysis during the Fitter is 0.72 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
+Info (11888): Total time spent on timing analysis during the Fitter is 0.70 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/output_files/top_ov7670.fit.smsg
+Info (144001): Generated suppressed messages file D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/output_files/top_ov7670.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 5714 megabytes
-    Info: Processing ended: Wed Aug 21 21:23:06 2024
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 5705 megabytes
+    Info: Processing ended: Sat Jan 10 10:36:45 2026
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/output_files/top_ov7670.fit.smsg.
+The suppressed messages can be found in D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/output_files/top_ov7670.fit.smsg.
 
 

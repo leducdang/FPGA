@@ -1,0 +1,39 @@
+|button_counter
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => stable_d1.CLK
+clk => stable_key.CLK
+clk => debounce_cnt[0].CLK
+clk => debounce_cnt[1].CLK
+clk => debounce_cnt[2].CLK
+clk => debounce_cnt[3].CLK
+clk => debounce_cnt[4].CLK
+clk => debounce_cnt[5].CLK
+clk => debounce_cnt[6].CLK
+clk => debounce_cnt[7].CLK
+clk => debounce_cnt[8].CLK
+clk => debounce_cnt[9].CLK
+clk => debounce_cnt[10].CLK
+clk => debounce_cnt[11].CLK
+clk => debounce_cnt[12].CLK
+clk => debounce_cnt[13].CLK
+clk => debounce_cnt[14].CLK
+clk => debounce_cnt[15].CLK
+clk => debounce_cnt[16].CLK
+clk => debounce_cnt[17].CLK
+clk => debounce_cnt[18].CLK
+clk => debounce_cnt[19].CLK
+clk => key_sync2.CLK
+clk => key_sync1.CLK
+KEY0 => key_sync1.DATAIN
+HEX0[0] << WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] << WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] << WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] << WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] << WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

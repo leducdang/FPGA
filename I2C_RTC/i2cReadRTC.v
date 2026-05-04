@@ -4,31 +4,33 @@ i2c_scl,
 i2c_sda,
 data_out,
 addr_read,
+btstart
 );
-
-input	 clk_50mhz;
-output i2c_scl;
-inout i2c_sda;
-output [7:0] data_out;
+	
+input	 	clk_50mhz;
+output 	i2c_scl;
+inout wire	i2c_sda;
+output 	[7:0] data_out;
 input 	[7:0] addr_read;
 reg 		SCLK;
 reg		SDI;
-reg 	[6:0] counter;
-reg	[7:0]	counterI2C;
-reg 			clock;
-reg 	[7:0] data;
-
+reg 		[7:0] counter;
+reg		[6:0]	counterI2C;
+reg 		clock;
+reg 		[7:0] data;
+wire 		input_sda;
+input 	btstart;
 
 //assign addr_read = 7'b1101000;
 
 
-//TẠO XUNG 200Khz
+//TẠO XUNG 100Khz
 always@(posedge clk_50mhz)
 	begin
-		if(counter == 7'd124)
+		if(counter == 7'd249)
 			begin
 				counter	<= 7'b0;
-				clock = ~clock;
+				clock 	<= ~clock;
 			end
 		else
 			counter <= counter +1;
@@ -41,9 +43,9 @@ always@(posedge clk_50mhz)
 //tao bien chuyen trang thai cho bien ra i2c.
 always@ (negedge clock)	
 	begin
-		//if(!btstart)
-		//	counterI2C	<= 0;
-		//else
+		if(!btstart)
+			counterI2C	<= 0;
+		else
 			//if(counterI2C < 85)
 				counterI2C <= counterI2C + 1;		
 	end
@@ -52,12 +54,12 @@ always@ (negedge clock)
 // chuong trinh i2c doc data i2c	
 always@ (posedge clk_50mhz)	
 	begin
-		//if(!btstart)
-		//	begin
-		//		SDI	<=	1;
-		//		SCLK	<= 1;
-		//	end
-		//else
+		if(!btstart)
+			begin
+				SDI	<=	1;
+				SCLK	<= 1;
+			end
+		else
 			case(counterI2C)
 				8'd0: begin
 							SDI	<=	1;
@@ -67,13 +69,14 @@ always@ (posedge clk_50mhz)
 				8'd1: SDI	<=	0;
 				8'd2: SCLK	<=	0;
 				
-				//address 1101_0000 wr_data=8'b1101_0000; //slave address
+				//address 1101_000 wr_data=8'b1101_0000; //slave address
+				
 				//	1
 				8'd3: begin
 							SCLK	<=	0;
 							SDI	<= 1;
 						end
-				8'd4: SCLK	<= 1;
+				8'd4: 	SCLK	<= 1;
 				//	1
 				
 				8'd5:begin
@@ -94,7 +97,7 @@ always@ (posedge clk_50mhz)
 							SCLK	<= 0;
 							SDI	<= 1;
 						end
-				8'd10:		SCLK 	<= 1;
+				8'd10:	SCLK 	<= 1;
 				
 				//0
 				8'd11:begin
@@ -137,56 +140,56 @@ always@ (posedge clk_50mhz)
 				//0	-1
 				8'd21:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[0];
+							SDI	<=	0;			//addr_read[0];
 						end
 				8'd22:	SCLK	<=	1;
 				
 				//0	-2
 				8'd23:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[1];
+							SDI	<=	0;
 						end
 				8'd24:	SCLK	<=	1;
 				
 				//0	-3
 				8'd25:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[2];
+							SDI	<=	0;
 						end
 				8'd26:	SCLK	<=	1;
 				
 				//0	-4
 				8'd27:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[3];
+							SDI	<=	0;
 						end
 				8'd28:	SCLK	<=	1;
 				
 				//0	-5
 				8'd29:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[4];
+							SDI	<=	0;
 						end
 				8'd30:	SCLK	<=	1;
 				
 				//0	-6
 				8'd31:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[5];
+							SDI	<=	0;
 						end
 				8'd32:	SCLK	<=	1;
 				
 				//0	-7
 				8'd33:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[6];
+							SDI	<=	0;
 						end
 				8'd34:	SCLK	<=	1;
 				
 				//0	-8
 				8'd35:begin
 							SCLK	<= 0;
-							SDI	<=	addr_read[7];
+							SDI	<=	0;
 						end
 				8'd36:	SCLK	<=	1;
 				
@@ -208,152 +211,152 @@ always@ (posedge clk_50mhz)
 				
 				8'd39:begin
 							SCLK<=0;
-				//			SDI <=0;	
+							SDI <=1;	
 						end
 				8'd40:	SCLK 	<= 1;
-				8'd41:	SDI 	<= 1;
-				8'd42:	SDI 	<= 0;
-				8'd43:	SCLK 	<= 0;
+				8'd41:	SDI 	<= 0;
+//				8'd42:	SDI 	<= 0;
+				8'd42:	SCLK 	<= 0;
 				
 				//Device address  1101_000 + 1 bit read = 1
 				
 				//1
-				8'd44:begin
-							SCLK 	<= 0;
+				8'd43:begin
+//							SCLK 	<= 0;
 							SDI 	<= 1;
 						end
-				8'd45:	SCLK 	<= 1;
+				8'd44:	SCLK 	<= 1;
 				
 				//1
-				8'd46:begin
+				8'd45:begin
 							SCLK 	<= 0;
 							SDI 	<= 1;
 						end
-				8'd47:	SCLK 	<= 1;
+				8'd46:	SCLK 	<= 1;
 				
 				//0
-				8'd48:begin
+				8'd47:begin
 							SCLK 	<= 0;
 							SDI 	<= 0;
 						end
-				8'd49:	SCLK 	<= 1;
+				8'd48:	SCLK 	<= 1;
 				
 				//1
-				8'd50:begin
+				8'd49:begin
 							SCLK 	<= 0;
 							SDI 	<= 1;
 						end
-				8'd51:	SCLK 	<= 1;
+				8'd50:	SCLK 	<= 1;
 				
 				//0
-				8'd52:begin
+				8'd51:begin
 							SCLK 	<= 0;
 							SDI 	<= 0;
 						end
-				8'd53:	SCLK 	<= 1;
+				8'd52:	SCLK 	<= 1;
 				
 				//0
-				8'd54:begin
+				8'd53:begin
 							SCLK 	<= 0;
 							SDI 	<= 0;
 						end
-				8'd55:	SCLK 	<= 1;
+				8'd54:	SCLK 	<= 1;
 				
 				//0
-				8'd56:begin
+				8'd55:begin
 							SCLK 	<= 0;
 							SDI 	<= 0;
 						end
-				8'd57:	SCLK 	<= 1;
+				8'd56:	SCLK 	<= 1;
 				
 				//1  bit write
-				8'd58:begin
+				8'd57:begin
 							SCLK 	<= 0;
 							SDI 	<= 1;
 						end
-				8'd59:	SCLK 	<= 1;
+				8'd58:	SCLK 	<= 1;
 				
 				// bit ACK feed back from RTC
-				8'd60:begin
+				8'd59:begin
 							SCLK 	<= 0;
 							SDI 	<= 1'bz;
 						end
-				8'd61:	SCLK 	<= 1;
+				8'd60:	SCLK 	<= 1;
 				
 //--------------------------------------- read DATA Seconds --------------------------------------------
 				
 				//bit 0
-				8'd62:begin
+				8'd61:begin
 							SCLK 	<= 0;
 							data[7] 	<= input_sda;
 						end
-				8'd63:	SCLK 	<= 1;
+				8'd62:	SCLK 	<= 1;
 				
 				//bit 1
-				8'd64:begin
+				8'd63:begin
 							SCLK 	<= 0;
 							data[6] 	<= input_sda;
 						end
-				8'd65:SCLK 	<= 1;
+				8'd64:SCLK 	<= 1;
 				
 				//bit 2
-				8'd66:begin
+				8'd65:begin
 							SCLK 	<= 0;
 							data[5] 	<= input_sda;
 						end
-				8'd67:SCLK 	<= 1;
+				8'd66:SCLK 	<= 1;
 				//bit 3
-				8'd68:begin
+				8'd67:begin
 							SCLK 	<= 0;
 							data[4] 	<= input_sda;
 						end
-				8'd69:SCLK 	<= 1;
+				8'd68:SCLK 	<= 1;
 				
 				//bit 4
-				8'd70:begin
+				8'd69:begin
 							SCLK 	<= 0;
 							data[3] 	<= input_sda;
 						end
-				8'd71:SCLK 	<= 1;
+				8'd70:SCLK 	<= 1;
 				
 				// bit 5
-				8'd72:begin
+				8'd71:begin
 							SCLK 	<= 0;
 							data[2] 	<= input_sda;
 						end
-				8'd73:SCLK 	<= 1;
+				8'd72:SCLK 	<= 1;
 				
 				// bit 6
-				8'd74:begin
+				8'd73:begin
 							SCLK 	<= 0;
 							data[1] 	<= input_sda;
 						end
-				8'd75:SCLK 	<= 1;
+				8'd74:SCLK 	<= 1;
 				
 				// bit 7
-				8'd76:begin
+				8'd75:begin
 							SCLK 	<= 0;
 							data[0] 	<= input_sda;
 						end
-				8'd77:SCLK 	<= 1;
+				8'd76:SCLK 	<= 1;
 						
 
 //---------------------------------------BIT NAK--------------------------------------------
 				//bit NAK
-				8'd78:begin
+				8'd77:begin
 							SCLK 	<= 0;
 							SDI 	<= 1;
 						end
-				8'd79:	SCLK 	<= 1;
+				8'd78:	SCLK 	<= 1;
 				
 				
 				//stop
-				8'd80:begin	
+				8'd79:begin	
 							SCLK 	<= 0;
 							SDI	<= 0;
 						end
-				8'd81:	SCLK 	<= 1;
-				8'd82:	SDI 	<= 1;
+				8'd80:	SCLK 	<= 1;
+				8'd81:	SDI 	<= 1;
 				
 	endcase
 end
@@ -367,3 +370,10 @@ assign i2c_sda	= SDI;
 assign input_sda	= i2c_sda;
 assign data_out = data;
 endmodule
+
+
+
+
+
+
+

@@ -36,7 +36,7 @@ always@(posedge clock_50mhz)
 				clock= ~clock; 												// đầu ra xung clock có tần số 115200/s
 			end
 		else
-			counter <= counter + 1;
+			counter <= counter + 12'd1;
 	end
 	
 // chuong trinh gui data

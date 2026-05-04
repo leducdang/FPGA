@@ -1,13 +1,13 @@
-Timing Analyzer report for uartLib
-Wed Jul  3 13:24:32 2024
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+TimeQuest Timing Analyzer report for uartLib
+Mon Oct 27 16:11:07 2025
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Timing Analyzer Summary
+  2. TimeQuest Timing Analyzer Summary
   3. Parallel Compilation
   4. Clocks
   5. Slow 1200mV 85C Model Fmax Summary
@@ -65,16 +65,16 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
  57. Unconstrained Output Ports
  58. Unconstrained Input Ports
  59. Unconstrained Output Ports
- 60. Timing Analyzer Messages
+ 60. TimeQuest Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -84,23 +84,22 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                        ;
-+-----------------------+--------------------------------------------------------+
-; Quartus Prime Version ; Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
-; Revision Name         ; uartLib                                                ;
-; Device Family         ; Cyclone IV E                                           ;
-; Device Name           ; EP4CE115F29C7                                          ;
-; Timing Models         ; Final                                                  ;
-; Delay Model           ; Combined                                               ;
-; Rise/Fall Delays      ; Enabled                                                ;
-+-----------------------+--------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; uartLib                                             ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -116,8 +115,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processors 3-4         ;   0.6%      ;
+;     Processor 2            ;   0.9%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processor 4            ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -398,11 +398,11 @@ No paths to report.
 ; 0.184  ; stt_rx.00001000 ; stt_rx.00001000 ; clock        ; clock       ; 1.000        ; -0.080     ; 0.734      ;
 ; 0.184  ; stt_tx.00001011 ; stt_tx.00001011 ; clock        ; clock       ; 1.000        ; -0.080     ; 0.734      ;
 ; 0.221  ; data_rx[4]      ; data_rx[4]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
-; 0.221  ; data_rx[5]      ; data_rx[5]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
 ; 0.221  ; data_rx[7]      ; data_rx[7]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
-; 0.221  ; data_rx[6]      ; data_rx[6]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
 ; 0.221  ; data_rx[2]      ; data_rx[2]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
+; 0.221  ; data_rx[5]      ; data_rx[5]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
 ; 0.221  ; data_rx[3]      ; data_rx[3]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
+; 0.221  ; data_rx[6]      ; data_rx[6]      ; clock        ; clock       ; 1.000        ; -0.043     ; 0.734      ;
 +--------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -419,10 +419,10 @@ No paths to report.
 ; 0.437 ; stt_tx.00001010 ; stt_tx.00001011 ; clock        ; clock       ; 0.000        ; 0.080      ; 0.703      ;
 ; 0.440 ; data_rx[4]      ; data_rx[4]      ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; data_rx[5]      ; data_rx[5]      ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; data_rx[7]      ; data_rx[7]      ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; data_rx[6]      ; data_rx[6]      ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; data_rx[2]      ; data_rx[2]      ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; data_rx[3]      ; data_rx[3]      ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; data_rx[7]      ; data_rx[7]      ; clock        ; clock       ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.443 ; stt_rx.00000000 ; stt_rx.00000001 ; clock        ; clock       ; 0.000        ; 0.080      ; 0.709      ;
 ; 0.552 ; stt_tx.00001001 ; tx              ; clock        ; clock       ; 0.000        ; 0.080      ; 0.818      ;
 ; 0.560 ; stt_rx.00000100 ; stt_rx.00000101 ; clock        ; clock       ; 0.000        ; 0.080      ; 0.826      ;
@@ -885,10 +885,10 @@ No paths to report.
 ; 0.267  ; stt_tx.00001011 ; stt_tx.00001011 ; clock        ; clock       ; 1.000        ; -0.073     ; 0.659      ;
 ; 0.301  ; data_rx[4]      ; data_rx[4]      ; clock        ; clock       ; 1.000        ; -0.039     ; 0.659      ;
 ; 0.301  ; data_rx[5]      ; data_rx[5]      ; clock        ; clock       ; 1.000        ; -0.039     ; 0.659      ;
-; 0.301  ; data_rx[7]      ; data_rx[7]      ; clock        ; clock       ; 1.000        ; -0.039     ; 0.659      ;
 ; 0.301  ; data_rx[6]      ; data_rx[6]      ; clock        ; clock       ; 1.000        ; -0.039     ; 0.659      ;
 ; 0.301  ; data_rx[2]      ; data_rx[2]      ; clock        ; clock       ; 1.000        ; -0.039     ; 0.659      ;
 ; 0.301  ; data_rx[3]      ; data_rx[3]      ; clock        ; clock       ; 1.000        ; -0.039     ; 0.659      ;
+; 0.301  ; data_rx[7]      ; data_rx[7]      ; clock        ; clock       ; 1.000        ; -0.039     ; 0.659      ;
 +--------+-----------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -902,10 +902,10 @@ No paths to report.
 ; 0.353 ; stt_tx.00001011 ; stt_tx.00001011 ; clock        ; clock       ; 0.000        ; 0.073      ; 0.597      ;
 ; 0.387 ; data_rx[4]      ; data_rx[4]      ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; data_rx[5]      ; data_rx[5]      ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; data_rx[7]      ; data_rx[7]      ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; data_rx[6]      ; data_rx[6]      ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; data_rx[2]      ; data_rx[2]      ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; data_rx[3]      ; data_rx[3]      ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; data_rx[7]      ; data_rx[7]      ; clock        ; clock       ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; stt_tx.00001010 ; tx              ; clock        ; clock       ; 0.000        ; 0.073      ; 0.631      ;
 ; 0.396 ; stt_tx.00000110 ; stt_tx.00000111 ; clock        ; clock       ; 0.000        ; 0.073      ; 0.640      ;
 ; 0.399 ; stt_rx.00000000 ; stt_rx.00000001 ; clock        ; clock       ; 0.000        ; 0.073      ; 0.643      ;
@@ -1810,32 +1810,32 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+--------------------------+
-; Timing Analyzer Messages ;
-+--------------------------+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Timing Analyzer
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Jul  3 13:24:30 2024
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Oct 27 16:11:05 2025
 Info: Command: quartus_sta uartLib -c uartLib
-Info: qsta_default_script.tcl version: #1
+Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 7 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'uartLib.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 7 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'uartLib.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clock_50mhz clock_50mhz
     Info (332105): create_clock -period 1.000 -name clock clock
     Info (332105): create_clock -period 1.000 -name data_rx[1] data_rx[1]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -2.980
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1861,9 +1861,9 @@ Info (332114): Report Metastability: Found 1 synchronizer chains.
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -2.704
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1887,9 +1887,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
 Info (332146): Worst-case setup slack is -1.227
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1919,10 +1919,10 @@ Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Wed Jul  3 13:24:32 2024
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Mon Oct 27 16:11:07 2025
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

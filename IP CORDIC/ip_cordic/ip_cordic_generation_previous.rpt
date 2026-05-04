@@ -1,0 +1,34 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\2024\FPGA\codeFPGAL_LIB\IP CORDIC\ip_cordic.qsys" --block-symbol-file --output-directory="D:\2024\FPGA\codeFPGAL_LIB\IP CORDIC\ip_cordic" --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading IP CORDIC/ip_cordic.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 17.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\2024\FPGA\codeFPGAL_LIB\IP CORDIC\ip_cordic.qsys" --synthesis=VERILOG --output-directory="D:\2024\FPGA\codeFPGAL_LIB\IP CORDIC\ip_cordic\synthesis" --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading IP CORDIC/ip_cordic.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 17.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip_cordic: Generating ip_cordic "ip_cordic" for QUARTUS_SYNTH
+Info: CORDIC_0: D:/fpga/quartus/dspba/backend/windows64/cmdPolyEval -target CycloneIVE -frequency 50 -name ip_cordic_CORDIC_0 -noChanValid -faithfulRounding -printMachineReadable -lang VHDL -speedgrade 7 FXPSinCosCordic 13 10 1 10
+Info: CORDIC_0: Latency on Cyclone IV E is 3 cycles
+Info: CORDIC_0: DSP Blocks Used: 0
+Info: CORDIC_0: LUTs Used: 1189
+Info: CORDIC_0: Memory Bits Used: 0
+Info: CORDIC_0: Memory Blocks Used: 0
+Info: CORDIC_0: "ip_cordic" instantiated altera_CORDIC "CORDIC_0"
+Info: ip_cordic: Done "ip_cordic" with 2 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

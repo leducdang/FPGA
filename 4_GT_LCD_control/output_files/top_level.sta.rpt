@@ -1,0 +1,1230 @@
+TimeQuest Timing Analyzer report for top_level
+Fri Nov 21 16:19:23 2025
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk_50mhz'
+ 13. Slow 1200mV 85C Model Hold: 'clk_50mhz'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk_50mhz'
+ 22. Slow 1200mV 0C Model Hold: 'clk_50mhz'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk_50mhz'
+ 30. Fast 1200mV 0C Model Hold: 'clk_50mhz'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; top_level                                           ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.02        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.5%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; clk_50mhz  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50mhz } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 306.65 MHz ; 250.0 MHz       ; clk_50mhz  ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-----------+--------+----------------+
+; Clock     ; Slack  ; End Point TNS  ;
++-----------+--------+----------------+
+; clk_50mhz ; -2.261 ; -102.083       ;
++-----------+--------+----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-----------+-------+----------------+
+; Clock     ; Slack ; End Point TNS  ;
++-----------+-------+----------------+
+; clk_50mhz ; 0.385 ; 0.000          ;
++-----------+-------+----------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-----------+--------+------------------------------+
+; Clock     ; Slack  ; End Point TNS                ;
++-----------+--------+------------------------------+
+; clk_50mhz ; -3.000 ; -89.095                      ;
++-----------+--------+------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk_50mhz'                                                                                                                       ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.261 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 3.160      ;
+; -2.236 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 3.153      ;
+; -2.167 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 3.084      ;
+; -2.132 ; step.0010                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.512     ; 2.618      ;
+; -2.129 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 3.028      ;
+; -2.077 ; step.0010                              ; state_lcd[0]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.512     ; 2.563      ;
+; -2.061 ; state.SET_CURSOR_LINE_2                ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.080     ; 2.979      ;
+; -2.060 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.519     ; 2.539      ;
+; -2.060 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.519     ; 2.539      ;
+; -2.055 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.974      ;
+; -2.055 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.974      ;
+; -2.040 ; step.0110                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.955      ;
+; -2.035 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.954      ;
+; -2.035 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.954      ;
+; -2.033 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.932      ;
+; -2.017 ; step.0010                              ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.513     ; 2.502      ;
+; -2.017 ; step.0010                              ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.513     ; 2.502      ;
+; -2.017 ; step.0010                              ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.513     ; 2.502      ;
+; -2.017 ; step.0010                              ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.513     ; 2.502      ;
+; -2.017 ; step.0010                              ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.513     ; 2.502      ;
+; -2.017 ; step.0010                              ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.513     ; 2.502      ;
+; -2.017 ; step.0010                              ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.513     ; 2.502      ;
+; -1.997 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.916      ;
+; -1.997 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.916      ;
+; -1.978 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.897      ;
+; -1.978 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.897      ;
+; -1.974 ; state.SET_CURSOR_LINE_2                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.890      ;
+; -1.970 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.869      ;
+; -1.963 ; lcdController_pos:lcd|cnt_1ms[9]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.862      ;
+; -1.957 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 2.874      ;
+; -1.938 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.521     ; 2.415      ;
+; -1.937 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.836      ;
+; -1.937 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 2.854      ;
+; -1.914 ; lcdController_pos:lcd|cnt_1ms[0]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.342      ; 3.254      ;
+; -1.895 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.814      ;
+; -1.895 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.814      ;
+; -1.891 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 2.808      ;
+; -1.884 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.342      ; 3.224      ;
+; -1.871 ; step.0100                              ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.080     ; 2.789      ;
+; -1.865 ; data_in[6]                             ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.780      ;
+; -1.856 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 2.773      ;
+; -1.848 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.767      ;
+; -1.848 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.767      ;
+; -1.842 ; counter[4]                             ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.078     ; 2.762      ;
+; -1.838 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.334      ; 3.170      ;
+; -1.830 ; step.0000                              ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.300      ; 3.128      ;
+; -1.830 ; step.0000                              ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.300      ; 3.128      ;
+; -1.830 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.729      ;
+; -1.828 ; lcdController_pos:lcd|done_write       ; step.0100                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.076     ; 2.750      ;
+; -1.817 ; lcdController_pos:lcd|cnt_1ms[9]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.716      ;
+; -1.815 ; state.WRITE_DATA_LINE_1                ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.080     ; 2.733      ;
+; -1.805 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.704      ;
+; -1.782 ; state_lcd[2]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.084     ; 2.696      ;
+; -1.782 ; state_lcd[2]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.084     ; 2.696      ;
+; -1.782 ; lcdController_pos:lcd|cnt_1ms[2]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.342      ; 3.122      ;
+; -1.778 ; state.WRITE_DATA_LINE_2                ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.694      ;
+; -1.778 ; state.WRITE_DATA_LINE_2                ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.694      ;
+; -1.778 ; state.WRITE_DATA_LINE_2                ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.694      ;
+; -1.778 ; state.WRITE_DATA_LINE_2                ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.694      ;
+; -1.778 ; state.WRITE_DATA_LINE_2                ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.694      ;
+; -1.778 ; state.WRITE_DATA_LINE_2                ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.694      ;
+; -1.778 ; state.WRITE_DATA_LINE_2                ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.694      ;
+; -1.775 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 2.692      ;
+; -1.765 ; state.WRITE_DATA_LINE_2                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 2.682      ;
+; -1.752 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.296      ; 3.046      ;
+; -1.752 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.296      ; 3.046      ;
+; -1.752 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.296      ; 3.046      ;
+; -1.750 ; lcdController_pos:lcd|cnt_1ms[3]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.342      ; 3.090      ;
+; -1.749 ; state.WRITE_DATA_LINE_1                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.665      ;
+; -1.738 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.342      ; 3.078      ;
+; -1.734 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.633      ;
+; -1.733 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.333      ; 3.064      ;
+; -1.733 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.334      ; 3.065      ;
+; -1.731 ; row[0]                                 ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.483     ; 2.246      ;
+; -1.729 ; state_lcd[0]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.644      ;
+; -1.729 ; state_lcd[0]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.644      ;
+; -1.728 ; state.WRITE_DATA_LINE_1                ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.643      ;
+; -1.728 ; state.WRITE_DATA_LINE_1                ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.643      ;
+; -1.728 ; state.WRITE_DATA_LINE_1                ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.643      ;
+; -1.728 ; state.WRITE_DATA_LINE_1                ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.643      ;
+; -1.728 ; state.WRITE_DATA_LINE_1                ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.643      ;
+; -1.728 ; state.WRITE_DATA_LINE_1                ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.643      ;
+; -1.728 ; state.WRITE_DATA_LINE_1                ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.643      ;
+; -1.727 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[12]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.521     ; 2.204      ;
+; -1.727 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.646      ;
+; -1.727 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.079     ; 2.646      ;
+; -1.726 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.081     ; 2.643      ;
+; -1.725 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.106     ; 2.617      ;
+; -1.722 ; step.0011                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.082     ; 2.638      ;
+; -1.714 ; state.IDLE                             ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.629      ;
+; -1.709 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.099     ; 2.608      ;
+; -1.699 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.080     ; 2.617      ;
+; -1.696 ; step.0100                              ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.300      ; 2.994      ;
+; -1.696 ; step.0100                              ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.300      ; 2.994      ;
+; -1.684 ; state.IDLE                             ; state_lcd[0]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.083     ; 2.599      ;
+; -1.684 ; state_lcd[2]                           ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.086     ; 2.596      ;
+; -1.683 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.334      ; 3.015      ;
+; -1.669 ; state.SET_CURSOR_LINE_1                ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.300      ; 2.967      ;
+; -1.669 ; state.SET_CURSOR_LINE_1                ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.300      ; 2.967      ;
+; -1.667 ; counter[2]                             ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.078     ; 2.587      ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk_50mhz'                                                                                                                       ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.385 ; step.0010                              ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.098      ; 0.669      ;
+; 0.402 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; step.0000                              ; step.0000                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state_lcd[2]                           ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; step.0001                              ; step.0001                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; step.0011                              ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.DONE                             ; state.DONE                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; step.0110                              ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; step.0111                              ; step.0111                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.WRITE_DATA_LINE_2                ; state.WRITE_DATA_LINE_2                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; step.0101                              ; step.0101                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; step.0100                              ; step.0100                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.IDLE                             ; state.IDLE                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.SET_CURSOR_LINE_1                ; state.SET_CURSOR_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; state.WRITE_DATA_LINE_1                ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.INIT_LCD   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.669      ;
+; 0.403 ; lcdController_pos:lcd|data[7]          ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; lcdController_pos:lcd|data[6]          ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; lcdController_pos:lcd|data[2]          ; lcdController_pos:lcd|data[2]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.669      ;
+; 0.403 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|step.0001        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.669      ;
+; 0.471 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.738      ;
+; 0.473 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.740      ;
+; 0.492 ; step.0001                              ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.189      ;
+; 0.512 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|en               ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.778      ;
+; 0.512 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.778      ;
+; 0.551 ; state.SET_CURSOR_LINE_1                ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.248      ;
+; 0.557 ; lcdController_pos:lcd|cnt_1ms[12]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.254      ;
+; 0.557 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.254      ;
+; 0.579 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.276      ;
+; 0.590 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.250      ;
+; 0.591 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.251      ;
+; 0.637 ; lcdController_pos:lcd|cnt_1ms[13]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.098      ; 0.921      ;
+; 0.638 ; lcdController_pos:lcd|cnt_1ms[11]      ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.098      ; 0.922      ;
+; 0.655 ; lcdController_pos:lcd|cnt_1ms[3]       ; lcdController_pos:lcd|cnt_1ms[3]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.921      ;
+; 0.656 ; lcdController_pos:lcd|cnt_1ms[5]       ; lcdController_pos:lcd|cnt_1ms[5]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.922      ;
+; 0.657 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[1]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.923      ;
+; 0.659 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[7]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.925      ;
+; 0.660 ; lcdController_pos:lcd|cnt_1ms[2]       ; lcdController_pos:lcd|cnt_1ms[2]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.926      ;
+; 0.661 ; lcdController_pos:lcd|cnt_1ms[12]      ; lcdController_pos:lcd|cnt_1ms[12]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.927      ;
+; 0.661 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[10]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.927      ;
+; 0.667 ; step.0100                              ; step.0101                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.933      ;
+; 0.674 ; counter[4]                             ; counter[4]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.940      ;
+; 0.674 ; counter[1]                             ; counter[1]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.940      ;
+; 0.674 ; counter[0]                             ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.079      ; 0.939      ;
+; 0.676 ; counter[0]                             ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.079      ; 0.941      ;
+; 0.682 ; lcdController_pos:lcd|cnt_1ms[0]       ; lcdController_pos:lcd|cnt_1ms[0]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.948      ;
+; 0.682 ; step.0110                              ; step.0111                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.949      ;
+; 0.683 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.380      ;
+; 0.685 ; counter[1]                             ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.079      ; 0.950      ;
+; 0.689 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.349      ;
+; 0.691 ; counter[1]                             ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.079      ; 0.956      ;
+; 0.692 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|rs               ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.958      ;
+; 0.692 ; counter[1]                             ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.079      ; 0.957      ;
+; 0.693 ; counter[0]                             ; counter[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.959      ;
+; 0.700 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.360      ;
+; 0.701 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.361      ;
+; 0.710 ; counter[3]                             ; counter[3]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.976      ;
+; 0.710 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.977      ;
+; 0.711 ; counter[2]                             ; counter[2]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 0.977      ;
+; 0.711 ; state.WRITE_DATA_LINE_1                ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.978      ;
+; 0.712 ; step.0001                              ; state.SET_CURSOR_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.979      ;
+; 0.713 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.980      ;
+; 0.720 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.987      ;
+; 0.722 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 0.989      ;
+; 0.739 ; step.0011                              ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.006      ;
+; 0.747 ; state.SET_CURSOR_LINE_1                ; step.0001                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.014      ;
+; 0.778 ; state.SET_CURSOR_LINE_1                ; step.0000                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.045      ;
+; 0.792 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.489      ;
+; 0.795 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.472      ; 1.453      ;
+; 0.797 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.472      ; 1.455      ;
+; 0.813 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.080      ;
+; 0.817 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.477      ;
+; 0.820 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.480      ;
+; 0.828 ; state_lcd[2]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.077      ; 1.091      ;
+; 0.829 ; state_lcd[2]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.077      ; 1.092      ;
+; 0.829 ; data_in[4]                             ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.470      ; 1.485      ;
+; 0.833 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.INIT_LCD   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.100      ;
+; 0.851 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[3]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 1.117      ;
+; 0.851 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 1.117      ;
+; 0.866 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|step.0001        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.133      ;
+; 0.867 ; data_in[5]                             ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.470      ; 1.523      ;
+; 0.869 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.136      ;
+; 0.872 ; state.SET_CURSOR_LINE_2                ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.569      ;
+; 0.875 ; step.0010                              ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; -0.332     ; 0.729      ;
+; 0.882 ; state.SET_CURSOR_LINE_2                ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.478      ; 1.546      ;
+; 0.894 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.554      ;
+; 0.895 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.474      ; 1.555      ;
+; 0.902 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.472      ; 1.560      ;
+; 0.905 ; counter[3]                             ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.079      ; 1.170      ;
+; 0.909 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.176      ;
+; 0.909 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.176      ;
+; 0.916 ; lcdController_pos:lcd|cnt_1ms[5]       ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.613      ;
+; 0.918 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.511      ; 1.615      ;
+; 0.922 ; step.0001                              ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.081      ; 1.189      ;
+; 0.938 ; lcdController_pos:lcd|data[3]          ; lcdController_pos:lcd|data[3]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.080      ; 1.204      ;
+; 0.939 ; state.SET_CURSOR_LINE_2                ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.478      ; 1.603      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 336.93 MHz ; 250.0 MHz       ; clk_50mhz  ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_50mhz ; -1.968 ; -87.289       ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 0.338 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; clk_50mhz ; -3.000 ; -89.095                     ;
++-----------+--------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk_50mhz'                                                                                                                        ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.968 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.879      ;
+; -1.938 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.865      ;
+; -1.898 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.825      ;
+; -1.859 ; step.0010                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.469     ; 2.389      ;
+; -1.853 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.764      ;
+; -1.811 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.740      ;
+; -1.811 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.740      ;
+; -1.806 ; step.0010                              ; state_lcd[0]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.469     ; 2.336      ;
+; -1.795 ; step.0010                              ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.470     ; 2.324      ;
+; -1.795 ; step.0010                              ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.470     ; 2.324      ;
+; -1.795 ; step.0010                              ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.470     ; 2.324      ;
+; -1.795 ; step.0010                              ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.470     ; 2.324      ;
+; -1.795 ; step.0010                              ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.470     ; 2.324      ;
+; -1.795 ; step.0010                              ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.470     ; 2.324      ;
+; -1.795 ; step.0010                              ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.470     ; 2.324      ;
+; -1.794 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.475     ; 2.318      ;
+; -1.794 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.475     ; 2.318      ;
+; -1.788 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.717      ;
+; -1.788 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.717      ;
+; -1.776 ; state.SET_CURSOR_LINE_2                ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 2.704      ;
+; -1.772 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.683      ;
+; -1.740 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.667      ;
+; -1.740 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.669      ;
+; -1.740 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.669      ;
+; -1.735 ; step.0110                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.660      ;
+; -1.723 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.477     ; 2.245      ;
+; -1.717 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.644      ;
+; -1.699 ; state.SET_CURSOR_LINE_2                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.625      ;
+; -1.695 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 2.623      ;
+; -1.695 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 2.623      ;
+; -1.694 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.605      ;
+; -1.680 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.591      ;
+; -1.669 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.596      ;
+; -1.644 ; data_in[6]                             ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.569      ;
+; -1.636 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.565      ;
+; -1.636 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.565      ;
+; -1.635 ; step.0100                              ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 2.563      ;
+; -1.634 ; lcdController_pos:lcd|cnt_1ms[9]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.545      ;
+; -1.628 ; lcdController_pos:lcd|cnt_1ms[0]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.317      ; 2.944      ;
+; -1.620 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.546      ;
+; -1.619 ; lcdController_pos:lcd|done_write       ; step.0100                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.068     ; 2.550      ;
+; -1.612 ; step.0000                              ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.276      ; 2.887      ;
+; -1.612 ; step.0000                              ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.276      ; 2.887      ;
+; -1.605 ; counter[4]                             ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.534      ;
+; -1.605 ; state.WRITE_DATA_LINE_1                ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 2.533      ;
+; -1.588 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.310      ; 2.897      ;
+; -1.579 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.490      ;
+; -1.579 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.508      ;
+; -1.579 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.508      ;
+; -1.565 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.492      ;
+; -1.556 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.467      ;
+; -1.548 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.317      ; 2.864      ;
+; -1.543 ; lcdController_pos:lcd|cnt_1ms[9]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.454      ;
+; -1.537 ; state.WRITE_DATA_LINE_2                ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.463      ;
+; -1.537 ; state.WRITE_DATA_LINE_2                ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.463      ;
+; -1.537 ; state.WRITE_DATA_LINE_2                ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.463      ;
+; -1.537 ; state.WRITE_DATA_LINE_2                ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.463      ;
+; -1.537 ; state.WRITE_DATA_LINE_2                ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.463      ;
+; -1.537 ; state.WRITE_DATA_LINE_2                ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.463      ;
+; -1.537 ; state.WRITE_DATA_LINE_2                ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.463      ;
+; -1.535 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.095     ; 2.439      ;
+; -1.523 ; state.WRITE_DATA_LINE_1                ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.448      ;
+; -1.523 ; state.WRITE_DATA_LINE_1                ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.448      ;
+; -1.523 ; state.WRITE_DATA_LINE_1                ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.448      ;
+; -1.523 ; state.WRITE_DATA_LINE_1                ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.448      ;
+; -1.523 ; state.WRITE_DATA_LINE_1                ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.448      ;
+; -1.523 ; state.WRITE_DATA_LINE_1                ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.448      ;
+; -1.523 ; state.WRITE_DATA_LINE_1                ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.448      ;
+; -1.516 ; state_lcd[2]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.441      ;
+; -1.516 ; state_lcd[2]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.441      ;
+; -1.514 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.443      ;
+; -1.514 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.443      ;
+; -1.513 ; lcdController_pos:lcd|cnt_1ms[2]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.317      ; 2.829      ;
+; -1.509 ; row[0]                                 ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.439     ; 2.069      ;
+; -1.507 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.310      ; 2.816      ;
+; -1.499 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.426      ;
+; -1.498 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.409      ;
+; -1.483 ; state.WRITE_DATA_LINE_2                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.410      ;
+; -1.482 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.309      ; 2.790      ;
+; -1.481 ; step.0100                              ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.276      ; 2.756      ;
+; -1.481 ; step.0100                              ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.276      ; 2.756      ;
+; -1.475 ; state_lcd[0]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.400      ;
+; -1.475 ; state_lcd[0]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.400      ;
+; -1.474 ; lcdController_pos:lcd|done_write       ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.069     ; 2.404      ;
+; -1.472 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.273      ; 2.744      ;
+; -1.472 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.273      ; 2.744      ;
+; -1.472 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.273      ; 2.744      ;
+; -1.472 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.088     ; 2.383      ;
+; -1.460 ; lcdController_pos:lcd|done_write       ; state.SET_CURSOR_LINE_2                ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.068     ; 2.391      ;
+; -1.459 ; state.WRITE_DATA_LINE_1                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.073     ; 2.385      ;
+; -1.458 ; state.IDLE                             ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.383      ;
+; -1.457 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.317      ; 2.773      ;
+; -1.452 ; state.IDLE                             ; state_lcd[0]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.074     ; 2.377      ;
+; -1.450 ; counter[2]                             ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.070     ; 2.379      ;
+; -1.448 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[12]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.477     ; 1.970      ;
+; -1.445 ; state_lcd[2]                           ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.076     ; 2.368      ;
+; -1.443 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.072     ; 2.370      ;
+; -1.442 ; state.SET_CURSOR_LINE_1                ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.276      ; 2.717      ;
+; -1.442 ; state.SET_CURSOR_LINE_1                ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.276      ; 2.717      ;
+; -1.441 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.309      ; 2.749      ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk_50mhz'                                                                                                                        ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.338 ; step.0010                              ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.088      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|data[7]          ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|data[6]          ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|data[2]          ; lcdController_pos:lcd|data[2]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; step.0000                              ; step.0000                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state_lcd[2]                           ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; step.0001                              ; step.0001                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; step.0011                              ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state.DONE                             ; state.DONE                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; step.0110                              ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; step.0111                              ; step.0111                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state.WRITE_DATA_LINE_2                ; state.WRITE_DATA_LINE_2                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; step.0101                              ; step.0101                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; step.0100                              ; step.0100                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state.IDLE                             ; state.IDLE                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state.SET_CURSOR_LINE_1                ; state.SET_CURSOR_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; state.WRITE_DATA_LINE_1                ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|step.0001        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.INIT_LCD   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.597      ;
+; 0.427 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.670      ;
+; 0.429 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.672      ;
+; 0.454 ; step.0001                              ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.093      ;
+; 0.461 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.704      ;
+; 0.462 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|en               ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.705      ;
+; 0.495 ; state.SET_CURSOR_LINE_1                ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.134      ;
+; 0.496 ; lcdController_pos:lcd|cnt_1ms[12]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.135      ;
+; 0.496 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.135      ;
+; 0.527 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.129      ;
+; 0.528 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.130      ;
+; 0.543 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.182      ;
+; 0.582 ; lcdController_pos:lcd|cnt_1ms[13]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.088      ; 0.841      ;
+; 0.583 ; lcdController_pos:lcd|cnt_1ms[11]      ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.088      ; 0.842      ;
+; 0.598 ; lcdController_pos:lcd|cnt_1ms[3]       ; lcdController_pos:lcd|cnt_1ms[3]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.841      ;
+; 0.599 ; lcdController_pos:lcd|cnt_1ms[5]       ; lcdController_pos:lcd|cnt_1ms[5]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.842      ;
+; 0.601 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[1]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.844      ;
+; 0.603 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[7]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.846      ;
+; 0.603 ; lcdController_pos:lcd|cnt_1ms[2]       ; lcdController_pos:lcd|cnt_1ms[2]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.846      ;
+; 0.604 ; lcdController_pos:lcd|cnt_1ms[12]      ; lcdController_pos:lcd|cnt_1ms[12]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.847      ;
+; 0.604 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[10]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.847      ;
+; 0.606 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.245      ;
+; 0.611 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.213      ;
+; 0.615 ; counter[1]                             ; counter[1]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.858      ;
+; 0.617 ; counter[4]                             ; counter[4]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.860      ;
+; 0.622 ; step.0110                              ; step.0111                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.865      ;
+; 0.622 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.224      ;
+; 0.623 ; counter[0]                             ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 0.865      ;
+; 0.623 ; step.0100                              ; step.0101                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 0.865      ;
+; 0.623 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.225      ;
+; 0.624 ; lcdController_pos:lcd|cnt_1ms[0]       ; lcdController_pos:lcd|cnt_1ms[0]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.867      ;
+; 0.625 ; counter[0]                             ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 0.867      ;
+; 0.634 ; counter[1]                             ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 0.876      ;
+; 0.635 ; counter[0]                             ; counter[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.878      ;
+; 0.638 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|rs               ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 0.880      ;
+; 0.640 ; counter[1]                             ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 0.882      ;
+; 0.641 ; counter[1]                             ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 0.883      ;
+; 0.646 ; counter[2]                             ; counter[2]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.889      ;
+; 0.646 ; step.0001                              ; state.SET_CURSOR_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.889      ;
+; 0.647 ; counter[3]                             ; counter[3]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.890      ;
+; 0.651 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.894      ;
+; 0.654 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.897      ;
+; 0.656 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.899      ;
+; 0.656 ; state.WRITE_DATA_LINE_1                ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.899      ;
+; 0.657 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.900      ;
+; 0.677 ; step.0011                              ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.920      ;
+; 0.680 ; state.SET_CURSOR_LINE_1                ; step.0001                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.923      ;
+; 0.703 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.342      ;
+; 0.706 ; state.SET_CURSOR_LINE_1                ; step.0000                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.949      ;
+; 0.723 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.429      ; 1.323      ;
+; 0.725 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.429      ; 1.325      ;
+; 0.733 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.976      ;
+; 0.752 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.INIT_LCD   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 0.995      ;
+; 0.758 ; data_in[4]                             ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.428      ; 1.357      ;
+; 0.763 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.365      ;
+; 0.765 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[3]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 1.008      ;
+; 0.765 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 1.008      ;
+; 0.771 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.373      ;
+; 0.774 ; state_lcd[2]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.069      ; 1.014      ;
+; 0.775 ; state_lcd[2]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.069      ; 1.015      ;
+; 0.780 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|step.0001        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.073      ; 1.024      ;
+; 0.792 ; data_in[5]                             ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.428      ; 1.391      ;
+; 0.796 ; state.SET_CURSOR_LINE_2                ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.435      ;
+; 0.801 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.403      ;
+; 0.802 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.431      ; 1.404      ;
+; 0.805 ; state.SET_CURSOR_LINE_2                ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.435      ; 1.411      ;
+; 0.805 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 1.048      ;
+; 0.806 ; step.0010                              ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; -0.308     ; 0.669      ;
+; 0.808 ; lcdController_pos:lcd|cnt_1ms[5]       ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.447      ;
+; 0.813 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.468      ; 1.452      ;
+; 0.832 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 1.075      ;
+; 0.832 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 1.075      ;
+; 0.837 ; counter[3]                             ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.071      ; 1.079      ;
+; 0.846 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.429      ; 1.446      ;
+; 0.848 ; step.0001                              ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 1.091      ;
+; 0.863 ; lcdController_pos:lcd|data[3]          ; lcdController_pos:lcd|data[3]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.072      ; 1.106      ;
+; 0.868 ; state.SET_CURSOR_LINE_2                ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.435      ; 1.474      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_50mhz ; -0.642 ; -17.297       ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; clk_50mhz ; 0.174 ; 0.000         ;
++-----------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; clk_50mhz ; -3.000 ; -74.531                     ;
++-----------+--------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk_50mhz'                                                                                                                        ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.642 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.587      ;
+; -0.609 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.554      ;
+; -0.575 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.512      ;
+; -0.519 ; step.0010                              ; state_lcd[0]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.244     ; 1.262      ;
+; -0.511 ; state.SET_CURSOR_LINE_2                ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.457      ;
+; -0.505 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.442      ;
+; -0.502 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.248     ; 1.241      ;
+; -0.502 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.248     ; 1.241      ;
+; -0.497 ; step.0110                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.442      ;
+; -0.488 ; step.0010                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.244     ; 1.231      ;
+; -0.470 ; lcdController_pos:lcd|cnt_1ms[9]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.407      ;
+; -0.465 ; step.0010                              ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.245     ; 1.207      ;
+; -0.465 ; step.0010                              ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.245     ; 1.207      ;
+; -0.465 ; step.0010                              ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.245     ; 1.207      ;
+; -0.465 ; step.0010                              ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.245     ; 1.207      ;
+; -0.465 ; step.0010                              ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.245     ; 1.207      ;
+; -0.465 ; step.0010                              ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.245     ; 1.207      ;
+; -0.465 ; step.0010                              ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.245     ; 1.207      ;
+; -0.464 ; data_in[6]                             ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.408      ;
+; -0.461 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.249     ; 1.199      ;
+; -0.455 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.392      ;
+; -0.455 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.401      ;
+; -0.455 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.401      ;
+; -0.454 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.391      ;
+; -0.448 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.394      ;
+; -0.448 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.394      ;
+; -0.447 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.393      ;
+; -0.447 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.393      ;
+; -0.445 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.158      ; 1.590      ;
+; -0.435 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.381      ;
+; -0.435 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.381      ;
+; -0.434 ; lcdController_pos:lcd|done_write       ; step.0100                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.040     ; 1.381      ;
+; -0.431 ; lcdController_pos:lcd|cnt_1ms[0]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.158      ; 1.576      ;
+; -0.417 ; state.SET_CURSOR_LINE_2                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.362      ;
+; -0.414 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.359      ;
+; -0.412 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.154      ; 1.553      ;
+; -0.412 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.358      ;
+; -0.412 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.358      ;
+; -0.407 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.352      ;
+; -0.404 ; state.WRITE_DATA_LINE_1                ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.350      ;
+; -0.396 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.333      ;
+; -0.396 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.342      ;
+; -0.396 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.342      ;
+; -0.389 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.334      ;
+; -0.385 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.322      ;
+; -0.382 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.327      ;
+; -0.380 ; lcdController_pos:lcd|cnt_1ms[9]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.317      ;
+; -0.375 ; lcdController_pos:lcd|cnt_1ms[3]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.158      ; 1.520      ;
+; -0.373 ; state.WRITE_DATA_LINE_2                ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.317      ;
+; -0.373 ; state.WRITE_DATA_LINE_2                ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.317      ;
+; -0.373 ; state.WRITE_DATA_LINE_2                ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.317      ;
+; -0.373 ; state.WRITE_DATA_LINE_2                ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.317      ;
+; -0.373 ; state.WRITE_DATA_LINE_2                ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.317      ;
+; -0.373 ; state.WRITE_DATA_LINE_2                ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.317      ;
+; -0.373 ; state.WRITE_DATA_LINE_2                ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.317      ;
+; -0.371 ; counter[4]                             ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.040     ; 1.318      ;
+; -0.371 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.316      ;
+; -0.365 ; step.0100                              ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.138      ; 1.490      ;
+; -0.365 ; step.0100                              ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.138      ; 1.490      ;
+; -0.365 ; state_lcd[2]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.044     ; 1.308      ;
+; -0.365 ; state_lcd[2]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.044     ; 1.308      ;
+; -0.364 ; lcdController_pos:lcd|cnt_1ms[2]       ; lcdController_pos:lcd|cnt_1ms[15]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.158      ; 1.509      ;
+; -0.363 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.053     ; 1.297      ;
+; -0.362 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.136      ; 1.485      ;
+; -0.362 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.136      ; 1.485      ;
+; -0.362 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.136      ; 1.485      ;
+; -0.359 ; step.0100                              ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.305      ;
+; -0.355 ; state.WRITE_DATA_LINE_1                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.300      ;
+; -0.355 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.158      ; 1.500      ;
+; -0.355 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.300      ;
+; -0.353 ; step.0000                              ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.138      ; 1.478      ;
+; -0.353 ; state.SET_CURSOR_LINE_1                ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.138      ; 1.478      ;
+; -0.353 ; step.0000                              ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.138      ; 1.478      ;
+; -0.353 ; state.SET_CURSOR_LINE_1                ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.138      ; 1.478      ;
+; -0.352 ; row[0]                                 ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.231     ; 1.108      ;
+; -0.347 ; state.WRITE_DATA_LINE_2                ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.292      ;
+; -0.344 ; state.WRITE_DATA_LINE_1                ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.288      ;
+; -0.344 ; state.WRITE_DATA_LINE_1                ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.288      ;
+; -0.344 ; state.WRITE_DATA_LINE_1                ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.288      ;
+; -0.344 ; state.WRITE_DATA_LINE_1                ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.288      ;
+; -0.344 ; state.WRITE_DATA_LINE_1                ; data_in[2]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.288      ;
+; -0.344 ; state.WRITE_DATA_LINE_1                ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.288      ;
+; -0.344 ; state.WRITE_DATA_LINE_1                ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.288      ;
+; -0.343 ; step.0011                              ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.288      ;
+; -0.340 ; lcdController_pos:lcd|done_write       ; state.SET_CURSOR_LINE_2                ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.040     ; 1.287      ;
+; -0.338 ; lcdController_pos:lcd|done_write       ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.040     ; 1.285      ;
+; -0.336 ; state.IDLE                             ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.042     ; 1.281      ;
+; -0.333 ; lcdController_pos:lcd|cnt_1ms[8]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.270      ;
+; -0.331 ; state_lcd[0]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.275      ;
+; -0.331 ; state_lcd[0]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.043     ; 1.275      ;
+; -0.329 ; lcdController_pos:lcd|cnt_1ms[4]       ; lcdController_pos:lcd|cnt_1ms[12]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.250     ; 1.066      ;
+; -0.327 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.153      ; 1.467      ;
+; -0.326 ; lcdController_pos:lcd|cnt_1ms[6]       ; lcdController_pos:lcd|cnt_1ms[9]       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.050     ; 1.263      ;
+; -0.320 ; counter[3]                             ; step.0100                              ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.266      ;
+; -0.313 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 1.229      ;
+; -0.313 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 1.229      ;
+; -0.313 ; lcdController_pos:lcd|tick_1ms         ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.071     ; 1.229      ;
+; -0.307 ; state_lcd[2]                           ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.045     ; 1.249      ;
+; -0.307 ; lcdController_pos:lcd|cnt_1ms[0]       ; lcdController_pos:lcd|cnt_1ms[14]      ; clk_50mhz    ; clk_50mhz   ; 1.000        ; 0.158      ; 1.452      ;
+; -0.306 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 1.000        ; -0.041     ; 1.252      ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk_50mhz'                                                                                                                        ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.174 ; step.0010                              ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.049      ; 0.307      ;
+; 0.181 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|state.IDLE       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; step.0000                              ; step.0000                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; state_lcd[2]                           ; state_lcd[2]                           ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; step.0001                              ; step.0001                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; step.0011                              ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; state.WRITE_DATA_LINE_2                ; state.WRITE_DATA_LINE_2                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; step.0101                              ; step.0101                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; step.0100                              ; step.0100                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; state.SET_CURSOR_LINE_1                ; state.SET_CURSOR_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; state.WRITE_DATA_LINE_1                ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|state.INIT_LCD   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.307      ;
+; 0.182 ; lcdController_pos:lcd|data[7]          ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; lcdController_pos:lcd|data[6]          ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; lcdController_pos:lcd|data[2]          ; lcdController_pos:lcd|data[2]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state.DONE                             ; state.DONE                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; step.0110                              ; step.0110                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; step.0111                              ; step.0111                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; state.IDLE                             ; state.IDLE                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.182 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|step.0001        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.307      ;
+; 0.213 ; step.0001                              ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.541      ;
+; 0.219 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.345      ;
+; 0.221 ; lcdController_pos:lcd|state.IDLE       ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.347      ;
+; 0.230 ; state.SET_CURSOR_LINE_1                ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.558      ;
+; 0.241 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[0]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.569      ;
+; 0.242 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[7]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.367      ;
+; 0.243 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|en               ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.368      ;
+; 0.257 ; lcdController_pos:lcd|cnt_1ms[12]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.585      ;
+; 0.257 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.585      ;
+; 0.291 ; lcdController_pos:lcd|cnt_1ms[13]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.049      ; 0.424      ;
+; 0.292 ; lcdController_pos:lcd|cnt_1ms[11]      ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.049      ; 0.425      ;
+; 0.293 ; step.0100                              ; step.0101                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.419      ;
+; 0.297 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.608      ;
+; 0.298 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.609      ;
+; 0.298 ; lcdController_pos:lcd|cnt_1ms[3]       ; lcdController_pos:lcd|cnt_1ms[3]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.424      ;
+; 0.299 ; lcdController_pos:lcd|cnt_1ms[5]       ; lcdController_pos:lcd|cnt_1ms[5]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.425      ;
+; 0.299 ; lcdController_pos:lcd|cnt_1ms[1]       ; lcdController_pos:lcd|cnt_1ms[1]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.425      ;
+; 0.300 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[7]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.426      ;
+; 0.300 ; lcdController_pos:lcd|cnt_1ms[2]       ; lcdController_pos:lcd|cnt_1ms[2]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.426      ;
+; 0.301 ; lcdController_pos:lcd|cnt_1ms[12]      ; lcdController_pos:lcd|cnt_1ms[12]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.427      ;
+; 0.301 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[10]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.427      ;
+; 0.302 ; counter[0]                             ; data_in[1]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.427      ;
+; 0.304 ; counter[0]                             ; data_in[4]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.429      ;
+; 0.309 ; counter[1]                             ; counter[1]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.434      ;
+; 0.310 ; lcdController_pos:lcd|cnt_1ms[0]       ; lcdController_pos:lcd|cnt_1ms[0]       ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.436      ;
+; 0.311 ; counter[4]                             ; counter[4]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.436      ;
+; 0.313 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.624      ;
+; 0.313 ; counter[1]                             ; data_in[5]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.438      ;
+; 0.314 ; step.0110                              ; step.0111                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.439      ;
+; 0.316 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|rs               ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.442      ;
+; 0.317 ; counter[1]                             ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.442      ;
+; 0.319 ; counter[1]                             ; data_in[3]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.444      ;
+; 0.320 ; counter[0]                             ; counter[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.445      ;
+; 0.323 ; lcdController_pos:lcd|cnt_1ms[10]      ; lcdController_pos:lcd|cnt_1ms[13]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.651      ;
+; 0.326 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.452      ;
+; 0.328 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.454      ;
+; 0.329 ; step.0001                              ; state.SET_CURSOR_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.455      ;
+; 0.330 ; counter[3]                             ; counter[3]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.455      ;
+; 0.330 ; state.WRITE_DATA_LINE_1                ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.456      ;
+; 0.332 ; counter[2]                             ; counter[2]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.457      ;
+; 0.332 ; lcdController_pos:lcd|init_step[3]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.458      ;
+; 0.332 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[3]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.458      ;
+; 0.341 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.652      ;
+; 0.342 ; step.0011                              ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.468      ;
+; 0.342 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.653      ;
+; 0.347 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.226      ; 0.657      ;
+; 0.348 ; state.SET_CURSOR_LINE_1                ; step.0001                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.474      ;
+; 0.349 ; lcdController_pos:lcd|state.WRITE_DATA ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.226      ; 0.659      ;
+; 0.363 ; state.SET_CURSOR_LINE_1                ; step.0000                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.489      ;
+; 0.364 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.675      ;
+; 0.367 ; lcdController_pos:lcd|init_step[1]     ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.678      ;
+; 0.369 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.495      ;
+; 0.371 ; data_in[4]                             ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.225      ; 0.680      ;
+; 0.375 ; state_lcd[2]                           ; lcdController_pos:lcd|state.SET_CURSOR ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.040      ; 0.499      ;
+; 0.376 ; state_lcd[2]                           ; lcdController_pos:lcd|state.WRITE_DATA ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.040      ; 0.500      ;
+; 0.376 ; lcdController_pos:lcd|cnt_1ms[7]       ; lcdController_pos:lcd|cnt_1ms[11]      ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.704      ;
+; 0.386 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|step.0001        ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.512      ;
+; 0.387 ; data_in[5]                             ; lcdController_pos:lcd|data[5]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.225      ; 0.696      ;
+; 0.389 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[0]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.515      ;
+; 0.390 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[3]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.515      ;
+; 0.395 ; state.SET_CURSOR_LINE_2                ; step.0010                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.244      ; 0.723      ;
+; 0.398 ; lcdController_pos:lcd|init_step[0]     ; lcdController_pos:lcd|state.INIT_LCD   ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.524      ;
+; 0.402 ; step.0010                              ; step.0011                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; -0.153     ; 0.333      ;
+; 0.406 ; lcdController_pos:lcd|state.SET_CURSOR ; lcdController_pos:lcd|data[1]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.226      ; 0.716      ;
+; 0.407 ; lcdController_pos:lcd|step.0001        ; lcdController_pos:lcd|data[6]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.532      ;
+; 0.409 ; state.SET_CURSOR_LINE_2                ; col[2]                                 ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.229      ; 0.722      ;
+; 0.414 ; step.0001                              ; state.WRITE_DATA_LINE_1                ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.540      ;
+; 0.414 ; counter[3]                             ; data_in[0]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.539      ;
+; 0.421 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[1]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.547      ;
+; 0.421 ; lcdController_pos:lcd|state.INIT_LCD   ; lcdController_pos:lcd|init_step[2]     ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.547      ;
+; 0.422 ; lcdController_pos:lcd|data[3]          ; lcdController_pos:lcd|data[3]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.547      ;
+; 0.423 ; state.SET_CURSOR_LINE_2                ; row[0]                                 ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.229      ; 0.736      ;
+; 0.426 ; state.SET_CURSOR_LINE_2                ; step.0101                              ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.042      ; 0.552      ;
+; 0.429 ; step.0111                              ; state.DONE                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.554      ;
+; 0.429 ; lcdController_pos:lcd|init_step[2]     ; lcdController_pos:lcd|data[4]          ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.227      ; 0.740      ;
+; 0.430 ; counter[1]                             ; data_in[6]                             ; clk_50mhz    ; clk_50mhz   ; 0.000        ; 0.041      ; 0.555      ;
++-------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.261   ; 0.174 ; N/A      ; N/A     ; -3.000              ;
+;  clk_50mhz       ; -2.261   ; 0.174 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -102.083 ; 0.0   ; 0.0      ; 0.0     ; -89.095             ;
+;  clk_50mhz       ; -102.083 ; 0.000 ; N/A      ; N/A     ; -89.095             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; rs            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; rw            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; en            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; pin_data[7]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clear                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk_50mhz               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst_n                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rs            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; rw            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; en            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.33 V              ; -0.00496 V          ; 0.223 V                              ; 0.086 V                              ; 2.9e-09 s                   ; 2.73e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.33 V             ; -0.00496 V         ; 0.223 V                             ; 0.086 V                             ; 2.9e-09 s                  ; 2.73e-09 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rs            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; rw            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; en            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; pin_data[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.33 V              ; -0.00269 V          ; 0.13 V                               ; 0.055 V                              ; 3.54e-09 s                  ; 3.29e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.33 V             ; -0.00269 V         ; 0.13 V                              ; 0.055 V                             ; 3.54e-09 s                 ; 3.29e-09 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; rs            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; rw            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; en            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; pin_data[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_50mhz  ; clk_50mhz ; 785      ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_50mhz  ; clk_50mhz ; 785      ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 67    ; 67   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------+
+; Clock Status Summary                       ;
++-----------+-----------+------+-------------+
+; Target    ; Clock     ; Type ; Status      ;
++-----------+-----------+------+-------------+
+; clk_50mhz ; clk_50mhz ; Base ; Constrained ;
++-----------+-----------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; en          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst_n      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; en          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; pin_data[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rs          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Nov 21 16:19:22 2025
+Info: Command: quartus_sta top_level -c top_level
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50mhz clk_50mhz
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.261
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.261            -102.083 clk_50mhz 
+Info (332146): Worst-case hold slack is 0.385
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.385               0.000 clk_50mhz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -89.095 clk_50mhz 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.968
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.968             -87.289 clk_50mhz 
+Info (332146): Worst-case hold slack is 0.338
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.338               0.000 clk_50mhz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -89.095 clk_50mhz 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.642
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.642             -17.297 clk_50mhz 
+Info (332146): Worst-case hold slack is 0.174
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.174               0.000 clk_50mhz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -74.531 clk_50mhz 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Fri Nov 21 16:19:23 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,25 @@
+module top_level(
+    input clk,
+    input rst_n,
+    input [3:0] col,      // cột keypad
+    output [3:0] row,     // hàng keypad
+    output [6:0] led7     // led 7 đoạn
+);
+
+    wire [3:0] key_val;
+//    wire key_press;
+
+    keypad4x4 k1(
+        .clk(clk),
+        .rst_n(rst_n),
+        .col(col),
+        .row(row),
+        .key_val(key_val)
+    );
+
+    led7seg L1(
+        .digit(key_val),
+        .led(led7)
+    );
+
+endmodule

@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "system.h"
+#include "io.h"
+
+#define FIFO_DATA_BASE   FIFO_IN_BASE
+#define FIFO_CSR_BASE    FIFO__IN_CSR_BASE
+
+#define FIFO_STATUS_REG      0
+#define FIFO_FILLLEVEL_REG   5
+#define FIFO_STATUS_FULL     (1 << 0)
+#define FIFO_DEPTH           256
+
+static inline uint32_t fifo_status(void)
+{
+    return IORD(FIFO_CSR_BASE, FIFO_STATUS_REG);
+}
+
+static inline void fifo_write(uint32_t data)
+{
+    IOWR(FIFO_DATA_BASE, 0, data);
+}
+
+static inline uint32_t pack_mono(int16_t s)
+{
+    return (((uint16_t)s) << 16) | ((uint16_t)s);
+}
+
+int main(void)
+{
+    int i;
+    int16_t hi = 12000;
+    int16_t lo = -12000;
+
+    printf("Write audio data to FIFO...\n");
+
+    while (1) {
+        for (i = 0; i < 240; i++) {
+            while (fifo_status() & FIFO_STATUS_FULL) ;
+            fifo_write(pack_mono(hi));
+        }
+
+        for (i = 0; i < 240; i++) {
+            while (fifo_status() & FIFO_STATUS_FULL) ;
+            fifo_write(pack_mono(lo));
+        }
+    }
+
+    return 0;
+}

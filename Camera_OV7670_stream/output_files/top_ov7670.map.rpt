@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_ov7670
-Wed Aug 21 21:22:44 2024
+Sat Jan 10 10:36:25 2026
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -25,21 +25,22 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  17. Registers Packed Into Inferred Megafunctions
  18. Multiplexer Restructuring Statistics (Restructuring Performed)
  19. Source assignments for RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated
- 20. Source assignments for config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated
+ 20. Source assignments for config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated
  21. Parameter Settings for User Entity Instance: PLL:u1|altpll:altpll_component
  22. Parameter Settings for User Entity Instance: VGA_Ctrl:u5
  23. Parameter Settings for User Entity Instance: RAM:u6|altsyncram:altsyncram_component
- 24. Parameter Settings for Inferred Entity Instance: config_camera:u2|altsyncram:message_rtl_0
+ 24. Parameter Settings for Inferred Entity Instance: config_camera:u2|altsyncram:cam_cfg_rtl_0
  25. altpll Parameter Settings by Entity Instance
  26. altsyncram Parameter Settings by Entity Instance
  27. Port Connectivity Checks: "VGA_Ctrl:u5"
  28. Port Connectivity Checks: "camera_read:u4"
  29. Port Connectivity Checks: "sram:u3"
- 30. Port Connectivity Checks: "config_camera:u2|i2c:config_camera"
- 31. Port Connectivity Checks: "config_camera:u2"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
+ 30. Port Connectivity Checks: "PLL:u1"
+ 31. Port Connectivity Checks: "config_camera:u2|i2c:config_camera"
+ 32. Port Connectivity Checks: "config_camera:u2"
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -65,7 +66,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 21 21:22:44 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jan 10 10:36:25 2026       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_ov7670                                  ;
 ; Top-level Entity Name              ; top_ov7670                                  ;
@@ -188,41 +189,41 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
-+---------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                  ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                      ; Library ;
-+---------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; read_camera.v                                     ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/read_camera.v                                     ;         ;
-; sram/synthesis/sram.v                             ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/sram.v                             ; sram    ;
-; sram/synthesis/submodules/sram_sram_0.v           ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/submodules/sram_sram_0.v           ; sram    ;
-; top_ov7670.v                                      ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v                                      ;         ;
-; i2c.v                                             ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v                                             ;         ;
-; config_camera.v                                   ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v                                   ;         ;
-; PLL.v                                             ; yes             ; User Wizard-Generated File                            ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v                                             ;         ;
-; VGA_control.v                                     ; yes             ; User Verilog HDL File                                 ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v                                     ;         ;
-; RAM.v                                             ; yes             ; User Wizard-Generated File                            ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v                                             ;         ;
-; altpll.tdf                                        ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/altpll.tdf                                                ;         ;
-; aglobal171.inc                                    ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/aglobal171.inc                                            ;         ;
-; stratix_pll.inc                                   ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/stratix_pll.inc                                           ;         ;
-; stratixii_pll.inc                                 ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/stratixii_pll.inc                                         ;         ;
-; cycloneii_pll.inc                                 ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/cycloneii_pll.inc                                         ;         ;
-; db/pll_altpll.v                                   ; yes             ; Auto-Generated Megafunction                           ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v                                   ;         ;
-; altsyncram.tdf                                    ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf                                            ;         ;
-; stratix_ram_block.inc                             ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;         ;
-; lpm_mux.inc                                       ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/lpm_mux.inc                                               ;         ;
-; lpm_decode.inc                                    ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/lpm_decode.inc                                            ;         ;
-; a_rdenreg.inc                                     ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;         ;
-; altrom.inc                                        ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/altrom.inc                                                ;         ;
-; altram.inc                                        ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/altram.inc                                                ;         ;
-; altdpram.inc                                      ; yes             ; Megafunction                                          ; d:/fpga/quartus/libraries/megafunctions/altdpram.inc                                              ;         ;
-; db/altsyncram_1bg1.tdf                            ; yes             ; Auto-Generated Megafunction                           ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf                            ;         ;
-; db/decode_5ua.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_5ua.tdf                                 ;         ;
-; db/decode_u9a.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_u9a.tdf                                 ;         ;
-; db/mux_4qb.tdf                                    ; yes             ; Auto-Generated Megafunction                           ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/mux_4qb.tdf                                    ;         ;
-; db/altsyncram_si81.tdf                            ; yes             ; Auto-Generated Megafunction                           ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_si81.tdf                            ;         ;
-; db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ;         ;
-+---------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                            ;
++---------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                  ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                              ; Library ;
++---------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; read_camera.v                                     ; yes             ; User Verilog HDL File                                 ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/read_camera.v                                     ;         ;
+; sram/synthesis/sram.v                             ; yes             ; User Verilog HDL File                                 ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/sram.v                             ; sram    ;
+; sram/synthesis/submodules/sram_sram_0.v           ; yes             ; User Verilog HDL File                                 ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/submodules/sram_sram_0.v           ; sram    ;
+; top_ov7670.v                                      ; yes             ; User Verilog HDL File                                 ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v                                      ;         ;
+; i2c.v                                             ; yes             ; User Verilog HDL File                                 ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v                                             ;         ;
+; config_camera.v                                   ; yes             ; User Verilog HDL File                                 ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v                                   ;         ;
+; PLL.v                                             ; yes             ; User Wizard-Generated File                            ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v                                             ;         ;
+; VGA_control.v                                     ; yes             ; User Verilog HDL File                                 ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v                                     ;         ;
+; RAM.v                                             ; yes             ; User Wizard-Generated File                            ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v                                             ;         ;
+; altpll.tdf                                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf                                         ;         ;
+; aglobal171.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                                     ;         ;
+; stratix_pll.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_pll.inc                                    ;         ;
+; stratixii_pll.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratixii_pll.inc                                  ;         ;
+; cycloneii_pll.inc                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                  ;         ;
+; db/pll_altpll.v                                   ; yes             ; Auto-Generated Megafunction                           ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v                                   ;         ;
+; altsyncram.tdf                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
+; stratix_ram_block.inc                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
+; lpm_mux.inc                                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
+; lpm_decode.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
+; a_rdenreg.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
+; altrom.inc                                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
+; altram.inc                                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                         ;         ;
+; altdpram.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
+; db/altsyncram_1bg1.tdf                            ; yes             ; Auto-Generated Megafunction                           ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf                            ;         ;
+; db/decode_5ua.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_5ua.tdf                                 ;         ;
+; db/decode_u9a.tdf                                 ; yes             ; Auto-Generated Megafunction                           ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_u9a.tdf                                 ;         ;
+; db/mux_4qb.tdf                                    ; yes             ; Auto-Generated Megafunction                           ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/mux_4qb.tdf                                    ;         ;
+; db/altsyncram_si81.tdf                            ; yes             ; Auto-Generated Megafunction                           ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_si81.tdf                            ;         ;
+; db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ;         ;
++---------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -279,8 +280,8 @@ refer to the applicable agreement for further details.
 ;    |VGA_Ctrl:u5|                          ; 73 (73)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|VGA_Ctrl:u5                                                                                  ; VGA_Ctrl        ; work         ;
 ;    |camera_read:u4|                       ; 24 (24)             ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|camera_read:u4                                                                               ; camera_read     ; work         ;
 ;    |config_camera:u2|                     ; 63 (27)             ; 41 (16)                   ; 1616        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|config_camera:u2                                                                             ; config_camera   ; work         ;
-;       |altsyncram:message_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1616        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|config_camera:u2|altsyncram:message_rtl_0                                                    ; altsyncram      ; work         ;
-;          |altsyncram_si81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1616        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated                     ; altsyncram_si81 ; work         ;
+;       |altsyncram:cam_cfg_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 1616        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|config_camera:u2|altsyncram:cam_cfg_rtl_0                                                    ; altsyncram      ; work         ;
+;          |altsyncram_si81:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1616        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated                     ; altsyncram_si81 ; work         ;
 ;       |i2c:config_camera|                 ; 36 (36)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|config_camera:u2|i2c:config_camera                                                           ; i2c             ; work         ;
 ;    |sram:u3|                              ; 2 (0)               ; 54 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|sram:u3                                                                                      ; sram            ; sram         ;
 ;       |sram_sram_0:sram_0|                ; 2 (2)               ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_ov7670|sram:u3|sram_sram_0:sram_0                                                                   ; sram_sram_0     ; sram         ;
@@ -294,7 +295,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                                               ;
 +-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+---------------------------------------------------+
 ; RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|ALTSYNCRAM    ; AUTO ; Single Port ; 80000        ; 16           ; --           ; --           ; 1280000 ; None                                              ;
-; config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 101          ; 16           ; --           ; --           ; 1616    ; db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ;
+; config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 101          ; 16           ; --           ; --           ; 1616    ; db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif ;
 +-------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+---------------------------------------------------+
 
 
@@ -454,7 +455,7 @@ Encoding Type:  One-Hot
 +------------------------------------+--------------------------------+------+
 ; Register Name                      ; Megafunction                   ; Type ;
 +------------------------------------+--------------------------------+------+
-; config_camera:u2|i_i2c_data[0..15] ; config_camera:u2|message_rtl_0 ; RAM  ;
+; config_camera:u2|i_i2c_data[0..15] ; config_camera:u2|cam_cfg_rtl_0 ; RAM  ;
 +------------------------------------+--------------------------------+------+
 
 
@@ -484,7 +485,7 @@ Encoding Type:  One-Hot
 
 
 +-------------------------------------------------------------------------------------------------+
-; Source assignments for config_camera:u2|altsyncram:message_rtl_0|altsyncram_si81:auto_generated ;
+; Source assignments for config_camera:u2|altsyncram:cam_cfg_rtl_0|altsyncram_si81:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------+
 ; Assignment                      ; Value              ; From ; To                                ;
 +---------------------------------+--------------------+------+-----------------------------------+
@@ -949,7 +950,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: config_camera:u2|altsyncram:message_rtl_0              ;
+; Parameter Settings for Inferred Entity Instance: config_camera:u2|altsyncram:cam_cfg_rtl_0              ;
 +------------------------------------+---------------------------------------------------+----------------+
 ; Parameter Name                     ; Value                                             ; Type           ;
 +------------------------------------+---------------------------------------------------+----------------+
@@ -1043,7 +1044,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                              ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                      ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                 ;
-; Entity Instance                           ; config_camera:u2|altsyncram:message_rtl_0 ;
+; Entity Instance                           ; config_camera:u2|altsyncram:cam_cfg_rtl_0 ;
 ;     -- OPERATION_MODE                     ; ROM                                       ;
 ;     -- WIDTH_A                            ; 16                                        ;
 ;     -- NUMWORDS_A                         ; 101                                       ;
@@ -1062,9 +1063,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
-; iRed[2..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; iGreen[1..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; iBlue[2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; iRed[2..0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; iGreen[1..0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; iBlue[2..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; oAddress     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; oRequest     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1087,6 +1088,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; address[19]   ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; readdatavalid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PLL:u1"                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; c1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1163,49 +1173,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Aug 21 21:22:23 2024
+    Info: Processing started: Sat Jan 10 10:36:15 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_ov7670 -c top_ov7670
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file read_camera.v
-    Info (12023): Found entity 1: camera_read File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/read_camera.v Line: 21
+    Info (12023): Found entity 1: camera_read File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/read_camera.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file sram/synthesis/sram.v
-    Info (12023): Found entity 1: sram File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/sram.v Line: 6
+    Info (12023): Found entity 1: sram File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/sram.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file sram/synthesis/submodules/sram_sram_0.v
-    Info (12023): Found entity 1: sram_sram_0 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/submodules/sram_sram_0.v Line: 30
-Warning (10238): Verilog Module Declaration warning at top_ov7670.v(51): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "top_ov7670" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 51
+    Info (12023): Found entity 1: sram_sram_0 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/submodules/sram_sram_0.v Line: 30
+Warning (10238): Verilog Module Declaration warning at top_ov7670.v(51): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "top_ov7670" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file top_ov7670.v
-    Info (12023): Found entity 1: top_ov7670 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 1
+    Info (12023): Found entity 1: top_ov7670 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file i2c.v
-    Info (12023): Found entity 1: i2c File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 42
-Warning (10229): Verilog HDL Expression warning at config_camera.v(144): truncated literal to match 5 bits File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 144
+    Info (12023): Found entity 1: i2c File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 42
+Warning (10229): Verilog HDL Expression warning at config_camera.v(151): truncated literal to match 5 bits File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 151
 Info (12021): Found 1 design units, including 1 entities, in source file config_camera.v
-    Info (12023): Found entity 1: config_camera File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 1
+    Info (12023): Found entity 1: config_camera File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: PLL File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 40
+    Info (12023): Found entity 1: PLL File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file vga_control.v
-    Info (12023): Found entity 1: VGA_Ctrl File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 1
+    Info (12023): Found entity 1: VGA_Ctrl File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
-    Info (12023): Found entity 1: RAM File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 39
+    Info (12023): Found entity 1: RAM File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 39
 Info (12127): Elaborating entity "top_ov7670" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top_ov7670.v(280): truncated value with size 19 to match size of target (17) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 280
-Info (10264): Verilog HDL Case Statement information at top_ov7670.v(274): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 274
-Warning (10230): Verilog HDL assignment warning at top_ov7670.v(306): truncated value with size 32 to match size of target (17) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 306
-Warning (10230): Verilog HDL assignment warning at top_ov7670.v(308): truncated value with size 32 to match size of target (19) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 308
-Warning (10230): Verilog HDL assignment warning at top_ov7670.v(311): truncated value with size 32 to match size of target (3) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 311
-Info (12128): Elaborating entity "config_camera" for hierarchy "config_camera:u2" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 367
-Warning (10230): Verilog HDL assignment warning at config_camera.v(170): truncated value with size 32 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 170
-Info (10264): Verilog HDL Case Statement information at config_camera.v(154): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 154
-Warning (10030): Net "message.data_a" at config_camera.v(35) has no driver or initial value, using a default initial value '0' File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 35
-Warning (10030): Net "message.waddr_a" at config_camera.v(35) has no driver or initial value, using a default initial value '0' File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 35
-Warning (10030): Net "message.we_a" at config_camera.v(35) has no driver or initial value, using a default initial value '0' File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 35
-Info (12128): Elaborating entity "i2c" for hierarchy "config_camera:u2|i2c:config_camera" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 201
-Warning (10230): Verilog HDL assignment warning at i2c.v(85): truncated value with size 32 to match size of target (1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 85
-Warning (10230): Verilog HDL assignment warning at i2c.v(84): truncated value with size 32 to match size of target (1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 84
-Warning (10230): Verilog HDL assignment warning at i2c.v(109): truncated value with size 32 to match size of target (6) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 109
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:u1" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 377
-Info (12128): Elaborating entity "altpll" for hierarchy "PLL:u1|altpll:altpll_component" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 103
-Info (12130): Elaborated megafunction instantiation "PLL:u1|altpll:altpll_component" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 103
-Info (12133): Instantiated megafunction "PLL:u1|altpll:altpll_component" with the following parameter: File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 103
+Warning (10230): Verilog HDL assignment warning at top_ov7670.v(281): truncated value with size 19 to match size of target (17) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 281
+Info (10264): Verilog HDL Case Statement information at top_ov7670.v(274): all case item expressions in this case statement are onehot File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 274
+Warning (10230): Verilog HDL assignment warning at top_ov7670.v(307): truncated value with size 32 to match size of target (17) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 307
+Warning (10230): Verilog HDL assignment warning at top_ov7670.v(309): truncated value with size 32 to match size of target (19) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 309
+Warning (10230): Verilog HDL assignment warning at top_ov7670.v(320): truncated value with size 32 to match size of target (3) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 320
+Info (12128): Elaborating entity "config_camera" for hierarchy "config_camera:u2" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 377
+Warning (10230): Verilog HDL assignment warning at config_camera.v(177): truncated value with size 32 to match size of target (7) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 177
+Info (10264): Verilog HDL Case Statement information at config_camera.v(161): all case item expressions in this case statement are onehot File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 161
+Warning (10030): Net "cam_cfg.data_a" at config_camera.v(35) has no driver or initial value, using a default initial value '0' File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 35
+Warning (10030): Net "cam_cfg.waddr_a" at config_camera.v(35) has no driver or initial value, using a default initial value '0' File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 35
+Warning (10030): Net "cam_cfg.we_a" at config_camera.v(35) has no driver or initial value, using a default initial value '0' File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 35
+Info (12128): Elaborating entity "i2c" for hierarchy "config_camera:u2|i2c:config_camera" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/config_camera.v Line: 208
+Warning (10230): Verilog HDL assignment warning at i2c.v(85): truncated value with size 32 to match size of target (1) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 85
+Warning (10230): Verilog HDL assignment warning at i2c.v(84): truncated value with size 32 to match size of target (1) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 84
+Warning (10230): Verilog HDL assignment warning at i2c.v(109): truncated value with size 32 to match size of target (6) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 109
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:u1" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 387
+Info (12128): Elaborating entity "altpll" for hierarchy "PLL:u1|altpll:altpll_component" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 103
+Info (12130): Elaborated megafunction instantiation "PLL:u1|altpll:altpll_component" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 103
+Info (12133): Instantiated megafunction "PLL:u1|altpll:altpll_component" with the following parameter: File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/PLL.v Line: 103
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1273,20 +1283,20 @@ Info (12133): Instantiated megafunction "PLL:u1|altpll:altpll_component" with th
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
-    Info (12023): Found entity 1: PLL_altpll File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 29
-Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated" File: d:/fpga/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "sram" for hierarchy "sram:u3" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 399
-Info (12128): Elaborating entity "sram_sram_0" for hierarchy "sram:u3|sram_sram_0:sram_0" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/sram.v Line: 42
-Info (12128): Elaborating entity "camera_read" for hierarchy "camera_read:u4" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 412
-Warning (10230): Verilog HDL assignment warning at read_camera.v(55): truncated value with size 32 to match size of target (1) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/read_camera.v Line: 55
-Info (12128): Elaborating entity "VGA_Ctrl" for hierarchy "VGA_Ctrl:u5" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 438
-Warning (10230): Verilog HDL assignment warning at VGA_control.v(67): truncated value with size 32 to match size of target (19) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 67
-Warning (10230): Verilog HDL assignment warning at VGA_control.v(70): truncated value with size 32 to match size of target (11) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 70
-Warning (10230): Verilog HDL assignment warning at VGA_control.v(71): truncated value with size 32 to match size of target (11) File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 71
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:u6" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 448
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:u6|altsyncram:altsyncram_component" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 85
-Info (12130): Elaborated megafunction instantiation "RAM:u6|altsyncram:altsyncram_component" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 85
-Info (12133): Instantiated megafunction "RAM:u6|altsyncram:altsyncram_component" with the following parameter: File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 85
+    Info (12023): Found entity 1: PLL_altpll File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 29
+Info (12128): Elaborating entity "PLL_altpll" for hierarchy "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "sram" for hierarchy "sram:u3" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 409
+Info (12128): Elaborating entity "sram_sram_0" for hierarchy "sram:u3|sram_sram_0:sram_0" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/sram/synthesis/sram.v Line: 42
+Info (12128): Elaborating entity "camera_read" for hierarchy "camera_read:u4" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 422
+Warning (10230): Verilog HDL assignment warning at read_camera.v(55): truncated value with size 32 to match size of target (1) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/read_camera.v Line: 55
+Info (12128): Elaborating entity "VGA_Ctrl" for hierarchy "VGA_Ctrl:u5" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 448
+Warning (10230): Verilog HDL assignment warning at VGA_control.v(67): truncated value with size 32 to match size of target (19) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 67
+Warning (10230): Verilog HDL assignment warning at VGA_control.v(70): truncated value with size 32 to match size of target (11) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 70
+Warning (10230): Verilog HDL assignment warning at VGA_control.v(71): truncated value with size 32 to match size of target (11) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/VGA_control.v Line: 71
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:u6" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 458
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:u6|altsyncram:altsyncram_component" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 85
+Info (12130): Elaborated megafunction instantiation "RAM:u6|altsyncram:altsyncram_component" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 85
+Info (12133): Instantiated megafunction "RAM:u6|altsyncram:altsyncram_component" with the following parameter: File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/RAM.v Line: 85
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
@@ -1302,19 +1312,19 @@ Info (12133): Instantiated megafunction "RAM:u6|altsyncram:altsyncram_component"
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1bg1.tdf
-    Info (12023): Found entity 1: altsyncram_1bg1 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 33
-Info (12128): Elaborating entity "altsyncram_1bg1" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated" File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_1bg1 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_1bg1" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5ua.tdf
-    Info (12023): Found entity 1: decode_5ua File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_5ua.tdf Line: 22
-Info (12128): Elaborating entity "decode_5ua" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 43
+    Info (12023): Found entity 1: decode_5ua File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_5ua.tdf Line: 22
+Info (12128): Elaborating entity "decode_5ua" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_5ua:decode3" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_u9a.tdf
-    Info (12023): Found entity 1: decode_u9a File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_u9a.tdf Line: 22
-Info (12128): Elaborating entity "decode_u9a" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 44
+    Info (12023): Found entity 1: decode_u9a File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/decode_u9a.tdf Line: 22
+Info (12128): Elaborating entity "decode_u9a" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|decode_u9a:rden_decode" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_4qb.tdf
-    Info (12023): Found entity 1: mux_4qb File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/mux_4qb.tdf Line: 22
-Info (12128): Elaborating entity "mux_4qb" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|mux_4qb:mux2" File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 45
+    Info (12023): Found entity 1: mux_4qb File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/mux_4qb.tdf Line: 22
+Info (12128): Elaborating entity "mux_4qb" for hierarchy "RAM:u6|altsyncram:altsyncram_component|altsyncram_1bg1:auto_generated|mux_4qb:mux2" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_1bg1.tdf Line: 45
 Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "config_camera:u2|message_rtl_0" 
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "config_camera:u2|cam_cfg_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
         Info (286033): Parameter WIDTH_A set to 16
         Info (286033): Parameter WIDTHAD_A set to 7
@@ -1325,8 +1335,8 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif
-Info (12130): Elaborated megafunction instantiation "config_camera:u2|altsyncram:message_rtl_0"
-Info (12133): Instantiated megafunction "config_camera:u2|altsyncram:message_rtl_0" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "config_camera:u2|altsyncram:cam_cfg_rtl_0"
+Info (12133): Instantiated megafunction "config_camera:u2|altsyncram:cam_cfg_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
     Info (12134): Parameter "WIDTH_A" = "16"
     Info (12134): Parameter "WIDTHAD_A" = "7"
@@ -1338,28 +1348,29 @@ Info (12133): Instantiated megafunction "config_camera:u2|altsyncram:message_rtl
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_si81.tdf
-    Info (12023): Found entity 1: altsyncram_si81 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_si81.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_si81 File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/altsyncram_si81.tdf Line: 27
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 79
+Info (13000): Registers with preset signals will power-up high File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/i2c.v Line: 79
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SRAM_ADDR[19]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 83
-    Warning (13410): Pin "SRAM_LB_N" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 84
-    Warning (13410): Pin "SRAM_UB_N" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 85
-    Warning (13410): Pin "SRAM_CE_N" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 86
-    Warning (13410): Pin "pin_r[0]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 122
-    Warning (13410): Pin "pin_r[1]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 122
-    Warning (13410): Pin "pin_r[2]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 122
-    Warning (13410): Pin "pin_g[0]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 123
-    Warning (13410): Pin "pin_g[1]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 123
-    Warning (13410): Pin "pin_b[0]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 124
-    Warning (13410): Pin "pin_b[1]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 124
-    Warning (13410): Pin "pin_b[2]" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 124
-    Warning (13410): Pin "pin_sync" is stuck at VCC File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 126
+    Warning (13410): Pin "SRAM_ADDR[19]" is stuck at GND File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 83
+    Warning (13410): Pin "SRAM_LB_N" is stuck at GND File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 84
+    Warning (13410): Pin "SRAM_UB_N" is stuck at GND File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 85
+    Warning (13410): Pin "SRAM_CE_N" is stuck at GND File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 86
+    Warning (13410): Pin "pin_r[0]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 122
+    Warning (13410): Pin "pin_r[1]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 122
+    Warning (13410): Pin "pin_r[2]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 122
+    Warning (13410): Pin "pin_g[0]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 123
+    Warning (13410): Pin "pin_g[1]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 123
+    Warning (13410): Pin "pin_b[0]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 124
+    Warning (13410): Pin "pin_b[1]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 124
+    Warning (13410): Pin "pin_b[2]" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 124
+    Warning (13410): Pin "pin_sync" is stuck at VCC File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/top_ov7670.v Line: 126
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (15899): PLL "PLL:u1|altpll:altpll_component|PLL_altpll:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/Camera_OV7670_stream/db/pll_altpll.v Line: 43
 Info (21057): Implemented 837 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 76 output pins
@@ -1367,10 +1378,10 @@ Info (21057): Implemented 837 device resources after synthesis - the final resou
     Info (21061): Implemented 552 logic cells
     Info (21064): Implemented 176 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Wed Aug 21 21:22:44 2024
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Sat Jan 10 10:36:25 2026
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
 
 

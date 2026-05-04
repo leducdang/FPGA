@@ -1,0 +1,22 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="804465a01ebb2f5e7263"/>
+  </project>
+  <file_info>
+    <file device="EP4CE115F29C7" path="top_level.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="ip_cordic:u0" name="u0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME ip_cordic HAS_SOPCINFO 1 GENERATION_ID 1740444470"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+    <sld_info hpath="ip_sdram:u1" name="u1">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME ip_sdram HAS_SOPCINFO 1 GENERATION_ID 1740556308"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

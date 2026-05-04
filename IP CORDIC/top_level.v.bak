@@ -1,0 +1,27 @@
+module top_level(
+						clock,
+						reset,
+						phase,
+						sin,
+						cos
+);
+
+
+input clock;
+input reset;
+input [12:0] phase;
+output [11:0] cos;
+output [11:0] sin;
+
+ip_cordic u1(
+		.a(phase),      //      a.a
+		.areset(reset), // areset.reset
+		.c(cos),      //      c.c
+		.clk(clock),    //    clk.clk
+		.s(sin)       //      s.s
+	);		
+		
+		
+endmodule
+
+

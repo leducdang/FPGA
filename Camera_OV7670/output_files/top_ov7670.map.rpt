@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_ov7670
-Sat Aug 10 14:46:39 2024
+Thu Mar 20 08:42:21 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Aug 10 14:46:39 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 20 08:42:21 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_ov7670                                  ;
 ; Top-level Entity Name              ; top_ov7670                                  ;
@@ -394,8 +394,6 @@ Encoding Type:  One-Hot
 ; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                                     ;
 +---------------------------------+---------------------------+----------------------------------------------------------------------------+
 ; read_sram                       ; Stuck at VCC              ; sram:u3|sram_sram_0:sram_0|SRAM_OE_N, sram:u3|sram_sram_0:sram_0|SRAM_CE_N ;
-;                                 ; due to stuck port data_in ;                                                                            ;
-; stt_vga[2]                      ; Stuck at GND              ; sram:u3|sram_sram_0:sram_0|SRAM_ADDR[19]                                   ;
 ;                                 ; due to stuck port data_in ;                                                                            ;
 ; config_camera:u2|i_i2c_data[23] ; Stuck at GND              ; config_camera:u2|i2c:config_camera|SD[23]                                  ;
 ;                                 ; due to stuck port data_in ;                                                                            ;
@@ -1078,7 +1076,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1088,7 +1086,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Aug 10 14:46:26 2024
+    Info: Processing started: Thu Mar 20 08:42:11 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_ov7670 -c top_ov7670
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1231,8 +1229,6 @@ Info (12133): Instantiated megafunction "config_camera:u2|altsyncram:message_rtl
     Info (12134): Parameter "INIT_FILE" = "db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_si81.tdf
     Info (12023): Found entity 1: altsyncram_si81 File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/altsyncram_si81.tdf Line: 27
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif" contains "don't care" values -- overwriting them with 0s File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/db/top_ov7670.ram0_config_camera_6fe8a9fb.hdl.mif" contains "don't care" values -- overwriting them with 0s File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high File: D:/2024/FPGA/codeFPGAL_LIB/Camera_OV7670/i2c.v Line: 79
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -1265,10 +1261,10 @@ Info (21057): Implemented 550 device resources after synthesis - the final resou
     Info (21061): Implemented 420 logic cells
     Info (21064): Implemented 16 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Sat Aug 10 14:46:39 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Thu Mar 20 08:42:21 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

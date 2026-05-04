@@ -5,7 +5,12 @@
 `timescale 1 ps / 1 ps
 module sdram (
 		input  wire        clk_clk,               //       clk.clk
-		input  wire        reset_reset,           //     reset.reset
+		input  wire        pll_read,              //       pll.read
+		input  wire        pll_write,             //          .write
+		input  wire [1:0]  pll_address,           //          .address
+		output wire [31:0] pll_readdata,          //          .readdata
+		input  wire [31:0] pll_writedata,         //          .writedata
+		input  wire        reset_reset_n,         //     reset.reset_n
 		input  wire [24:0] sdram_1_address,       //   sdram_1.address
 		input  wire [3:0]  sdram_1_byteenable_n,  //          .byteenable_n
 		input  wire        sdram_1_chipselect,    //          .chipselect
@@ -27,39 +32,55 @@ module sdram (
 		output wire        wire_we_n              //          .we_n
 	);
 
-	wire    sys_sdram_pll_0_sys_clk_clk;        // sys_sdram_pll_0:sys_clk_clk -> [new_sdram_controller_0:clk, rst_controller:clk]
-	wire    rst_controller_reset_out_reset;     // rst_controller:reset_out -> new_sdram_controller_0:reset_n
-	wire    sys_sdram_pll_0_reset_source_reset; // sys_sdram_pll_0:reset_source_reset -> rst_controller:reset_in0
+	wire    altpll_0_c0_clk;                    // altpll_0:c0 -> [new_sdram_controller_0:clk, rst_controller_001:clk]
+	wire    rst_controller_reset_out_reset;     // rst_controller:reset_out -> altpll_0:reset
+	wire    rst_controller_001_reset_out_reset; // rst_controller_001:reset_out -> new_sdram_controller_0:reset_n
 
-	sdram_new_sdram_controller_0 new_sdram_controller_0 (
-		.clk            (sys_sdram_pll_0_sys_clk_clk),     //   clk.clk
-		.reset_n        (~rst_controller_reset_out_reset), // reset.reset_n
-		.az_addr        (sdram_1_address),                 //    s1.address
-		.az_be_n        (sdram_1_byteenable_n),            //      .byteenable_n
-		.az_cs          (sdram_1_chipselect),              //      .chipselect
-		.az_data        (sdram_1_writedata),               //      .writedata
-		.az_rd_n        (sdram_1_read_n),                  //      .read_n
-		.az_wr_n        (sdram_1_write_n),                 //      .write_n
-		.za_data        (sdram_1_readdata),                //      .readdata
-		.za_valid       (sdram_1_readdatavalid),           //      .readdatavalid
-		.za_waitrequest (sdram_1_waitrequest),             //      .waitrequest
-		.zs_addr        (wire_addr),                       //  wire.export
-		.zs_ba          (wire_ba),                         //      .export
-		.zs_cas_n       (wire_cas_n),                      //      .export
-		.zs_cke         (wire_cke),                        //      .export
-		.zs_cs_n        (wire_cs_n),                       //      .export
-		.zs_dq          (wire_dq),                         //      .export
-		.zs_dqm         (wire_dqm),                        //      .export
-		.zs_ras_n       (wire_ras_n),                      //      .export
-		.zs_we_n        (wire_we_n)                        //      .export
+	sdram_altpll_0 altpll_0 (
+		.clk                (clk_clk),                        //       inclk_interface.clk
+		.reset              (rst_controller_reset_out_reset), // inclk_interface_reset.reset
+		.read               (pll_read),                       //             pll_slave.read
+		.write              (pll_write),                      //                      .write
+		.address            (pll_address),                    //                      .address
+		.readdata           (pll_readdata),                   //                      .readdata
+		.writedata          (pll_writedata),                  //                      .writedata
+		.c0                 (altpll_0_c0_clk),                //                    c0.clk
+		.c1                 (sdram_clk_clk),                  //                    c1.clk
+		.scandone           (),                               //           (terminated)
+		.scandataout        (),                               //           (terminated)
+		.areset             (1'b0),                           //           (terminated)
+		.locked             (),                               //           (terminated)
+		.phasedone          (),                               //           (terminated)
+		.phasecounterselect (4'b0000),                        //           (terminated)
+		.phaseupdown        (1'b0),                           //           (terminated)
+		.phasestep          (1'b0),                           //           (terminated)
+		.scanclk            (1'b0),                           //           (terminated)
+		.scanclkena         (1'b0),                           //           (terminated)
+		.scandata           (1'b0),                           //           (terminated)
+		.configupdate       (1'b0)                            //           (terminated)
 	);
 
-	sdram_sys_sdram_pll_0 sys_sdram_pll_0 (
-		.ref_clk_clk        (clk_clk),                            //      ref_clk.clk
-		.ref_reset_reset    (reset_reset),                        //    ref_reset.reset
-		.sys_clk_clk        (sys_sdram_pll_0_sys_clk_clk),        //      sys_clk.clk
-		.sdram_clk_clk      (sdram_clk_clk),                      //    sdram_clk.clk
-		.reset_source_reset (sys_sdram_pll_0_reset_source_reset)  // reset_source.reset
+	sdram_new_sdram_controller_0 new_sdram_controller_0 (
+		.clk            (altpll_0_c0_clk),                     //   clk.clk
+		.reset_n        (~rst_controller_001_reset_out_reset), // reset.reset_n
+		.az_addr        (sdram_1_address),                     //    s1.address
+		.az_be_n        (sdram_1_byteenable_n),                //      .byteenable_n
+		.az_cs          (sdram_1_chipselect),                  //      .chipselect
+		.az_data        (sdram_1_writedata),                   //      .writedata
+		.az_rd_n        (sdram_1_read_n),                      //      .read_n
+		.az_wr_n        (sdram_1_write_n),                     //      .write_n
+		.za_data        (sdram_1_readdata),                    //      .readdata
+		.za_valid       (sdram_1_readdatavalid),               //      .readdatavalid
+		.za_waitrequest (sdram_1_waitrequest),                 //      .waitrequest
+		.zs_addr        (wire_addr),                           //  wire.export
+		.zs_ba          (wire_ba),                             //      .export
+		.zs_cas_n       (wire_cas_n),                          //      .export
+		.zs_cke         (wire_cke),                            //      .export
+		.zs_cs_n        (wire_cs_n),                           //      .export
+		.zs_dq          (wire_dq),                             //      .export
+		.zs_dqm         (wire_dqm),                            //      .export
+		.zs_ras_n       (wire_ras_n),                          //      .export
+		.zs_we_n        (wire_we_n)                            //      .export
 	);
 
 	altera_reset_controller #(
@@ -88,9 +109,72 @@ module sdram (
 		.USE_RESET_REQUEST_IN15    (0),
 		.ADAPT_RESET_REQUEST       (0)
 	) rst_controller (
-		.reset_in0      (sys_sdram_pll_0_reset_source_reset), // reset_in0.reset
-		.clk            (sys_sdram_pll_0_sys_clk_clk),        //       clk.clk
-		.reset_out      (rst_controller_reset_out_reset),     // reset_out.reset
+		.reset_in0      (~reset_reset_n),                 // reset_in0.reset
+		.clk            (clk_clk),                        //       clk.clk
+		.reset_out      (rst_controller_reset_out_reset), // reset_out.reset
+		.reset_req      (),                               // (terminated)
+		.reset_req_in0  (1'b0),                           // (terminated)
+		.reset_in1      (1'b0),                           // (terminated)
+		.reset_req_in1  (1'b0),                           // (terminated)
+		.reset_in2      (1'b0),                           // (terminated)
+		.reset_req_in2  (1'b0),                           // (terminated)
+		.reset_in3      (1'b0),                           // (terminated)
+		.reset_req_in3  (1'b0),                           // (terminated)
+		.reset_in4      (1'b0),                           // (terminated)
+		.reset_req_in4  (1'b0),                           // (terminated)
+		.reset_in5      (1'b0),                           // (terminated)
+		.reset_req_in5  (1'b0),                           // (terminated)
+		.reset_in6      (1'b0),                           // (terminated)
+		.reset_req_in6  (1'b0),                           // (terminated)
+		.reset_in7      (1'b0),                           // (terminated)
+		.reset_req_in7  (1'b0),                           // (terminated)
+		.reset_in8      (1'b0),                           // (terminated)
+		.reset_req_in8  (1'b0),                           // (terminated)
+		.reset_in9      (1'b0),                           // (terminated)
+		.reset_req_in9  (1'b0),                           // (terminated)
+		.reset_in10     (1'b0),                           // (terminated)
+		.reset_req_in10 (1'b0),                           // (terminated)
+		.reset_in11     (1'b0),                           // (terminated)
+		.reset_req_in11 (1'b0),                           // (terminated)
+		.reset_in12     (1'b0),                           // (terminated)
+		.reset_req_in12 (1'b0),                           // (terminated)
+		.reset_in13     (1'b0),                           // (terminated)
+		.reset_req_in13 (1'b0),                           // (terminated)
+		.reset_in14     (1'b0),                           // (terminated)
+		.reset_req_in14 (1'b0),                           // (terminated)
+		.reset_in15     (1'b0),                           // (terminated)
+		.reset_req_in15 (1'b0)                            // (terminated)
+	);
+
+	altera_reset_controller #(
+		.NUM_RESET_INPUTS          (1),
+		.OUTPUT_RESET_SYNC_EDGES   ("deassert"),
+		.SYNC_DEPTH                (2),
+		.RESET_REQUEST_PRESENT     (0),
+		.RESET_REQ_WAIT_TIME       (1),
+		.MIN_RST_ASSERTION_TIME    (3),
+		.RESET_REQ_EARLY_DSRT_TIME (1),
+		.USE_RESET_REQUEST_IN0     (0),
+		.USE_RESET_REQUEST_IN1     (0),
+		.USE_RESET_REQUEST_IN2     (0),
+		.USE_RESET_REQUEST_IN3     (0),
+		.USE_RESET_REQUEST_IN4     (0),
+		.USE_RESET_REQUEST_IN5     (0),
+		.USE_RESET_REQUEST_IN6     (0),
+		.USE_RESET_REQUEST_IN7     (0),
+		.USE_RESET_REQUEST_IN8     (0),
+		.USE_RESET_REQUEST_IN9     (0),
+		.USE_RESET_REQUEST_IN10    (0),
+		.USE_RESET_REQUEST_IN11    (0),
+		.USE_RESET_REQUEST_IN12    (0),
+		.USE_RESET_REQUEST_IN13    (0),
+		.USE_RESET_REQUEST_IN14    (0),
+		.USE_RESET_REQUEST_IN15    (0),
+		.ADAPT_RESET_REQUEST       (0)
+	) rst_controller_001 (
+		.reset_in0      (~reset_reset_n),                     // reset_in0.reset
+		.clk            (altpll_0_c0_clk),                    //       clk.clk
+		.reset_out      (rst_controller_001_reset_out_reset), // reset_out.reset
 		.reset_req      (),                                   // (terminated)
 		.reset_req_in0  (1'b0),                               // (terminated)
 		.reset_in1      (1'b0),                               // (terminated)

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Wed Oct 02 09:07:54 2024
+Tue Sep 30 15:39:08 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -53,13 +53,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 02 09:07:54 2024       ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 30 15:39:08 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 312                                         ;
-;     Total combinational functions  ; 303                                         ;
+; Total logic elements               ; 309                                         ;
+;     Total combinational functions  ; 301                                         ;
 ;     Dedicated logic registers      ; 69                                          ;
 ; Total registers                    ; 69                                          ;
 ; Total pins                         ; 31                                          ;
@@ -175,35 +175,35 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+---------+
-; IP_RAM_VGA_Data.mif              ; yes             ; User Memory Initialization File  ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/IP_RAM_VGA_Data.mif    ;         ;
-; vga_controler.v                  ; yes             ; User Verilog HDL File            ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v        ;         ;
-; top.v                            ; yes             ; User Verilog HDL File            ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v                  ;         ;
-; pll1.v                           ; yes             ; User Wizard-Generated File       ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v                 ;         ;
-; ram1.v                           ; yes             ; User Wizard-Generated File       ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v                 ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/altpll.tdf             ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/aglobal171.inc         ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/stratix_pll.inc        ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/stratixii_pll.inc      ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/cycloneii_pll.inc      ;         ;
-; db/pll1_altpll.v                 ; yes             ; Auto-Generated Megafunction      ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/pll1_altpll.v       ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf         ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/stratix_ram_block.inc  ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/lpm_mux.inc            ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/lpm_decode.inc         ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/a_rdenreg.inc          ;         ;
-; altrom.inc                       ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/altrom.inc             ;         ;
-; altram.inc                       ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/altram.inc             ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                     ; d:/fpga/quartus/libraries/megafunctions/altdpram.inc           ;         ;
-; db/altsyncram_p9j1.tdf           ; yes             ; Auto-Generated Megafunction      ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf ;         ;
-; db/decode_5ua.tdf                ; yes             ; Auto-Generated Megafunction      ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_5ua.tdf      ;         ;
-; db/decode_u9a.tdf                ; yes             ; Auto-Generated Megafunction      ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_u9a.tdf      ;         ;
-; db/mux_3qb.tdf                   ; yes             ; Auto-Generated Megafunction      ; D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/mux_3qb.tdf         ;         ;
-+----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
+; IP_RAM_VGA_Data.mif              ; yes             ; User Memory Initialization File  ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/IP_RAM_VGA_Data.mif          ;         ;
+; vga_controler.v                  ; yes             ; User Verilog HDL File            ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v              ;         ;
+; top.v                            ; yes             ; User Verilog HDL File            ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v                        ;         ;
+; pll1.v                           ; yes             ; User Wizard-Generated File       ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v                       ;         ;
+; ram1.v                           ; yes             ; User Wizard-Generated File       ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v                       ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/pll1_altpll.v                 ; yes             ; Auto-Generated Megafunction      ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/pll1_altpll.v             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_p9j1.tdf           ; yes             ; Auto-Generated Megafunction      ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf       ;         ;
+; db/decode_5ua.tdf                ; yes             ; Auto-Generated Megafunction      ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_5ua.tdf            ;         ;
+; db/decode_u9a.tdf                ; yes             ; Auto-Generated Megafunction      ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_u9a.tdf            ;         ;
+; db/mux_3qb.tdf                   ; yes             ; Auto-Generated Megafunction      ; E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/mux_3qb.tdf               ;         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -211,16 +211,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 312                                                                         ;
+; Estimated Total logic elements              ; 309                                                                         ;
 ;                                             ;                                                                             ;
-; Total combinational functions               ; 303                                                                         ;
+; Total combinational functions               ; 301                                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                                             ;
-;     -- 4 input functions                    ; 230                                                                         ;
-;     -- 3 input functions                    ; 22                                                                          ;
-;     -- <=2 input functions                  ; 51                                                                          ;
+;     -- 4 input functions                    ; 234                                                                         ;
+;     -- 3 input functions                    ; 17                                                                          ;
+;     -- <=2 input functions                  ; 50                                                                          ;
 ;                                             ;                                                                             ;
 ; Logic elements by mode                      ;                                                                             ;
-;     -- normal mode                          ; 252                                                                         ;
+;     -- normal mode                          ; 250                                                                         ;
 ;     -- arithmetic mode                      ; 51                                                                          ;
 ;                                             ;                                                                             ;
 ; Total registers                             ; 69                                                                          ;
@@ -237,8 +237,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                             ;
 ; Maximum fan-out node                        ; pll1:u2|altpll:altpll_component|pll1_altpll:auto_generated|wire_pll1_clk[0] ;
 ; Maximum fan-out                             ; 299                                                                         ;
-; Total fan-out                               ; 5183                                                                        ;
-; Average fan-out                             ; 7.68                                                                        ;
+; Total fan-out                               ; 5182                                                                        ;
+; Average fan-out                             ; 7.70                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------+
 
 
@@ -247,8 +247,8 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                      ; 303 (77)            ; 69 (41)                   ; 1843200     ; 0            ; 0       ; 0         ; 31   ; 0            ; |top                                                                                               ; top             ; work         ;
-;    |VGA_Ctrl:vga|                         ; 72 (72)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_Ctrl:vga                                                                                  ; VGA_Ctrl        ; work         ;
+; |top                                      ; 301 (76)            ; 69 (41)                   ; 1843200     ; 0            ; 0       ; 0         ; 31   ; 0            ; |top                                                                                               ; top             ; work         ;
+;    |VGA_Ctrl:vga|                         ; 71 (71)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|VGA_Ctrl:vga                                                                                  ; VGA_Ctrl        ; work         ;
 ;    |pll1:u2|                              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll1:u2                                                                                       ; pll1            ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll1:u2|altpll:altpll_component                                                               ; altpll          ; work         ;
 ;          |pll1_altpll:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pll1:u2|altpll:altpll_component|pll1_altpll:auto_generated                                    ; pll1_altpll     ; work         ;
@@ -838,21 +838,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR SCLR          ; 22                          ;
 ;     ENA               ; 41                          ;
 ;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 307                         ;
+; cycloneiii_lcell_comb ; 305                         ;
 ;     arith             ; 51                          ;
-;         2 data inputs ; 38                          ;
-;         3 data inputs ; 13                          ;
-;     normal            ; 256                         ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 12                          ;
+;     normal            ; 254                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 230                         ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 234                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 240                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.50                        ;
-; Average LUT depth     ; 3.26                        ;
+; Max LUT depth         ; 5.30                        ;
+; Average LUT depth     ; 3.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -871,24 +871,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 02 09:07:41 2024
+    Info: Processing started: Tue Sep 30 15:38:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controler.v
-    Info (12023): Found entity 1: VGA_Ctrl File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 197
+    Info (12023): Found entity 1: VGA_Ctrl File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 197
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
-    Info (12023): Found entity 1: top File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 1
+    Info (12023): Found entity 1: top File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll1.v
-    Info (12023): Found entity 1: pll1 File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 40
+    Info (12023): Found entity 1: pll1 File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file ram1.v
-    Info (12023): Found entity 1: ram1 File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 40
+    Info (12023): Found entity 1: ram1 File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 40
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.v(38): truncated value with size 32 to match size of target (22) File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 38
-Info (12128): Elaborating entity "pll1" for hierarchy "pll1:u2" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 68
-Info (12128): Elaborating entity "altpll" for hierarchy "pll1:u2|altpll:altpll_component" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 95
-Info (12130): Elaborated megafunction instantiation "pll1:u2|altpll:altpll_component" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 95
-Info (12133): Instantiated megafunction "pll1:u2|altpll:altpll_component" with the following parameter: File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 95
+Warning (10230): Verilog HDL assignment warning at top.v(40): truncated value with size 32 to match size of target (22) File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 40
+Info (12128): Elaborating entity "pll1" for hierarchy "pll1:u2" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 70
+Info (12128): Elaborating entity "altpll" for hierarchy "pll1:u2|altpll:altpll_component" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 95
+Info (12130): Elaborated megafunction instantiation "pll1:u2|altpll:altpll_component" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 95
+Info (12133): Instantiated megafunction "pll1:u2|altpll:altpll_component" with the following parameter: File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/pll1.v Line: 95
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -948,12 +948,12 @@ Info (12133): Instantiated megafunction "pll1:u2|altpll:altpll_component" with t
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll1_altpll.v
-    Info (12023): Found entity 1: pll1_altpll File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/pll1_altpll.v Line: 29
-Info (12128): Elaborating entity "pll1_altpll" for hierarchy "pll1:u2|altpll:altpll_component|pll1_altpll:auto_generated" File: d:/fpga/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "ram1" for hierarchy "ram1:U1" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 78
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ram1:U1|altsyncram:altsyncram_component" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 86
-Info (12130): Elaborated megafunction instantiation "ram1:U1|altsyncram:altsyncram_component" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 86
-Info (12133): Instantiated megafunction "ram1:U1|altsyncram:altsyncram_component" with the following parameter: File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 86
+    Info (12023): Found entity 1: pll1_altpll File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/pll1_altpll.v Line: 29
+Info (12128): Elaborating entity "pll1_altpll" for hierarchy "pll1:u2|altpll:altpll_component|pll1_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
+Info (12128): Elaborating entity "ram1" for hierarchy "ram1:U1" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 80
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram1:U1|altsyncram:altsyncram_component" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 86
+Info (12130): Elaborated megafunction instantiation "ram1:U1|altsyncram:altsyncram_component" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 86
+Info (12133): Instantiated megafunction "ram1:U1|altsyncram:altsyncram_component" with the following parameter: File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "IP_RAM_VGA_Data.mif"
@@ -970,40 +970,39 @@ Info (12133): Instantiated megafunction "ram1:U1|altsyncram:altsyncram_component
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_p9j1.tdf
-    Info (12023): Found entity 1: altsyncram_p9j1 File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 33
-Info (12128): Elaborating entity "altsyncram_p9j1" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated" File: d:/fpga/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Critical Warning (127005): Memory depth (76800) in the design file differs from memory depth (76186) in the Memory Initialization File "D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/IP_RAM_VGA_Data.mif" -- setting initial value for remaining addresses to 0 File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/ram1.v Line: 86
+    Info (12023): Found entity 1: altsyncram_p9j1 File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_p9j1" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5ua.tdf
-    Info (12023): Found entity 1: decode_5ua File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_5ua.tdf Line: 22
-Info (12128): Elaborating entity "decode_5ua" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated|decode_5ua:decode3" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 43
+    Info (12023): Found entity 1: decode_5ua File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_5ua.tdf Line: 22
+Info (12128): Elaborating entity "decode_5ua" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated|decode_5ua:decode3" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_u9a.tdf
-    Info (12023): Found entity 1: decode_u9a File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_u9a.tdf Line: 22
-Info (12128): Elaborating entity "decode_u9a" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated|decode_u9a:rden_decode" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 44
+    Info (12023): Found entity 1: decode_u9a File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/decode_u9a.tdf Line: 22
+Info (12128): Elaborating entity "decode_u9a" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated|decode_u9a:rden_decode" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_3qb.tdf
-    Info (12023): Found entity 1: mux_3qb File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/mux_3qb.tdf Line: 22
-Info (12128): Elaborating entity "mux_3qb" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated|mux_3qb:mux2" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 45
-Info (12128): Elaborating entity "VGA_Ctrl" for hierarchy "VGA_Ctrl:vga" File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 101
-Warning (10230): Verilog HDL assignment warning at vga_controler.v(267): truncated value with size 32 to match size of target (22) File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 267
-Warning (10230): Verilog HDL assignment warning at vga_controler.v(270): truncated value with size 32 to match size of target (11) File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 270
-Warning (10230): Verilog HDL assignment warning at vga_controler.v(271): truncated value with size 32 to match size of target (11) File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 271
+    Info (12023): Found entity 1: mux_3qb File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/mux_3qb.tdf Line: 22
+Info (12128): Elaborating entity "mux_3qb" for hierarchy "ram1:U1|altsyncram:altsyncram_component|altsyncram_p9j1:auto_generated|mux_3qb:mux2" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/db/altsyncram_p9j1.tdf Line: 45
+Info (12128): Elaborating entity "VGA_Ctrl" for hierarchy "VGA_Ctrl:vga" File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 103
+Warning (10230): Verilog HDL assignment warning at vga_controler.v(267): truncated value with size 32 to match size of target (22) File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 267
+Warning (10230): Verilog HDL assignment warning at vga_controler.v(270): truncated value with size 32 to match size of target (11) File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 270
+Warning (10230): Verilog HDL assignment warning at vga_controler.v(271): truncated value with size 32 to match size of target (11) File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 271
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 231
+Info (13000): Registers with preset signals will power-up high File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/vga_controler.v Line: 231
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "pin_sync" is stuck at VCC File: D:/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 6
+    Warning (13410): Pin "pin_sync" is stuck at VCC File: E:/2-DU AN/2024/FPGA/codeFPGAL_LIB/VGA_TestAddr/top.v Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 584 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 581 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 312 logic cells
+    Info (21061): Implemented 309 logic cells
     Info (21064): Implemented 240 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Wed Oct 02 09:07:54 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Tue Sep 30 15:39:08 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:17
 
 

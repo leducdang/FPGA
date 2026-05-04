@@ -68,6 +68,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "pin_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_b[7]",
+					"strict" : false
+				},
+				{
 					"name" : "pin_vga_clock",
 					"strict" : false
 				},
@@ -84,11 +108,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw_r[0]",
+					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "clock_50mhz",
+					"name" : "sw_r[0]",
 					"strict" : false
 				},
 				{
@@ -109,14 +133,6 @@
 				},
 				{
 					"name" : "sw_r[5]",
-					"strict" : false
-				},
-				{
-					"name" : "sw_r[6]",
-					"strict" : false
-				},
-				{
-					"name" : "sw_r[7]",
 					"strict" : false
 				},
 				{
@@ -144,15 +160,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw_g[6]",
+					"name" : "sw_b[0]",
 					"strict" : false
 				},
 				{
-					"name" : "sw_g[7]",
+					"name" : "sw_b[1]",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "sw_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50mhz",
 					"strict" : false
 				}
 			]

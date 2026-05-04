@@ -34,7 +34,7 @@ always@(posedge clock_50mhz)
 					clock	<= ~clock; 		// tao xung clock có tan so 115200 bit/s
 				end
 			else
-				counter <= counter + 1;
+				counter <= counter + 12'd1;
 		end
 	end
 	

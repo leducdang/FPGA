@@ -1,7 +1,12 @@
 	component sdram is
 		port (
 			clk_clk               : in    std_logic                     := 'X';             -- clk
-			reset_reset           : in    std_logic                     := 'X';             -- reset
+			pll_read              : in    std_logic                     := 'X';             -- read
+			pll_write             : in    std_logic                     := 'X';             -- write
+			pll_address           : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			pll_readdata          : out   std_logic_vector(31 downto 0);                    -- readdata
+			pll_writedata         : in    std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			reset_reset_n         : in    std_logic                     := 'X';             -- reset_n
 			sdram_1_address       : in    std_logic_vector(24 downto 0) := (others => 'X'); -- address
 			sdram_1_byteenable_n  : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable_n
 			sdram_1_chipselect    : in    std_logic                     := 'X';             -- chipselect

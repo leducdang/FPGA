@@ -33,9 +33,11 @@ begin
 		if(Request)
 		begin
 			//if((Current_X > 11'd112) && (Current_Y < 11'd240) && (Current_X < 11'd320))
-			if((Current_Y < 11'd240) && (Current_X < 11'd320))
+//			if((Current_Y < 11'd240) && (Current_X < 11'd320))				// 320X240
+			if((Current_Y < 11'd480) && (Current_X < 11'd640))				// 640X480
 				begin
-					Address_ram <= Current_Y*320 + Current_X ;      //( 112 = H_FRONT + H_SYNC )
+//					Address_ram <= Current_Y*320 + Current_X ;      //( 112 = H_FRONT + H_SYNC ) 320X240
+					Address_ram <= Current_Y/2*320 + Current_X/2 ;			//640X480
 					data_b <= data_out[7:0];
 					data_g <= data_out[15:8];
 					data_r <= data_out[23:16];

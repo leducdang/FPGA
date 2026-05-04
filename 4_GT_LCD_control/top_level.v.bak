@@ -1,0 +1,33 @@
+module top_level (
+					input clk_50mhz,
+					input rst_n,
+					input start,              // Kích hoạt ghi LCD
+					input clear,              // Kích hoạt xóa LCD
+					output reg rs,
+					output reg rw,
+					output reg en,
+					output reg [7:0] data
+);
+
+
+reg [3:0] col;          // Cột (0–15)
+reg [1:0] row;          // Hàng (0 hoặc 1)
+reg [7:0] data_in = 8'd48;      // Dữ liệu cần hiển thị
+
+
+lcdController_pos  lcd(
+    .clk_50mhz(clk_50mhz),
+    .rst_n(rst_n),
+    .start(start),              // Kích hoạt ghi LCD
+    .clear(clear),              // Kích hoạt xóa LCD
+    .col(col),          // Cột (0–15)
+    .row(row),          // Hàng (0 hoặc 1)
+    .data_in(data_in),      // Dữ liệu cần hiển thị
+    .rs(),
+    .rw(),
+    .en(),
+    .data(),
+);
+
+endmodule
+

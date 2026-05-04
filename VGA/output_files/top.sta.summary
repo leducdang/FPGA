@@ -1,112 +1,112 @@
 ------------------------------------------------------------
-Timing Analyzer Summary
+TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -2.819
-TNS   : -19.968
+Slack : -2.796
+TNS   : -17.135
 
 Type  : Slow 1200mV 85C Model Setup 'VGA_Ctrl:vga|oVGA_HS'
-Slack : -1.429
-TNS   : -16.228
+Slack : -1.454
+TNS   : -15.887
 
 Type  : Slow 1200mV 85C Model Setup 'clock_50mhz'
-Slack : -1.099
-TNS   : -1.099
+Slack : -0.633
+TNS   : -0.633
 
 Type  : Slow 1200mV 85C Model Hold 'VGA_Ctrl:vga|oVGA_HS'
-Slack : 0.390
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.449
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clock_50mhz'
-Slack : 1.020
+Slack : 0.632
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : 0.642
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_50mhz'
 Slack : -3.000
-TNS   : -24.845
+TNS   : -4.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -1.285
+TNS   : -43.690
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'VGA_Ctrl:vga|oVGA_HS'
 Slack : -1.285
 TNS   : -15.420
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
-Slack : -1.285
-TNS   : -15.420
-
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -2.531
-TNS   : -17.315
+Slack : -2.510
+TNS   : -14.547
 
 Type  : Slow 1200mV 0C Model Setup 'VGA_Ctrl:vga|oVGA_HS'
-Slack : -1.213
-TNS   : -13.730
+Slack : -1.236
+TNS   : -13.455
 
 Type  : Slow 1200mV 0C Model Setup 'clock_50mhz'
-Slack : -0.979
-TNS   : -0.979
+Slack : -0.516
+TNS   : -0.516
 
 Type  : Slow 1200mV 0C Model Hold 'VGA_Ctrl:vga|oVGA_HS'
-Slack : 0.340
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.405
+Slack : 0.339
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock_50mhz'
-Slack : 0.949
+Slack : 0.550
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : 0.585
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_50mhz'
 Slack : -3.000
-TNS   : -24.845
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -1.285
+TNS   : -43.690
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'VGA_Ctrl:vga|oVGA_HS'
 Slack : -1.285
 TNS   : -15.420
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
-Slack : -1.285
-TNS   : -15.420
-
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -0.866
-TNS   : -3.187
-
-Type  : Fast 1200mV 0C Model Setup 'clock_50mhz'
-Slack : -0.239
-TNS   : -0.239
+Slack : -0.879
+TNS   : -1.884
 
 Type  : Fast 1200mV 0C Model Setup 'VGA_Ctrl:vga|oVGA_HS'
-Slack : -0.150
-TNS   : -1.500
+Slack : -0.162
+TNS   : -1.302
+
+Type  : Fast 1200mV 0C Model Setup 'clock_50mhz'
+Slack : -0.013
+TNS   : -0.013
 
 Type  : Fast 1200mV 0C Model Hold 'VGA_Ctrl:vga|oVGA_HS'
-Slack : 0.172
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.203
+Slack : 0.146
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_50mhz'
-Slack : 0.431
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : 0.291
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_50mhz'
 Slack : -3.000
-TNS   : -21.092
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_Ctrl:vga|oVGA_HS'
-Slack : -1.000
-TNS   : -12.000
+TNS   : -4.019
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -1.000
+TNS   : -34.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'VGA_Ctrl:vga|oVGA_HS'
 Slack : -1.000
 TNS   : -12.000
 

@@ -2,196 +2,196 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : -6.313
-TNS   : -774.924
+Type  : Slow 1200mV 85C Model Setup 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : -6.747
+TNS   : -874.652
 
 Type  : Slow 1200mV 85C Model Setup 'byteRW.01_556'
-Slack : -2.831
-TNS   : -41.637
+Slack : -5.010
+TNS   : -74.187
 
 Type  : Slow 1200mV 85C Model Setup 'button_addr'
-Slack : -2.336
-TNS   : -36.264
+Slack : -2.327
+TNS   : -36.888
 
 Type  : Slow 1200mV 85C Model Setup 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : -1.048
-TNS   : -1.837
+Slack : -0.830
+TNS   : -1.654
 
-Type  : Slow 1200mV 85C Model Hold 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : -0.196
-TNS   : -0.196
+Type  : Slow 1200mV 85C Model Hold 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : -0.199
+TNS   : -0.199
 
 Type  : Slow 1200mV 85C Model Hold 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : 0.170
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'button_addr'
-Slack : 0.694
+Slack : 0.228
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'byteRW.01_556'
-Slack : 0.892
+Slack : 0.498
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 15.964
+Type  : Slow 1200mV 85C Model Hold 'button_addr'
+Slack : 0.692
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 1.308
+Type  : Slow 1200mV 85C Model Recovery 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 2.992
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 1.035
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'button_addr'
 Slack : -3.000
-TNS   : -35.563
+TNS   : -35.125
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : 0.418
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'byteRW.00_563'
-Slack : 0.455
+Slack : 0.380
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'byteRW.01_556'
-Slack : 0.456
+Slack : 0.430
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 9.701
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'byteRW.00_563'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 3.191
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50mhz'
 Slack : 9.891
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : -5.572
-TNS   : -664.086
+Type  : Slow 1200mV 0C Model Setup 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : -6.010
+TNS   : -772.189
 
 Type  : Slow 1200mV 0C Model Setup 'byteRW.01_556'
-Slack : -2.819
-TNS   : -41.934
+Slack : -4.884
+TNS   : -72.888
 
 Type  : Slow 1200mV 0C Model Setup 'button_addr'
-Slack : -1.973
-TNS   : -29.683
+Slack : -1.971
+TNS   : -30.355
 
 Type  : Slow 1200mV 0C Model Setup 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : -0.955
-TNS   : -1.713
+Slack : -0.754
+TNS   : -1.496
 
-Type  : Slow 1200mV 0C Model Hold 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : -0.290
-TNS   : -0.290
+Type  : Slow 1200mV 0C Model Hold 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : -0.303
+TNS   : -0.303
 
 Type  : Slow 1200mV 0C Model Hold 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : 0.148
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'button_addr'
-Slack : 0.633
+Slack : 0.209
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'byteRW.01_556'
-Slack : 0.800
+Slack : 0.452
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Recovery 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 16.267
+Type  : Slow 1200mV 0C Model Hold 'button_addr'
+Slack : 0.631
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 1.203
+Type  : Slow 1200mV 0C Model Recovery 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 3.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 0.940
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'button_addr'
 Slack : -3.000
 TNS   : -35.125
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'byteRW.01_556'
-Slack : 0.380
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'byteRW.00_563'
-Slack : 0.383
+Slack : 0.416
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : 0.463
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'byteRW.01_556'
+Slack : 0.423
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 9.687
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 3.179
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50mhz'
 Slack : 9.887
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : -3.508
-TNS   : -385.728
+Type  : Fast 1200mV 0C Model Setup 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : -3.998
+TNS   : -490.571
 
 Type  : Fast 1200mV 0C Model Setup 'byteRW.01_556'
-Slack : -1.218
-TNS   : -17.087
+Slack : -2.632
+TNS   : -38.518
 
 Type  : Fast 1200mV 0C Model Setup 'button_addr'
-Slack : -0.663
-TNS   : -6.312
+Slack : -0.662
+TNS   : -6.416
 
 Type  : Fast 1200mV 0C Model Setup 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : -0.240
-TNS   : -0.304
+Slack : -0.125
+TNS   : -0.228
 
-Type  : Fast 1200mV 0C Model Hold 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : -0.106
-TNS   : -0.106
+Type  : Fast 1200mV 0C Model Hold 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : -0.108
+TNS   : -0.108
 
 Type  : Fast 1200mV 0C Model Hold 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : 0.135
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'button_addr'
-Slack : 0.317
+Slack : 0.156
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'byteRW.01_556'
-Slack : 0.500
+Slack : 0.272
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 17.751
+Type  : Fast 1200mV 0C Model Hold 'button_addr'
+Slack : 0.316
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 0.618
+Type  : Fast 1200mV 0C Model Recovery 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 4.792
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 0.493
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'button_addr'
 Slack : -3.000
-TNS   : -42.981
+TNS   : -39.117
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'byteRW.01_556'
-Slack : 0.330
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
-Slack : 0.382
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'byteRW.00_563'
-Slack : 0.389
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sdram:u0|sdram_new_sdram_controller_0:new_sdram_controller_0|sdram_new_sdram_controller_0_input_efifo_module:the_sdram_new_sdram_controller_0_input_efifo_module|entries[0]'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u0|altpll_0|sd1|pll7|clk[0]'
+Slack : 3.275
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50mhz'
 Slack : 9.574
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u0|sys_sdram_pll_0|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
-Slack : 9.780
 TNS   : 0.000
 
 ------------------------------------------------------------

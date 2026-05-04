@@ -1,5 +1,5 @@
 Flow report for top_ov7670
-Sat Aug 10 14:47:06 2024
+Thu Mar 20 08:42:40 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Aug 10 14:47:03 2024       ;
+; Flow Status                        ; Successful - Thu Mar 20 08:42:37 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top_ov7670                                  ;
 ; Top-level Entity Name              ; top_ov7670                                  ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/10/2024 14:46:26 ;
+; Start date & time ; 03/20/2025 08:42:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_ov7670          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 2545931656683.172327598617376                          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 2545931656683.174243493106472                          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -109,11 +109,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 4802 MB             ; 00:00:06                           ;
-; Fitter                    ; 00:00:17     ; 1.0                     ; 5699 MB             ; 00:00:11                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4683 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4805 MB             ; 00:00:09                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 5703 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4685 MB             ; 00:00:03                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.1                     ; 4848 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:21                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:24                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

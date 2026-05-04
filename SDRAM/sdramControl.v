@@ -25,7 +25,7 @@ reg [24:0] 	SDRAM_1_address;       //   sdram_1.address
 reg [3:0]  	SDRAM_1_byteenable_n = 4'b0000;  //          .byteenable_n
 reg        	SDRAM_1_chipselect = 1'b1;    //          .chipselect
 reg [31:0] 	SDRAM_1_writedata;     //          .writedata
-reg        SDRAM_1_read_n;        //          .read_n
+reg         SDRAM_1_read_n;        //          .read_n
 reg        	SDRAM_1_write_n;       //          .write_n
 wire [31:0] SDRAM_1_readdata;      //          .readdata
 wire        SDRAM_1_readdatavalid; //          .readdatavalid
@@ -90,7 +90,7 @@ assign led_addr = SDRAM_1_address[7:0];
         .wire_we_n             (SDRAM_we_n),             //          .we_n
         .sdram_clk_clk         (SDRAM_clk_clk),         // sdram_clk.clk
         .clk_clk               (clk_50mhz),               //       clk.clk
-        .reset_reset           (reset),           //     reset.reset
+        .reset_reset_n           (reset),           //     reset.reset
         .sdram_1_address       (SDRAM_1_address),       //   sdram_1.address
         .sdram_1_byteenable_n  (SDRAM_1_byteenable_n),  //          .byteenable_n
         .sdram_1_chipselect    (SDRAM_1_chipselect),    //          .chipselect

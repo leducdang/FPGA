@@ -51,7 +51,7 @@ always@(posedge clock or negedge reset)
 				5'd2:	begin en<=1; data_tx <= data_write[cnt_tx];	stt_tx<= 3;	end				//	gửi bit cho phép = 1 cho phép truyền dữ liệu, data cần gửi và chuyển trạng thái tiếp theo
 				5'd3:	if(fb_tx) 																					// chờ phản hồi từ uart write là đã truyền xong dữ liệu
 							begin		
-								if(cnt_tx < 15) begin  cnt_tx <= cnt_tx + 1; stt_tx <= 0; end		// kiem tra số phần tử dữ liệu đã gửi,
+								if(cnt_tx < 15) begin  cnt_tx <= cnt_tx + 5'd1; stt_tx <= 0; end		// kiem tra số phần tử dữ liệu đã gửi,
 								else stt_tx <= 4; 
 							end
 								
@@ -81,10 +81,10 @@ always@(posedge clock)
 			end
 		else
 			begin
-				counter <= counter + 1;				// tăng biến đếm counter
+				counter <= counter + 19'd1;				// tăng biến đếm counter
 				case(stt_rx)
 					4'd0:	if(fb_rx)	begin data_rx_str[cnt_rx] <= data_rx;  stt_rx <= 1; end		// cho khi viec doc du lieu hoan thanh thi gán gia tri nhan dươc vao chuoi và chuyên trạng thái
-					4'd1:	begin cnt_rx <= cnt_rx + 1; stt_rx <= 2; end										// tăng địa chỉ lưu dữ liệu tiếp theo
+					4'd1:	begin cnt_rx <= cnt_rx + 5'd1; stt_rx <= 2; end										// tăng địa chỉ lưu dữ liệu tiếp theo
 					4'd2:	if(!fb_rx)	begin  stt_rx <= 0; counter 	<= 0; end							// cho khi uart_read chuẩn bị đọc dữ liệu tiếp theo.
 				endcase
 			end
@@ -166,7 +166,7 @@ uartRead		read1(
 
 			
 // gán dữ liệu cho các led 7 đoạn với dữ liệu tương ứng.
-assign led7seg = HEX1;
+assign led7seg =  HEX1;
 assign led7seg1 = HEX2;
 assign led7seg2 = HEX3;
 assign led7seg3 = HEX4;

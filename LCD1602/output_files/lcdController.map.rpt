@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lcdController
-Wed Oct 02 15:41:09 2024
+Wed Nov 12 15:37:44 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 02 15:41:09 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 12 15:37:44 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; lcdController                               ;
 ; Top-level Entity Name              ; lcdController                               ;
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 158                                         ;
 ;     Dedicated logic registers      ; 59                                          ;
 ; Total registers                    ; 59                                          ;
-; Total pins                         ; 20                                          ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -164,13 +164,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; lcdController.v                  ; yes             ; User Verilog HDL File  ; D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
+; lcdController.v                  ; yes             ; User Verilog HDL File  ; D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------+
@@ -194,14 +194,14 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 59                ;
 ;     -- I/O registers                        ; 0                 ;
 ;                                             ;                   ;
-; I/O pins                                    ; 20                ;
+; I/O pins                                    ; 12                ;
 ;                                             ;                   ;
 ; Embedded Multiplier 9-bit elements          ; 0                 ;
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; clock_50mhz~input ;
 ; Maximum fan-out                             ; 59                ;
-; Total fan-out                               ; 666               ;
-; Average fan-out                             ; 2.59              ;
+; Total fan-out                               ; 650               ;
+; Average fan-out                             ; 2.70              ;
 +---------------------------------------------+-------------------+
 
 
@@ -210,7 +210,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; |lcdController             ; 158 (158)           ; 59 (59)                   ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |lcdController      ; lcdController ; work         ;
+; |lcdController             ; 158 (158)           ; 59 (59)                   ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |lcdController      ; lcdController ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -256,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 20                          ;
+; boundary_port         ; 12                          ;
 ; cycloneiii_ff         ; 59                          ;
 ;     ENA               ; 22                          ;
 ;     ENA SLD           ; 10                          ;
@@ -292,32 +292,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 02 15:40:59 2024
+    Info: Processing started: Wed Nov 12 15:37:35 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lcdController -c lcdController
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lcdcontroller.v
-    Info (12023): Found entity 1: lcdController File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 1
+    Info (12023): Found entity 1: lcdController File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at lcdController.v(167): created implicit net for "led_out" File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 167
 Info (12127): Elaborating entity "lcdController" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at lcdController.v(46): truncated value with size 32 to match size of target (10) File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 46
-Warning (10230): Verilog HDL assignment warning at lcdController.v(47): truncated value with size 32 to match size of target (10) File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 47
-Warning (10230): Verilog HDL assignment warning at lcdController.v(54): truncated value with size 32 to match size of target (5) File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 54
-Warning (10230): Verilog HDL assignment warning at lcdController.v(59): truncated value with size 32 to match size of target (8) File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 59
-Warning (10230): Verilog HDL assignment warning at lcdController.v(66): truncated value with size 32 to match size of target (16) File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 66
-Warning (10230): Verilog HDL assignment warning at lcdController.v(128): truncated value with size 32 to match size of target (8) File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 128
+Warning (10036): Verilog HDL or VHDL warning at lcdController.v(167): object "led_out" assigned a value but never read File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 167
+Warning (10230): Verilog HDL assignment warning at lcdController.v(47): truncated value with size 32 to match size of target (10) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 47
+Warning (10230): Verilog HDL assignment warning at lcdController.v(48): truncated value with size 32 to match size of target (10) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 48
+Warning (10230): Verilog HDL assignment warning at lcdController.v(55): truncated value with size 32 to match size of target (5) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 55
+Warning (10230): Verilog HDL assignment warning at lcdController.v(60): truncated value with size 32 to match size of target (8) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 60
+Warning (10230): Verilog HDL assignment warning at lcdController.v(67): truncated value with size 32 to match size of target (16) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 67
+Warning (10230): Verilog HDL assignment warning at lcdController.v(129): truncated value with size 32 to match size of target (8) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 129
+Warning (10230): Verilog HDL assignment warning at lcdController.v(167): truncated value with size 8 to match size of target (1) File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 167
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "rw_pin" is stuck at GND File: D:/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 8
+    Warning (13410): Pin "rw_pin" is stuck at GND File: D:/2-DU_AN/2024/FPGA/codeFPGAL_LIB/LCD1602/lcdController.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 178 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 170 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 19 output pins
+    Info (21059): Implemented 11 output pins
     Info (21061): Implemented 158 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Wed Oct 02 15:41:09 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4765 megabytes
+    Info: Processing ended: Wed Nov 12 15:37:44 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 

@@ -198,10 +198,10 @@ module	VGA_Ctrl	(	//	Host Side
 						iRed,
 						iGreen,
 						iBlue,
-//						oCurrent_X,
-//						oCurrent_Y,
-//						oAddress,
-//						oRequest,
+						oCurrent_X,
+						oCurrent_Y,
+						oAddress,
+						oRequest,
 						//	VGA Side
 						oVGA_R,
 						oVGA_G,
@@ -218,10 +218,10 @@ module	VGA_Ctrl	(	//	Host Side
 input		[7:0]	iRed;
 input		[7:0]	iGreen;
 input		[7:0]	iBlue;
-//output		[21:0]	oAddress;
-//output		[10:0]	oCurrent_X;
-//output		[10:0]	oCurrent_Y;
-//output				oRequest;
+output		[21:0]	oAddress;
+output		[10:0]	oCurrent_X;
+output		[10:0]	oCurrent_Y;
+output				oRequest;
 //	VGA Side
 
 
@@ -264,11 +264,11 @@ assign	oVGA_R		=	iRed;
 assign	oVGA_G		=	iGreen;
 assign	oVGA_B		=	iBlue;
 
-//assign	oAddress	=	oCurrent_Y*H_ACT+oCurrent_X;
-//assign	oRequest	=	((H_Cont>=H_BLANK && H_Cont<H_TOTAL)	&&
-//						 (V_Cont>=V_BLANK && V_Cont<V_TOTAL));
-//assign	oCurrent_X	=	(H_Cont>=H_BLANK)	?	H_Cont-H_BLANK	:	11'h0	;
-//assign	oCurrent_Y	=	(V_Cont>=V_BLANK)	?	V_Cont-V_BLANK	:	11'h0	;
+assign	oAddress	=	oCurrent_Y*H_ACT+oCurrent_X;
+assign	oRequest	=	((H_Cont>=H_BLANK && H_Cont<H_TOTAL)	&&
+						 (V_Cont>=V_BLANK && V_Cont<V_TOTAL));
+assign	oCurrent_X	=	(H_Cont>=H_BLANK)	?	H_Cont-H_BLANK	:	11'h0	;
+assign	oCurrent_Y	=	(V_Cont>=V_BLANK)	?	V_Cont-V_BLANK	:	11'h0	;
 
 //	Horizontal Generator: Refer to the pixel clock
 always@(posedge iCLK or negedge iRST_N)

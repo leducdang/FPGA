@@ -1,0 +1,13 @@
+
+State Machine - |i2cControllerRTC|i2creadRTC:i2c_reader|state
+Name state.ST_WAIT_HALF state.ST_DONE state.ST_NACK_STOP state.ST_READ_BYTE state.ST_DEV_R state.ST_RESTART state.ST_REG state.ST_DEV_W state.ST_START state.ST_IDLE 
+state.ST_IDLE 0 0 0 0 0 0 0 0 0 0 
+state.ST_START 0 0 0 0 0 0 0 0 1 1 
+state.ST_DEV_W 0 0 0 0 0 0 0 1 0 1 
+state.ST_REG 0 0 0 0 0 0 1 0 0 1 
+state.ST_RESTART 0 0 0 0 0 1 0 0 0 1 
+state.ST_DEV_R 0 0 0 0 1 0 0 0 0 1 
+state.ST_READ_BYTE 0 0 0 1 0 0 0 0 0 1 
+state.ST_NACK_STOP 0 0 1 0 0 0 0 0 0 1 
+state.ST_DONE 0 1 0 0 0 0 0 0 0 1 
+state.ST_WAIT_HALF 1 0 0 0 0 0 0 0 0 1 

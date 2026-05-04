@@ -1,5 +1,5 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate D:\2024\FPGA-TEST\SDRAM\sdram.qsys --block-symbol-file --output-directory=D:\2024\FPGA-TEST\SDRAM\sdram --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading SDRAM/sdram.qsys
 Progress: Reading input file
 Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
@@ -12,12 +12,13 @@ Progress: Validating
 Progress: Done reading input file
 Info: sdram.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
 Info: sdram.sys_sdram_pll_0: Refclk Freq: 50.0
-Warning: sdram.new_sdram_controller_0: new_sdram_controller_0.s1 must be connected to an Avalon-MM master
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated clock interface.  Export the driver of new_sdram_controller_0.clk
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated reset interface.  Export the driver(s) of new_sdram_controller_0.reset
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate D:\2024\FPGA-TEST\SDRAM\sdram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA-TEST\SDRAM\sdram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGAL_LIB\SDRAM\sdram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
 Progress: Loading SDRAM/sdram.qsys
 Progress: Reading input file
 Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 17.1]
@@ -30,10 +31,11 @@ Progress: Validating
 Progress: Done reading input file
 Info: sdram.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
 Info: sdram.sys_sdram_pll_0: Refclk Freq: 50.0
-Warning: sdram.new_sdram_controller_0: new_sdram_controller_0.s1 must be connected to an Avalon-MM master
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated clock interface.  Export the driver of new_sdram_controller_0.clk
+Warning: sdram.: You have exported the interface new_sdram_controller_0.s1 but not its associated reset interface.  Export the driver(s) of new_sdram_controller_0.reset
 Info: sdram: Generating sdram "sdram" for QUARTUS_SYNTH
 Info: new_sdram_controller_0: Starting RTL generation for module 'sdram_new_sdram_controller_0'
-Info: new_sdram_controller_0:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0017_1268928917972631237.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: new_sdram_controller_0:   Generation command is [exec D:/fpga/quartus/bin64/perl/bin/perl.exe -I D:/fpga/quartus/bin64/perl/lib -I D:/fpga/quartus/sopc_builder/bin/europa -I D:/fpga/quartus/sopc_builder/bin/perl_lib -I D:/fpga/quartus/sopc_builder/bin -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/common -I D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/fpga/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_new_sdram_controller_0 --dir=C:/Users/DELL/AppData/Local/Temp/alt0145_1491397572054701488.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=D:/fpga/quartus --verilog --config=C:/Users/DELL/AppData/Local/Temp/alt0145_1491397572054701488.dir/0002_new_sdram_controller_0_gen//sdram_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
 Info: new_sdram_controller_0: Done RTL generation for module 'sdram_new_sdram_controller_0'
 Info: new_sdram_controller_0: "sdram" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
 Info: sys_sdram_pll_0: "sdram" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"

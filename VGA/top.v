@@ -1,6 +1,7 @@
 module top(	input clock_50mhz,
-				input [7:0] sw_r,
-				input [7:0] sw_g,
+				input [5:0] sw_r,
+				input [5:0] sw_g,
+				input [5:0] sw_b,
 				output [7:0] pin_r,
 				output [7:0] pin_g,
 				output [7:0] pin_b,
@@ -18,44 +19,46 @@ reg [7:0] data_g;
 reg [7:0] data_b;
 reg	clock;
 
-always@(posedge clock_50mhz)
+//----------------------------------------------
+// Tạo clock 25 MHz từ clock 50 MHz
+//----------------------------------------------
+always @(posedge clock_50mhz or negedge reset)
 begin
-		data_r <= sw_r;
-		data_g <= sw_g;
-		data_b <= 8'hff;
-		clock <= ~clock;
-end			
-			
-			
-			
-			
+    if (!reset)
+        clock <= 1'b0;
+    else
+        clock <= ~clock;
+end
 
-//assign clock_25mhz = clock;
+//----------------------------------------------
+// Đồng bộ dữ liệu màu theo clock VGA (25MHz)
+//----------------------------------------------
+always @(posedge clock or negedge reset)
+begin
+    if (!reset) begin
+        data_r <= 8'b0;
+        data_g <= 8'b0;
+        data_b <= 8'b0;
+    end
+    else begin
+        // Mở rộng 6 bit → 8 bit
+        data_r <= {sw_r, 2'b11};
+        data_g <= {sw_g, 2'b11};
+        data_b <= {sw_b, 2'b00};
+    end
+end
 
-
-//vga_controler vga_test( .clock_50mhz(clock_50mhz),
-//								.vga_r(data_r),
-//								.vga_g(data_g),
-//								.vga_b(data_b),
-//								.pin_rgb_r(pin_r),
-//								.pin_rgb_g(pin_g),
-//								.pin_rgb_b(pin_b),
-//								.vga_clk(pin_vga_clock),
-//								.vga_sync(pin_sync),
-//								.vga_blank(pin_bank),
-//								.vga_vs(pin_vs),
-//								.vga_hs(pin_hs),
-//								.reset(reset)
-//							);
+			
+			
 							
 VGA_Ctrl			vga(	//	Host Side
 						.iRed(data_r),
 						.iGreen(data_g),
 						.iBlue(data_b),
-//						oCurrent_X,
-//						oCurrent_Y,
-//						oAddress,
-//						oRequest,
+						.oCurrent_X(),
+						.oCurrent_Y(),
+						.oAddress(),
+						.oRequest(),
 						//	VGA Side
 						.oVGA_R(pin_r),
 						.oVGA_G(pin_g),

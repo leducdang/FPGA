@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "system.h"
+#include "io.h"
+#include "unistd.h"
+
+#define FIFO_DATA_BASE      FIFO_IN_BASE
+#define FIFO_CSR_BASE       FIFO_IN_CSR_BASE
+
+#define FIFO_STATUS_REG     0
+#define FIFO_FILL_REG       5
+
+#define FIFO_STATUS_FULL    (1 << 0)
+#define FIFO_DEPTH          256
+
+static inline uint32_t fifo_status(void)
+{
+    return IORD(FIFO_CSR_BASE, FIFO_STATUS_REG);
+}
+
+static inline uint32_t fifo_fill(void)
+{
+    return IORD(FIFO_CSR_BASE, FIFO_FILL_REG);
+}
+
+static inline void fifo_write_word(uint32_t data)
+{
+    IOWR(FIFO_DATA_BASE, 0, data);
+}
+
+static inline uint32_t pack_mono(int16_t s)
+{
+    return (((uint16_t)s) << 16) | ((uint16_t)s);
+}
+
+static inline void fifo_write_mono_blocking(int16_t s)
+{
+    while (fifo_status() & FIFO_STATUS_FULL) {
+        ;
+    }
+    fifo_write_word(pack_mono(s));
+}
+
+int main(void)
+{
+    int i;
+    int16_t hi = 12000;
+    int16_t lo = -12000;
+
+    printf("Start write FIFO...\n");
+    printf("Initial fill = %lu\n", (unsigned long)fifo_fill());
+
+    usleep(10000);
+
+    while (1) {
+        for (i = 0; i < 200; i++) {
+            fifo_write_mono_blocking(hi);
+        }
+        for (i = 0; i < 200; i++) {
+            fifo_write_mono_blocking(lo);
+        }
+    }
+
+    return 0;
+}

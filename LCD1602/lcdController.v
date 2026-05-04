@@ -1,4 +1,4 @@
-module lcdController(clock_50mhz, rs_pin, rw_pin, en_pin, pinLCD, led_out );
+module lcdController(clock_50mhz, rs_pin, rw_pin, en_pin, pinLCD );
 
 //lcd1602Write
 
@@ -7,8 +7,9 @@ input clock_50mhz;
 output rs_pin;
 output rw_pin;
 output en_pin;
-output 	[7:0] led_out;
 output 	[7:0]	pinLCD;
+
+
 
 
 //khai báo biến phụ
@@ -47,18 +48,18 @@ always@(posedge clock_50mhz)
 				counter_char <= counter_char + 1;
 
 				
-					if (counter_lcd > 40)
+					if (counter_lcd > 40)									// lặp lại quá trình ghi, 0-40 là khoi tao LCD.
 						begin
-							counter_lcd <= 10'd29;
+							counter_lcd <= 10'd29;							// lap lai buoc 29 den 40
 							if(counter < 16)
 								counter <= counter+1;
 						end
 
-					if(counter_char == 10'd1000)
+					if(counter_char == 10'd1000)							// biến đếm kí tự tăng sau 1s
 						begin
-							char <= char + 1;
-							counter_char <= 10'd0;	
-							if (char > 8'd117) char <= 8'd48;
+							char <= char + 1;									// kí tự tăng 1
+							counter_char <= 10'd0;							// gán lại biến đếm về 0
+							if (char > 8'd117) char <= 8'd48;			// Nếu số kí tự lớn hơn 117 thì gan lại vè 48 = 0
 						
 						end
 			end
@@ -125,7 +126,7 @@ always@(posedge clock_50mhz)
 			10'd29:begin
 						rw	<=	0;
 						rs <= 0;
-						data <= 8'h80 + 6;
+						data <= 8'h80 + 6;				// hang 0 cot 6
 					end
 			10'd30:en <= 1;
 			10'd31:en	<= 0;
@@ -145,7 +146,7 @@ always@(posedge clock_50mhz)
 			10'd35:begin
 							rw	<=	0;
 							rs <= 0;
-							data <= 8'hC0 + counter;
+							data <= 8'hC0 + counter;				// hang 1+ cot = counter
 						
 					end
 			10'd36:en 	<= 1;
@@ -171,3 +172,4 @@ assign pinLCD = data;
 
 
 endmodule
+

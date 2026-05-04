@@ -1,0 +1,35 @@
+|LedMatrix8x8
+clock_50mhz => clock.CLK
+clock_50mhz => counter[0].CLK
+clock_50mhz => counter[1].CLK
+clock_50mhz => counter[2].CLK
+clock_50mhz => counter[3].CLK
+clock_50mhz => counter[4].CLK
+clock_50mhz => counter[5].CLK
+clock_50mhz => counter[6].CLK
+clock_50mhz => counter[7].CLK
+clock_50mhz => counter[8].CLK
+clock_50mhz => counter[9].CLK
+clock_50mhz => counter[10].CLK
+clock_50mhz => counter[11].CLK
+clock_50mhz => counter[12].CLK
+clock_50mhz => counter[13].CLK
+clock_50mhz => counter[14].CLK
+row[0] <= row[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[1] <= row[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[2] <= row[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[3] <= row[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[4] <= row[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[5] <= row[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[6] <= row[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[7] <= row[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[2] <= col[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[3] <= col[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[4] <= col[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[5] <= col[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[6] <= col[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[7] <= col[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

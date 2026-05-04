@@ -1,5 +1,5 @@
 Fitter report for controllUart
-Sat Oct 12 08:51:23 2024
+Mon Feb 09 16:13:30 2026
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Oct 12 08:51:23 2024       ;
+; Fitter Status                      ; Successful - Mon Feb 09 16:13:30 2026       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; controllUart                                ;
 ; Top-level Entity Name              ; controllUart                                ;
@@ -201,7 +201,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.pin.
+The pin-out file can be found in D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -1694,16 +1694,16 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clock~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 4
+Info (176353): Automatically promoted node clock~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 4
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
-Info (176353): Automatically promoted node uartRead:read1|clock  File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 15
+Info (176353): Automatically promoted node uartRead:read1|clock  File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 15
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node uartRead:read1|clock~0 File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 15
-Info (176353): Automatically promoted node uartWrite:write1|clock  File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 18
+        Info (176357): Destination node uartRead:read1|clock~0 File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 15
+Info (176353): Automatically promoted node uartWrite:write1|clock  File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 18
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node uartWrite:write1|clock~0 File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 18
+        Info (176357): Destination node uartWrite:write1|clock~0 File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 18
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1720,23 +1720,23 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (144001): Generated suppressed messages file D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5686 megabytes
-    Info: Processing ended: Sat Oct 12 08:51:23 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 5685 megabytes
+    Info: Processing ended: Mon Feb 09 16:13:30 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.fit.smsg.
+The suppressed messages can be found in D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.fit.smsg.
 
 

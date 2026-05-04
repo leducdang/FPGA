@@ -1,5 +1,5 @@
 Analysis & Synthesis report for controllUart
-Sat Oct 12 08:51:10 2024
+Mon Feb 09 16:13:18 2026
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 12 08:51:10 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 09 16:13:18 2026       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; controllUart                                ;
 ; Top-level Entity Name              ; controllUart                                ;
@@ -170,15 +170,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
-; uartWrite.v                      ; yes             ; User Verilog HDL File  ; D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v    ;         ;
-; uartRead.v                       ; yes             ; User Verilog HDL File  ; D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v     ;         ;
-; controllUart.v                   ; yes             ; User Verilog HDL File  ; D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; uartWrite.v                      ; yes             ; User Verilog HDL File  ; D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartWrite.v    ;         ;
+; uartRead.v                       ; yes             ; User Verilog HDL File  ; D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartRead.v     ;         ;
+; controllUart.v                   ; yes             ; User Verilog HDL File  ; D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -413,7 +413,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -423,51 +423,46 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Oct 12 08:50:59 2024
+    Info: Processing started: Mon Feb 09 16:13:09 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off controllUart -c controllUart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file uartwrite.v
-    Info (12023): Found entity 1: uartWrite File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 1
+    Info (12023): Found entity 1: uartWrite File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uartread.v
-    Info (12023): Found entity 1: uartRead File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 1
+    Info (12023): Found entity 1: uartRead File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controlluart.v
-    Info (12023): Found entity 1: controllUart File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at uartRead.v(69): created implicit net for "input_rx" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 69
+    Info (12023): Found entity 1: controllUart File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at uartRead.v(69): created implicit net for "input_rx" File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 69
 Info (12127): Elaborating entity "controllUart" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at controllUart.v(54): truncated value with size 32 to match size of target (5) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 54
-Info (10264): Verilog HDL Case Statement information at controllUart.v(48): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 48
-Warning (10230): Verilog HDL assignment warning at controllUart.v(84): truncated value with size 32 to match size of target (19) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 84
-Warning (10230): Verilog HDL assignment warning at controllUart.v(87): truncated value with size 32 to match size of target (5) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 87
-Warning (10230): Verilog HDL assignment warning at controllUart.v(169): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 169
-Warning (10230): Verilog HDL assignment warning at controllUart.v(170): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 170
-Warning (10230): Verilog HDL assignment warning at controllUart.v(171): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 171
-Warning (10230): Verilog HDL assignment warning at controllUart.v(172): truncated value with size 8 to match size of target (7) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 172
-Info (12128): Elaborating entity "uartWrite" for hierarchy "uartWrite:write1" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 158
-Warning (10230): Verilog HDL assignment warning at uartWrite.v(39): truncated value with size 32 to match size of target (12) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 39
-Info (10264): Verilog HDL Case Statement information at uartWrite.v(47): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 47
-Info (12128): Elaborating entity "uartRead" for hierarchy "uartRead:read1" File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 165
-Warning (10230): Verilog HDL assignment warning at uartRead.v(37): truncated value with size 32 to match size of target (12) File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 37
-Info (10264): Verilog HDL Case Statement information at uartRead.v(52): all case item expressions in this case statement are onehot File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 52
+Info (10264): Verilog HDL Case Statement information at controllUart.v(48): all case item expressions in this case statement are onehot File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 48
+Warning (10230): Verilog HDL assignment warning at controllUart.v(169): truncated value with size 8 to match size of target (7) File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 169
+Warning (10230): Verilog HDL assignment warning at controllUart.v(170): truncated value with size 8 to match size of target (7) File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 170
+Warning (10230): Verilog HDL assignment warning at controllUart.v(171): truncated value with size 8 to match size of target (7) File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 171
+Warning (10230): Verilog HDL assignment warning at controllUart.v(172): truncated value with size 8 to match size of target (7) File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 172
+Info (12128): Elaborating entity "uartWrite" for hierarchy "uartWrite:write1" File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 158
+Info (10264): Verilog HDL Case Statement information at uartWrite.v(47): all case item expressions in this case statement are onehot File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 47
+Info (12128): Elaborating entity "uartRead" for hierarchy "uartRead:read1" File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/controllUart.v Line: 165
+Info (10264): Verilog HDL Case Statement information at uartRead.v(52): all case item expressions in this case statement are onehot File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartRead.v Line: 52
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 25 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.map.smsg
+Info (144001): Generated suppressed messages file D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 224 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 29 output pins
     Info (21061): Implemented 192 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Sat Oct 12 08:51:10 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Mon Feb 09 16:13:18 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.map.smsg.
+The suppressed messages can be found in D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/output_files/controllUart.map.smsg.
 
 

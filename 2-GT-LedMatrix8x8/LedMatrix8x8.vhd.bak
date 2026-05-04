@@ -1,0 +1,75 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity LedMatrix8x8 is
+    port(
+        clock_50mhz : in  std_logic;
+        row         : out std_logic_vector(7 downto 0);
+        col         : out std_logic_vector(7 downto 0)
+    );
+end topLevel;
+
+architecture Behavioral of topLevel is
+
+signal stt     : unsigned(3 downto 0) := (others => '0');
+signal counter : unsigned(14 downto 0) := (others => '0');
+signal clk1k   : std_logic := '0';
+
+type arr8 is array (0 to 7) of std_logic_vector(7 downto 0);
+signal data_col : arr8;
+
+begin
+
+--------------------------------------------------------
+-- KHỞI TẠO DỮ LIỆU HÌNH
+--------------------------------------------------------
+Init_Data : process
+begin
+    -- Hình mặt cười
+    data_col(0) <= not "00111100";
+    data_col(1) <= not "01000010";
+    data_col(2) <= not "10100101";
+    data_col(3) <= not "10000001";
+    data_col(4) <= not "10100101";
+    data_col(5) <= not "10011001";
+    data_col(6) <= not "01000010";
+    data_col(7) <= not "00111100";
+
+    wait;
+end process;
+
+
+--------------------------------------------------------
+-- TẠO CLOCK 1 KHZ TỪ 50 MHZ
+--------------------------------------------------------
+Clock_Div : process(clock_50mhz)
+begin
+    if rising_edge(clock_50mhz) then
+        if counter = 25000 then
+            clk1k   <= not clk1k;
+            counter <= (others => '0');
+        else
+            counter <= counter + 1;
+        end if;
+    end if;
+end process;
+
+--------------------------------------------------------
+-- QUÉT LED MATRIX
+--------------------------------------------------------
+Scan : process(clk1k)
+begin
+    if rising_edge(clk1k) then
+        if stt < 8 then
+            col <= data_col(to_integer(stt));
+            row <= std_logic_vector(shift_left(unsigned("00000001"), to_integer(stt)));
+            stt <= stt + 1;
+        else
+            stt <= (others => '0');
+            col <= (others => '1');  -- Tắt hết khi reset vòng quét
+        end if;
+    end if;
+end process;
+
+end Behavioral;

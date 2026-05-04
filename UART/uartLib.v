@@ -36,7 +36,7 @@ always@(posedge clock_50mhz)
 		if(counter == 8'd216)
 			begin
 				counter<=0;
-				clock= ~clock; 
+				clock <= ~clock; 
 			end
 		else
 			counter <= counter + 1;

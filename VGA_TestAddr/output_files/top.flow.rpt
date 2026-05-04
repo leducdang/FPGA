@@ -1,5 +1,5 @@
 Flow report for top
-Wed Oct 02 09:08:23 2024
+Tue Sep 30 15:39:47 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Oct 02 09:08:20 2024       ;
+; Flow Status                        ; Successful - Tue Sep 30 15:39:44 2025       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 303 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 303 / 114,480 ( < 1 % )                     ;
+; Total logic elements               ; 310 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 301 / 114,480 ( < 1 % )                     ;
 ;     Dedicated logic registers      ; 69 / 114,480 ( < 1 % )                      ;
 ; Total registers                    ; 69                                          ;
 ; Total pins                         ; 31 / 529 ( 6 % )                            ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/02/2024 09:07:41 ;
+; Start date & time ; 09/30/2025 15:38:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 2545931656683.172783486107204          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 2544666414400.175922153916352          ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -86,7 +86,6 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                           ; pll1.ppf                               ; --            ; --          ; --                                ;
 ; MISC_FILE                           ; ram1_inst.v                            ; --            ; --          ; --                                ;
 ; MISC_FILE                           ; ram1_bb.v                              ; --            ; --          ; --                                ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --                                ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --                                ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --                                ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --                                ;
@@ -105,11 +104,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 4808 MB             ; 00:00:09                           ;
-; Fitter                    ; 00:00:19     ; 1.0                     ; 5698 MB             ; 00:00:13                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4698 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 4859 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:38     ; --                      ; --                  ; 00:00:26                           ;
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4810 MB             ; 00:00:17                           ;
+; Fitter                    ; 00:00:28     ; 1.0                     ; 5709 MB             ; 00:00:41                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4694 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 4861 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:43     ; --                      ; --                  ; 00:01:04                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,10 +117,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-GR64V7Q  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-GR64V7Q  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-GR64V7Q  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-GR64V7Q  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; Dell             ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; Dell             ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; Dell             ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; Dell             ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

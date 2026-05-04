@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Oct 22 11:01:04 2024
+Analysis & Synthesis Status : Successful - Wed Feb 26 14:43:31 2025
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : sdramControl
 Top-level Entity Name : sdramControl
 Family : Cyclone IV E
-Total logic elements : 414
-    Total combinational functions : 327
-    Dedicated logic registers : 265
-Total registers : 265
+Total logic elements : 428
+    Total combinational functions : 341
+    Dedicated logic registers : 268
+Total registers : 268
 Total pins : 102
 Total virtual pins : 0
 Total memory bits : 0

@@ -1,0 +1,148 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 368 272)
+	(text "cpu" (rect 174 -1 188 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 256 20 268)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 128 72)(line_width 1))
+	)
+	(port
+		(pt 368 136)
+		(input)
+		(text "fifo_out_ready" (rect 0 0 60 12)(font "Arial" (font_size 8)))
+		(text "fifo_out_ready" (rect 291 125 375 136)(font "Arial" (font_size 8)))
+		(line (pt 368 136)(pt 240 136)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "fifo_read_clk_clk" (rect 0 0 69 12)(font "Arial" (font_size 8)))
+		(text "fifo_read_clk_clk" (rect 4 101 106 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 128 112)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 141 82 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 128 152)(line_width 1))
+	)
+	(port
+		(pt 368 72)
+		(output)
+		(text "fifo_out_valid" (rect 0 0 54 12)(font "Arial" (font_size 8)))
+		(text "fifo_out_valid" (rect 297 61 381 72)(font "Arial" (font_size 8)))
+		(line (pt 368 72)(pt 240 72)(line_width 1))
+	)
+	(port
+		(pt 368 88)
+		(output)
+		(text "fifo_out_data[31..0]" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "fifo_out_data[31..0]" (rect 270 77 390 88)(font "Arial" (font_size 8)))
+		(line (pt 368 88)(pt 240 88)(line_width 3))
+	)
+	(port
+		(pt 368 104)
+		(output)
+		(text "fifo_out_channel[7..0]" (rect 0 0 86 12)(font "Arial" (font_size 8)))
+		(text "fifo_out_channel[7..0]" (rect 257 93 389 104)(font "Arial" (font_size 8)))
+		(line (pt 368 104)(pt 240 104)(line_width 3))
+	)
+	(port
+		(pt 368 120)
+		(output)
+		(text "fifo_out_error[7..0]" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "fifo_out_error[7..0]" (rect 271 109 391 120)(font "Arial" (font_size 8)))
+		(line (pt 368 120)(pt 240 120)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(output)
+		(text "sd_card_o_SD_clock" (rect 0 0 88 12)(font "Arial" (font_size 8)))
+		(text "sd_card_o_SD_clock" (rect 4 229 112 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 128 240)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(bidir)
+		(text "sd_card_b_SD_cmd" (rect 0 0 86 12)(font "Arial" (font_size 8)))
+		(text "sd_card_b_SD_cmd" (rect 4 181 100 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 128 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(bidir)
+		(text "sd_card_b_SD_dat" (rect 0 0 80 12)(font "Arial" (font_size 8)))
+		(text "sd_card_b_SD_dat" (rect 4 197 100 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 128 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(bidir)
+		(text "sd_card_b_SD_dat3" (rect 0 0 84 12)(font "Arial" (font_size 8)))
+		(text "sd_card_b_SD_dat3" (rect 4 213 106 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 128 224)(line_width 1))
+	)
+	(drawing
+		(text "clk" (rect 113 43 244 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 133 67 284 144)(font "Arial" (color 0 0 0)))
+		(text "fifo_out" (rect 241 43 530 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "valid" (rect 217 67 464 144)(font "Arial" (color 0 0 0)))
+		(text "data" (rect 219 83 462 176)(font "Arial" (color 0 0 0)))
+		(text "channel" (rect 205 99 452 208)(font "Arial" (color 0 0 0)))
+		(text "error" (rect 215 115 460 240)(font "Arial" (color 0 0 0)))
+		(text "ready" (rect 212 131 454 272)(font "Arial" (color 0 0 0)))
+		(text "fifo_read_clk" (rect 51 83 180 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 133 107 284 224)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 99 123 228 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 133 147 308 304)(font "Arial" (color 0 0 0)))
+		(text "sd_card" (rect 82 163 206 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "b_SD_cmd" (rect 133 187 314 384)(font "Arial" (color 0 0 0)))
+		(text "b_SD_dat" (rect 133 203 314 416)(font "Arial" (color 0 0 0)))
+		(text "b_SD_dat3" (rect 133 219 320 448)(font "Arial" (color 0 0 0)))
+		(text "o_SD_clock" (rect 133 235 326 480)(font "Arial" (color 0 0 0)))
+		(text " cpu " (rect 350 256 730 522)(font "Arial" ))
+		(line (pt 128 32)(pt 240 32)(line_width 1))
+		(line (pt 240 32)(pt 240 256)(line_width 1))
+		(line (pt 128 256)(pt 240 256)(line_width 1))
+		(line (pt 128 32)(pt 128 256)(line_width 1))
+		(line (pt 129 52)(pt 129 76)(line_width 1))
+		(line (pt 130 52)(pt 130 76)(line_width 1))
+		(line (pt 239 52)(pt 239 140)(line_width 1))
+		(line (pt 238 52)(pt 238 140)(line_width 1))
+		(line (pt 129 92)(pt 129 116)(line_width 1))
+		(line (pt 130 92)(pt 130 116)(line_width 1))
+		(line (pt 129 132)(pt 129 156)(line_width 1))
+		(line (pt 130 132)(pt 130 156)(line_width 1))
+		(line (pt 129 172)(pt 129 244)(line_width 1))
+		(line (pt 130 172)(pt 130 244)(line_width 1))
+		(line (pt 0 0)(pt 368 0)(line_width 1))
+		(line (pt 368 0)(pt 368 272)(line_width 1))
+		(line (pt 0 272)(pt 368 272)(line_width 1))
+		(line (pt 0 0)(pt 0 272)(line_width 1))
+	)
+)

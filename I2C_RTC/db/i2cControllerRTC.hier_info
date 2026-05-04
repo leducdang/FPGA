@@ -10,6 +10,7 @@ data[4] << i2creadRTC:seconds.data_out
 data[5] << i2creadRTC:seconds.data_out
 data[6] << i2creadRTC:seconds.data_out
 data[7] << i2creadRTC:seconds.data_out
+start => start.IN1
 led7seg[6] << led7seg:ledseconds.led1
 led7seg[5] << led7seg:ledseconds.led1
 led7seg[4] << led7seg:ledseconds.led1
@@ -74,6 +75,7 @@ clk_50mhz => counter[3].CLK
 clk_50mhz => counter[4].CLK
 clk_50mhz => counter[5].CLK
 clk_50mhz => counter[6].CLK
+clk_50mhz => counter[7].CLK
 i2c_scl <= SCLK.DB_MAX_OUTPUT_PORT_TYPE
 i2c_sda <> i2c_sda
 data_out[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -84,14 +86,33 @@ data_out[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
 data_out[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
-addr_read[0] => Selector2.IN23
-addr_read[1] => Selector2.IN22
-addr_read[2] => Selector2.IN21
-addr_read[3] => Selector2.IN20
-addr_read[4] => Selector2.IN19
-addr_read[5] => Selector2.IN18
-addr_read[6] => Selector2.IN17
-addr_read[7] => Selector2.IN16
+addr_read[0] => ~NO_FANOUT~
+addr_read[1] => ~NO_FANOUT~
+addr_read[2] => ~NO_FANOUT~
+addr_read[3] => ~NO_FANOUT~
+addr_read[4] => ~NO_FANOUT~
+addr_read[5] => ~NO_FANOUT~
+addr_read[6] => ~NO_FANOUT~
+addr_read[7] => ~NO_FANOUT~
+btstart => SCLK.OUTPUTSELECT
+btstart => SDI.IN1
+btstart => SDI.OUTPUTSELECT
+btstart => SDI.IN1
+btstart => counterI2C.OUTPUTSELECT
+btstart => counterI2C.OUTPUTSELECT
+btstart => counterI2C.OUTPUTSELECT
+btstart => counterI2C.OUTPUTSELECT
+btstart => counterI2C.OUTPUTSELECT
+btstart => counterI2C.OUTPUTSELECT
+btstart => counterI2C.OUTPUTSELECT
+btstart => data[2].ENA
+btstart => data[1].ENA
+btstart => data[0].ENA
+btstart => data[3].ENA
+btstart => data[4].ENA
+btstart => data[5].ENA
+btstart => data[6].ENA
+btstart => data[7].ENA
 
 
 |i2cControllerRTC|led7seg:ledseconds

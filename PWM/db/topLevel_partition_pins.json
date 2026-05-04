@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led_duty[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_duty[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_duty[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_duty[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_duty[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led_duty[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led_duty[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_pwm",
+					"strict" : false
+				},
+				{
+					"name" : "sw[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sw[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50mhz",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,427 @@
+//#include <stdio.h>
+//#include <stdint.h>
+//#include "system.h"
+//#include "io.h"
+//#include "unistd.h"
+//#include "altera_up_sd_card_avalon_interface.h"
+//
+//#define FIFO_DATA_BASE      FIFO_IN_BASE
+//#define FIFO_CSR_BASE       FIFO_IN_CSR_BASE
+//
+//#define FIFO_STATUS_REG     0
+//#define FIFO_FILL_REG       5
+//
+//#define FIFO_STATUS_FULL    (1 << 0)
+//#define FIFO_DEPTH          256
+//
+////----------------- SD CARD -----------------//
+//
+//static int rd8(short int fd)
+//{
+//    return alt_up_sd_card_read(fd);
+//}
+//
+//static unsigned short rd16le(short int fd)
+//{
+//    int b0 = rd8(fd);
+//    int b1 = rd8(fd);
+//    if (b0 < 0 || b1 < 0) return 0xFFFF;
+//    return (unsigned short)(b0 | (b1 << 8));
+//}
+//
+//static unsigned int rd32le(short int fd)
+//{
+//    int b0 = rd8(fd);
+//    int b1 = rd8(fd);
+//    int b2 = rd8(fd);
+//    int b3 = rd8(fd);
+//    if (b0 < 0 || b1 < 0 || b2 < 0 || b3 < 0) return 0xFFFFFFFF;
+//    return (unsigned int)(b0 | (b1 << 8) | (b2 << 16) | (b3 << 24));
+//}
+//
+//static short rd16le_signed(short int fd)
+//{
+//    return (short)rd16le(fd);
+//}
+//
+////------------------- FIFO ---------------------//
+//
+//static inline uint32_t fifo_status(void)
+//{
+//    return IORD(FIFO_CSR_BASE, FIFO_STATUS_REG);
+//}
+//
+//static inline uint32_t fifo_fill(void)
+//{
+//    return IORD(FIFO_CSR_BASE, FIFO_FILL_REG);
+//}
+//
+//static inline void fifo_write_word(uint32_t data)
+//{
+//    IOWR(FIFO_DATA_BASE, 0, data);
+//}
+//
+//static inline uint32_t pack_mono(int16_t s)
+//{
+//    return (((uint16_t)s) << 16) | ((uint16_t)s);
+//}
+//
+//static inline void fifo_write_mono_blocking(int16_t s)
+//{
+//    while (fifo_status() & FIFO_STATUS_FULL) {
+//        ;
+//    }
+//    fifo_write_word(pack_mono(s));
+//}
+//
+////int main(void)
+////{
+////    int i;
+////    int16_t hi = 12000;
+////    int16_t lo = -12000;
+////
+////    printf("Start write FIFO...\n");
+////    printf("Initial fill = %lu\n", (unsigned long)fifo_fill());
+////
+////    usleep(10000);
+////
+////    while (1) {
+//////        for (i = 0; i < 12000; i++) {
+//////            fifo_write_mono_blocking(i);
+//////        }
+//////        for (i = 0; i < 200; i++) {
+//////            fifo_write_mono_blocking(lo);
+//////        }
+////
+////        for (i = 0; i < 200; i++) {
+////            fifo_write_mono_blocking(hi);
+////        }
+////        for (i = 0; i < 200; i++) {
+////            fifo_write_mono_blocking(lo);
+////        }
+////    }
+////
+////    return 0;
+////}
+//
+//
+//
+//
+//
+//
+//
+//uint32_t sample32;
+//
+//int main()
+//{
+//    alt_up_sd_card_dev *sd_dev;
+//    short int fd;
+//    char id[5];
+//    unsigned int chunk_size;
+//    unsigned short audio_format, num_channels, block_align, bits_per_sample;
+//    unsigned int sample_rate, byte_rate;
+//    unsigned int data_size;
+//    unsigned int n, num_frames;
+//    short left, right;
+//    int i;
+//
+//    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+//    if (sd_dev == NULL) {
+//        printf("Khong mo duoc SD\n");
+//        return 1;
+//    }
+//
+//    if (!alt_up_sd_card_is_Present()) {
+//        printf("Khong co the SD\n");
+//        return 1;
+//    }
+//
+//    if (!alt_up_sd_card_is_FAT16()) {
+//        printf("The khong phai FAT16\n");
+//        return 1;
+//    }
+//
+//    fd = alt_up_sd_card_fopen("AUDIO.WAV", false);
+//    if (fd < 0) {
+//        printf("Khong mo duoc file WAV\n");
+//        return 1;
+//    }
+//
+//    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+//    id[4] = '\0';
+//    printf("ChunkID: %s\n", id);
+//
+//    chunk_size = rd32le(fd);
+//
+//    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+//    id[4] = '\0';
+//    printf("Format : %s\n", id);
+//
+//    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+//    id[4] = '\0';
+//    printf("Subchunk1 ID: %s\n", id);
+//
+//    chunk_size = rd32le(fd);
+//    audio_format = rd16le(fd);
+//    num_channels = rd16le(fd);
+//    sample_rate = rd32le(fd);
+//    byte_rate = rd32le(fd);
+//    block_align = rd16le(fd);
+//    bits_per_sample = rd16le(fd);
+//
+//    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+//    id[4] = '\0';
+//    printf("Subchunk2 ID: %s\n", id);
+//
+//    data_size = rd32le(fd);
+//
+//    printf("audio_format    = %u\n", audio_format);
+//    printf("num_channels    = %u\n", num_channels);
+//    printf("sample_rate     = %u\n", sample_rate);
+//    printf("byte_rate       = %u\n", byte_rate);
+//    printf("block_align     = %u\n", block_align);
+//    printf("bits_per_sample = %u\n", bits_per_sample);
+//    printf("data_size       = %u\n", data_size);
+//
+//    num_frames = data_size / block_align;
+//    printf("num_frames      = %u\n", num_frames);
+//
+////    for (n = 0; n < 480000; n++) {
+////        left  = rd16le_signed(fd);
+////        right = rd16le_signed(fd);
+////        printf("Frame %u: L=%d R=%d\n", n, left, right);
+////        fifo_write_mono_blocking(left);
+////    }
+//
+//    for (n = 0; n < 480000; n++) {
+////        left  = rd16le_signed(fd);
+////        right = rd16le_signed(fd);
+//        	sample32 = rd32le(fd);			// đọc dữ liệu âm thanh
+////        sample32 = 0x80008401;
+////        printf("Frame %u: L=%d R=%d\n", n, left, right);
+////        sample32 = (((uint32_t)(uint16_t)left) << 16) | ((uint16_t)right);
+////        while (fifo_status() & FIFO_STATUS_FULL) {
+////            ;
+////        }
+////        fifo_write_word(pack_mono(sample32));  // chỉ gửi dữ liệu 16bit
+//        fifo_write_word(sample32);
+//    }
+//    alt_up_sd_card_fclose(fd);
+//    return 0;
+//}
+//
+
+
+
+#include <stdio.h>
+#include <stdint.h>
+#include "system.h"
+#include "io.h"
+#include "unistd.h"
+#include "altera_up_sd_card_avalon_interface.h"
+
+#define FIFO_DATA_BASE      FIFO_IN_BASE
+#define FIFO_CSR_BASE       FIFO_IN_CSR_BASE
+
+#define FIFO_STATUS_REG     0
+#define FIFO_FILL_REG       5
+
+#define FIFO_STATUS_FULL    (1 << 0)
+#define FIFO_DEPTH          256
+
+//----------------- SD CARD -----------------//
+
+static int rd8(short int fd)
+{
+    return alt_up_sd_card_read(fd);
+}
+
+static unsigned short rd16le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    if (b0 < 0 || b1 < 0) return 0xFFFF;
+    return (unsigned short)(b0 | (b1 << 8));
+}
+
+static unsigned int rd32le(short int fd)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    int b2 = rd8(fd);
+    int b3 = rd8(fd);
+    if (b0 < 0 || b1 < 0 || b2 < 0 || b3 < 0) return 0xFFFFFFFF;
+    return (unsigned int)((uint32_t)b0 |
+                          ((uint32_t)b1 << 8) |
+                          ((uint32_t)b2 << 16) |
+                          ((uint32_t)b3 << 24));
+}
+
+static int rd32le_data(short int fd, uint32_t *out)
+{
+    int b0 = rd8(fd);
+    int b1 = rd8(fd);
+    int b2 = rd8(fd);
+    int b3 = rd8(fd);
+
+    if (b0 < 0 || b1 < 0 || b2 < 0 || b3 < 0) {
+        return -1;
+    }
+
+    *out = ((uint32_t)b0) |
+           ((uint32_t)b1 << 8) |
+           ((uint32_t)b2 << 16) |
+           ((uint32_t)b3 << 24);
+
+    return 0;
+}
+
+//------------------- FIFO ---------------------//
+
+static inline uint32_t fifo_status(void)
+{
+    return IORD(FIFO_CSR_BASE, FIFO_STATUS_REG);
+}
+
+static inline uint32_t fifo_fill(void)
+{
+    return IORD(FIFO_CSR_BASE, FIFO_FILL_REG);
+}
+
+static inline void fifo_write_word(uint32_t data)
+{
+    IOWR(FIFO_DATA_BASE, 0, data);
+}
+
+uint32_t sample32;
+int16_t sample_mono;
+
+int main()
+{
+    alt_up_sd_card_dev *sd_dev;
+    short int fd;
+    char id[5];
+    unsigned int chunk_size;
+    unsigned short audio_format, num_channels, block_align, bits_per_sample;
+    unsigned int sample_rate, byte_rate;
+    unsigned int data_size;
+    unsigned int n, num_frames;
+    int i;
+
+    sd_dev = alt_up_sd_card_open_dev("/dev/SDCard");
+    if (sd_dev == NULL) {
+        printf("Khong mo duoc SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_Present()) {
+        printf("Khong co the SD\n");
+        return 1;
+    }
+
+    if (!alt_up_sd_card_is_FAT16()) {
+        printf("The khong phai FAT16\n");
+        return 1;
+    }
+
+    fd = alt_up_sd_card_fopen("MM16.WAV", false);
+    if (fd < 0) {
+        printf("Khong mo duoc file WAV\n");
+        return 1;
+    }
+
+    // RIFF
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("ChunkID: %s\n", id);
+
+    chunk_size = rd32le(fd);
+
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Format : %s\n", id);
+
+    // fmt
+    for (i = 0; i < 4; i++) id[i] = rd8(fd);
+    id[4] = '\0';
+    printf("Subchunk1 ID: %s\n", id);
+
+    chunk_size = rd32le(fd);
+    audio_format = rd16le(fd);
+    num_channels = rd16le(fd);
+    sample_rate = rd32le(fd);
+    byte_rate = rd32le(fd);
+    block_align = rd16le(fd);
+    bits_per_sample = rd16le(fd);
+
+    if (chunk_size > 16) {
+        unsigned int extra = chunk_size - 16;
+        for (i = 0; i < (int)extra; i++) {
+            if (rd8(fd) < 0) {
+                printf("Loi doc fmt extra\n");
+                alt_up_sd_card_fclose(fd);
+                return 1;
+            }
+        }
+    }
+
+    printf("audio_format    = %u\n", audio_format);
+    printf("num_channels    = %u\n", num_channels);
+    printf("sample_rate     = %u\n", sample_rate);
+    printf("byte_rate       = %u\n", byte_rate);
+    printf("block_align     = %u\n", block_align);
+    printf("bits_per_sample = %u\n", bits_per_sample);
+
+
+
+    if (audio_format != 1) {
+        printf("Khong phai PCM\n");
+        alt_up_sd_card_fclose(fd);
+        return 1;
+    }
+
+    if (num_channels != 1) {
+        printf("Khong phai mono\n");
+        alt_up_sd_card_fclose(fd);
+        return 1;
+    }
+
+    if (bits_per_sample != 16) {
+        printf("Khong phai 16-bit\n");
+        alt_up_sd_card_fclose(fd);
+        return 1;
+    }
+
+    num_frames = data_size / block_align;
+    printf("data_size       = %u\n", data_size);
+    printf("num_frames      = %u\n", num_frames);
+
+//    for (n = 0; n < num_frames; n++) {
+//        sample_mono = rd16le(fd);
+//
+////        sample32 = (((uint32_t)(uint16_t)sample_mono) << 16) |
+////                   ((uint16_t)sample_mono);
+//
+////        while (fifo_status() & FIFO_STATUS_FULL) {
+////            ;
+////        }
+////        fifo_write_word(sample32);
+////        fifo_write_word(sample_mono);
+////        fifo_write_word((uint32_t)(uint16_t)sample_mono);
+//    }
+
+    for (n = 0; n < num_frames; n++) {
+        sample_mono = rd16le(fd);
+
+        sample32 = ((uint32_t)(uint16_t)sample_mono) << 16;
+
+        while (fifo_status() & FIFO_STATUS_FULL) {
+            ;
+        }
+
+        fifo_write_word(sample32);
+    }
+    alt_up_sd_card_fclose(fd);
+    return 0;
+}
+

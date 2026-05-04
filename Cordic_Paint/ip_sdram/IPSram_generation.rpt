@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\Cordic_Paint\IPSram.qsys --block-symbol-file --output-directory=D:\2024\FPGA\codeFPGAL_LIB\Cordic_Paint\ip_sdram --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Cordic_Paint/IPSram.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 17.1]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\2024\FPGA\codeFPGAL_LIB\Cordic_Paint\IPSram.qsys --synthesis=VERILOG --output-directory=D:\2024\FPGA\codeFPGAL_LIB\Cordic_Paint\ip_sdram\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading Cordic_Paint/IPSram.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 17.1]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: IPSram: Generating IPSram "IPSram" for QUARTUS_SYNTH
+Info: sram_0: Starting Generation of the SRAM Controller
+Info: sram_0: "IPSram" instantiated altera_up_avalon_sram "sram_0"
+Info: IPSram: Done "IPSram" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

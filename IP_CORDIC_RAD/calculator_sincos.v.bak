@@ -1,0 +1,19 @@
+module calculator_sincos(
+									clock_50mhz,
+									phase,
+									cos,
+									sin
+);
+
+input clock_50mhz;
+input 	[9:0] phase;   // SW0 -> SW9
+output 	[7:0] sin;		// LEDR0 -> LEDR7
+output	[7:0]	cos;		//	LEDG0 -> LEDG7
+
+
+
+
+
+endmodule
+
+

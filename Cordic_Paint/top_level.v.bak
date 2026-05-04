@@ -1,0 +1,63 @@
+module top_level(
+						clock_50mhz,
+						reset,
+						phase,
+						sin,
+						cos
+);
+
+
+
+input				clock_50mhz;
+input 			reset;
+input	 [9:0]	phase;
+output [7:0]	sin;
+output [7:0]	cos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ip_cordic u0 (
+      .a      (phase),      //      a.a
+      .areset (reset), // areset.reset
+      .c      (cos),      //      c.c
+      .clk    (clock_50mhz),    //    clk.clk
+      .s      (sin)       //      s.s
+);
+
+
+
+
+
+
+
+
+
+

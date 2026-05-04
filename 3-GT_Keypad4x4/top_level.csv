@@ -1,0 +1,47 @@
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# File: D:\2-DU_AN\2024\FPGA\codeFPGAL_LIB\3-Keypad4x4\top_level.csv
+# Generated on: Sat Nov 22 13:05:12 2025
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clk,Input,PIN_Y2,2,B2_N0,PIN_Y2,2.5 V,,,,,
+col[3],Input,PIN_AE16,4,B4_N2,PIN_AE16,2.5 V,,,,,
+col[2],Input,PIN_Y16,4,B4_N0,PIN_Y16,2.5 V,,,,,
+col[1],Input,PIN_Y17,4,B4_N0,PIN_Y17,2.5 V,,,,,
+col[0],Input,PIN_AC15,4,B4_N2,PIN_AC15,2.5 V,,,,,
+led7[6],Output,PIN_H22,6,B6_N0,PIN_H22,2.5 V,,,,,
+led7[5],Output,PIN_J22,6,B6_N0,PIN_J22,2.5 V,,,,,
+led7[4],Output,PIN_L25,6,B6_N1,PIN_L25,2.5 V,,,,,
+led7[3],Output,PIN_L26,6,B6_N1,PIN_L26,2.5 V,,,,,
+led7[2],Output,PIN_E17,7,B7_N2,PIN_E17,2.5 V,,,,,
+led7[1],Output,PIN_F22,7,B7_N0,PIN_F22,2.5 V,,,,,
+led7[0],Output,PIN_G18,7,B7_N2,PIN_G18,2.5 V,,,,,
+row[3],Output,PIN_AD21,4,B4_N0,PIN_AD21,2.5 V,,,,,
+row[2],Output,PIN_AC21,4,B4_N0,PIN_AC21,2.5 V,,,,,
+row[1],Output,PIN_AB21,4,B4_N0,PIN_AB21,2.5 V,,,,,
+row[0],Output,PIN_AB22,4,B4_N0,PIN_AB22,2.5 V,,,,,
+rst_n,Input,PIN_M23,6,B6_N2,PIN_M23,2.5 V,,,,,
+led,Unknown,PIN_G19,7,B7_N2,,,,,,,
+ledg[0],Unknown,PIN_H21,7,B7_N2,,,,,,,
+ledg[1],Unknown,PIN_G20,7,B7_N1,,,,,,,
+ledg[2],Unknown,PIN_G22,7,B7_N2,,,,,,,
+ledg[3],Unknown,PIN_G21,7,B7_N1,,,,,,,
+ledg1[0],Unknown,PIN_E21,7,B7_N0,,,,,,,
+ledg1[1],Unknown,PIN_E22,7,B7_N0,,,,,,,
+ledg1[2],Unknown,PIN_E25,7,B7_N1,,,,,,,
+ledg1[3],Unknown,PIN_E24,7,B7_N1,,,,,,,

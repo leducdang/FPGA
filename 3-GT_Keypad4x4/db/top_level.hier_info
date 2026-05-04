@@ -1,0 +1,101 @@
+|top_level
+clk => clk.IN1
+rst_n => rst_n.IN1
+col[0] => col[0].IN1
+col[1] => col[1].IN1
+col[2] => col[2].IN1
+col[3] => col[3].IN1
+row[0] <= keypad4x4:k1.row
+row[1] <= keypad4x4:k1.row
+row[2] <= keypad4x4:k1.row
+row[3] <= keypad4x4:k1.row
+led7[0] <= led7seg:L1.led
+led7[1] <= led7seg:L1.led
+led7[2] <= led7seg:L1.led
+led7[3] <= led7seg:L1.led
+led7[4] <= led7seg:L1.led
+led7[5] <= led7seg:L1.led
+led7[6] <= led7seg:L1.led
+
+
+|top_level|keypad4x4:k1
+clk => key_val[0]~reg0.CLK
+clk => key_val[1]~reg0.CLK
+clk => key_val[2]~reg0.CLK
+clk => key_val[3]~reg0.CLK
+clk => key_pressed.CLK
+clk => stable.CLK
+clk => col_reg[0].CLK
+clk => col_reg[1].CLK
+clk => col_reg[2].CLK
+clk => col_reg[3].CLK
+clk => scan_cnt[0].CLK
+clk => scan_cnt[1].CLK
+clk => scan_cnt[2].CLK
+clk => scan_cnt[3].CLK
+clk => scan_cnt[4].CLK
+clk => scan_cnt[5].CLK
+clk => scan_cnt[6].CLK
+clk => scan_cnt[7].CLK
+clk => scan_cnt[8].CLK
+clk => scan_cnt[9].CLK
+clk => scan_cnt[10].CLK
+clk => scan_cnt[11].CLK
+clk => scan_cnt[12].CLK
+clk => scan_cnt[13].CLK
+clk => scan_cnt[14].CLK
+clk => scan_cnt[15].CLK
+clk => scan_row[0].CLK
+clk => scan_row[1].CLK
+rst_n => scan_cnt[0].ACLR
+rst_n => scan_cnt[1].ACLR
+rst_n => scan_cnt[2].ACLR
+rst_n => scan_cnt[3].ACLR
+rst_n => scan_cnt[4].ACLR
+rst_n => scan_cnt[5].ACLR
+rst_n => scan_cnt[6].ACLR
+rst_n => scan_cnt[7].ACLR
+rst_n => scan_cnt[8].ACLR
+rst_n => scan_cnt[9].ACLR
+rst_n => scan_cnt[10].ACLR
+rst_n => scan_cnt[11].ACLR
+rst_n => scan_cnt[12].ACLR
+rst_n => scan_cnt[13].ACLR
+rst_n => scan_cnt[14].ACLR
+rst_n => scan_cnt[15].ACLR
+rst_n => scan_row[0].ACLR
+rst_n => scan_row[1].ACLR
+rst_n => key_val[0]~reg0.ACLR
+rst_n => key_val[1]~reg0.ACLR
+rst_n => key_val[2]~reg0.ACLR
+rst_n => key_val[3]~reg0.ACLR
+rst_n => key_pressed.ACLR
+rst_n => stable.ACLR
+col[0] => col_reg[0].DATAIN
+col[1] => col_reg[1].DATAIN
+col[2] => col_reg[2].DATAIN
+col[3] => col_reg[3].DATAIN
+row[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+row[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+row[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+row[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+key_val[0] <= key_val[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_val[1] <= key_val[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_val[2] <= key_val[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_val[3] <= key_val[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|led7seg:L1
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+led[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

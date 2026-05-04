@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at topLevel.v(40): always construct contains both blocking and non-blocking assignments File: D:/2024/FPGA/codeFPGA_NV/2-GT-LedMatrix/topLevel.v Line: 40

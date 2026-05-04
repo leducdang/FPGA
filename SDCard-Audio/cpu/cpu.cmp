@@ -1,0 +1,17 @@
+	component cpu is
+		port (
+			clk_clk            : in    std_logic                     := 'X'; -- clk
+			fifo_out_valid     : out   std_logic;                            -- valid
+			fifo_out_data      : out   std_logic_vector(31 downto 0);        -- data
+			fifo_out_channel   : out   std_logic_vector(7 downto 0);         -- channel
+			fifo_out_error     : out   std_logic_vector(7 downto 0);         -- error
+			fifo_out_ready     : in    std_logic                     := 'X'; -- ready
+			fifo_read_clk_clk  : in    std_logic                     := 'X'; -- clk
+			reset_reset_n      : in    std_logic                     := 'X'; -- reset_n
+			sd_card_b_SD_cmd   : inout std_logic                     := 'X'; -- b_SD_cmd
+			sd_card_b_SD_dat   : inout std_logic                     := 'X'; -- b_SD_dat
+			sd_card_b_SD_dat3  : inout std_logic                     := 'X'; -- b_SD_dat3
+			sd_card_o_SD_clock : out   std_logic                             -- o_SD_clock
+		);
+	end component cpu;
+

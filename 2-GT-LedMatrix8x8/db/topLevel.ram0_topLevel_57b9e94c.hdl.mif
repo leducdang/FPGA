@@ -1,0 +1,22 @@
+-- begin_signature
+-- topLevel
+-- end_signature
+WIDTH=8;
+DEPTH=11;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	10 :	XXXXXXXX;
+	9 :	XXXXXXXX;
+	8 :	XXXXXXXX;
+	7 :	11000011;
+	6 :	10111101;
+	5 :	01100110;
+	4 :	01011010;
+	3 :	01111110;
+	2 :	01011010;
+	1 :	10111101;
+	0 :	11000011;
+END;

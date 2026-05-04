@@ -3,12 +3,12 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="79" />
+   <connections preferredWidth="95" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/University Program,Library,Library/Memory Interfaces and Controllers,Library/Memory Interfaces and Controllers/SDRAM,Project,Library/University Program/Clock,Library/Memory Interfaces and Controllers/Memory Interfaces with UniPHY,Library/Memory Interfaces and Controllers/Memory Interfaces with ALTMEMPHY" />
- <window width="1938" height="1038" x="-9" y="-9" />
+   expandedCategories="Project,Library,Library/Basic Functions,Library/Basic Functions/Clocks; PLLs and Resets,Library/Interface Protocols/Transceiver PLL,Library/University Program/Clock,Library/Interface Protocols,Library/Basic Functions/Clocks; PLLs and Resets/PLL,Library/University Program" />
+ <window width="1920" height="1020" x="-416" y="38" />
  <hdlexample language="VERILOG" />
 </preferences>

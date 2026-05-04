@@ -1,0 +1,10 @@
+
+State Machine - |lcdController|lcd_controller_string:lcd1|state
+Name state.S_DELAY state.S_WRITE_STR state.S_WRITE_CHAR state.S_GOTO state.S_CLEAR state.S_IDLE state.S_INIT 
+state.S_INIT 0 0 0 0 0 0 0 
+state.S_IDLE 0 0 0 0 0 1 1 
+state.S_CLEAR 0 0 0 0 1 0 1 
+state.S_GOTO 0 0 0 1 0 0 1 
+state.S_WRITE_CHAR 0 0 1 0 0 0 1 
+state.S_WRITE_STR 0 1 0 0 0 0 1 
+state.S_DELAY 1 0 0 0 0 0 1 

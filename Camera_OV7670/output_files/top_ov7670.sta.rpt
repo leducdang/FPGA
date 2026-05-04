@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top_ov7670
-Sat Aug 10 14:47:06 2024
+Thu Mar 20 08:42:40 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -122,14 +122,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.12        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.1%      ;
-;     Processor 3            ;   3.1%      ;
-;     Processor 4            ;   3.0%      ;
+;     Processor 2            ;   4.6%      ;
+;     Processor 3            ;   3.7%      ;
+;     Processor 4            ;   3.5%      ;
 +----------------------------+-------------+
 
 
@@ -374,8 +374,8 @@ No paths to report.
 ; -1.541 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[16] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.448      ;
 ; -1.533 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.440      ;
 ; -1.528 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.435      ;
-; -1.522 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.429      ;
 ; -1.522 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.429      ;
+; -1.522 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.429      ;
 ; -1.516 ; camera_read:u4|wraddr[7]             ; camera_read:u4|wraddr[18] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.423      ;
 ; -1.514 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.421      ;
 ; -1.509 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.416      ;
@@ -386,6 +386,7 @@ No paths to report.
 ; -1.429 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[11] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.336      ;
 ; -1.429 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.336      ;
 ; -1.409 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.316      ;
+; -1.401 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.308      ;
 ; -1.401 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[0]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.315      ; 2.734      ;
 ; -1.401 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[1]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.315      ; 2.734      ;
 ; -1.401 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[2]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.315      ; 2.734      ;
@@ -395,11 +396,10 @@ No paths to report.
 ; -1.401 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[6]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.315      ; 2.734      ;
 ; -1.401 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[7]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.315      ; 2.734      ;
 ; -1.401 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[8]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.315      ; 2.734      ;
-; -1.401 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.308      ;
 ; -1.396 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.303      ;
+; -1.390 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.297      ;
 ; -1.390 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.297      ;
 ; -1.390 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.297      ;
-; -1.390 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.297      ;
 ; -1.385 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.291      ; 2.694      ;
 ; -1.385 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[9]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.291      ; 2.694      ;
 ; -1.385 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[10] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.291      ; 2.694      ;
@@ -425,9 +425,9 @@ No paths to report.
 ; -1.277 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.184      ;
 ; -1.269 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[10] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.176      ;
 ; -1.264 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[11] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.171      ;
+; -1.258 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.165      ;
 ; -1.258 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.165      ;
 ; -1.258 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.165      ;
-; -1.258 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.165      ;
 ; -1.252 ; camera_read:u4|wraddr[7]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.159      ;
 ; -1.250 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[11] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.157      ;
 ; -1.250 ; camera_read:u4|wraddr[8]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.111     ; 2.157      ;
@@ -1225,8 +1225,8 @@ No paths to report.
 ; 1.016 ; camera_read:u4|wraddr[15]            ; camera_read:u4|wraddr[16]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.248      ;
 ; 1.018 ; camera_read:u4|wraddr[17]            ; camera_read:u4|wraddr[18]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.250      ;
 ; 1.022 ; camera_read:u4|wraddr[9]             ; camera_read:u4|wraddr[10]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.254      ;
-; 1.025 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[4]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.257      ;
 ; 1.025 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[7]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.257      ;
+; 1.025 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[4]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.257      ;
 ; 1.026 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[5]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.258      ;
 ; 1.030 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.262      ;
 ; 1.030 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[3]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.262      ;
@@ -1270,8 +1270,8 @@ No paths to report.
 ; 1.191 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.451      ; 1.828      ;
 ; 1.191 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.451      ; 1.828      ;
 ; 1.191 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.451      ; 1.828      ;
-; 1.193 ; camera_read:u4|wraddr[10]            ; camera_read:u4|wraddr[11]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.425      ;
 ; 1.193 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[4]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.425      ;
+; 1.193 ; camera_read:u4|wraddr[10]            ; camera_read:u4|wraddr[11]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.425      ;
 ; 1.198 ; camera_read:u4|wraddr[10]            ; camera_read:u4|wraddr[12]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.430      ;
 ; 1.198 ; camera_read:u4|wraddr[12]            ; camera_read:u4|wraddr[13]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.430      ;
 ; 1.202 ; camera_read:u4|wraddr[14]            ; camera_read:u4|wraddr[15]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.434      ;
@@ -1283,8 +1283,8 @@ No paths to report.
 ; 1.257 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[5]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.489      ;
 ; 1.259 ; camera_read:u4|wraddr[8]             ; camera_read:u4|wraddr[14]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.062      ; 1.507      ;
 ; 1.261 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[11]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.062      ; 1.509      ;
-; 1.262 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.494      ;
 ; 1.262 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[9]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.062      ; 1.510      ;
+; 1.262 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.046      ; 1.494      ;
 ; 1.266 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[12]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.062      ; 1.514      ;
 ; 1.267 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[10]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.062      ; 1.515      ;
 ; 1.269 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[9]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.062      ; 1.517      ;
@@ -2391,8 +2391,8 @@ No paths to report.
 ; 0.935 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.147      ;
 ; 0.937 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.149      ;
 ; 0.939 ; camera_read:u4|wraddr[16]            ; camera_read:u4|wraddr[18]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.155      ;
-; 0.941 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[4]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.153      ;
 ; 0.941 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[12]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.157      ;
+; 0.941 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[4]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.153      ;
 ; 0.945 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.157      ;
 ; 0.957 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[1]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.169      ;
 ; 0.968 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[2]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.180      ;
@@ -2410,18 +2410,19 @@ No paths to report.
 ; 1.033 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[5]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.245      ;
 ; 1.036 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[7]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.248      ;
 ; 1.037 ; camera_read:u4|wraddr[9]             ; camera_read:u4|wraddr[12]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.253      ;
-; 1.040 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[5]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.252      ;
 ; 1.040 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[13]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.256      ;
+; 1.040 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[5]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.252      ;
 ; 1.044 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.256      ;
 ; 1.044 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[7]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.256      ;
 ; 1.047 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.259      ;
-; 1.051 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.263      ;
 ; 1.051 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[14]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.267      ;
+; 1.051 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.263      ;
 ; 1.055 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.267      ;
-; 1.067 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[3]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.279      ;
 ; 1.067 ; camera_read:u4|wraddr[12]            ; camera_read:u4|wraddr[13]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.283      ;
+; 1.067 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[3]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.279      ;
 ; 1.071 ; camera_read:u4|wraddr[10]            ; camera_read:u4|wraddr[11]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.287      ;
 ; 1.071 ; camera_read:u4|wraddr[14]            ; camera_read:u4|wraddr[15]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.287      ;
+; 1.078 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[4]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.290      ;
 ; 1.078 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[8]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.418      ; 1.667      ;
 ; 1.078 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[9]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.418      ; 1.667      ;
 ; 1.078 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[10] ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.418      ; 1.667      ;
@@ -2430,7 +2431,6 @@ No paths to report.
 ; 1.078 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.418      ; 1.667      ;
 ; 1.078 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.418      ; 1.667      ;
 ; 1.078 ; camera_read:u4|pixel_half            ; camera_read:u4|pixel_data[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.418      ; 1.667      ;
-; 1.078 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[4]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.290      ;
 ; 1.081 ; camera_read:u4|wraddr[13]            ; camera_read:u4|wraddr[14]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.297      ;
 ; 1.096 ; camera_read:u4|wraddr[10]            ; camera_read:u4|wraddr[12]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.312      ;
 ; 1.101 ; camera_read:u4|wraddr[12]            ; camera_read:u4|wraddr[14]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.317      ;
@@ -2450,11 +2450,11 @@ No paths to report.
 ; 1.143 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[7]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.355      ;
 ; 1.144 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[10]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.062      ; 1.377      ;
 ; 1.147 ; camera_read:u4|wraddr[9]             ; camera_read:u4|wraddr[14]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.363      ;
-; 1.150 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[7]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.362      ;
 ; 1.150 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[15]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.366      ;
+; 1.150 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[7]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.362      ;
 ; 1.154 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.366      ;
 ; 1.157 ; camera_read:u4|wraddr[13]            ; camera_read:u4|wraddr[15]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.373      ;
-; 1.161 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.041      ; 1.373      ;
+; 1.161 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[16]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.045      ; 1.377      ;
 +-------+--------------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -2651,8 +2651,8 @@ No paths to report.
 ; -0.288 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.243      ;
 ; -0.283 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.238      ;
 ; -0.266 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.221      ;
-; -0.246 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[16] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.201      ;
 ; -0.246 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[18] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.201      ;
+; -0.246 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[16] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.201      ;
 ; -0.242 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.197      ;
 ; -0.239 ; camera_read:u4|FSM_state.ROW_CAPTURE ; camera_read:u4|wraddr[8]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.162      ; 1.408      ;
 ; -0.239 ; camera_read:u4|FSM_state.ROW_CAPTURE ; camera_read:u4|wraddr[7]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.162      ; 1.408      ;
@@ -2680,8 +2680,8 @@ No paths to report.
 ; -0.225 ; camera_read:u4|wraddr[7]             ; camera_read:u4|wraddr[18] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.180      ;
 ; -0.224 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.179      ;
 ; -0.220 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.175      ;
-; -0.215 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.170      ;
 ; -0.215 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.170      ;
+; -0.215 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.170      ;
 ; -0.209 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[0]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.162      ; 1.378      ;
 ; -0.209 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[1]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.162      ; 1.378      ;
 ; -0.209 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[2]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.162      ; 1.378      ;
@@ -2702,9 +2702,9 @@ No paths to report.
 ; -0.196 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.154      ; 1.357      ;
 ; -0.196 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[16] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.154      ; 1.357      ;
 ; -0.196 ; camera_read:u4|pixel_half            ; camera_read:u4|wraddr[18] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; 0.154      ; 1.357      ;
-; -0.178 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.133      ;
 ; -0.178 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[16] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.133      ;
 ; -0.178 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[18] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.133      ;
+; -0.178 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.133      ;
 ; -0.174 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.129      ;
 ; -0.170 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.125      ;
 ; -0.169 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.124      ;
@@ -2714,14 +2714,14 @@ No paths to report.
 ; -0.157 ; camera_read:u4|wraddr[7]             ; camera_read:u4|wraddr[16] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.112      ;
 ; -0.156 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[11] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.111      ;
 ; -0.152 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[10] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.107      ;
-; -0.147 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.102      ;
 ; -0.147 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.102      ;
+; -0.147 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.102      ;
 ; -0.146 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[17] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.101      ;
 ; -0.133 ; camera_read:u4|wraddr[9]             ; camera_read:u4|wraddr[18] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.023     ; 1.117      ;
 ; -0.130 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[10] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.085      ;
-; -0.110 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.065      ;
 ; -0.110 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.065      ;
 ; -0.110 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[16] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.065      ;
+; -0.110 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.065      ;
 ; -0.106 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.061      ;
 ; -0.103 ; camera_read:u4|wraddr[8]             ; camera_read:u4|wraddr[18] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.058      ;
 ; -0.102 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[12] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.057      ;
@@ -2732,8 +2732,8 @@ No paths to report.
 ; -0.093 ; camera_read:u4|wraddr[7]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.048      ;
 ; -0.089 ; camera_read:u4|wraddr[7]             ; camera_read:u4|wraddr[14] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.044      ;
 ; -0.088 ; camera_read:u4|wraddr[1]             ; camera_read:u4|wraddr[9]  ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.043      ;
-; -0.079 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[11] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.034      ;
 ; -0.079 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[13] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.034      ;
+; -0.079 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[11] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.034      ;
 ; -0.078 ; camera_read:u4|wraddr[6]             ; camera_read:u4|wraddr[15] ; PCLK_CAMERA  ; PCLK_CAMERA ; 1.000        ; -0.052     ; 1.033      ;
 +--------+--------------------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -3511,8 +3511,8 @@ No paths to report.
 ; 0.326 ; camera_read:u4|wraddr[9]             ; camera_read:u4|wraddr[9]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.432      ;
 ; 0.326 ; camera_read:u4|wraddr[16]            ; camera_read:u4|wraddr[16]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.432      ;
 ; 0.329 ; camera_read:u4|wraddr[3]             ; camera_read:u4|wraddr[3]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.435      ;
-; 0.336 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[11]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.442      ;
 ; 0.336 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[5]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.442      ;
+; 0.336 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[11]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.442      ;
 ; 0.352 ; camera_read:u4|FSM_state.ROW_CAPTURE ; camera_read:u4|pixel_half     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.024      ; 0.460      ;
 ; 0.353 ; camera_read:u4|wraddr[0]             ; camera_read:u4|wraddr[0]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.459      ;
 ; 0.390 ; camera_read:u4|wraddr[18]            ; camera_read:u4|wraddr[18]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.022      ; 0.496      ;
@@ -3561,8 +3561,8 @@ No paths to report.
 ; 0.547 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[13]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.023      ; 0.654      ;
 ; 0.548 ; camera_read:u4|wraddr[4]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.025      ; 0.657      ;
 ; 0.548 ; camera_read:u4|wraddr[5]             ; camera_read:u4|wraddr[8]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.025      ; 0.657      ;
-; 0.549 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.025      ; 0.658      ;
 ; 0.549 ; camera_read:u4|wraddr[10]            ; camera_read:u4|wraddr[11]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.023      ; 0.656      ;
+; 0.549 ; camera_read:u4|wraddr[2]             ; camera_read:u4|wraddr[6]      ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.025      ; 0.658      ;
 ; 0.550 ; camera_read:u4|wraddr[11]            ; camera_read:u4|wraddr[14]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.023      ; 0.657      ;
 ; 0.551 ; camera_read:u4|wraddr[12]            ; camera_read:u4|wraddr[13]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.023      ; 0.658      ;
 ; 0.552 ; camera_read:u4|wraddr[10]            ; camera_read:u4|wraddr[12]     ; PCLK_CAMERA  ; PCLK_CAMERA ; 0.000        ; 0.023      ; 0.659      ;
@@ -4433,7 +4433,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Aug 10 14:47:04 2024
+    Info: Processing started: Thu Mar 20 08:42:38 2025
 Info: Command: quartus_sta top_ov7670 -c top_ov7670
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -4574,7 +4574,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4848 megabytes
-    Info: Processing ended: Sat Aug 10 14:47:06 2024
+    Info: Processing ended: Thu Mar 20 08:42:40 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,17 +1,16 @@
 
-State Machine - |topSRAM|sttRead
-Name sttRead.0000 sttRead.0100 sttRead.0011 sttRead.0010 sttRead.0001 sttRead.0101 
-sttRead.0101 0 0 0 0 0 0 
-sttRead.0001 0 0 0 0 1 1 
-sttRead.0010 0 0 0 1 0 1 
-sttRead.0011 0 0 1 0 0 1 
-sttRead.0100 0 1 0 0 0 1 
-sttRead.0000 1 0 0 0 0 1 
+State Machine - |SRAM_new|stR
+Name stR.R_READ stR.R_SETUP stR.R_TRISTATE stR.R_IDLE stR.R_DONE 
+stR.R_IDLE 0 0 0 0 0 
+stR.R_TRISTATE 0 0 1 1 0 
+stR.R_SETUP 0 1 0 1 0 
+stR.R_READ 1 0 0 1 0 
+stR.R_DONE 0 0 0 1 1 
 
-State Machine - |topSRAM|sttWrite
-Name sttWrite.0000 sttWrite.0011 sttWrite.0010 sttWrite.0001 sttWrite.0100 
-sttWrite.0100 0 0 0 0 0 
-sttWrite.0001 0 0 0 1 1 
-sttWrite.0010 0 0 1 0 1 
-sttWrite.0011 0 1 0 0 1 
-sttWrite.0000 1 0 0 0 1 
+State Machine - |SRAM_new|stW
+Name stW.W_HOLD stW.W_WRITE stW.W_SETUP stW.W_IDLE stW.W_DONE 
+stW.W_IDLE 0 0 0 0 0 
+stW.W_SETUP 0 0 1 1 0 
+stW.W_WRITE 0 1 0 1 0 
+stW.W_HOLD 1 0 0 1 0 
+stW.W_DONE 0 0 0 1 1 

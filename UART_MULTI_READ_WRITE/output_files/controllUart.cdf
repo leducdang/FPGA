@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCS64) Path("D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/output_files/") File("controllUart.pof") MfrSpec(OpMask(1) Child_OpMask(1 1));
+		Device PartName(EP4CE115F29) Path("D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/output_files/") File("controllUart.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(asc);
+	ChainType(JTAG);
 AlteraEnd;

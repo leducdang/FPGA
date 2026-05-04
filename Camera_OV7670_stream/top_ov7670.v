@@ -115,7 +115,7 @@ wire					pixel_valid;
 wire					frame_done;
 
 
-assign XCLK_CAMERA = clock_24Mhz;
+assign XCLK_CAMERA = clock_25Mhz;
 
 //************ PORT VGA ************************//
 
@@ -274,6 +274,7 @@ begin
 	case(FMS)
 		3'd1: if(addr_camera == 0)  FMS <= 3'd2; 			// chờ dia chi camera = 0
 		3'd2: begin
+//					if(addr_camera >= 307199 ) FMS <= 3'd3;			// su dung sdram thay cho ram de du bo nho
 					if(addr_camera >= 76799 ) FMS <= 3'd3;	// neu du 320x240 Pixel thì thoat
 					else if(slectMemory && write_ram)		// luu gia tri pixel vao ram
 							begin
@@ -301,14 +302,23 @@ begin
 
 		
 	case(slectMemory)				// xet trường hợp để lấy địa chỉ sram hoặc ram tương ứng
-	
+//	
 		1'd0: if(!write_ram && (oCurrent_Y < 11'd240) && (oCurrent_X < 11'd320))
 					address_ram <=  oCurrent_Y*320 + oCurrent_X ;
 		1'd1: if(read_sram && (oCurrent_Y < 11'd240) && (oCurrent_X < 11'd320))
 					address_sram <= oCurrent_Y*320 + oCurrent_X ;
+					
+//					////////////////////////////////////////////////  su dung sdram thay cho sram de dam bao du bo nho
+//		1'd0: if(!write_ram && (oCurrent_Y < 11'd480) && (oCurrent_X < 11'd640))        
+//					address_ram <=  oCurrent_Y*640 + oCurrent_X ;
+//		1'd1: if(read_sram && (oCurrent_Y < 11'd480) && (oCurrent_X < 11'd640))
+//					address_sram <= oCurrent_Y*640 + oCurrent_X ;
+					
+					
 	endcase
 
 		stt_vga <= ((!write_ram || read_sram) && (oCurrent_Y < 11'd240) && (oCurrent_X < 11'd320))?1:0;
+//		stt_vga <= ((!write_ram || read_sram) && (oCurrent_Y < 11'd480) && (oCurrent_X < 11'd640))?1:0; // sdram -> ram
 		// gán vị trí hiển thị hình ảnh còn lại không hiển thị
 end
 
@@ -331,8 +341,8 @@ wire [4:0] CMOS_B;			// khai bao bien luu pixel mau xanh duong
 //assign CMOS_R = (stt_vga) ? readdata_sram[15:11]: 5'b00000;  
 //assign CMOS_G = (stt_vga) ? readdata_sram[10:5]:  4'b00000;
 //assign CMOS_B = (stt_vga) ? readdata_sram[4:0]:  5'b00000;
-
-// ram
+//
+//// ram
 //assign CMOS_R = (stt_vga) ? readdata_ram[15:11]: 5'b00000;  
 //assign CMOS_G = (stt_vga) ? readdata_ram[10:5]:  4'b00000;
 //assign CMOS_B = (stt_vga) ? readdata_ram[4:0]:  5'b00000;
@@ -348,9 +358,9 @@ wire [7:0]	mVGA_G;
 wire [7:0]	mVGA_B;
 
 // gán giá trị màu cho các chân màu VGA.
-assign mVGA_R = {CMOS_R,{3{1'b0}}};			
-assign mVGA_G = {CMOS_G,{2{1'b0}}};
-assign mVGA_B = {CMOS_B,{3{1'b0}}};
+assign mVGA_R = {CMOS_R,{3{1'b1}}};			
+assign mVGA_G = {CMOS_G,{2{1'b1}}};
+assign mVGA_B = {CMOS_B,{3{1'b1}}};
 
 // KHAI BÁO MODULE CẤU HÌNH CAMERA
 

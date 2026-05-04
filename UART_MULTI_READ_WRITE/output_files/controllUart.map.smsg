@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at uartWrite.v(30): always construct contains both blocking and non-blocking assignments File: D:/2024/FPGA/codeFPGAL_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 30
+Warning (10268): Verilog HDL information at uartWrite.v(30): always construct contains both blocking and non-blocking assignments File: D:/2-DU_AN/2024/FPGA/codeFPGA_LIB/UART_MULTI_READ_WRITE/uartWrite.v Line: 30

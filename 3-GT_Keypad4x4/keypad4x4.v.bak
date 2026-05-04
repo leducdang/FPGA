@@ -1,0 +1,97 @@
+module keypad4x4(
+    input        clk,         // clock 50MHz
+    input        rst_n,
+    input  [3:0] col,         // cột từ keypad
+    output reg [3:0] row,     // hàng xuất xuống keypad
+    output reg [3:0] key_val, // giá trị key (0–15)
+    output reg   key_pressed  // xung báo nhấn phím
+);
+
+    reg [19:0] debounce_cnt;
+    reg        stable;
+    reg [3:0]  scan_row = 0;
+    reg [3:0]  col_reg;
+
+    // --------------------------- QUÉT HÀNG ---------------------------
+    always @(posedge clk or negedge rst_n) begin
+        if(!rst_n) begin
+            scan_row <= 0;
+        end else begin
+            scan_row <= scan_row + 1;
+        end
+    end
+
+    always @(*) begin
+        case(scan_row)
+            0: row = 4'b1110;
+            1: row = 4'b1101;
+            2: row = 4'b1011;
+            3: row = 4'b0111;
+            default: row = 4'b1111;
+        endcase
+    end
+
+    // Chốt cột đọc được
+    always @(posedge clk)
+        col_reg <= col;
+
+    // --------------------------- DEBOUNCE ---------------------------
+    always @(posedge clk or negedge rst_n) begin
+        if(!rst_n) begin
+            debounce_cnt <= 0;
+            stable       <= 0;
+        end else begin
+            if(col_reg != 4'b1111) begin
+                debounce_cnt <= debounce_cnt + 1;
+                if(debounce_cnt == 20'd600_000)   // ~12ms ổn định
+                    stable <= 1;
+            end else begin
+                debounce_cnt <= 0;
+                stable       <= 0;
+            end
+        end
+    end
+
+    // --------------------------- GIẢI MÃ PHÍM ---------------------------
+    always @(posedge clk or negedge rst_n) begin
+        if(!rst_n) begin
+            key_pressed <= 0;
+            key_val <= 4'h0;
+        end
+        else begin
+            if(stable && !key_pressed) begin
+                key_pressed <= 1;  // tạo 1 xung duy nhất
+
+                case({row, col_reg})
+                    // row=0 (1110)
+                    8'b1110_1110: key_val <= 4'd0;   // phím 1
+                    8'b1110_1101: key_val <= 4'd1;
+                    8'b1110_1011: key_val <= 4'd2;
+                    8'b1110_0111: key_val <= 4'd3;
+
+                    // row=1 (1101)
+                    8'b1101_1110: key_val <= 4'd4;
+                    8'b1101_1101: key_val <= 4'd5;
+                    8'b1101_1011: key_val <= 4'd6;
+                    8'b1101_0111: key_val <= 4'd7;
+
+                    // row=2 (1011)
+                    8'b1011_1110: key_val <= 4'd8;
+                    8'b1011_1101: key_val <= 4'd9;
+                    8'b1011_1011: key_val <= 4'd10;
+                    8'b1011_0111: key_val <= 4'd11;
+
+                    // row=3 (0111)
+                    8'b0111_1110: key_val <= 4'd12;
+                    8'b0111_1101: key_val <= 4'd13;
+                    8'b0111_1011: key_val <= 4'd14;
+                    8'b0111_0111: key_val <= 4'd15;
+                endcase
+
+            end
+            else if(!stable)
+                key_pressed <= 0;
+        end
+    end
+
+endmodule

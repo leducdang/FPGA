@@ -1,77 +1,77 @@
 ------------------------------------------------------------
-Timing Analyzer Summary
+TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -3.412
-TNS   : -172.773
+Slack : -3.747
+TNS   : -167.061
 
 Type  : Slow 1200mV 85C Model Setup 'i2creadRTC:seconds|clock'
 Slack : -1.146
-TNS   : -5.986
+TNS   : -5.891
 
 Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.384
+Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'i2creadRTC:seconds|clock'
-Slack : 0.410
+Slack : 0.490
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -148.205
+TNS   : -145.635
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i2creadRTC:seconds|clock'
 Slack : -1.285
-TNS   : -10.280
+TNS   : -8.995
 
 Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -3.036
-TNS   : -145.255
+Slack : -3.326
+TNS   : -140.723
 
 Type  : Slow 1200mV 0C Model Setup 'i2creadRTC:seconds|clock'
-Slack : -0.920
-TNS   : -4.663
+Slack : -0.919
+TNS   : -4.572
 
 Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.337
+Slack : 0.340
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'i2creadRTC:seconds|clock'
-Slack : 0.366
+Slack : 0.441
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -148.205
+TNS   : -145.635
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i2creadRTC:seconds|clock'
 Slack : -1.285
-TNS   : -10.280
+TNS   : -8.995
 
 Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -1.213
-TNS   : -35.539
+Slack : -1.463
+TNS   : -32.880
 
 Type  : Fast 1200mV 0C Model Setup 'i2creadRTC:seconds|clock'
-Slack : -0.054
-TNS   : -0.054
+Slack : -0.051
+TNS   : -0.051
 
 Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.173
+Slack : 0.174
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'i2creadRTC:seconds|clock'
-Slack : 0.186
+Slack : 0.222
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -123.192
+TNS   : -120.917
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i2creadRTC:seconds|clock'
 Slack : -1.000
-TNS   : -8.000
+TNS   : -7.000
 
 ------------------------------------------------------------

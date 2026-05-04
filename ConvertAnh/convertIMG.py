@@ -1,5 +1,5 @@
 import cv2
-image = cv2.imread("D:/2024\FPGA\Thu Vien/320-240/Cute-Kittens--80748.jpg")
+image = cv2.imread("D:/2024\THANG 8-KTKT\TAI LIEU\TEST.jpg")
 # image = cv2.resize(image,(320,240))
 data = image[0,5]
 file = open("convert.txt", "a")
