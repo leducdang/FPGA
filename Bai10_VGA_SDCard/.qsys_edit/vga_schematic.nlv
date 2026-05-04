@@ -1,0 +1,38 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst vga.video_dual_clock_buffer_0 -pg 1 -lvl 6 -y 310
+preplace inst vga.video_pixel_buffer_dma_0 -pg 1 -lvl 2 -y 250
+preplace inst vga.nios2_gen2_0.reset_bridge -pg 1
+preplace inst vga.nios2_gen2_0 -pg 1 -lvl 2 -y 50
+preplace inst vga.nios2_gen2_0.clock_bridge -pg 1
+preplace inst vga.timer_0 -pg 1 -lvl 7 -y 130
+preplace inst vga.onchip_memory2_0 -pg 1 -lvl 7 -y 230
+preplace inst vga.new_sdram_controller_0 -pg 1 -lvl 7 -y 390
+preplace inst vga -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst vga.jtag_uart_0 -pg 1 -lvl 7 -y 30
+preplace inst vga.SDCard -pg 1 -lvl 4 -y 170
+preplace inst vga.video_scaler_0 -pg 1 -lvl 5 -y 310
+preplace inst vga.video_rgb_resampler_0 -pg 1 -lvl 4 -y 270
+preplace inst vga.sysid_qsys_0 -pg 1 -lvl 7 -y 310
+preplace inst vga.clk_0 -pg 1 -lvl 1 -y 430
+preplace inst vga.video_vga_controller_0 -pg 1 -lvl 7 -y 510
+preplace inst vga.nios2_gen2_0.cpu -pg 1
+preplace inst vga.altpll_0 -pg 1 -lvl 3 -y 430
+preplace netloc FAN_OUT<net_container>vga</net_container>(MASTER)altpll_0.c0,(SLAVE)new_sdram_controller_0.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)video_rgb_resampler_0.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)video_scaler_0.clk,(SLAVE)SDCard.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)timer_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)video_dual_clock_buffer_0.clock_stream_in,(SLAVE)video_pixel_buffer_dma_0.clk) 1 1 6 310 240 NJ 240 1000 360 1220 400 1500 300 1950
+preplace netloc POINT_TO_POINT<net_container>vga</net_container>(SLAVE)video_rgb_resampler_0.avalon_rgb_sink,(MASTER)video_pixel_buffer_dma_0.avalon_pixel_source) 1 2 2 N 280 NJ
+preplace netloc EXPORT<net_container>vga</net_container>(SLAVE)vga.vga_out,(SLAVE)video_vga_controller_0.external_interface) 1 0 7 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ 560 NJ
+preplace netloc POINT_TO_POINT<net_container>vga</net_container>(MASTER)clk_0.clk,(SLAVE)altpll_0.inclk_interface) 1 1 2 NJ 440 N
+preplace netloc FAN_OUT<net_container>vga</net_container>(SLAVE)video_scaler_0.reset,(SLAVE)timer_0.reset,(SLAVE)video_pixel_buffer_dma_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)video_vga_controller_0.reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)video_rgb_resampler_0.reset,(SLAVE)video_dual_clock_buffer_0.reset_stream_in,(SLAVE)SDCard.reset,(MASTER)clk_0.clk_reset,(SLAVE)altpll_0.inclk_interface_reset,(SLAVE)video_dual_clock_buffer_0.reset_stream_out,(SLAVE)new_sdram_controller_0.reset,(SLAVE)nios2_gen2_0.reset) 1 1 6 290 340 780 340 1020 380 1240 300 1480 440 1890
+preplace netloc EXPORT<net_container>vga</net_container>(SLAVE)new_sdram_controller_0.wire,(SLAVE)vga.sdram_wire) 1 0 7 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ 520 NJ
+preplace netloc EXPORT<net_container>vga</net_container>(SLAVE)clk_0.clk_in,(SLAVE)vga.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>vga</net_container>(SLAVE)jtag_uart_0.irq,(SLAVE)timer_0.irq,(MASTER)nios2_gen2_0.irq) 1 2 5 N 140 NJ 140 NJ 140 NJ 140 1930
+preplace netloc FAN_OUT<net_container>vga</net_container>(SLAVE)video_vga_controller_0.clk,(MASTER)altpll_0.c2,(SLAVE)video_dual_clock_buffer_0.clock_stream_out) 1 3 4 NJ 480 NJ 480 1520 480 NJ
+preplace netloc POINT_TO_POINT<net_container>vga</net_container>(SLAVE)video_scaler_0.avalon_scaler_sink,(MASTER)video_rgb_resampler_0.avalon_rgb_source) 1 4 1 1220
+preplace netloc POINT_TO_POINT<net_container>vga</net_container>(MASTER)video_scaler_0.avalon_scaler_source,(SLAVE)video_dual_clock_buffer_0.avalon_dc_buffer_sink) 1 5 1 1460
+preplace netloc EXPORT<net_container>vga</net_container>(SLAVE)vga.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>vga</net_container>(SLAVE)video_vga_controller_0.avalon_vga_sink,(MASTER)video_dual_clock_buffer_0.avalon_dc_buffer_source) 1 6 1 1870
+preplace netloc EXPORT<net_container>vga</net_container>(MASTER)vga.clk_sdram,(MASTER)altpll_0.c1) 1 3 5 NJ 460 NJ 460 NJ 500 NJ 500 NJ
+preplace netloc INTERCONNECT<net_container>vga</net_container>(MASTER)nios2_gen2_0.data_master,(SLAVE)new_sdram_controller_0.s1,(SLAVE)onchip_memory2_0.s1,(SLAVE)altpll_0.pll_slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)timer_0.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(MASTER)video_pixel_buffer_dma_0.avalon_pixel_dma_master,(SLAVE)SDCard.avalon_sdcard_slave,(SLAVE)video_pixel_buffer_dma_0.avalon_control_slave,(MASTER)nios2_gen2_0.instruction_master) 1 1 6 330 220 760 120 1000 160 NJ 160 NJ 160 1910
+preplace netloc EXPORT<net_container>vga</net_container>(SLAVE)SDCard.conduit_end,(SLAVE)vga.sdcard) 1 0 4 NJ 200 NJ 200 NJ 220 NJ
+levelinfo -pg 1 0 80 2270
+levelinfo -hier vga 90 120 450 810 1050 1270 1550 2020 2180
