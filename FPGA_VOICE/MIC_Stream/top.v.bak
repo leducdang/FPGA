@@ -1,0 +1,37 @@
+module top(
+					input 	clk_50mhz,
+					input 	reset,
+					input 	key3,
+					input 	key1,
+					inout 	I2C_SDAT,
+					output 	I2C_SCLK,
+					output 	MCK
+);
+
+wire		clk_12mhz;
+wire 		clk_512khz;
+wire		clk_100khz;
+
+assign MCK = clk_12mhz;
+
+PLL u1(
+	.inclk0(clk_50mhz),
+	.c0(clk_12mhz),
+	.c1(clk_512khz),
+	.c2(clk_100khz)
+	);
+
+config_mic u3(
+		.clock_50mhz(clk_50mhz),
+		.clock_100khz(clk_100Khz),
+		.sda(I2C_SDAT),
+		.scl(I2C_SLCK),
+		.reset(reset),
+		.enable_config(key3),
+		.done_config(config_done),
+		.o_index()
+		);
+
+endmodule
+
+

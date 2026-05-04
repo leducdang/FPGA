@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at uartWrite.v(32): always construct contains both blocking and non-blocking assignments File: C:/Users/DELL/Desktop/FPGA_VOICE/MIC_Audio_PLAY_UART/uartWrite.v Line: 32
+Info (10281): Verilog HDL Declaration information at log2_u48.v(12): object "FRAC" differs only in case from object "frac" in the same scope File: C:/Users/DELL/Desktop/FPGA_VOICE/MIC_Audio_PLAY_UART/log2_u48.v Line: 12

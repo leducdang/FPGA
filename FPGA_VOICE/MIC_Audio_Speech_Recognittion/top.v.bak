@@ -1,0 +1,21 @@
+module top(
+			input clk_50mhz,
+			input reset,
+			output oAUD_XCK,
+			output oAUD_BCLK,
+			output oAUD_DACDAT,
+			output oAUD_DACLRCK,
+			input  iAUD_ADCDAT,
+			output oAUD_ADCLRCK,
+			
+			input key3,
+			output [15:0] led
+);
+
+
+
+
+
+endmodule
+
+

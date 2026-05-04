@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\DELL\Desktop\FPGA_VOICE\MIC_Audio_PLAY\SRAM.qsys --block-symbol-file --output-directory=C:\Users\DELL\Desktop\FPGA_VOICE\MIC_Audio_PLAY\SRAM --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading MIC_Audio_PLAY/SRAM.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 17.1]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\DELL\Desktop\FPGA_VOICE\MIC_Audio_PLAY\SRAM.qsys --synthesis=VERILOG --output-directory=C:\Users\DELL\Desktop\FPGA_VOICE\MIC_Audio_PLAY\SRAM\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading MIC_Audio_PLAY/SRAM.qsys
+Progress: Reading input file
+Progress: Adding sram_0 [altera_up_avalon_sram 17.1]
+Progress: Parameterizing module sram_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: SRAM: Generating SRAM "SRAM" for QUARTUS_SYNTH
+Info: sram_0: Starting Generation of the SRAM Controller
+Info: sram_0: "SRAM" instantiated altera_up_avalon_sram "sram_0"
+Info: SRAM: Done "SRAM" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

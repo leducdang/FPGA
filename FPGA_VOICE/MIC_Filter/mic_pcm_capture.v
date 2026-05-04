@@ -1,0 +1,59 @@
+module mic_pcm_capture (
+    input  wire        clk_512Khz,     // clock hệ thống
+    input  wire        reset_n,         // reset active low
+    input  wire        config_done,     // codec đã cấu hình xong
+    input  wire        clk_16khz,       // clock/lrck lấy mẫu
+    input  wire        iAUD_ADCDAT,     // data mic nối tiếp
+
+    output reg  [15:0] pcm,             // dữ liệu PCM 16-bit
+    output reg         pcm_valid,       // báo pcm hợp lệ
+    output reg  [15:0] data_out  // dữ liệu ghi SRAM
+);
+
+    reg [4:0] cnt;
+    reg       pre_clk16khz;
+
+always @(posedge clk_512Khz or negedge reset_n) 
+begin
+	if (!reset_n) 
+		begin
+			pcm            <= 16'd0;
+         pcm_valid      <= 1'b0;
+         data_out 		<= 16'd0;
+         cnt            <= 5'd0;
+         pre_clk16khz   <= 1'b0;
+      end
+   else 
+		begin
+            
+		if (config_done) 		// luôn đọc giá trị ADC từ mic
+			begin
+				if(!clk_16khz && pre_clk16khz)
+					begin
+						cnt <= 0;
+						pre_clk16khz <= clk_16khz;
+					end
+				else if(clk_16khz) pre_clk16khz <= clk_16khz;
+				else cnt <= cnt + 5'd1;
+		
+				if((cnt >= 1) && (cnt <= 16)) 
+					begin
+						pcm_valid <= 0;
+						pcm <= {pcm[14:0],iAUD_ADCDAT};
+					end
+				else 
+					begin
+						pcm_valid <= 1;
+						data_out <= pcm;
+					end
+			end
+		end
+end
+
+endmodule
+
+
+
+
+				
+				

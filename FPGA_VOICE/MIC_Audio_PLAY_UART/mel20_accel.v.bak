@@ -1,0 +1,41 @@
+module mel20_accel(
+	input  wire                   clk,
+	input  wire                   rst_n,
+
+	// -------------------------
+	// Receive bins interface
+	// -------------------------
+	input  wire                   rx_ready_in, // input flag: "sẵn sàng nhận dữ liệu"
+	input  wire                   bin_valid,   // input flag: P[k] valid
+	input  wire [P_WIDTH-1:0]     bin_data,    // P[k] theo thứ tự k=0..NUM_BINS-1
+
+	output reg                    rx_done,     // output flag: đã nhận đủ bin
+
+	// -------------------------
+	// Calculate control
+	// -------------------------
+	input  wire                   start_calc,  // input flag: bắt đầu tính (pulse)
+	output reg                    calc_done,   // output flag: tính xong
+
+	// -------------------------
+	// Readback interface
+	// -------------------------
+	input  wire                   rd_ready_in, // input flag: sẵn sàng đọc
+	output reg                    mel_valid,   // output flag: mel_out valid
+	output reg  [4:0]             mel_index,   // 0..19
+	output reg  [ACC_WIDTH-1:0]   mel_out,     // mel energy output
+	output reg                    read_done    // output flag: đã đọc đủ 20 mel
+);
+
+
+
+
+
+
+
+
+
+
+
+
+endmodule

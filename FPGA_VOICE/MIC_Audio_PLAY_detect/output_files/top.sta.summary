@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -5.108
+TNS   : -27.191
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50mhz'
+Slack : -3.604
+TNS   : -82.107
+
+Type  : Slow 1200mV 85C Model Setup 'gen_lrclk_48k:u1|LRCLK'
+Slack : -3.006
+TNS   : -61.833
+
+Type  : Slow 1200mV 85C Model Setup 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9994.818
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -0.195
+TNS   : -0.195
+
+Type  : Slow 1200mV 85C Model Hold 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'gen_lrclk_48k:u1|LRCLK'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50mhz'
+Slack : 1.049
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'gen_lrclk_48k:u1|LRCLK'
+Slack : -1.285
+TNS   : -30.840
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50mhz'
+Slack : 9.757
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 325.226
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 4999.711
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -4.432
+TNS   : -22.362
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50mhz'
+Slack : -3.516
+TNS   : -75.989
+
+Type  : Slow 1200mV 0C Model Setup 'gen_lrclk_48k:u1|LRCLK'
+Slack : -2.668
+TNS   : -54.738
+
+Type  : Slow 1200mV 0C Model Setup 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9995.320
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -0.296
+TNS   : -0.296
+
+Type  : Slow 1200mV 0C Model Hold 'gen_lrclk_48k:u1|LRCLK'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50mhz'
+Slack : 0.945
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'gen_lrclk_48k:u1|LRCLK'
+Slack : -1.285
+TNS   : -30.840
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50mhz'
+Slack : 9.778
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 325.211
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 4999.712
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -2.168
+TNS   : -9.593
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50mhz'
+Slack : -1.898
+TNS   : -29.326
+
+Type  : Fast 1200mV 0C Model Setup 'gen_lrclk_48k:u1|LRCLK'
+Slack : -0.927
+TNS   : -18.383
+
+Type  : Fast 1200mV 0C Model Setup 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9997.433
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : -0.103
+TNS   : -0.103
+
+Type  : Fast 1200mV 0C Model Hold 'gen_lrclk_48k:u1|LRCLK'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50mhz'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'gen_lrclk_48k:u1|LRCLK'
+Slack : -1.000
+TNS   : -24.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50mhz'
+Slack : 9.420
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u2|altpll_component|auto_generated|pll1|clk[2]'
+Slack : 325.300
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u2|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 4999.780
+TNS   : 0.000
+
+------------------------------------------------------------

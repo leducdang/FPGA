@@ -1,0 +1,90 @@
+
+State Machine - |top1|fsm_fft
+Name fsm_fft.0000 fsm_fft.0010 fsm_fft.0001 
+fsm_fft.0000 0 0 0 
+fsm_fft.0001 1 0 1 
+fsm_fft.0010 1 1 0 
+
+State Machine - |top1|stt_main
+Name stt_main.00110 stt_main.00101 stt_main.00100 stt_main.00011 stt_main.00010 stt_main.00001 stt_main.00000 
+stt_main.00000 0 0 0 0 0 0 0 
+stt_main.00001 0 0 0 0 0 1 1 
+stt_main.00010 0 0 0 0 1 0 1 
+stt_main.00011 0 0 0 1 0 0 1 
+stt_main.00100 0 0 1 0 0 0 1 
+stt_main.00101 0 1 0 0 0 0 1 
+stt_main.00110 1 0 0 0 0 0 1 
+
+State Machine - |top1|FSM_MAIN
+Name FSM_MAIN.FSM_PLAYER FSM_MAIN.FSM_PCM FSM_MAIN.FSM_RECORD FSM_MAIN.FSM_UART FSM_MAIN.FSM_LOG FSM_MAIN.FSM_MEL FSM_MAIN.FSM_MAG FSM_MAIN.FSM_FFT FSM_MAIN.FSM_PRE FSM_MAIN.0000 
+FSM_MAIN.0000 0 0 0 0 0 0 0 0 0 0 
+FSM_MAIN.FSM_PRE 0 0 0 0 0 0 0 0 1 1 
+FSM_MAIN.FSM_FFT 0 0 0 0 0 0 0 1 0 1 
+FSM_MAIN.FSM_MAG 0 0 0 0 0 0 1 0 0 1 
+FSM_MAIN.FSM_MEL 0 0 0 0 0 1 0 0 0 1 
+FSM_MAIN.FSM_LOG 0 0 0 0 1 0 0 0 0 1 
+FSM_MAIN.FSM_UART 0 0 0 1 0 0 0 0 0 1 
+FSM_MAIN.FSM_RECORD 0 0 1 0 0 0 0 0 0 1 
+FSM_MAIN.FSM_PCM 0 1 0 0 0 0 0 0 0 1 
+FSM_MAIN.FSM_PLAYER 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top1|config_mic:u3|stt
+Name stt.00000 stt.00110 stt.00101 stt.00100 stt.00011 stt.00010 stt.00001 stt.11111 
+stt.11111 0 0 0 0 0 0 0 0 
+stt.00001 0 0 0 0 0 0 1 1 
+stt.00010 0 0 0 0 0 1 0 1 
+stt.00011 0 0 0 0 1 0 0 1 
+stt.00100 0 0 0 1 0 0 0 1 
+stt.00101 0 0 1 0 0 0 0 1 
+stt.00110 0 1 0 0 0 0 0 1 
+stt.00000 1 0 0 0 0 0 0 1 
+
+State Machine - |top1|pre_emphasis:u7|stt
+Name stt.0011 stt.0010 stt.0000 stt.0001 
+stt.0001 0 0 0 0 
+stt.0000 0 0 1 1 
+stt.0010 0 1 0 1 
+stt.0011 1 0 0 1 
+
+State Machine - |top1|uart_send:UART_NEW|state
+Name state.S_NEXT state.S_WAIT_DONE state.S_WAIT_BUSY state.S_START_TX state.S_WAIT_FREE state.S_LOAD state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 0 
+state.S_LOAD 0 0 0 0 0 1 1 
+state.S_WAIT_FREE 0 0 0 0 1 0 1 
+state.S_START_TX 0 0 0 1 0 0 1 
+state.S_WAIT_BUSY 0 0 1 0 0 0 1 
+state.S_WAIT_DONE 0 1 0 0 0 0 1 
+state.S_NEXT 1 0 0 0 0 0 1 
+
+State Machine - |top1|uart_send:UART_NEW|uartWrite:UART|stt_tx
+Name stt_tx.00001100 stt_tx.00001011 stt_tx.00001010 stt_tx.00001001 stt_tx.00001000 stt_tx.00000111 stt_tx.00000110 stt_tx.00000101 stt_tx.00000100 stt_tx.00000011 stt_tx.00000010 stt_tx.00000001 stt_tx.00000000 
+stt_tx.00000000 0 0 0 0 0 0 0 0 0 0 0 0 0 
+stt_tx.00000001 0 0 0 0 0 0 0 0 0 0 0 1 1 
+stt_tx.00000010 0 0 0 0 0 0 0 0 0 0 1 0 1 
+stt_tx.00000011 0 0 0 0 0 0 0 0 0 1 0 0 1 
+stt_tx.00000100 0 0 0 0 0 0 0 0 1 0 0 0 1 
+stt_tx.00000101 0 0 0 0 0 0 0 1 0 0 0 0 1 
+stt_tx.00000110 0 0 0 0 0 0 1 0 0 0 0 0 1 
+stt_tx.00000111 0 0 0 0 0 1 0 0 0 0 0 0 1 
+stt_tx.00001000 0 0 0 0 1 0 0 0 0 0 0 0 1 
+stt_tx.00001001 0 0 0 1 0 0 0 0 0 0 0 0 1 
+stt_tx.00001010 0 0 1 0 0 0 0 0 0 0 0 0 1 
+stt_tx.00001011 0 1 0 0 0 0 0 0 0 0 0 0 1 
+stt_tx.00001100 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top1|log2_u48:u9|state
+Name state.WAIT_ROM state.CAL state.START state.IDLE state.DONE 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 1 1 0 
+state.CAL 0 1 0 1 0 
+state.WAIT_ROM 1 0 0 1 0 
+state.DONE 0 0 0 1 1 
+
+State Machine - |top1|mel_20:mel_20_inst|state
+Name state.S_READ state.S_DONE state.S_CALC state.S_READY state.S_RECV state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_RECV 0 0 0 0 1 1 
+state.S_READY 0 0 0 1 0 1 
+state.S_CALC 0 0 1 0 0 1 
+state.S_DONE 0 1 0 0 0 1 
+state.S_READ 1 0 0 0 0 1 

@@ -1,0 +1,133 @@
+
+State Machine - |top|stt_pre
+Name stt_pre.0101 stt_pre.0100 stt_pre.0011 stt_pre.0010 stt_pre.0001 stt_pre.0000 
+stt_pre.0000 0 0 0 0 0 0 
+stt_pre.0001 0 0 0 0 1 1 
+stt_pre.0010 0 0 0 1 0 1 
+stt_pre.0011 0 0 1 0 0 1 
+stt_pre.0100 0 1 0 0 0 1 
+stt_pre.0101 1 0 0 0 0 1 
+
+State Machine - |top|stt_lut
+Name stt_lut.000011 stt_lut.000010 stt_lut.000001 stt_lut.000000 
+stt_lut.000000 0 0 0 0 
+stt_lut.000001 0 0 1 1 
+stt_lut.000010 0 1 0 1 
+stt_lut.000011 1 0 0 1 
+
+State Machine - |top|stt_mag
+Name stt_mag.0011 stt_mag.0010 stt_mag.0001 stt_mag.0000 
+stt_mag.0000 0 0 0 0 
+stt_mag.0001 0 0 1 1 
+stt_mag.0010 0 1 0 1 
+stt_mag.0011 1 0 0 1 
+
+State Machine - |top|stt_mel
+Name stt_mel.0110 stt_mel.0101 stt_mel.0100 stt_mel.0011 stt_mel.0010 stt_mel.0001 stt_mel.0000 
+stt_mel.0000 0 0 0 0 0 0 0 
+stt_mel.0001 0 0 0 0 0 1 1 
+stt_mel.0010 0 0 0 0 1 0 1 
+stt_mel.0011 0 0 0 1 0 0 1 
+stt_mel.0100 0 0 1 0 0 0 1 
+stt_mel.0101 0 1 0 0 0 0 1 
+stt_mel.0110 1 0 0 0 0 0 1 
+
+State Machine - |top|fsm_fft
+Name fsm_fft.0000 fsm_fft.0100 fsm_fft.0010 fsm_fft.0001 
+fsm_fft.0000 0 0 0 0 
+fsm_fft.0001 1 0 0 1 
+fsm_fft.0010 1 0 1 0 
+fsm_fft.0100 1 1 0 0 
+
+State Machine - |top|state_fft
+Name state_fft.READ state_fft.WAIT_OUTPUT state_fft.SEND state_fft.IDLE state_fft.DONE 
+state_fft.IDLE 0 0 0 0 0 
+state_fft.SEND 0 0 1 1 0 
+state_fft.WAIT_OUTPUT 0 1 0 1 0 
+state_fft.READ 1 0 0 1 0 
+state_fft.DONE 0 0 0 1 1 
+
+State Machine - |top|state
+Name state.UART_LUT state.UART_MEL state.UART_MAG state.UART_FFT state.UART_PRE_RAM state.UART_PRE state.UART 
+state.UART 0 0 0 0 0 0 0 
+state.UART_PRE 0 0 0 0 0 1 1 
+state.UART_PRE_RAM 0 0 0 0 1 0 1 
+state.UART_FFT 0 0 0 1 0 0 1 
+state.UART_MAG 0 0 1 0 0 0 1 
+state.UART_MEL 0 1 0 0 0 0 1 
+state.UART_LUT 1 0 0 0 0 0 1 
+
+State Machine - |top|stt_uart
+Name stt_uart.10100 stt_uart.10011 stt_uart.10010 stt_uart.10001 stt_uart.10000 stt_uart.01111 stt_uart.01110 stt_uart.01101 stt_uart.01100 stt_uart.01011 stt_uart.01010 stt_uart.01001 stt_uart.01000 stt_uart.00111 stt_uart.00110 stt_uart.00101 stt_uart.00100 stt_uart.00011 stt_uart.00010 stt_uart.00001 stt_uart.00000 
+stt_uart.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+stt_uart.00001 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+stt_uart.00010 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+stt_uart.00011 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+stt_uart.00100 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+stt_uart.00101 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+stt_uart.00110 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+stt_uart.00111 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+stt_uart.01000 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+stt_uart.01001 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+stt_uart.01010 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+stt_uart.01011 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.01100 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.01101 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.01110 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.01111 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.10000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.10001 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.10010 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.10011 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+stt_uart.10100 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|config_mic:u3|stt
+Name stt.00000 stt.00110 stt.00101 stt.00100 stt.00011 stt.00010 stt.00001 stt.11111 
+stt.11111 0 0 0 0 0 0 0 0 
+stt.00001 0 0 0 0 0 0 1 1 
+stt.00010 0 0 0 0 0 1 0 1 
+stt.00011 0 0 0 0 1 0 0 1 
+stt.00100 0 0 0 1 0 0 0 1 
+stt.00101 0 0 1 0 0 0 0 1 
+stt.00110 0 1 0 0 0 0 0 1 
+stt.00000 1 0 0 0 0 0 0 1 
+
+State Machine - |top|uartWrite:u5|stt_tx
+Name stt_tx.00001100 stt_tx.00001011 stt_tx.00001010 stt_tx.00001001 stt_tx.00001000 stt_tx.00000111 stt_tx.00000110 stt_tx.00000101 stt_tx.00000100 stt_tx.00000011 stt_tx.00000010 stt_tx.00000001 stt_tx.00000000 
+stt_tx.00000000 0 0 0 0 0 0 0 0 0 0 0 0 0 
+stt_tx.00000001 0 0 0 0 0 0 0 0 0 0 0 1 1 
+stt_tx.00000010 0 0 0 0 0 0 0 0 0 0 1 0 1 
+stt_tx.00000011 0 0 0 0 0 0 0 0 0 1 0 0 1 
+stt_tx.00000100 0 0 0 0 0 0 0 0 1 0 0 0 1 
+stt_tx.00000101 0 0 0 0 0 0 0 1 0 0 0 0 1 
+stt_tx.00000110 0 0 0 0 0 0 1 0 0 0 0 0 1 
+stt_tx.00000111 0 0 0 0 0 1 0 0 0 0 0 0 1 
+stt_tx.00001000 0 0 0 0 1 0 0 0 0 0 0 0 1 
+stt_tx.00001001 0 0 0 1 0 0 0 0 0 0 0 0 1 
+stt_tx.00001010 0 0 1 0 0 0 0 0 0 0 0 0 1 
+stt_tx.00001011 0 1 0 0 0 0 0 0 0 0 0 0 1 
+stt_tx.00001100 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |top|pre_emphasis:u7|stt
+Name stt.0011 stt.0010 stt.0000 stt.0001 
+stt.0001 0 0 0 0 
+stt.0000 0 0 1 1 
+stt.0010 0 1 0 1 
+stt.0011 1 0 0 1 
+
+State Machine - |top|log2_u48:u9|state
+Name state.WAIT_ROM state.CAL state.START state.IDLE state.DONE 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 1 1 0 
+state.CAL 0 1 0 1 0 
+state.WAIT_ROM 1 0 0 1 0 
+state.DONE 0 0 0 1 1 
+
+State Machine - |top|mel_20:mel_20_inst|state
+Name state.S_READ state.S_DONE state.S_CALC state.S_READY state.S_RECV state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_RECV 0 0 0 0 1 1 
+state.S_READY 0 0 0 1 0 1 
+state.S_CALC 0 0 1 0 0 1 
+state.S_DONE 0 1 0 0 0 1 
+state.S_READ 1 0 0 0 0 1 

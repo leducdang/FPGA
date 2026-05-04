@@ -1,0 +1,90 @@
+module mic_pcm_capture (
+    input  wire        clk_1536Mhz,     // clock hệ thống
+    input  wire        reset_n,         // reset active low
+    input  wire        config_done,     // codec đã cấu hình xong
+    input  wire        clk_48khz,       // clock/lrck lấy mẫu
+    input  wire        iAUD_ADCDAT,     // data mic nối tiếp
+    input  wire        start_run,       // bắt đầu ghi
+    input  wire        stop_run,        // dừng ghi
+
+    output reg  [15:0] pcm,             // dữ liệu PCM 16-bit
+    output reg         pcm_valid,       // báo pcm hợp lệ
+    output reg  [15:0] writedata_sram,  // dữ liệu ghi SRAM
+    output reg         rec_active       // đang ghi âm
+);
+
+    reg [4:0] cnt;
+    reg       pre_clk48khz;
+
+always @(posedge clk_1536Mhz or negedge reset_n) 
+begin
+	if (!reset_n) 
+		begin
+			pcm            <= 16'd0;
+         pcm_valid      <= 1'b0;
+         writedata_sram <= 16'd0;
+         cnt            <= 5'd0;
+         pre_clk48khz   <= 1'b0;
+         rec_active     <= 1'b0;
+      end
+   else 
+		begin
+            
+      if (start_run)		rec_active <= 1'b1;			// Điều khiển trạng thái ghi
+      else if (stop_run)	rec_active <= 1'b0;
+		
+		if (config_done && rec_active) 
+			begin
+				if(!clk_48khz && pre_clk48khz)
+					begin
+						cnt <= 0;
+						pre_clk48khz <= clk_48khz;
+					end
+				else if(clk_48khz) pre_clk48khz <= clk_48khz;
+				else cnt <= cnt + 5'd1;
+		
+				if((cnt >= 1) && (cnt <= 16)) 
+					begin
+						pcm_valid <= 0;
+						pcm <= {pcm[14:0],iAUD_ADCDAT};
+					end
+				else 
+					begin
+						pcm_valid <= 1;
+						writedata_sram <= pcm;
+					end
+			end
+		end
+end
+
+endmodule
+
+
+
+//					begin
+//                // Bắt cạnh xuống của clk_48khz
+//                if (!clk_48khz && pre_clk48khz) begin
+//                    cnt <= 5'd0;
+//                end
+//                else if (!clk_48khz) begin
+//                    cnt <= cnt + 5'd1;
+//                end
+//
+//                pre_clk48khz <= clk_48khz;
+//
+//                // Dịch 16 bit PCM từ mic
+//                if ((cnt >= 5'd1) && (cnt <= 5'd16)) begin
+//                    pcm <= {pcm[14:0], iAUD_ADCDAT};
+//                end
+//                else if (cnt > 5'd16) begin
+//                    pcm_valid      <= 1'b1;
+//                    writedata_sram <= pcm;
+//                end
+//            end
+//            else begin
+//                cnt          <= 5'd0;
+//                pre_clk48khz <= clk_48khz;
+//            end
+				
+				
+				
