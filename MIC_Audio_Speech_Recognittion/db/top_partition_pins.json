@@ -336,11 +336,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW1",
+					"strict" : false
+				},
+				{
 					"name" : "SW2",
 					"strict" : false
 				},
 				{
-					"name" : "key1",
+					"name" : "SW3",
 					"strict" : false
 				},
 				{
@@ -348,11 +352,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW1",
-					"strict" : false
-				},
-				{
-					"name" : "SW3",
+					"name" : "key1",
 					"strict" : false
 				},
 				{

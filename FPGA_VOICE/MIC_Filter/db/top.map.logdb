@@ -1,2 +1,0 @@
-v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,audio_filter_chain:u4|high_pass_filter:u_hpf|lpm_mult:Mult0|mult_s9t:auto_generated|mac_out2,

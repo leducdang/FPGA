@@ -281,6 +281,19 @@ reg 	[4:0] 	send_lut;
 wire 				out_valid_lut;
 wire	[15:0]	lut_data_out;
 
+//*********************** MFCC ***********************//
+
+reg log_valid;
+reg [4:0] log_index;
+reg signed [23:0] log_in;
+reg dct_start;
+wire signed [31:0] mfcc_out;
+wire [3:0] mfcc_index;
+wire mfcc_valid;
+wire dct_done;
+
+reg signed [31:0] mfcc_data[0:12];
+
 
 //************* TEST UART MOI **************//
 
@@ -305,6 +318,7 @@ localparam FSM_IDLE	= 4'd0,
 			  FSM_MAG 	= 4'd3,
 			  FSM_MEL 	= 4'd4,
 			  FSM_LOG 	= 4'd5,
+			  FSM_DCT	= 4'd10,
 			  FSM_UART 	= 4'd6,
 			  FSM_RECORD= 4'd7,
 			  FSM_PCM	= 4'd8,
@@ -743,11 +757,63 @@ begin
 							else
 								begin
 									stt_main <= 0;
-									FSM_MAIN	<= FSM_UART;
+//									FSM_MAIN	<= FSM_UART;
+									FSM_MAIN	<= FSM_DCT;
 									led_7 <= 1;
 									cnt_lut <= 0;
 								end
 						end
+					endcase
+				end
+				
+				
+			FSM_DCT:
+				begin
+					case(stt_main)
+					5'd0:
+						begin
+							log_valid <= 0;
+							log_index <= 0;
+							dct_start <= 0;
+							stt_main  <= 1;
+						end
+					5'd1:
+						begin
+							log_valid <= 1;
+							log_in <= out_data_lut[log_index];
+							stt_main <= 2;
+						end
+					5'd2:
+						begin
+							if(log_index < 5'd20)
+								begin
+									log_index <= log_index + 5'd1;
+									stt_main  <= 1;
+								end
+							else
+								begin	
+									log_valid <= 0;
+									log_index <= 0;
+									stt_main  <= 3;
+								end
+						end
+					5'd3:
+						begin
+							dct_start <= 1;
+							stt_main  <= 4;
+						end
+					5'd4:
+						if(mfcc_valid)
+							begin
+								mfcc_data[mfcc_index] <= mfcc_out;
+								if(mfcc_index == 4'd12) stt_main  <= 5;
+							end
+					5'd5:
+						if(dct_done)
+							begin 
+								FSM_MAIN	<= FSM_UART;
+								stt_main <= 0;
+							end
 					endcase
 				end
 			
@@ -757,10 +823,11 @@ begin
 						5'd0:	begin
 							if(!busy_uart_new)
 								begin
-									data_in_uart <= {out_data_lut[send_lut], 24'd0};
+//									data_in_uart <= {out_data_lut[send_lut], 24'd0};
+									data_in_uart <= {mfcc_data[send_lut], 16'd0};
 									start_uart_new <= 1;
 									stt_main <= 1;
-									data_byte <= 3;
+									data_byte <= 4;
 								end
 							end
 						5'd1: if(busy_uart_new)
@@ -775,7 +842,8 @@ begin
 							end
 						5'd3:	
 							begin
-								if(send_lut > 5'd19) 
+//								if(send_lut > 5'd19) 
+								if(send_lut > 5'd12) 
 									begin
 										stt_main <= 4;
 										start_uart_new <= 0;
@@ -976,6 +1044,20 @@ hamming_256 hamming(
     .y_out(data_out_hamming),
     .ham_done (ham_done)
 );
+	
+	
+DCT13 dct(
+    .clk(clk_50mhz),
+    .rst(reset),          // active low
+    .log_valid(log_valid),
+    .log_index(log_index),       // 0 -> 19
+    .log_in(log_in),
+    .dct_start(dct_start),
+    .mfcc_out(mfcc_out),
+    .mfcc_index(mfcc_index),       // 0 -> 12
+    .mfcc_valid(mfcc_valid),
+    .dct_done(dct_done)
+);	
 	
 endmodule
 

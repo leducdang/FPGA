@@ -1,4 +1,5 @@
 v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,DCT13:dct|lpm_mult:Mult0|mult_66t:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mel_20:mel_20_inst|lpm_mult:Mult49|mult_sgt:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mel_20:mel_20_inst|lpm_mult:Mult48|mult_pgt:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mel_20:mel_20_inst|lpm_mult:Mult50|mult_ugt:auto_generated|mac_out2,
