@@ -1,0 +1,178 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# Date created = 17:10:53  February 04, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY top1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:10:53  FEBRUARY 04, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_A8 -to I2C_SDAT
+set_location_assignment PIN_B7 -to I2C_SLCK
+set_location_assignment PIN_Y2 -to clk_50mhz
+set_location_assignment PIN_R24 -to key3
+set_location_assignment PIN_M23 -to reset
+set_location_assignment PIN_E1 -to oAUD_MCLK
+set_location_assignment PIN_E3 -to oAUD_DACLRCK
+set_location_assignment PIN_D1 -to oAUD_DACDAT
+set_location_assignment PIN_F2 -to oAUD_BCLK
+set_location_assignment PIN_C2 -to oAUD_ADCLRCK
+set_location_assignment PIN_D2 -to iAUD_ADCDAT
+set_location_assignment PIN_G19 -to led[0]
+set_location_assignment PIN_F19 -to led[1]
+set_location_assignment PIN_E19 -to led[2]
+set_location_assignment PIN_F21 -to led[3]
+set_location_assignment PIN_F18 -to led[4]
+set_location_assignment PIN_E18 -to led[5]
+set_location_assignment PIN_J19 -to led[6]
+set_location_assignment PIN_H19 -to led[7]
+set_location_assignment PIN_J17 -to led[8]
+set_location_assignment PIN_G17 -to led[9]
+set_location_assignment PIN_J15 -to led[10]
+set_location_assignment PIN_H16 -to led[11]
+set_location_assignment PIN_J16 -to led[12]
+set_location_assignment PIN_H17 -to led[13]
+set_location_assignment PIN_F15 -to led[14]
+set_location_assignment PIN_G15 -to led[15]
+set_location_assignment PIN_AH26 -to clk_256
+set_location_assignment PIN_AG26 -to clk_8
+set_location_assignment PIN_T8 -to SRAM_ADDR[19]
+set_location_assignment PIN_AB8 -to SRAM_ADDR[18]
+set_location_assignment PIN_AB9 -to SRAM_ADDR[17]
+set_location_assignment PIN_AC11 -to SRAM_ADDR[16]
+set_location_assignment PIN_AB11 -to SRAM_ADDR[15]
+set_location_assignment PIN_AA4 -to SRAM_ADDR[14]
+set_location_assignment PIN_AC3 -to SRAM_ADDR[13]
+set_location_assignment PIN_AB4 -to SRAM_ADDR[12]
+set_location_assignment PIN_AD3 -to SRAM_ADDR[11]
+set_location_assignment PIN_AF2 -to SRAM_ADDR[10]
+set_location_assignment PIN_T7 -to SRAM_ADDR[9]
+set_location_assignment PIN_AF5 -to SRAM_ADDR[8]
+set_location_assignment PIN_AC5 -to SRAM_ADDR[7]
+set_location_assignment PIN_AB5 -to SRAM_ADDR[6]
+set_location_assignment PIN_AE6 -to SRAM_ADDR[5]
+set_location_assignment PIN_AB6 -to SRAM_ADDR[4]
+set_location_assignment PIN_AC7 -to SRAM_ADDR[3]
+set_location_assignment PIN_AE7 -to SRAM_ADDR[2]
+set_location_assignment PIN_AD7 -to SRAM_ADDR[1]
+set_location_assignment PIN_AB7 -to SRAM_ADDR[0]
+set_location_assignment PIN_AF8 -to SRAM_CE_N
+set_location_assignment PIN_AG3 -to SRAM_DQ[15]
+set_location_assignment PIN_AF3 -to SRAM_DQ[14]
+set_location_assignment PIN_AE4 -to SRAM_DQ[13]
+set_location_assignment PIN_AE3 -to SRAM_DQ[12]
+set_location_assignment PIN_AE1 -to SRAM_DQ[11]
+set_location_assignment PIN_AE2 -to SRAM_DQ[10]
+set_location_assignment PIN_AD2 -to SRAM_DQ[9]
+set_location_assignment PIN_AD1 -to SRAM_DQ[8]
+set_location_assignment PIN_AF7 -to SRAM_DQ[7]
+set_location_assignment PIN_AH6 -to SRAM_DQ[6]
+set_location_assignment PIN_AG6 -to SRAM_DQ[5]
+set_location_assignment PIN_AF6 -to SRAM_DQ[4]
+set_location_assignment PIN_AH4 -to SRAM_DQ[3]
+set_location_assignment PIN_AG4 -to SRAM_DQ[2]
+set_location_assignment PIN_AF4 -to SRAM_DQ[1]
+set_location_assignment PIN_AH3 -to SRAM_DQ[0]
+set_location_assignment PIN_AD4 -to SRAM_LB_N
+set_location_assignment PIN_AD5 -to SRAM_OE_N
+set_location_assignment PIN_AC4 -to SRAM_UB_N
+set_location_assignment PIN_AE8 -to SRAM_WE_N
+set_location_assignment PIN_M21 -to key1
+set_location_assignment PIN_N21 -to key2
+set_location_assignment PIN_AE24 -to data_input_wm8731
+set_location_assignment PIN_G12 -to UART_RX
+set_location_assignment PIN_G9 -to UART_TX
+set_location_assignment PIN_AB28 -to SW0
+set_location_assignment PIN_AC28 -to SW1
+set_location_assignment PIN_AC27 -to SW2
+set_location_assignment PIN_AD27 -to SW3
+set_location_assignment PIN_AB27 -to SW4
+set_location_assignment PIN_AC26 -to SW5
+set_location_assignment PIN_AD26 -to SW6
+set_location_assignment PIN_E22 -to led_1
+set_location_assignment PIN_E25 -to led_2
+set_location_assignment PIN_E21 -to led_0
+set_location_assignment PIN_E24 -to led_3
+set_location_assignment PIN_H21 -to led_4
+set_location_assignment PIN_G20 -to led_5
+set_location_assignment PIN_G22 -to led_6
+set_location_assignment PIN_G21 -to led_7
+set_location_assignment PIN_F17 -to led_8
+set_location_assignment PIN_AB26 -to SW7
+set_location_assignment PIN_AC25 -to SW8
+set_location_assignment PIN_AB25 -to SW9
+set_location_assignment PIN_AC24 -to SW10
+set_location_assignment PIN_G16 -to led_9
+set_location_assignment PIN_H15 -to led_10
+set_location_assignment PIN_AB24 -to SW11
+set_location_assignment PIN_AB23 -to SW12
+set_location_assignment PIN_AA23 -to SW13
+set_location_assignment PIN_G18 -to led_11
+set_location_assignment PIN_F22 -to led_12
+set_location_assignment PIN_E17 -to led_13
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE gen_lrclk_16k.v
+set_global_assignment -name QIP_FILE FFT/synthesis/FFT.qip
+set_global_assignment -name QIP_FILE SRAM/synthesis/SRAM.qip
+set_global_assignment -name VERILOG_FILE i2c_config_mic.v
+set_global_assignment -name VERILOG_FILE i2c.v
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name VERILOG_FILE circular_buffer_1024.v
+set_global_assignment -name VERILOG_FILE uartWrite.v
+set_global_assignment -name VERILOG_FILE pre_emphasis.v
+set_global_assignment -name QIP_FILE RAM.qip
+set_global_assignment -name VERILOG_FILE fft_fsm_256.v
+set_global_assignment -name VERILOG_FILE magnitude_calc.v
+set_global_assignment -name VERILOG_FILE mel20_accel.v
+set_global_assignment -name VERILOG_FILE log2_u48.v
+set_global_assignment -name QIP_FILE log_lut.qip
+set_global_assignment -name VERILOG_FILE mic_pcm_capture.v
+set_global_assignment -name VERILOG_FILE audio_sram_player.v
+set_global_assignment -name VERILOG_FILE uart_send.v
+set_global_assignment -name VERILOG_FILE top1.v
+set_global_assignment -name VERILOG_FILE hamming_256.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

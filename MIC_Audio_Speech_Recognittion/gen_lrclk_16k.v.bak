@@ -1,0 +1,25 @@
+module gen_lrclk_16k (
+    input  wire BCLK,       // 1.536 MHz
+    input  wire reset,
+    output reg  LRCLK        // 48 kHz
+);
+
+reg [4:0] cnt;  // đếm 0..31
+
+always @(posedge BCLK or negedge reset) begin
+    if (!reset) begin
+        cnt   <= 0;
+        LRCLK <= 0;
+    end else begin
+        cnt <= cnt + 5'd1;
+
+        if (cnt == 15)
+            LRCLK <= 1;   // nửa frame
+        else if (cnt == 31) begin
+            LRCLK <= 0;   // frame mới
+            cnt   <= 0;
+        end
+    end
+end
+
+endmodule

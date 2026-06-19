@@ -1,0 +1,81 @@
+module audio_sram_player (
+    input  wire        clk_1536Mhz,       // clock hệ thống
+    input  wire        reset_n,           // reset active low
+    input  wire        clk_48khz,         // clock đồng bộ sample/LRCK
+    input  wire        read_sram,         // tín hiệu cho biết đang đọc SRAM
+    input  wire        run,               // bắt đầu phát
+    input  wire        stop,              // dừng phát
+    input  wire [15:0] data_audio,     // dữ liệu đọc từ SRAM
+
+    output reg         oAUD_DACDAT,       // dữ liệu audio nối tiếp ra DAC
+    output reg  [4:0]  bit_counter,       // đếm bit đang phát
+    output reg         play_active        // đang ở trạng thái phát
+);
+
+    reg lrclk_d;
+    reg [15:0] sample_reg;
+	 assign oAUD_DACDAT = (read_sram && play_active) ? data_audio[15-bit_counter] : 0;
+
+    always @(posedge clk_1536Mhz or negedge reset_n) begin
+        if (!reset_n) begin
+            lrclk_d      <= 1'b0;
+            bit_counter  <= 5'd0;
+            sample_reg   <= 16'd0;
+            oAUD_DACDAT  <= 1'b0;
+            play_active  <= 1'b0;
+        end
+        else begin
+            // Điều khiển trạng thái phát
+            if (run)
+                play_active <= 1'b1;
+            else if (stop)
+                play_active <= 1'b0;
+
+            // Lưu trạng thái trước của clk_48khz để bắt cạnh
+				lrclk_d <= clk_48khz;
+				if (play_active && read_sram) 
+					begin
+						if(lrclk_d != clk_48khz)	bit_counter <= 0;
+						else if(read_sram)			bit_counter <= bit_counter + 5'd1;
+					end
+
+//            if (play_active && read_sram) begin
+//                // Khi clk_48khz đổi trạng thái => bắt đầu sample mới
+//                if (lrclk_d != clk_48khz) begin
+//                    bit_counter <= 5'd0;
+//                    sample_reg  <= readdata_sram;
+//                end
+//                else begin
+//                    if (bit_counter < 5'd16)
+//                        bit_counter <= bit_counter + 5'd1;
+//                end
+//
+//                // Xuất bit MSB trước
+//                if (bit_counter < 5'd16)
+//                    oAUD_DACDAT <= sample_reg[15 - bit_counter];
+//                else
+//                    oAUD_DACDAT <= 1'b0;
+//            end
+//            else begin
+//                bit_counter <= 5'd0;
+//                oAUD_DACDAT <= 1'b0;
+//            end
+        end
+    end
+
+endmodule
+
+
+//assign oAUD_DACDAT = (read_sram && SW0) ? readdata_sram[15-ROM_output_mux_counter] : 0;
+//reg lrclk_d;
+//
+//always @(posedge clk_1536Mhz)
+//begin
+//    lrclk_d <= clk_48khz;
+//
+//    if(lrclk_d != clk_48khz)
+//        ROM_output_mux_counter <= 0;
+//    else if(read_sram)
+//        ROM_output_mux_counter <= ROM_output_mux_counter + 5'd1;
+//end
+
