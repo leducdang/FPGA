@@ -1,4 +1,8 @@
 v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out6,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out8,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,DCT13:dct|lpm_mult:Mult0|mult_66t:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mel_20:mel_20_inst|lpm_mult:Mult49|mult_sgt:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mel_20:mel_20_inst|lpm_mult:Mult48|mult_pgt:auto_generated|mac_out2,
@@ -163,6 +167,7 @@ DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,FFT:u8|FFT_fft_ii_0:fft_ii_0|auk_dspip_r
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,FFT:u8|FFT_fft_ii_0:fft_ii_0|auk_dspip_r22sdf_top:auk_dspip_r22sdf_top_inst|auk_dspip_r22sdf_core:r22sdf_core_inst|auk_dspip_r22sdf_stage:\gen_natural_order_core:gen_stages:1:r22_stage|auk_dspip_r22sdf_cma:\gen_cma:cma_fixedpt:cma_inst|lpm_mult:Mult2|mult_76t:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,FFT:u8|FFT_fft_ii_0:fft_ii_0|auk_dspip_r22sdf_top:auk_dspip_r22sdf_top_inst|auk_dspip_r22sdf_core:r22sdf_core_inst|auk_dspip_r22sdf_stage:\gen_natural_order_core:gen_stages:1:r22_stage|auk_dspip_r22sdf_cma:\gen_cma:cma_fixedpt:cma_inst|lpm_mult:Mult3|mult_56t:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,FFT:u8|FFT_fft_ii_0:fft_ii_0|auk_dspip_r22sdf_top:auk_dspip_r22sdf_top_inst|auk_dspip_r22sdf_core:r22sdf_core_inst|auk_dspip_r22sdf_stage:\gen_natural_order_core:gen_stages:1:r22_stage|auk_dspip_r22sdf_cma:\gen_cma:cma_fixedpt:cma_inst|lpm_mult:Mult1|mult_56t:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_mult5,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mel_20:mel_20_inst|lpm_mult:Mult50|mult_ugt:auto_generated|mac_mult3,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mel_20:mel_20_inst|lpm_mult:Mult53|mult_ugt:auto_generated|mac_mult3,
 PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mel_20:mel_20_inst|lpm_mult:Mult43|mult_ugt:auto_generated|mac_mult3,

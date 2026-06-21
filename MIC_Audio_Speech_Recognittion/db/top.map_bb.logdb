@@ -1,4 +1,8 @@
 v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out6,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,MFCC30_DTW_RECOG:u_recog|lpm_mult:Mult0|mult_96t:auto_generated|mac_out8,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,DCT13:dct|lpm_mult:Mult0|mult_66t:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mel_20:mel_20_inst|lpm_mult:Mult49|mult_sgt:auto_generated|mac_out2,
 DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mel_20:mel_20_inst|lpm_mult:Mult48|mult_pgt:auto_generated|mac_out2,

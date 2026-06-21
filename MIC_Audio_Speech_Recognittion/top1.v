@@ -222,7 +222,7 @@ wire ham_done;
 
 reg         sink_valid;   //   sink.sink_valid
 wire        sink_ready;   //       .sink_ready
-reg         sink_sop;     //       .sink_sop
+reg         sink_sop;     //       .sink_sops
 reg         sink_eop;     //       .sink_eop
 reg [15:0]  sink_real;    //       .sink_real
 wire        source_valid; // source.source_valid
@@ -294,6 +294,19 @@ wire dct_done;
 
 reg signed [31:0] mfcc_data[0:12];
 
+//*********************** DTW ***********************//
+
+reg dtw_valid;
+reg [3:0] dtw_index; // 0 -> 12
+reg signed [31:0] dtw_in_mfcc; // Q8.10
+
+wire [2:0] result;      // 1 -> 4
+wire recog_valid;
+wire recog_done;
+wire [63:0] best_distance;
+wire [5:0] frame_count;
+reg [31:0] best_distance_hi;
+reg [31:0] best_distance_lo;
 
 //************* TEST UART MOI **************//
 
@@ -319,6 +332,7 @@ localparam FSM_IDLE	= 4'd0,
 			  FSM_MEL 	= 4'd4,
 			  FSM_LOG 	= 4'd5,
 			  FSM_DCT	= 4'd10,
+			  FSM_DTW	= 4'd11,
 			  FSM_UART 	= 4'd6,
 			  FSM_RECORD= 4'd7,
 			  FSM_PCM	= 4'd8,
@@ -362,6 +376,10 @@ begin
 			send_lut 		<= 0;
 			in_valid_lut 	<= 0;
 			
+			led_11	<= 1;
+			led_12	<= 1;
+			led_13	<= 1;
+			
 		end
 	else
 		case (FSM_MAIN)
@@ -398,6 +416,9 @@ begin
 					
 					start_uart_new <= 0;
 					data_byte		<= 0;
+					
+					dtw_valid <= 0;
+					dtw_index <= 0;
 						
 					led_3	<= 0;
 					led_4	<= 0;
@@ -407,9 +428,12 @@ begin
 					led_8	<= 0;
 					led_9 <= 1;
 					led_10<= 0;
-					led_11<= 1;
-					led_12<= 1;
-					led_13<= 1;
+//					led_11<= 1;
+//					led_12<= 1;
+//					led_13<= 1;
+					
+					best_distance_hi <= 0;
+					best_distance_lo <= 0;
 					
 					frame		<= 0;
 					
@@ -702,7 +726,7 @@ begin
 						end
 					5'd3: if(rx_done_sig)
 						begin
-							led_11 <= 0;
+//							led_11 <= 0;
 							bin_valid_sig <=  0;
 							cnt_mel <= cnt_mel + 7'd1;
 							if(cnt_mel >= 64) stt_main <= 4;
@@ -713,13 +737,13 @@ begin
 							rx_send_sig <= 0;
 							start_calc_sig <=  1; 
 							stt_main <= 5; 
-							led_12 <= 0;	
+//							led_12 <= 0;	
 						end
 					5'd5: if(calc_done_sig) 
 						begin 
 							rd_ready_in_sig <= 1; 
 							stt_main <= 6;  
-							led_13 <= 0;
+//							led_13 <= 0;
 						end
 					5'd6: if(mel_valid_sig)
 						begin
@@ -785,7 +809,7 @@ begin
 						end
 					5'd2:
 						begin
-							if(log_index < 5'd20)
+							if(log_index < 5'd19)
 								begin
 									log_index <= log_index + 5'd1;
 									stt_main  <= 1;
@@ -811,53 +835,179 @@ begin
 					5'd5:
 						if(dct_done)
 							begin 
-								FSM_MAIN	<= FSM_UART;
+//								FSM_MAIN	<= FSM_UART;
+								FSM_MAIN	<= FSM_DTW;
 								stt_main <= 0;
 							end
 					endcase
 				end
-			
-			FSM_UART:
+							
+			FSM_DTW:
 				begin
-					case(stt_main)		
-						5'd0:	begin
-							if(!busy_uart_new)
-								begin
-//									data_in_uart <= {out_data_lut[send_lut], 24'd0};
-									data_in_uart <= {mfcc_data[send_lut], 16'd0};
-									start_uart_new <= 1;
-									stt_main <= 1;
-									data_byte <= 4;
-								end
-							end
-						5'd1: if(busy_uart_new)
+					case(stt_main)
+						5'd0:
 							begin
-								start_uart_new <= 0;
+								dtw_valid <= 0;
+								dtw_index <= 0;
+								stt_main <= 1;
+							end
+						5'd1:
+							begin
+								dtw_valid <= 1;
+								dtw_in_mfcc <= mfcc_data[dtw_index];
 								stt_main <= 2;
 							end
-						5'd2:	if(done_uart_new)
+						5'd2:
 							begin
-								send_lut <= send_lut + 5'd1;
-								stt_main <= 3;	
-							end
-						5'd3:	
-							begin
-//								if(send_lut > 5'd19) 
-								if(send_lut > 5'd12) 
+								if(dtw_index < 4'd12)
 									begin
-										stt_main <= 4;
-										start_uart_new <= 0;
-										send_lut <= 0;
-										frame <= frame + 8'd1;
+										stt_main <= 1;
+										dtw_index <= dtw_index + 4'd1;
 									end
-								else	stt_main <= 0;
+								else
+									stt_main <= 3;
 							end
-						5'd4:
+								
+						5'd3:
 							begin
+									// Chưa đủ 30 frame thì không chờ recog_done
+									if(frame_count < 9'd29) begin
+										 FSM_MAIN <= FSM_UART;   // hoặc FSM_PRE nếu không muốn gửi UART
+										 stt_main <= 0;
+									end
+									else begin
+										 stt_main <= 4;
+									end
+							  end
+					
+						5'd4:
+							  begin
+									if(recog_done) begin
+										 if(recog_valid) begin
+											  led_12 <= 0;
+											  led_13 <= 0;
+										 end					
+										 FSM_MAIN <= FSM_UART;
+										 stt_main <= 0;
+									end
+							  end		
+					endcase
+				end
+			
+//			FSM_UART:
+//				begin
+//					case(stt_main)		
+//						5'd0:	begin
+//							if(!busy_uart_new)
+//								begin
+////									data_in_uart <= {out_data_lut[send_lut], 24'd0};
+//									data_in_uart <= {mfcc_data[send_lut], 16'd0};
+//									start_uart_new <= 1;
+//									stt_main <= 1;
+//									data_byte <= 4;
+//								end
+//							end
+//						5'd1: if(busy_uart_new)
+//							begin
+//								start_uart_new <= 0;
+//								stt_main <= 2;
+//							end
+//						5'd2:	if(done_uart_new)
+//							begin
+//								send_lut <= send_lut + 5'd1;
+//								stt_main <= 3;	
+//							end
+//						5'd3:	
+//							begin
+//								if(send_lut > 5'd12) 
+//									begin
+//										stt_main <= 4;
+//										start_uart_new <= 0;
+//										send_lut <= 0;
+//										frame <= frame + 8'd1;
+//									end
+//								else	stt_main <= 0;
+//							end
+//						5'd4:
+//							begin
+//								if(frame > 374)
+//									begin
+//										FSM_MAIN	<= FSM_IDLE;
+//										led_8	<= 1;
+//										start <= 0;
+//									end
+//								else
+//									begin
+//										FSM_MAIN	<= FSM_PRE;	
+//										stt_main <= 0;
+//										led_3	<= 0;
+//										led_4	<= 0;
+//										led_5	<= 0;
+//										led_6	<= 0;
+//										led_7	<= 0;
+//										led_10 <= 0;
+////										led_11 <= 1;
+////										led_12 <= 1;
+////										led_13 <= 0;
+//									end
+//							end
+//					endcase
+//				end
+				
+				
+				
+			FSM_UART:
+				begin
+					case(stt_main)	
+						5'd0:
+							begin
+								best_distance_hi <= best_distance[63:32];
+								best_distance_lo <= best_distance[31:0];
+								stt_main <= 1;
+							end
+						5'd1:	
+							if(!busy_uart_new)
+								begin
+									data_in_uart <= {best_distance_hi,16'd0};
+									start_uart_new <= 1;
+									data_byte <= 4;
+									stt_main <= 2;
+								end
+						5'd2: 
+							if(busy_uart_new)
+								begin
+									start_uart_new <= 0;
+									stt_main <= 3;
+								end
+						5'd3:	
+							if(done_uart_new)	stt_main <= 4;
+						5'd4:
+							if(!busy_uart_new)
+								begin
+									data_in_uart <= {best_distance_lo,16'd0};
+									start_uart_new <= 1;
+									stt_main <= 5;
+									data_byte <= 4;
+								end
+						5'd5:	
+							if(busy_uart_new)
+								begin
+									start_uart_new <= 0;
+									stt_main <= 6;
+								end
+						5'd6: if(done_uart_new) 
+								begin
+									stt_main <= 7;
+									frame <= frame + 8'd1;
+								end
+						5'd7:
+							begin
+								start_uart_new <= 0;
 								if(frame > 374)
 									begin
 										FSM_MAIN	<= FSM_IDLE;
 										led_8	<= 1;
+										start <= 0;
 									end
 								else
 									begin
@@ -869,13 +1019,15 @@ begin
 										led_6	<= 0;
 										led_7	<= 0;
 										led_10 <= 0;
-										led_11 <= 1;
-										led_12 <= 1;
-										led_13 <= 1;
+//										led_11 <= 1;
+//										led_12 <= 1;
+//										led_13 <= 0;
 									end
 							end
 					endcase
 				end
+				
+				
 		endcase
 	end
 	
@@ -1058,6 +1210,23 @@ DCT13 dct(
     .mfcc_valid(mfcc_valid),
     .dct_done(dct_done)
 );	
+
+
+MFCC30_DTW_RECOG u_recog (
+    .clk(clk_50mhz),
+    .rst(reset),
+
+    .mfcc_valid(dtw_valid),
+    .mfcc_index(dtw_index),
+    .mfcc_in(dtw_in_mfcc),
+
+    .result(result),
+    .recog_valid(recog_valid),
+    .recog_done(recog_done),
+    .best_distance(best_distance),
+	 .frame_count(frame_count)
+);
+
 	
 endmodule
 

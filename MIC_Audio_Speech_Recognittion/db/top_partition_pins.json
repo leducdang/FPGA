@@ -136,10 +136,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "led_11",
-					"strict" : false
-				},
-				{
 					"name" : "led_12",
 					"strict" : false
 				},
@@ -336,11 +332,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW1",
-					"strict" : false
-				},
-				{
-					"name" : "SW2",
+					"name" : "key1",
 					"strict" : false
 				},
 				{
@@ -352,7 +344,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "key1",
+					"name" : "SW1",
+					"strict" : false
+				},
+				{
+					"name" : "SW2",
 					"strict" : false
 				},
 				{
