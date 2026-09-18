@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at uartRead.v(6): object "data" differs only in case from object "DATA" in the same scope File: C:/Users/DELL/Desktop/CNN/FPGA/FPGA_CNN_Detect_Number_PC/uartRead.v Line: 6
+Warning (10268): Verilog HDL information at uartWrite.v(32): always construct contains both blocking and non-blocking assignments File: C:/Users/DELL/Desktop/CNN/FPGA/FPGA_CNN_Detect_Number_PC/uartWrite.v Line: 32
+Warning (10268): Verilog HDL information at top.v(286): always construct contains both blocking and non-blocking assignments File: C:/Users/DELL/Desktop/CNN/FPGA/FPGA_CNN_Detect_Number_PC/top.v Line: 286
