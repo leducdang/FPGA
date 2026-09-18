@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at uartWrite.v(32): always construct contains both blocking and non-blocking assignments File: C:/Users/DELL/Desktop/CNN/FPGA/FPGA_CNN_Detect_Number/uartWrite.v Line: 32
-Warning (10268): Verilog HDL information at top.v(230): always construct contains both blocking and non-blocking assignments File: C:/Users/DELL/Desktop/CNN/FPGA/FPGA_CNN_Detect_Number/top.v Line: 230
